@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::match(array('GET', 'POST'), '/login', array(
+			'as'	=>	'login',
+			'uses'	=>	'AuthController@login'
+));
+	
