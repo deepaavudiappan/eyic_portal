@@ -20,8 +20,7 @@ class AuthController extends BaseController {
 	|				home page
 	|
 	*/
-	public function login()
-	{
+	public function login(){
 			
 	}
 

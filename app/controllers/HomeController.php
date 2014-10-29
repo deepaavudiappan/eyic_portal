@@ -17,6 +17,10 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
+		Mail::queue('emails.testmail', array(), function($message)
+		{
+			$message->to('amirajdhawan@gmail.com', 'Amiraj Dhawan')->subject('Welcome!');
+		});
 		return View::make('hello');
 	}
 
