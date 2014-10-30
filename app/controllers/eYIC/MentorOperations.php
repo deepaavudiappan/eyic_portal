@@ -45,7 +45,6 @@ class MentorOperations extends BaseController {
 		//Auth
 
 		//Store the student details and send email
-		print_r("Temp");
 		return;
 	}
 }

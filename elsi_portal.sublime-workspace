@@ -239,7 +239,7 @@
 			"file": "app/controllers/eYIC/MentorOperations.php",
 			"settings":
 			{
-				"buffer_size": 1007,
+				"buffer_size": 1217,
 				"line_ending": "Unix"
 			}
 		},
@@ -247,15 +247,15 @@
 			"file": "app/views/eyic/mentor/addProjDtl.blade.php",
 			"settings":
 			{
-				"buffer_size": 8227,
+				"buffer_size": 781,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/var/www/html/eyrc14/app/views/pages/test_module/load_test.blade.php",
+			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 16149,
+				"buffer_size": 851,
 				"line_ending": "Unix"
 			}
 		},
@@ -271,7 +271,7 @@
 			"file": "app/controllers/HomeController.php",
 			"settings":
 			{
-				"buffer_size": 587,
+				"buffer_size": 739,
 				"line_ending": "Unix"
 			}
 		}
@@ -309,10 +309,16 @@
 		"/var/www/elsi_portal/app/controllers/eYIC",
 		"/var/www/elsi_portal/app/models",
 		"/var/www/elsi_portal/app/views",
+		"/var/www/elsi_portal/app/views/emails",
 		"/var/www/elsi_portal/app/views/eyic"
 	],
 	"file_history":
 	[
+		"/var/www/elsi_portal/app/views/emails/testmail.blade.php",
+		"/var/www/elsi_portal/app/config/mail.php",
+		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Database/Eloquent/MassAssignmentException.php",
+		"/var/www/html/eyrc14/app/views/pages/test_module/load_test.blade.php",
+		"/var/www/html/eyrc14/app/views/pages/test_module/endtestland.blade.php",
 		"/var/www/elsi_portal/app/views/hello.php",
 		"/var/www/elsi_portal/app/config/auth.php",
 		"/var/www/elsi_portal/bootstrap/autoload.php",
@@ -435,12 +441,7 @@
 		"/var/www/eyrc14/app/models/QuestionCategoryMaster.php",
 		"/var/www/eyrc14/vendor/symfony/finder/Symfony/Component/Finder/Iterator/ExcludeDirectoryFilterIterator.php",
 		"/var/www/eyrc14/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionLoadedBundle/ExtensionLoadedBundle.php",
-		"/var/www/eyrc14/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Session/Attribute/NamespacedAttributeBag.php",
-		"/var/www/eyrc14/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/ExtensionPresentBundle/Command/BarCommand.php",
-		"/var/www/eyrc14/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
-		"/var/www/eyrc14/app/views/pages/test_module/load_test.blade.php",
-		"/var/www/eyrc14/app/controllers/test_module/LoadTestController.php",
-		"/var/www/eyrc14/app/models/Bookings.php"
+		"/var/www/eyrc14/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Session/Attribute/NamespacedAttributeBag.php"
 	],
 	"find":
 	{
@@ -516,7 +517,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -525,15 +526,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1007,
+						"buffer_size": 1217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								734,
-								734
+								1183,
+								1183
 							]
 						],
 						"settings":
@@ -542,10 +543,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 198.0,
+						"translation.y": 528.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -554,44 +555,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8227,
+						"buffer_size": 781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								666,
-								666
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 748.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/var/www/html/eyrc14/app/views/pages/test_module/load_test.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16149,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								158
+								94,
+								94
 							]
 						],
 						"settings":
@@ -603,7 +575,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								440,
+								440
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -632,7 +632,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -641,15 +641,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 587,
+						"buffer_size": 739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								553,
-								553
+								194,
+								194
 							]
 						],
 						"settings":
@@ -661,7 +661,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -718,6 +718,14 @@
 		"selected_items":
 		[
 			[
+				"mail",
+				"app/config/mail.php"
+			],
+			[
+				"home",
+				"app/controllers/HomeController.php"
+			],
+			[
 				"hom",
 				"app/controllers/HomeController.php"
 			],
@@ -748,10 +756,6 @@
 			[
 				"start",
 				"/var/www/eyrc14/app/views/pages/test_module/start_test.blade.php"
-			],
-			[
-				"home",
-				"app/controllers/team_members/HomepageController.php"
 			],
 			[
 				"global",
