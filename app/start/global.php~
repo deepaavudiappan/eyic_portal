@@ -1,8 +1,5 @@
 <?php
 
-//Adding constant file include
-require app_path().'/constants.php';
-
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader

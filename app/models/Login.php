@@ -14,13 +14,13 @@ class Login extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'login';
+	protected $table = 'users_login';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('pass_hash', 'remember_token');
+	protected $hidden = array('password', 'remember_token');
 
 }
