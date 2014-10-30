@@ -52,7 +52,7 @@ class MentorOperations extends BaseController {
 		//Get project id
 		$proj_id = 1;
 		$mentor_name = 'XYZ';
-		$proj_title = 'TEMP'
+		$proj_title = 'TEMP';
 		
 		$rules = [	'std1_email'	=>	'required|email',
 		'std2_email'	=>	'required|email',
@@ -164,20 +164,20 @@ class MentorOperations extends BaseController {
 			DB::commit();
 
 			Mail::queue('emails.eyic.student_invite',  array('username'	=>	$sc_email, 
-				'pwd' => $scpassword, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message)
+				'pwd' => $scpassword, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message) use($sc_email, $emailSubj)
 			{
 				$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
 				$message->to($sc_email)->subject($emailSubj);
 			});
 			Mail::queue('emails.eyic.student_invite',  array('username'	=>	$std2_email, 
-				'pwd' => $std2_pwd, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message)
+				'pwd' => $std2_pwd, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message) use($std2_email, $emailSubj)
 			{
 				$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
 				$message->to($std2_email)->subject($emailSubj);
 			});
 			if(!empty($std3_email)){
 				Mail::queue('emails.eyic.student_invite', array('username'	=>	$std3_email, 
-					'pwd' => $std3_pwd, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message)
+					'pwd' => $std3_pwd, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message) use($std3_email, $emailSubj)
 				{
 					$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
 					$message->to($std3_email)->subject($emailSubj);
@@ -185,7 +185,7 @@ class MentorOperations extends BaseController {
 			}
 			if(!empty($std4_email)){
 				Mail::queue('emails.eyic.student_invite', array('username'	=>	$std4_email, 
-					'pwd' => $std4_pwd, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message)
+					'pwd' => $std4_pwd, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message) use($std4_email, $emailSubj)
 				{
 					$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
 					$message->to($std4_email)->subject($emailSubj);
