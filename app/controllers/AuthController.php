@@ -21,7 +21,16 @@ class AuthController extends BaseController {
 	|
 	*/
 	public function login(){
-			
+		$us = 'sad@njk.com';
+		$pwd = 'bkm012xt';
+
+		if(Auth::attempt(['username'=> $us, 'password'=>$pwd])){
+			Log::error("Success!!");
+		}
+		else{
+			Log::error("Failed");
+		}
+
 	}
 
 }

@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"projDtls"
+			],
+			[
+				"proj",
+				"proj_name"
+			],
+			[
+				"EYIC",
+				"EYIC_PROJS_ALLOWED"
+			],
+			[
+				"email",
+				"email_id"
+			],
+			[
+				"eyi",
+				"eyicMentorLand"
+			],
+			[
 				"emai",
 				"emailSubj"
 			],
@@ -22,10 +42,6 @@
 			[
 				"cur",
 				"curStd_login"
-			],
-			[
-				"proj",
-				"proj_id"
 			],
 			[
 				"pre",
@@ -252,18 +268,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/eYIC/MentorOperations.php",
+			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 6758,
+				"buffer_size": 1140,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/constants.php",
+			"file": "app/controllers/AuthController.php",
 			"settings":
 			{
-				"buffer_size": 236,
+				"buffer_size": 758,
 				"line_ending": "Unix"
 			}
 		},
@@ -276,66 +292,10 @@
 			}
 		},
 		{
-			"file": "app/views/emails/eyic/student_invite.blade.php",
+			"file": "app/config/auth.php",
 			"settings":
 			{
-				"buffer_size": 283,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/emails/testmail.blade.php",
-			"settings":
-			{
-				"buffer_size": 16,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/config/database.php",
-			"settings":
-			{
-				"buffer_size": 3328,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/eyic/mentor/addProjDtl.blade.php",
-			"settings":
-			{
-				"buffer_size": 3451,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/routes.php",
-			"settings":
-			{
-				"buffer_size": 851,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/AuthController.php",
-			"settings":
-			{
-				"buffer_size": 588,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/HomeController.php",
-			"settings":
-			{
-				"buffer_size": 739,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/EyicStudentsDtls.php",
-			"settings":
-			{
-				"buffer_size": 165,
+				"buffer_size": 2112,
 				"line_ending": "Unix"
 			}
 		}
@@ -369,32 +329,53 @@
 	[
 		"/var/www/elsi_portal",
 		"/var/www/elsi_portal/app",
+		"/var/www/elsi_portal/app/controllers",
+		"/var/www/elsi_portal/app/controllers/eYIC",
 		"/var/www/elsi_portal/app/models",
+		"/var/www/elsi_portal/app/start",
 		"/var/www/elsi_portal/app/views",
-		"/var/www/elsi_portal/app/views/emails",
+		"/var/www/elsi_portal/app/views/eyic",
+		"/var/www/elsi_portal/app/views/eyic/labincharge",
+		"/var/www/elsi_portal/app/views/eyic/mentor",
 		"/var/www/elsi_portal/app/views/layouts"
 	],
 	"file_history":
 	[
-		"/var/www/html/eyrc14/app/views/pages/team_members/home.blade.php",
-		"/var/www/elsi_portal/app/config/database.php",
-		"/var/www/elsi_portal/app/models/EyicProjectDtls.php",
-		"/var/www/elsi_portal/app/models/EyicTeachersDtls.php",
-		"/var/www/elsi_portal/app/models/EyicStudentsDtls.php",
+		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Support/Facades/Log.php",
 		"/var/www/elsi_portal/app/models/Login.php",
-		"/var/www/elsi_portal/app/views/emails/testmail.blade.php",
+		"/var/www/elsi_portal/vendor/phpseclib/phpseclib/AUTHORS",
+		"/var/www/elsi_portal/app/config/app.php",
+		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php",
+		"/var/www/elsi_portal/vendor/symfony/console/Symfony/Component/Console/Tests/Input/ArgvInputTest.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/LabInchargeOperations.php",
+		"/var/www/elsi_portal/app/start/global.php",
+		"/var/www/elsi_portal/app/constants.php",
 		"/var/www/elsi_portal/app/config/mail.php",
+		"/var/www/elsi_portal/app/config/cache.php",
+		"/var/www/elsi_portal/composer.json",
+		"/var/www/elsi_portal/app/controllers/eYIC/MentorOperations.php",
+		"/var/www/elsi_portal/app/models/ElsiTeachersDtls.php",
+		"/var/www/elsi_portal/app/views/eyic/labincharge/regProj.blade.php",
+		"/var/www/elsi_portal/app/routes.php",
+		"/var/www/elsi_portal/app/views/eyic/mentor/addProjDtl.blade.php",
+		"/var/www/elsi_portal/app/models/ElsiStudentsDtls.php",
+		"/var/www/elsi_portal/app/models/EyicProjectDtls.php",
+		"/var/www/html/eyrc14/app/controllers/test_module/TestStartController.php",
+		"/var/www/elsi_portal/app/views/emails/eyic/student_invite.blade.php",
+		"/var/www/elsi_portal/app/config/database.php",
+		"/var/www/elsi_portal/app/views/emails/testmail.blade.php",
+		"/var/www/elsi_portal/app/controllers/AuthController.php",
+		"/var/www/elsi_portal/app/controllers/HomeController.php",
+		"/var/www/elsi_portal/app/models/EyicStudentsDtls.php",
+		"/var/www/html/eyrc14/app/views/pages/team_members/home.blade.php",
+		"/var/www/elsi_portal/app/models/EyicTeachersDtls.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Database/Eloquent/MassAssignmentException.php",
 		"/var/www/html/eyrc14/app/views/pages/test_module/load_test.blade.php",
 		"/var/www/html/eyrc14/app/views/pages/test_module/endtestland.blade.php",
 		"/var/www/elsi_portal/app/views/hello.php",
 		"/var/www/elsi_portal/app/config/auth.php",
 		"/var/www/elsi_portal/bootstrap/autoload.php",
-		"/var/www/elsi_portal/app/config/app.php",
-		"/var/www/elsi_portal/app/routes.php",
-		"/var/www/elsi_portal/app/controllers/AuthController.php",
 		"/var/www/elsi_portal/app/controllers/MentorOperations.php",
-		"/var/www/elsi_portal/app/controllers/HomeController.php",
 		"/home/amiraj/Dropbox/Work/sb_project/Solutions_v1.4.2.txt",
 		"/home/amiraj/Dropbox/Work/sb_project/cachesim.cpp",
 		"/home/amiraj/Dropbox/Work/sb_project/cachesim.sb.cpp",
@@ -487,23 +468,7 @@
 		"/var/www/eyrc14/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Log/LoggerInterface.php",
 		"/var/www/eyrc14/vendor/symfony/process/Symfony/Component/Process/Exception/LogicException.php",
 		"/var/www/eyrc14/vendor/monolog/monolog/tests/Monolog/Handler/LogEntriesHandlerTest.php",
-		"/var/www/eyrc14/vendor/monolog/monolog/tests/Monolog/Handler/GelfHandlerLegacyTest.php",
-		"/home/amiraj/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/var/www/eyrc14/vendor/composer/autoload_real.php",
-		"/var/www/eyrc14/vendor/composer/autoload_psr4.php",
-		"/var/www/eyrc14/vendor/composer/autoload_namespaces.php",
-		"/var/www/eyrc14/vendor/composer/autoload_files.php",
-		"/var/www/eyrc14/vendor/composer/autoload_classmap.php",
-		"/var/www/eyrc14/bootstrap/autoload.php",
-		"/var/www/eyrc14/app/controllers/test_module/SubmitFeedback.php",
-		"/var/www/eyrc14/vendor/autoload.php",
-		"/var/www/eyrc14/app/models/QuestionMaster.php",
-		"/var/www/eyrc14/vendor/symfony/debug/Symfony/Component/Debug/Exception/FatalErrorException.php",
-		"/var/www/eyrc14/vendor/laravel/framework/src/Illuminate/Config/FileEnvironmentVariablesLoader.php",
-		"/var/www/eyrc14/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fixtures/TestEventDispatcher.php",
-		"/var/www/eyrc14/app/views/layouts/master.blade.php",
-		"/var/www/eyrc14/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Session/Storage/MockArraySessionStorage.php",
-		"/var/www/eyrc14/vendor/laravel/framework/src/Illuminate/Database/Eloquent/MassAssignmentException.php"
+		"/var/www/eyrc14/vendor/monolog/monolog/tests/Monolog/Handler/GelfHandlerLegacyTest.php"
 	],
 	"find":
 	{
@@ -521,6 +486,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"redirect",
+			"redirec",
+			"	\n",
 			"sc_email",
 			"form",
 			"str",
@@ -580,24 +548,24 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/eYIC/MentorOperations.php",
+					"file": "app/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6758,
+						"buffer_size": 1140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5109,
-								5109
+								637,
+								637
 							]
 						],
 						"settings":
@@ -605,8 +573,8 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 150.0,
-						"translation.y": 1988.0,
+						"translation.x": 0.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -614,30 +582,31 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/constants.php",
+					"file": "app/controllers/AuthController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 236,
+						"buffer_size": 758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
+								346,
+								346
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -653,8 +622,8 @@
 						"selection":
 						[
 							[
-								334,
-								334
+								183,
+								183
 							]
 						],
 						"settings":
@@ -671,75 +640,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/emails/eyic/student_invite.blade.php",
+					"file": "app/config/auth.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 283,
+						"buffer_size": 2112,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								283,
-								283
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/emails/testmail.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/config/database.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3328,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1597,
-								1597
+								925,
+								925
 							]
 						],
 						"settings":
@@ -747,154 +660,11 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 855.0,
+						"translation.x": -0.0,
+						"translation.y": 228.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/eyic/mentor/addProjDtl.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3451,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2239,
-								2239
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 912.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/routes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 851,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								439,
-								439
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/controllers/AuthController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 588,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								548,
-								548
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/controllers/HomeController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 739,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								553,
-								553
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/models/EyicStudentsDtls.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 165,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -951,12 +721,44 @@
 		"selected_items":
 		[
 			[
-				"data",
-				"app/config/database.php"
+				"login",
+				"app/models/Login.php"
+			],
+			[
+				"auth",
+				"app/config/auth.php"
+			],
+			[
+				"route",
+				"app/routes.php"
+			],
+			[
+				"cac",
+				"app/config/cache.php"
+			],
+			[
+				"app",
+				"app/config/app.php"
 			],
 			[
 				"mail",
 				"app/config/mail.php"
+			],
+			[
+				"cons",
+				"app/constants.php"
+			],
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"consta",
+				"app/constants.php"
+			],
+			[
+				"data",
+				"app/config/database.php"
 			],
 			[
 				"home",
@@ -967,24 +769,12 @@
 				"app/controllers/HomeController.php"
 			],
 			[
-				"auth",
-				"app/controllers/AuthController.php"
-			],
-			[
-				"route",
-				"app/routes.php"
-			],
-			[
 				"",
 				"cachesim.hpp"
 			],
 			[
 				"con",
 				"app/constants.php"
-			],
-			[
-				"login",
-				"app/controllers/test_module/LoginController.php"
 			],
 			[
 				"testst",
@@ -1017,10 +807,6 @@
 			[
 				"globa",
 				"app/start/global.php"
-			],
-			[
-				"app",
-				"app/config/app.php"
 			],
 			[
 				"testfeedback",
@@ -1119,20 +905,12 @@
 				"app/routes.php"
 			],
 			[
-				"cac",
-				"app/config/cache.php"
-			],
-			[
 				"endtestland",
 				"app/views/pages/test_module/endtestland.blade.php"
 			],
 			[
 				"book",
 				"app/models/Bookings.php"
-			],
-			[
-				"consta",
-				"app/constants.php"
 			],
 			[
 				"load_",
@@ -1197,10 +975,6 @@
 			[
 				"test",
 				"app/models/TestQuestionAnsDtls.php"
-			],
-			[
-				"cons",
-				"app/constants.php"
 			]
 		],
 		"width": 0.0
