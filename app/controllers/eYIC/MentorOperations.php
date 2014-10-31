@@ -53,6 +53,7 @@ class MentorOperations extends BaseController {
 		$proj_id = 1;
 		$mentor_name = 'XYZ';
 		$proj_title = 'TEMP';
+		$clg_id = 1;
 		
 		$rules = [	'std1_email'	=>	'required|email',
 		'std2_email'	=>	'required|email',
@@ -70,7 +71,7 @@ class MentorOperations extends BaseController {
 		$validator = Validator::make(Input::all(), $rules, $messages);
 
 		if ($validator->fails()){
-			return Redirect::to('addprojdetailLand')->withErrors($validator)->withInput(Input::all());
+			return Redirect::Route('addprojdetailLand')->withErrors($validator)->withInput(Input::all());
 		}
 		$sc_email = Input::get('std1_email');
 		$std2_email = Input::get('std2_email');
@@ -78,9 +79,21 @@ class MentorOperations extends BaseController {
 		$std4_email = Input::get('std4_email');
 		$stdArray = [];
 
+		//Check if student already registered
+		$res = ElsiStudentsDtls::whereIn('email_id', [$sc_email, $std2_email, $std3_email, $std4_email])->get();
+
+		if(count($res) != 0){
+
+			$str = 'Student already registered with another project: ';
+			foreach($res as $curStd){
+				$str .= $curStd->email_id . ' ';
+			}
+			return Redirect::route('addprojdetailLand')->withErrors($str)->withInput(Input::all());
+		}
 		//begining DB transaction
 		DB::beginTransaction();
 		try{
+
 			$scpassword = str_random(10);
 			$std2_pwd = str_random(10);
 			$std3_pwd = str_random(10);
@@ -88,7 +101,9 @@ class MentorOperations extends BaseController {
 
 			$curStd_login = new Login;
 			$curStd_login->username = $sc_email;
+			$curStd_login->active = 1;
 			$curStd_login->password = Hash::make($scpassword);
+			$curStd_login->clg_id = $clg_id;
 			$curStd_login->role = 3;
 
 			if(!$curStd_login->save()){
@@ -104,7 +119,9 @@ class MentorOperations extends BaseController {
 
 			$curStd_login = new Login;
 			$curStd_login->username = $std2_email;
+			$curStd_login->active = 1;
 			$curStd_login->password = Hash::make($std2_pwd);
+			$curStd_login->clg_id = $clg_id;
 			$curStd_login->role = 3;
 
 			if(!$curStd_login->save()){
@@ -122,7 +139,9 @@ class MentorOperations extends BaseController {
 
 				$curStd_login = new Login;
 				$curStd_login->username = $std3_email;
+				$curStd_login->active = 1;
 				$curStd_login->password = Hash::make($std3_pwd);
+				$curStd_login->clg_id = $clg_id;
 				$curStd_login->role = 3;
 
 				if(!$curStd_login->save()){
@@ -139,7 +158,9 @@ class MentorOperations extends BaseController {
 			if(!empty($std4_email)){
 				$curStd_login = new Login;
 				$curStd_login->username = $std4_email;
+				$curStd_login->active = 1;
 				$curStd_login->password = Hash::make($std4_pwd);
+				$curStd_login->clg_id = $clg_id;
 				$curStd_login->role = 3;
 
 				if(!$curStd_login->save()){
@@ -154,15 +175,14 @@ class MentorOperations extends BaseController {
 				array_push($stdArray, $scStd4);
 			}
 
-			if(EyicStudentsDtls::insert($stdArray)){
+			if(ElsiStudentsDtls::insert($stdArray)){
 				Log::debug($thisMethod . "Added student details successfully");
 			}
 			else{
 				Log::debug($thisMethod . "Throwing exception for unable to save the student details");
 				throw new Exception('Unable to save student details');
 			}
-			DB::commit();
-
+			
 			Mail::queue('emails.eyic.student_invite',  array('username'	=>	$sc_email, 
 				'pwd' => $scpassword, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message) use($sc_email, $emailSubj)
 			{
@@ -191,18 +211,19 @@ class MentorOperations extends BaseController {
 					$message->to($std4_email)->subject($emailSubj);
 				});
 			}
+
+			DB::commit();
 		}
 		catch (Exception $e){
 			//Catching any exception to roll back
 			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
 			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
-			$msgs = $validator->errors();
-			$messages = ['Unable to save the information. Please contact helpdesk@e-yantra.org via email about the issue'];
-			return Redirect::to('addprojdetailLand')->withErrors($messages)->withInput(Input::all());
+			$messages = ['Unable to save the information. Please contact us at helpdesk@e-yantra.org via email about the issue'];
+			return Redirect::route('addprojdetailLand')->withErrors($messages)->withInput(Input::all());
 		}
 		//Store the student details and send email
 		$messages = ['Successfully stored'];
-		return Redirect::to('addprojdetailLand')->withErrors($messages);
+		return Redirect::route('addprojdetailLand')->withErrors($messages);
 	}
 }

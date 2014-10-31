@@ -26,4 +26,13 @@ Route::match(array('GET', 'POST'), '/addprojdetailLand', array(
 			'as'	=>	'addprojectdetailland',
 			'uses'	=>	'MentorOperations@eyicMentorLand'
 ));
-	
+
+Route::match(array('GET', 'POST'), '/labin/regProjLand', array(
+			'as'	=>	'regProjLand',
+			'uses'	=>	'LabInchargeOperations@loadRegProj'
+));
+
+Route::match(array('GET', 'POST'), '/labin/registerProj', array(
+			'as'	=>	'registerProj',
+			'uses'	=>	'LabInchargeOperations@registerProj'
+));
