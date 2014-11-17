@@ -10,7 +10,15 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', 'HomeController@showWelcome');
+Route::match(array('GET', 'POST'), '/addCoor', array(
+			'as'	=>	'addCoor',
+			'uses'	=>	'CollegeController@addCoordinator'
+));
+
+Route::match(array('GET', 'POST'), '/addCoorSave', array(
+			'as'	=>	'addCoorSave',
+			'uses'	=>	'CollegeController@addCoordinatorSave'
+));
 
 Route::match(array('GET', 'POST'), '/login', array(
 			'as'	=>	'login',

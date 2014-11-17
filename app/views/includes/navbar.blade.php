@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>                
-                <a class="navbar-brand" href="#" title="e-Yantra">{{ HTML::image('img/logo1.png') }}
+                <a class="navbar-brand" href="#" title="e-Yantra">{{ HTML::image('img/logo1.png') }}</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
