@@ -24,7 +24,7 @@
 				{{ Form::open(array('route' => 'addCoorSave', 'method' => 'POST')) }}
 				<label class="control-label" for="lbl_clg_select">Select your College:</label> 
 				{{ Form::select('college', $clgs,[], ['class' => 'form-control'] );}}<br/>
-				<div class="alert alert-info">If your college is not in the list please contact us on support@e-yantra.org or call us at xxx.</div>
+				<div class="alert alert-info">If your college is not in the list please contact us on support@e-yantra.org or call us at 022-2572-0184.</div>
 				<div class="form-group @if ($errors->has('pcoor_name')) has-error @endif">
 					<label class="control-label" for="lbl_pcoor_name">Primary Coordinator Name:</label>
 					<input type="text" id="pcoor_name" class="form-control" name="pcoor_name" placeholder="" value="{{ Input::old('pcoor_name') }}"/>
