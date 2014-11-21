@@ -25,6 +25,17 @@
 				<label class="control-label" for="lbl_clg_select">Select your College:</label> 
 				{{ Form::select('college', $clgs,[], ['class' => 'form-control'] );}}<br/>
 				<div class="alert alert-info">If your college is not in the list please contact us on support@e-yantra.org or call us at 022-2572-0184.</div>
+				<div class="alert alert-info">
+					<strong>The coordinator is responsible for the following tasks:</strong><br/>
+					<ul>
+						<li>Publicizing eYIC-2015 in the college</li>
+						<li>Call for projects in embedded systems and robotics from all the departments</li>
+						<li>Finalize upto 4 projects based on an evaluation template that e-Yantra will provide</li>
+						<li>Register these projects on the online portal</li>
+					</ul>
+					<br/>
+					Subsequently, the coordinator will be CC’ed on all communications that e-Yantra has with the participating teams.
+				</div>
 				<div class="form-group @if ($errors->has('pcoor_name')) has-error @endif">
 					<label class="control-label" for="lbl_pcoor_name">Primary Coordinator Name:</label>
 					<input type="text" id="pcoor_name" class="form-control" name="pcoor_name" placeholder="" value="{{ Input::old('pcoor_name') }}"/>
