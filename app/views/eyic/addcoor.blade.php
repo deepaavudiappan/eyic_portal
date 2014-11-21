@@ -74,7 +74,7 @@
 					<li>To ensure sustained use of the robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI).</li>
 					<li>To encourage<strong> innovative ideas</strong> from students in eLSI colleges across the country.</li>
 					<li>To provide a platform for teams to showcase their projects.</li>
-					<li>To nurture BE projects in embedded systems and robotics at the eLSI colleges.</li>
+					<li>To nurture BE projects in Embedded Systems and Robotics at the eLSI colleges.</li>
 					
 				</ul>
 			</div>
@@ -88,7 +88,7 @@
 				<p>e-Yantra Ideas Competition (eYIC- 2015) will be held as part of e-Yantra Symposium (eYS-2015).</p>
 				<strong>Stage 1:</strong><br/>
 				<ul>
-				<li> Team submits a proposal – an idea -- for a project as per a given template.</li>
+				<li> Team submits a proposal – an idea -- for a project as per given template.</li>
 				<li> Proposals are evaluated and teams are selected for Stage-2.</li>
 				</ul>
 				<strong>Stage 2:</strong><br/>
@@ -113,10 +113,10 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li>Since this would be a pilot phase we would be restricting the number of teams selected to a small number. A maximum of four teams per eLSI college is allowed to participate. A faculty co-ordinator will select four teams from their college who will be registered for the competition.</li>
+					<li>Since this is a pilot phase we are restricting the number of teams selected. A maximum of four teams per eLSI college is allowed to participate. A faculty co-ordinator will select four teams from their college who will be registered for the competition.</li>
 					<li>Teams should consist of 3 or 4 student members mentored by one teacher. All the students should be from the same year but can be from different branches.</li>
 					<li>The project must be from the domain of embedded systems and robotics.</li>
-					<li>Teams are required to use any processing board available in the eLSI labs. (Firebird V, Raspberry Pi, BeagleBoard & Arduino, etc.)</li>
+					<li>Teams are required to use any processing board available in the eLSI labs. (Firebird V, Raspberry Pi, BeagleBoard and Arduino). More details will be provided along with the proposal template.</li>
 				</ul>
 			</div>
 		</div>
