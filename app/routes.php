@@ -33,7 +33,7 @@ Route::post('/login', array(
 
 Route::get('/logout', array(
 			'as' => 'logout',
-			'uses' => 'AuthController@doLogout'
+			'uses' => 'AuthController@doLogout'  
 ));
 
 Route::match(array('GET', 'POST'), '/addprojdetail', array(
