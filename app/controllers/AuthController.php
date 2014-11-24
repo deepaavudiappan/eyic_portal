@@ -20,17 +20,26 @@ class AuthController extends BaseController {
 	|				home page
 	|
 	*/
-	public function login(){
-		$us = 'sad@njk.com';
-		$pwd = 'bkm012xt';
+	public function doLogin(){
+			
+		$userdata = array(
+				'username' 	=> Input::get('inputEmail'),
+				'password' 	=> Input::get('inputPassword')
+		);
 
-		if(Auth::attempt(['username'=> $us, 'password'=>$pwd])){
-			Log::error("Success!!");
+		if(Auth::attempt($userdata)){
+			return Auth::user();
 		}
 		else{
-			Log::error("Failed");
+			return Redirect::to('login');
 		}
 
+	}
+	
+	public function doLogout()
+	{
+		Auth::logout(); // log the user out of our application
+		return Redirect::to('login'); // redirect the user to the login screen
 	}
 
 }

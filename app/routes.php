@@ -20,9 +20,20 @@ Route::match(array('GET', 'POST'), '/addCoorSave', array(
 			'uses'	=>	'CollegeController@addCoordinatorSave'
 ));
 
-Route::match(array('GET', 'POST'), '/login', array(
+
+Route::get('/login', function(){				
+			return View::make('login');
+});
+ 
+
+Route::post('/login', array(
 			'as'	=>	'login',
-			'uses'	=>	'AuthController@login'
+			'uses'	=>	'AuthController@doLogin'
+));
+
+Route::get('/logout', array(
+			'as' => 'logout',
+			'uses' => 'AuthController@doLogout'
 ));
 
 Route::match(array('GET', 'POST'), '/addprojdetail', array(
@@ -44,3 +55,18 @@ Route::match(array('GET', 'POST'), '/labin/registerProj', array(
 			'as'	=>	'registerProj',
 			'uses'	=>	'LabInchargeOperations@registerProj'
 ));
+
+
+/*Route::get('/', function(){
+		$user = new Login();
+		
+		$user->username = "user1";
+		$user->password = Hash::make("12345");
+		$user->save();	
+ 		
+  		return "Done";		
+	
+});*/
+
+
+
