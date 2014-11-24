@@ -25,6 +25,17 @@
 				<label class="control-label" for="lbl_clg_select">Select your College:</label> 
 				{{ Form::select('college', $clgs,[], ['class' => 'form-control'] );}}<br/>
 				<div class="alert alert-info">If your college is not in the list please contact us on support@e-yantra.org or call us at 022-2572-0184.</div>
+				<div class="alert alert-info">
+					<strong>The coordinator is responsible for the following tasks:</strong><br/>
+					<ul>
+						<li>Publicizing eYIC-2015 in the college</li>
+						<li>Call for projects in embedded systems and robotics from all the departments</li>
+						<li>Finalize upto 4 projects based on an evaluation template that e-Yantra will provide</li>
+						<li>Register these projects on the online portal</li>
+					</ul>
+					<br/>
+					Subsequently, the coordinator will be CC’ed on all communications that e-Yantra has with the participating teams.
+				</div>
 				<div class="form-group @if ($errors->has('pcoor_name')) has-error @endif">
 					<label class="control-label" for="lbl_pcoor_name">Primary Coordinator Name:</label>
 					<input type="text" id="pcoor_name" class="form-control" name="pcoor_name" placeholder="" value="{{ Input::old('pcoor_name') }}"/>
@@ -61,7 +72,7 @@
 				<h3 class="panel-title">1. What is eYIC?</h3>
 			</div>
 			<div class="panel-body">
-				<p>eYIC stands for e-Yantra Ideas Competition, an initiative to encourage innovative projects from your robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI),in colleges across the country.</p>
+				<p>eYIC stands for e-Yantra Ideas Competition, an initiative to encourage innovative projects from robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI), in colleges across the country.</p>
 			</div>
 		</div>
 
@@ -73,8 +84,8 @@
 				<ul>
 					<li>To ensure sustained use of the robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI).</li>
 					<li>To encourage<strong> innovative ideas</strong> from students in eLSI colleges across the country.</li>
-					<li>To provide a platform for talented teams to showcase their projects.</li>
-					<li>To nurture BE projects in embedded systems and robotics at the eLSI colleges.</li>
+					<li>To provide a platform for teams to showcase their projects.</li>
+					<li>To nurture BE projects in Embedded Systems and Robotics at the eLSI colleges.</li>
 					
 				</ul>
 			</div>
@@ -88,21 +99,22 @@
 				<p>e-Yantra Ideas Competition (eYIC- 2015) will be held as part of e-Yantra Symposium (eYS-2015).</p>
 				<strong>Stage 1:</strong><br/>
 				<ul>
-				<li> Team submit a proposal – an idea -- for a project as per a given template.</li>
+				<li> Team submits a proposal – an idea -- for a project as per given template.</li>
 				<li> Proposals are evaluated and teams are selected for Stage-2.</li>
 				</ul>
 				<strong>Stage 2:</strong><br/>
 				<ul>
-				<li>Selected Teams implements their proposed idea.</li>
-				<li>A video of the working demonstration of the idea is submitted through a video link.</li>
-				<li>Selected teams will be invited to showcase their idea in an exhibition during the e-YS-2015.</li>
-				<li>All Selected teams will get honorarium.</li>
+				<li>Selected Teams implement their proposed idea.</li>
+				<li>Each team submits a video of the working demonstration of the idea through a video link.</li>
+				<li>Selected teams will be invited to showcase their ideas in an exhibition during the e-Yantra Symposium (eYS-2015).</li>
+				<li>All Selected teams will get cash prizes.</li>
 				</ul>
 				<strong>Stage 3:</strong><br/>
 				<ul>
-				<li>Exhibited Projects will be judged by a panel of judges.</li>
-				<li>Winning entries are awarded exciting Prizes and Certificates.</li>
-				<p>Projected Date for eYS-2015: Second week of April 2015.</p>
+				<li>Exhibited projects will be judged by a panel of judges.</li>
+				<li>Winning entries will be awarded exciting prizes and certificates.</li>
+				</ul>
+				<p><strong>Proposed Date for eYS-2015: Second week of April 2015.</strong></p>
 			</div>
 		</div>
 
@@ -112,10 +124,10 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li>Since this would be a pilot phase we would be restricting the number of teams selected to a small number. A maximum of four teams per eLSI college is allowed to participate. College lab in-charge will select four teams from their college who will be registered for the competition.</li>
-					<li>Teams would consist of 3 or 4 student members mentored by one teacher. All the students should be from the same year but can be from different branches.</li>
+					<li>Since this is a pilot phase we are restricting the number of teams selected. A maximum of four teams per eLSI college is allowed to participate. A faculty co-ordinator will select four teams from their college who will be registered for the competition.</li>
+					<li>Teams should consist of 3 or 4 student members mentored by one teacher. All the students should be from the same year but can be from different branches.</li>
 					<li>The project must be from the domain of embedded systems and robotics.</li>
-					<li>Teams are required to use any processing board available in the eLSI labs. (Firebird V, Raspberry Pi, BeagleBoard & Arduino, etc.)</li>
+					<li>Teams are required to use any processing board available in the eLSI labs. (Firebird V, Raspberry Pi, BeagleBoard and Arduino). More details will be provided along with the proposal template.</li>
 				</ul>
 			</div>
 		</div>
