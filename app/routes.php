@@ -20,6 +20,12 @@ Route::match(array('GET', 'POST'), '/addCoorSave', array(
 			'uses'	=>	'CollegeController@addCoordinatorSave'
 ));
 
+/* Migrate coordinator table data to teachers table*/
+Route::match(array('GET', 'POST'), '/migCoor', array(
+			'as'	=>	'migCoor',
+			'uses'	=>	'MigCoorController@migrateCoorToTeacher'
+));
+
 
 Route::get('/login', function(){				
 			return View::make('login');
