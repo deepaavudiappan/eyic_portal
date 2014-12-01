@@ -18,7 +18,7 @@
                         echo Session::get('teamid'); }?></a></li>
                     <li class="page-scroll"><li><a href="{{ URL::to('homepage') }}"><?php if(Session::has('username')){
                         echo Session::get('username'); } ?></a></li>
-                    <li class="page-scroll"><li><a href="{{ URL::to('logout') }}">Logout</a></li>
+                    <li class="page-scroll"><li><a href="{{ URL::to('/auth/logout') }}">Logout</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
