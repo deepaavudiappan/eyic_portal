@@ -42,6 +42,12 @@ Route::get('/logout', array(
 			'uses' => 'AuthController@doLogout'  
 ));
 
+/* Change Password */
+Route::match(array('GET', 'POST'), '/changePwdLand', array(
+			'as'	=>	'changePwdLand',
+			'uses'	=>	'AuthController@changePasswordLand'
+));
+
 Route::match(array('GET', 'POST'), '/addprojdetail', array(
 			'as'	=>	'addprojectdetail',
 			'uses'	=>	'MentorOperations@addProjectDetails'

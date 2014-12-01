@@ -42,4 +42,20 @@ class AuthController extends BaseController {
 		return Redirect::to('login'); // redirect the user to the login screen
 	}
 
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		changePasswordLand
+	| Input:		Null
+	| Output:		Generate View to Change Password 
+	| Logic:		Generate View to Change Password
+	|
+	*/
+	public function changePasswordLand(){
+		
+		//Display the view
+		return View::make('changepwd');
+	}
+	
+	
+
 }
