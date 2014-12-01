@@ -29,7 +29,7 @@ class AuthController extends BaseController {
 
 		if(Auth::attempt($userdata)){
 			if(Auth::user()->role == 1){
-				$teacherDtl = ElsiTeachersDtls::firstbyAttributes('user_id', Auth::id());
+				$teacherDtl = ElsiTeachersDtls::firstbyAttributes(['user_id' => Auth::id()]);
 				Session::put('entityDtl', $teacherDtl);
 			}
 			else if(Auth::user()->role == 2){
@@ -39,7 +39,7 @@ class AuthController extends BaseController {
 			return Redirect::Route('commonHome');
 		}
 		else{
-			return Redirect::to('login');
+			return Redirect::Route('loginLand')->withErrors('Incorrect username or password!');
 		}
 	}
 	
@@ -47,7 +47,7 @@ class AuthController extends BaseController {
 		if(Auth::check()){
 			Auth::logout();
 			Session::flush();
-			return Redirect::Route('loginLand')->with([ MSG_VAR_SUCCESS => 'Logout successfully']);
+			return Redirect::Route('loginLand')->with([ MSG_VAR_SUCCESS => 'Logout successful']);
 		}
 		else{
 			return Redirect::Route('loginLand');

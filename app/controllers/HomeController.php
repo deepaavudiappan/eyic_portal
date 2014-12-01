@@ -89,7 +89,7 @@ class HomeController extends BaseController {
 		if(Session::has('entityDtl')){
 			Log::debug($thisMethod . ' Coor_flag: ' . Session::get('entityDtl')['coor_flag'] . ' Auth:: ' . Auth::id());
 			if(Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2){
-				return View::make('eyic.labincharge.home');		
+				return View::make('eyic.labincharge.home');
 			}
 			else{
 				return View::make('eyic.mentor.home');
