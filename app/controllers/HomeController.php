@@ -1,27 +1,71 @@
 <?php
 
 class HomeController extends BaseController {
-
 	/*
 	|--------------------------------------------------------------------------
-	| Default Home Controller
+	| HomeController Controller
 	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
+	|	Route::match(array('GET', 'POST'), '/homecommon', array(
+	|		'as'	=>	'commonHome',
+	|		'uses'	=>	'HomeController@homeBifurcate'
+	|	));
+	|	
 	|
 	*/
 
-	public function showWelcome()
-	{
-		Mail::queue('emails.testmail', array(), function($message)
-		{
-			$message->to('amirajdhawan@gmail.com', 'Amiraj Dhawan')->subject('Welcome!');
-		});
-		return View::make('hello');
+	//Defining the layout to be used for these pages
+	protected $layout = 'layouts.master';
+	//Storing name of the class
+	protected static $thisClass = "HomeController";
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		homeBifurcate
+	| Input:		Null
+	| Output:		
+	| Logic:		Landing page for eYIC Mentor
+	|
+	*/
+	public function homeBifurcate(){
+		$thisMethod = self::$thisClass . ' -> homeBifurcate -> ';
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role == 1){
+			//Return to teachers home page
+			return Redirect::Route('addprojectdetailland');
+		}
+		else if(Auth::user()->role == 2){
+			//Return to students home page
+			//return Redirect::Route('');
+		}
+		else if(Auth::user()->role == 3){
+			//Return to admin page
+			return Redirect::Route('adminHome');
+		}
+		else{
+			Log::error($thisMethod . 'got role other than 1, 2 and 3 Login ID: ' . Auth::id());
+			//Return to error page
+		}
 	}
 
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		adminHome
+	| Input:		Null
+	| Output:		
+	| Logic:		Admin Home page
+	|
+	*/
+	public function adminHome(){
+		$thisMethod = self::$thisClass . ' -> adminHome -> ';
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+
+		return View::make('eyic.admin.home');
+	}
+	
 }

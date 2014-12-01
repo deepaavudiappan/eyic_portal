@@ -28,18 +28,24 @@ class AuthController extends BaseController {
 		);
 
 		if(Auth::attempt($userdata)){
-			return Auth::user();
+			return Redirect::Route('commonHome');
 		}
 		else{
 			return Redirect::to('login');
 		}
-
 	}
 	
-	public function doLogout()
-	{
-		Auth::logout(); // log the user out of our application
-		return Redirect::to('login'); // redirect the user to the login screen
+	public function doLogout(){
+		if(Auth::check()){
+			Auth::logout();
+			Session::flush();
+			return Redirect::Route('loginLand')->with([ MSG_VAR_SUCCESS => 'Logout successfully']);
+		}
+		else{
+			return Redirect::Route('loginLand');
+		}
+		//Auth::logout(); // log the user out of our application
+		//return Redirect::Route('loginLand'); // redirect the user to the login screen
 	}
 
 }

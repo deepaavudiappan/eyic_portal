@@ -27,10 +27,14 @@ Route::match(array('GET', 'POST'), '/migCoor', array(
 ));
 
 
-Route::get('/login', function(){				
-			return View::make('login');
-});
+//Route::get('/', );
  
+Route::match(array('GET', 'POST'), '/', array(
+			'as'	=>	'loginLand',
+			'uses'	=>	function(){		
+							return View::make('login');
+						}
+));
 
 Route::post('/login', array(
 			'as'	=>	'login',
@@ -40,6 +44,11 @@ Route::post('/login', array(
 Route::get('/logout', array(
 			'as' => 'logout',
 			'uses' => 'AuthController@doLogout'  
+));
+
+Route::match(array('GET', 'POST'), '/homecommon', array(
+			'as'	=>	'commonHome',
+			'uses'	=>	'HomeController@homeBifurcate'
 ));
 
 Route::match(array('GET', 'POST'), '/addprojdetail', array(
@@ -62,6 +71,16 @@ Route::match(array('GET', 'POST'), '/labin/registerProj', array(
 			'uses'	=>	'LabInchargeOperations@registerProj'
 ));
 
+/*----------------------Admin Routes---------------------------*/
+Route::match(array('GET', 'POST'), '/admin/home', array(
+			'as'	=>	'adminHome',
+			'uses'	=>	'HomeController@adminHome'
+));
+
+Route::match(array('GET', 'POST'), '/admin/setupCoorAccs', array(
+			'as'	=>	'setupCoorAccs',
+			'uses'	=>	'AdminOperations@makeLoginCoor'
+));
 
 /*Route::get('/', function(){
 		$user = new Login();
@@ -73,6 +92,3 @@ Route::match(array('GET', 'POST'), '/labin/registerProj', array(
   		return "Done";		
 	
 });*/
-
-
-

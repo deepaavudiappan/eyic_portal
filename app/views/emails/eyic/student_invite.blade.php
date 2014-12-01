@@ -5,3 +5,5 @@ Please login at <a href="http://elsiportal.e-yantra.org">e-Yantra</a> with the f
 <br/>
 Username: {{$username}}<br/>
 Password: {{$pwd}}<br/>
+Best Wishes,<br/>
+e-Yantra Admin
