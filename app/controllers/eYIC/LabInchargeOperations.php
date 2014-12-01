@@ -48,9 +48,23 @@ class LabInchargeOperations extends BaseController {
 	public function registerProj(){
 		//Auth
 		//Display the view
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 1){
+			return Redirect::Route('commonHome');
+		}
+		if(Session::has('entityDtl')){
+			if(Session::get('entityDtl')['coor_flag'] != 1 && Session::get('entityDtl')['coor_flag'] != 2){
+				return Redirect::Route('commonHome');
+			}
+		}
+		else{
+			return Redirect::Route('commonHome');
+		}
 
 		$thisMethod = self::$thisClass . ' -> registerProj -> ';
-		$clg_id = 1;
+		$clg_id = Auth::user()->clg_id;
 
 		$rules = [	'proj_name'	=>	'required',
 		'mentor_name'	=>	'required',
@@ -67,51 +81,66 @@ class LabInchargeOperations extends BaseController {
 		}
 
 		Log::error($thisMethod . 'Validation success');
-		$proj_name = Input::get('proj_name');
-		$mentor_name = Input::get('mentor_name');
+		$proj_name = ucwords(strtolower(Input::get('proj_name')));
+		$mentor_name = ucwords(strtolower(Input::get('mentor_name')));
 		$mentor_email = Input::get('mentor_email');
 
 		$projs_reg = EyicProjectDtls::where('clg_id', $clg_id)->get();
 
 		if(count($projs_reg) >= EYIC_PROJS_ALLOWED){
-			$msg = 'Maximum allowed '. EYIC_PROJS_ALLOWED . 'projects have already been registered';
+			$msg = 'Maximum allowed '. EYIC_PROJS_ALLOWED . ' projects have already been registered';
 			return Redirect::route('regProjLand')->withErrors($msg)->withInput(Input::all());
 		}
 
 		DB::beginTransaction();
 		try{
 			//Check intigrity
-			$projDtls = new EyicProjectDtls;
+			/*$projDtls = new EyicProjectDtls;
 			$projDtls->proj_name = $proj_name;
 			$projDtls->clg_id = $clg_id;
 
 			if(!$projDtls->save()){
 				throw new Exception("Failed to save project details");
+			}*/
+
+			$men_pre = ElsiTeachersDtls::where('emailid', $mentor_email)->get();
+			if(count($men_pre) >= 1){
+				$men_pre[0]->eyic_flag = 1;
+
+				if(!$mentorDtls->save()){
+					throw new Exception("Failed to save mentor details");
+				}
+
+				//Send email
 			}
+			else{
+				$mentorPwd = str_random(10);
 
-			$mentorPwd = str_random(10);
+				$curStd_login = new Login;
+				$curStd_login->username = $mentor_email;
+				$curStd_login->active = 1;
+				$curStd_login->password = Hash::make($mentorPwd);
+				$curStd_login->clg_id = $clg_id;
+				$curStd_login->role = 1;
 
-			$curStd_login = new Login;
-			$curStd_login->username = $mentor_email;
-			$curStd_login->active = 1;
-			$curStd_login->password = Hash::make($mentorPwd);
-			$curStd_login->clg_id = $clg_id;
-			$curStd_login->role = 2;
+				if(!$curStd_login->save()){
+					throw new Exception("Failed to save users login");
+				}
 
-			if(!$curStd_login->save()){
-				throw new Exception("Failed to save users login");
+				$mentorDtls = new ElsiTeachersDtls;
+				$mentorDtls->name = $mentor_name;
+				$mentorDtls->emailid = $mentor_email;
+				$mentorDtls->coor_flag = 0;
+				$mentorDtls->eyrtc_flag = 0;
+				$mentorDtls->eyic_flag = 1;
+				$mentorDtls->login_created = 1;
+
+				if(!$mentorDtls->save()){
+					throw new Exception("Failed to save mentor details");
+				}
+
+				//Send email
 			}
-
-			$mentorDtls = new ElsiTeachersDtls;
-			$mentorDtls->name = $mentor_name;
-			$mentorDtls->emailid = $mentor_email;
-			$mentorDtls->project_id = $projDtls->id;
-
-			if(!$mentorDtls->save()){
-				throw new Exception("Failed to save mentor details");
-			}
-
-			//Send email
 
 			DB::commit();
 		}
@@ -138,7 +167,7 @@ class LabInchargeOperations extends BaseController {
 	*/
 	public function displayRegProj(){
 		//Auth
-		$clg_id = 1;
+		$clg_id = Auth::user()->clg_id;
 
 		$projs_reg = EyicProjectDtls::where('clg_id', $clg_id)->get();
 

@@ -61,11 +61,20 @@ class MentorOperations extends BaseController {
 		$thisMethod = self::$thisClass . ' -> addProjectDetails -> ';
 		$emailSubj = 'eYIC Invite';
 
+		/*################################################*/
 		//Get project id
 		$proj_id = 1;
-		$mentor_name = 'XYZ';
 		$proj_title = 'TEMP';
-		$clg_id = 1;
+		
+		$mentor_name = 'XYZ';
+		if(Session::has('entityDtl')){
+			$mentor_name = Session::get('entityDtl')['name'];
+		}
+		else{
+			$mentor_name = '{Mentor Name not provided}';
+		}
+
+		$clg_id = Auth::user()->clg_id;
 		
 		$rules = [	'std1_email'	=>	'required|email',
 		'std2_email'	=>	'required|email',

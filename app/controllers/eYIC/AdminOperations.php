@@ -51,6 +51,7 @@ class AdminOperations extends BaseController {
 					throw new Exception('Unable to save coordinator login');
 				}
 				$curCoor->login_created = 1;
+				$curCoor->user_id = $curStd_login->id;
 				
 				if(!$curCoor->save()){
 					Log::error($thisMethod . "Throwing exception for unable to save coordinator in teachers dtls flag update");

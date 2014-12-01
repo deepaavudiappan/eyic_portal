@@ -8,7 +8,7 @@
 		<h3 class="panel-title">Home</h3>
 	</div>
 	<div class="panel-body">
-		{{ HTML::linkRoute('setupCoorAccs', 'Setup Coordinators account (email is sent)', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}
+		{{ HTML::linkRoute('regProjLand', 'Register a Project', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}
 	</div>
 </div>
 @stop

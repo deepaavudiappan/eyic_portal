@@ -17,6 +17,7 @@ class HomeController extends BaseController {
 	protected $layout = 'layouts.master';
 	//Storing name of the class
 	protected static $thisClass = "HomeController";
+
 	/*
 	|-------------------------------------------------------------------------
 	| Function:		homeBifurcate
@@ -32,7 +33,7 @@ class HomeController extends BaseController {
 		}
 		if(Auth::user()->role == 1){
 			//Return to teachers home page
-			return Redirect::Route('addprojectdetailland');
+			return Redirect::Route('coorMentorHome');
 		}
 		else if(Auth::user()->role == 2){
 			//Return to students home page
@@ -66,6 +67,58 @@ class HomeController extends BaseController {
 		}
 
 		return View::make('eyic.admin.home');
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		coordinatorMentorHome
+	| Input:		Null
+	| Output:		
+	| Logic:		coordinatorMentorHome Home page
+	|
+	*/
+	public function coordinatorMentorHome(){
+		$thisMethod = self::$thisClass . ' -> coordinatorMentorHome -> ';
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 1){
+			return Redirect::Route('commonHome');
+		}
+
+		if(Session::has('entityDtl')){
+			Log::debug($thisMethod . ' Coor_flag: ' . Session::get('entityDtl')['coor_flag'] . ' Auth:: ' . Auth::id());
+			if(Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2){
+				return View::make('eyic.labincharge.home');		
+			}
+			else{
+				return View::make('eyic.mentor.home');
+			}
+		}
+		else{
+			return Redirect::Route('logout');
+		}
+		
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		studentHome
+	| Input:		Null
+	| Output:		
+	| Logic:		Student Home page
+	|
+	*/
+	public function studentHome(){
+		$thisMethod = self::$thisClass . ' -> studentHome -> ';
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 2){
+			return Redirect::Route('commonHome');
+		}
+
+		return View::make('eyic.student.home');
 	}
 	
 }
