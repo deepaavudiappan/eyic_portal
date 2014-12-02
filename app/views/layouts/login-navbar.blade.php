@@ -1,6 +1,5 @@
 <!-- Navbar -->
-<div class="navbar">
-	<div class="navbar-inner">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">	
 		<div class="container">
 			<div class="navbar-header page-scroll">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -12,12 +11,7 @@
 				<a class="navbar-brand" href="#" title="e-Yantra">{{ HTML::image('img/logo1.png') }}</a>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right" style="font-size: 20px; margin-top: 20px;">
-					<li>e-Yantra Ideas Competition (eYIC-2015)</li>
-				</ul>
-			</div>      
-		</div>
-	</div>
+			<h3 class="navbar-text navbar-right">e-Yantra Ideas Competition (eYIC-2015)</h3>
+			    
+		</div>	
 </div>

@@ -33,7 +33,7 @@
 <body>
 	@include('layouts.login-navbar')
 	<!-- Container -->
-	<div class="container" style="margin-top: 45px;min-height:400px;">
+	<div class="container" style="padding-top: 80px;">
 		<!-- Content -->
 		@if (!empty($success))
 			<div class="alert alert-success">{{$success}}</div>
