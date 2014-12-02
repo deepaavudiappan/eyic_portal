@@ -50,6 +50,11 @@ Route::match(array('GET', 'POST'), '/changePwdLand', array(
 			'uses'	=>	'AuthController@changePasswordLand'
 ));
 
+Route::match(array('GET', 'POST'), '/changePwd', array(
+			'as'	=>	'changePwd',
+			'uses'	=>	'AuthController@changePassword'
+));
+
 
 Route::match(array('GET', 'POST'), '/common/home', array(
 			'as'	=>	'commonHome',

@@ -11,6 +11,11 @@ class AuthController extends BaseController {
 	|
 	*/
 
+	//Defining the layout to be used for these pages
+	protected $layout = 'layouts.master';
+	//Storing name of the class
+	protected static $thisClass = "AuthController";
+
 	/*
 	|-------------------------------------------------------------------------
 	| Function:		login
@@ -69,7 +74,79 @@ class AuthController extends BaseController {
 		//Display the view
 		return View::make('changepwd');
 	}
-	
-	
 
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		changePassword
+	| Input:		Null
+	| Output:		Change Password 
+	| Logic:		Change Password
+	|
+	*/
+	public function changePassword(){
+		
+		$thisMethod = self::$thisClass . ' -> changePassword -> ';
+
+		if(Session::has('entityDtl')){
+			$username = Session::get('entityDtl')['username'];
+		}
+		else{
+			$username = 'kiran';
+		}
+
+		/* Validation of data */
+		$rules = [	
+		'oldPassword'		=>	'required',
+		'newPassword'		=>	'required',
+		'repeatPassword'	=>	'required'];
+
+		$messages = [	
+		'oldPassword.required'		=>	'Current Password is compulsory',
+		'newPassword.required'		=>	'New Password is compulsory',
+		'repeatPassword.required'	=>	'Confirm Password is compulsory'];
+
+		$validator = Validator::make(Input::all(), $rules, $messages);
+		if ($validator->fails()){
+			return Redirect::Route('changePwdLand')->withErrors($validator)->withInput(Input::all());
+		}
+
+		/* Check newPassword and repeatPassword are Equal. Is some better approach available? */
+		$newpassword = Input::get('newPassword');
+		$repeatpassword = Input::get('repeatPassword');
+		if ($newpassword != $repeatpassword){
+			$messages = ['New Password, Confirm Password doesn\'t match.'];
+			return Redirect::Route('changePwdLand')->withErrors($messages)->withInput(Input::all());
+		}
+
+		/* Check currentpassword and storedpassword match. Use Hash */
+		$oldpassword = Input::get('oldPassword');
+		$user = Login::where('username', $username)->first();
+		if($oldpassword != $user->password) {
+			$messages = ['Incorrect Current Password.'];
+			return Redirect::Route('changePwdLand')->withErrors($messages)->withInput(Input::all());
+		}
+
+		$user->password = $newpassword;
+		
+		DB::beginTransaction();
+		try {
+			if(!$user->save()){
+				throw new Exception('Unable to save new password to Users table');
+			}
+			DB::commit();
+			Log::success($thisMethod . "Password updated.");
+		}
+		catch (Exception $e) {
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+		}
+
+		//Store the student details and send email
+		$messages = ['Successfully saved'];
+		return Redirect::route('changePwdLand')->withErrors($messages);
+		
+	}
+	
 }
