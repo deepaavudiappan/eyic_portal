@@ -35,6 +35,18 @@
 	<!-- Container -->
 	<div class="container" style="margin-top: 45px;min-height:400px;">
 		<!-- Content -->
+		@if (!empty($success))
+			<div class="alert alert-success">{{$success}}</div>
+		@endif
+	
+		@if ($errors->has())
+			<div class="alert alert-danger text-center">	
+			@foreach ($errors->all() as $error)
+				{{ $error }}<br/>
+			@endforeach
+			</div>
+		@endif
+	
 		@yield('content')
 	</div>
 

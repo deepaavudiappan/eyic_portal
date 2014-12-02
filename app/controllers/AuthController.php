@@ -22,24 +22,46 @@ class AuthController extends BaseController {
 	*/
 	public function doLogin(){
 			
+		
 		$userdata = array(
 				'username' 	=> Input::get('inputEmail'),
 				'password' 	=> Input::get('inputPassword')
 		);
-
-		if(Auth::attempt($userdata)){
-			return Auth::user();
-		}
-		else{
-			return Redirect::to('login');
-		}
-
-	}
+		
+		$validator = Validator::make(
+				array(
+				'username' 	=> Input::get('inputEmail'),
+				'password' 	=> Input::get('inputPassword')
+				),
+				array(
+					'username' => 'required|email',
+					'password' => 'required'
+				)
+		);		
+		
+		if($validator->fails()){
+			$messages = $validator->messages();
+			return Redirect::Route('login')->withErrors($validator);				
+		}else{
+			if(Auth::attempt($userdata)){
+				if( Auth::user()->active == 1){	
+					echo "Home Profile";
+					return Auth::user();
+				//Check user and redirect to corresponding controller 1 = teacher  2 = student 
+				}else{							
+					return Redirect::Route('login')->withErrors(['Please Activate your account']);
+				}
+			}else{
+				$msg = 'Please Enter correct Username and Password';				
+				return Redirect::Route('login')->withErrors(['Please Enter correct Username and Password']);
+			}
+		}//end of else
+	}//end of doLogin
 	
 	public function doLogout()
 	{
 		Auth::logout(); // log the user out of our application
-		return Redirect::to('login'); // redirect the user to the login screen
+		return Redirect::Route('login'); // redirect the user to the login screen
 	}
 
 }
