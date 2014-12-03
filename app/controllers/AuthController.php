@@ -86,12 +86,18 @@ class AuthController extends BaseController {
 	public function changePassword(){
 		
 		$thisMethod = self::$thisClass . ' -> changePassword -> ';
-
+				
+		/* This page must be accessed after login*/
+		/*if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}*/
+		$username = "";
 		if(Session::has('entityDtl')){
 			$username = Session::get('entityDtl')['username'];
 		}
 		else{
-			$username = 'kiran';
+			$username = 'testuser@gmail.com';
+			Log::error($thisMethod . "Exception occured! Msg: ". "Session not set");
 		}
 
 		/* Validation of data */
@@ -101,9 +107,9 @@ class AuthController extends BaseController {
 		'repeatPassword'	=>	'required'];
 
 		$messages = [	
-		'oldPassword.required'		=>	'Current Password is compulsory',
-		'newPassword.required'		=>	'New Password is compulsory',
-		'repeatPassword.required'	=>	'Confirm Password is compulsory'];
+		'oldPassword.required'		=>	'Current Password is compulsory.',
+		'newPassword.required'		=>	'New Password is compulsory.',
+		'repeatPassword.required'	=>	'Confirm Password is compulsory.'];
 
 		$validator = Validator::make(Input::all(), $rules, $messages);
 		if ($validator->fails()){
@@ -121,12 +127,14 @@ class AuthController extends BaseController {
 		/* Check currentpassword and storedpassword match. Use Hash */
 		$oldpassword = Input::get('oldPassword');
 		$user = Login::where('username', $username)->first();
-		if($oldpassword != $user->password) {
+		//if($oldpassword != $user->password) {
+		if(!(Hash::check($oldpassword, $user->password))) { 
 			$messages = ['Incorrect Current Password.'];
 			return Redirect::Route('changePwdLand')->withErrors($messages)->withInput(Input::all());
 		}
 
-		$user->password = $newpassword;
+		//$user->password = $newpassword;
+		$user->password = Hash::make($newpassword);
 		
 		DB::beginTransaction();
 		try {
@@ -134,7 +142,7 @@ class AuthController extends BaseController {
 				throw new Exception('Unable to save new password to Users table');
 			}
 			DB::commit();
-			Log::success($thisMethod . "Password updated.");
+			Log::debug($thisMethod . "Password updated.");
 		}
 		catch (Exception $e) {
 			//Catching any exception to roll back
@@ -143,10 +151,175 @@ class AuthController extends BaseController {
 			Log::error($thisMethod . "Rollback successful");
 		}
 
-		//Store the student details and send email
+		//Display Success
 		$messages = ['Successfully saved'];
 		return Redirect::route('changePwdLand')->withErrors($messages);
 		
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		forgetPasswordLand
+	| Input:		Null
+	| Output:		Generate View for Forget Password 
+	| Logic:		Generate View for Forget Password
+	|
+	*/
+	public function forgetPasswordLand(){
+		
+		//Display the view
+		return View::make('forgetpwd');
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		forgetPassword
+	| Input:		Null
+	| Output:		Forget Password 
+	| Logic:		Forget Password
+	|
+	*/
+	public function forgetPassword(){
+		
+		$thisMethod = self::$thisClass . ' -> forgetPassword -> ';
+				
+		/* Validation of data */
+		$rules = [	
+		'username'		=>	'required|email'
+		];
+
+		$messages = [	
+		'username.required'		=>	'Username is compulsory.',
+		'username.email'		=>	'Email is not in proper format.',
+		];
+
+		$validator = Validator::make(Input::all(), $rules, $messages);
+		if ($validator->fails()) {
+			return Redirect::Route('forgetPwdLand')->withErrors($validator)->withInput(Input::all());
+		}
+
+		/* Validation of username/emailid */
+		$username = Input::get('username');
+		$user = Login::where('username', $username)->first();
+		//if($oldpassword != $user->password) {
+		if(!$user) { 
+			$messages = ['This email is not registered with us.'];
+			return Redirect::Route('forgetPwdLand')->withErrors($messages)->withInput(Input::all());
+		}
+
+		/* Generate token and store in DB */
+		$token = md5(str_random(50));
+		$user->token = $token;
+		$user->active = 0;
+
+		DB::beginTransaction();
+		try {
+			if(!$user->save()){
+				throw new Exception('Unable to save token to users_login table.');
+			}
+			DB::commit();
+			Log::debug($thisMethod . "Token updated.");
+		}
+		catch (Exception $e) {
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+		}
+
+		//Display Success
+		$messages = ['Check your mail to reset your password.'];
+		return Redirect::route('forgetPwdLand')->withErrors($messages);
+		
+		
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		setPasswordLand
+	| Input:		Null
+	| Output:		Generate View to set new password incase of Forget Password 
+	| Logic:		Generate View to set new password incase of Forget Password 
+	|
+	*/
+	public function setPasswordLand(){
+		
+		//Display the view
+		return View::make('setpwd');
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		setPassword
+	| Input:		Null
+	| Output:		set new password incase of Forget Password  
+	| Logic:		set new password incase of Forget Password 
+	|
+	*/
+	public function setPassword(){
+		
+		$thisMethod = self::$thisClass . ' -> setPassword -> ';
+				
+		/* Set username and token from URL. But How to do it? */
+
+		$username = 'testuser@gmail.com';
+		$token = '5ab0ffefc5032a023a22749d37be961f';
+
+		/* Validate username and token */
+/*
+		$userrecord = Login::where('username', $username)->first();
+		if(!$userrecord || ($userrecord->token != $token)) {
+			$messages = ['Incorrect username or token.'];
+			Log::debug($thisMethod . $messages); 
+			return Redirect::Route('forgetPwdLand')->withErrors($messages);
+		}
+*/		
+		/* Validation of input data */
+		$rules = [	
+		'newPassword'		=>	'required',
+		'repeatPassword'	=>	'required'];
+
+		$messages = [	
+		'newPassword.required'		=>	'Password is compulsory.',
+		'repeatPassword.required'	=>	'Confirm Password is compulsory.'];
+
+		$validator = Validator::make(Input::all(), $rules, $messages);
+		if ($validator->fails()){
+			return Redirect::Route('setPwdLand')->withErrors($validator)->withInput(Input::all());
+		}
+
+		/* Check newPassword and repeatPassword are Equal. Is some better approach available? */
+		$newpassword = Input::get('newPassword');
+		$repeatpassword = Input::get('repeatPassword');
+		if ($newpassword != $repeatpassword){
+			$messages = ['Password, Confirm Password doesn\'t match.'];
+			return Redirect::Route('setPwdLand')->withErrors($messages)->withInput(Input::all());
+		}
+
+		/* Save new password in database */
+		$userrecord = Login::where('username', $username)->first();
+		$userrecord->password = Hash::make($newpassword);
+		$userrecord->token = Null;
+		$userrecord->active = 1;
+		
+		DB::beginTransaction();
+		try {
+			if(!$userrecord->save()){
+				throw new Exception('Unable to set new password in users_login table');
+			}
+			DB::commit();
+			Log::debug($thisMethod . "Password set.");
+		}
+		catch (Exception $e) {
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+		}
+
+		//Display Success
+		$messages = ['Password saved. Please Login again.'];
+		return Redirect::route('loginLand')->withErrors($messages);		
 	}
 	
 }

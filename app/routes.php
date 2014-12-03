@@ -55,6 +55,27 @@ Route::match(array('GET', 'POST'), '/changePwd', array(
 			'uses'	=>	'AuthController@changePassword'
 ));
 
+Route::match(array('GET', 'POST'), '/forgetPwdLand', array(
+			'as'	=>	'forgetPwdLand',
+			'uses'	=>	'AuthController@forgetPasswordLand'
+));
+
+Route::match(array('GET', 'POST'), '/forgetPwd', array(
+			'as'	=>	'forgetPwd',
+			'uses'	=>	'AuthController@forgetPassword'
+));
+
+/* Used to set new password in case of forget password */
+Route::match(array('GET', 'POST'), '/setPwdLand', array(
+			'as'	=>	'setPwdLand',
+			'uses'	=>	'AuthController@setPasswordLand'
+));
+
+Route::match(array('GET', 'POST'), '/setPwd', array(
+			'as'	=>	'setPwd',
+			'uses'	=>	'AuthController@setPassword'
+));
+
 
 Route::match(array('GET', 'POST'), '/common/home', array(
 			'as'	=>	'commonHome',
