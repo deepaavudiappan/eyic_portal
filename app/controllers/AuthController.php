@@ -217,6 +217,15 @@ class AuthController extends BaseController {
 			if(!$user->save()){
 				throw new Exception('Unable to save token to users_login table.');
 			}
+			
+			/* send email to user */
+			$emailSubj = "Reset password."
+			Mail::queue('emails.eyic.setpassword_invite',  array('username'	=>	$username), function($message) use($username, $emailSubj)
+			{
+				$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
+				$message->to($username)->subject($emailSubj);
+			});
+
 			DB::commit();
 			Log::debug($thisMethod . "Token updated.");
 		}
@@ -263,7 +272,7 @@ class AuthController extends BaseController {
 		/* Set username and token from URL. But How to do it? */
 
 		$username = 'testuser@gmail.com';
-		$token = '5ab0ffefc5032a023a22749d37be961f';
+		$token = 'f9b6996e83339f8476c9bd3ee92b1188';
 
 		/* Validate username and token */
 /*
