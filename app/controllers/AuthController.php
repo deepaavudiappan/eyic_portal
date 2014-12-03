@@ -96,7 +96,7 @@ class AuthController extends BaseController {
 			$username = Session::get('entityDtl')['username'];
 		}
 		else{
-			$username = 'testuser@gmail.com';
+			$username = 'khalid.iitb@gmail.com';
 			Log::error($thisMethod . "Exception occured! Msg: ". "Session not set");
 		}
 
@@ -124,10 +124,16 @@ class AuthController extends BaseController {
 			return Redirect::Route('changePwdLand')->withErrors($messages)->withInput(Input::all());
 		}
 
+		/* Check user exist in DB */
+		$user = Login::where('username', $username)->first();
+		if(!$user) { 
+			Log::error($thisMethod . "This email is not registered with us.");
+			$messages = ['Please Login again.'];
+			return Redirect::Route('loginLand')->withErrors($messages);
+		}
+
 		/* Check currentpassword and storedpassword match. Use Hash */
 		$oldpassword = Input::get('oldPassword');
-		$user = Login::where('username', $username)->first();
-		//if($oldpassword != $user->password) {
 		if(!(Hash::check($oldpassword, $user->password))) { 
 			$messages = ['Incorrect Current Password.'];
 			return Redirect::Route('changePwdLand')->withErrors($messages)->withInput(Input::all());
@@ -149,11 +155,14 @@ class AuthController extends BaseController {
 			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
 			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Unable to save the information. Please contact us at helpdesk@e-yantra.org via email about the issue'];
+			return Redirect::route('changePwdLand')->withErrors($messages)->withInput(Input::all());
+			
 		}
 
 		//Display Success
-		$messages = ['Successfully saved'];
-		return Redirect::route('changePwdLand')->withErrors($messages);
+		$messages = ['Password changed. Please login again.'];
+		return Redirect::route('loginLand')->withErrors($messages);
 		
 	}
 
@@ -219,7 +228,7 @@ class AuthController extends BaseController {
 			}
 			
 			/* send email to user */
-			$emailSubj = "Reset password."
+			$emailSubj = "Reset password.";
 			Mail::queue('emails.eyic.setpassword_invite',  array('username'	=>	$username), function($message) use($username, $emailSubj)
 			{
 				$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
@@ -234,6 +243,8 @@ class AuthController extends BaseController {
 			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
 			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Unable to save the information. Please contact us at helpdesk@e-yantra.org via email about the issue'];
+			return Redirect::route('forgetPwdLand')->withErrors($messages)->withInput(Input::all());
 		}
 
 		//Display Success
@@ -241,6 +252,36 @@ class AuthController extends BaseController {
 		return Redirect::route('forgetPwdLand')->withErrors($messages);
 		
 		
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		Validate username, token before allowing to set new password.
+	| Input:		Null
+	| Output:		Validate username, token before allowing to set new password.  
+	| Logic:		Validate username, token before allowing to set new password. 
+	|
+	*/
+	public function validateToken() {
+
+		$thisMethod = self::$thisClass . ' -> validateToken -> ';
+
+		$username = 'khalid.iitb@gmail.com';
+		$token = '47c977e048aded210bb93e7e835570df';
+
+		/* Validate username and token */
+
+		$userrecord = Login::where('username', $username)->first();
+		if(!$userrecord || ($userrecord->token != $token)) {
+			// Log Error.
+			$messages = 'Incorrect emailid or token.';			
+			Log::error($thisMethod . $messages);
+			// Redirect to login page with error message.
+			$messages = ['Unable to set new password. Please contact us at helpdesk@e-yantra.org via email about the issue']; 				return Redirect::Route('loginLand')->withErrors($messages);
+		}
+		
+		/* Emailid, Token verified. redirect user to set password page. */	
+		return Redirect::Route('setPwdLand')->with('username', $username);
 	}
 
 	/*
@@ -253,7 +294,6 @@ class AuthController extends BaseController {
 	*/
 	public function setPasswordLand(){
 		
-		//Display the view
 		return View::make('setpwd');
 	}
 
@@ -271,18 +311,9 @@ class AuthController extends BaseController {
 				
 		/* Set username and token from URL. But How to do it? */
 
-		$username = 'testuser@gmail.com';
-		$token = 'f9b6996e83339f8476c9bd3ee92b1188';
+		$username = 'khalid.iitb@gmail.com';
+		$token = '47c977e048aded210bb93e7e835570df';
 
-		/* Validate username and token */
-/*
-		$userrecord = Login::where('username', $username)->first();
-		if(!$userrecord || ($userrecord->token != $token)) {
-			$messages = ['Incorrect username or token.'];
-			Log::debug($thisMethod . $messages); 
-			return Redirect::Route('forgetPwdLand')->withErrors($messages);
-		}
-*/		
 		/* Validation of input data */
 		$rules = [	
 		'newPassword'		=>	'required',
@@ -324,6 +355,8 @@ class AuthController extends BaseController {
 			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
 			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Unable to save the information. Please contact us at helpdesk@e-yantra.org via email about the issue'];
+			return Redirect::route('loginLand')->withErrors($messages)->withInput(Input::all());
 		}
 
 		//Display Success

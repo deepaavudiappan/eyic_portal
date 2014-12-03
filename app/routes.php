@@ -65,6 +65,11 @@ Route::match(array('GET', 'POST'), '/forgetPwd', array(
 			'uses'	=>	'AuthController@forgetPassword'
 ));
 
+Route::match(array('GET', 'POST'), '/validateToken', array(
+			'as'	=>	'validateToken',
+			'uses'	=>	'AuthController@validateToken'
+));
+
 /* Used to set new password in case of forget password */
 Route::match(array('GET', 'POST'), '/setPwdLand', array(
 			'as'	=>	'setPwdLand',

@@ -24,7 +24,7 @@
 </div>
 @endif
 
-	{{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'setPwd')) }}	
+	{{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'setPwd')) }}
 	<div class="panel panel-info">
 		<div class="panel-heading">
 			<h3 class="panel-title">Set Password</h3>
@@ -33,12 +33,12 @@
         	     
 			<div class="form-group" @if ($errors->has('newPassword')) has-error @endif>
 				<label class="control-label" for="lbl_newPassword">Password:</label>
-				<input type="password" id="newPassword" class="form-control" name="newPassword" placeholder="" value="{{ Input::old('newPassword') }}"/>
+				<input type="password" id="newPassword" class="form-control" name="newPassword" placeholder="Password" value="{{ Input::old('newPassword') }}"/>
 				@if ($errors->has('newPassword')) <p class="help-block">{{ $errors->first('newPassword') }} </p>@endif
 			</div>
 			<div class="form-group" @if ($errors->has('repeatPassword')) has-error @endif>
 				<label class="control-label" for="lbl_repeatPassword">Confirm Password:</label>
-				<input type="password" id="repeatPassword" class="form-control" name="repeatPassword" placeholder="" value="{{ Input::old('repeatPassword') }}"/>
+				<input type="password" id="repeatPassword" class="form-control" name="repeatPassword" placeholder="Password" value="{{ Input::old('repeatPassword') }}"/>
 				@if ($errors->has('repeatPassword')) <p class="help-block">{{ $errors->first('repeatPassword') }} </p>@endif
 			</div>		        
                 	<div class="row">

@@ -33,17 +33,17 @@
         	     
         		<div class="form-group" @if ($errors->has('oldPassword')) has-error @endif >
 				<label class="control-label" for="lbl_oldPassword">Current Password:</label>
-				<input type="password" id="oldPassword"  class="form-control" name="oldPassword" placeholder="" value="{{ Input::old('oldPassword') }}"/>
+				<input type="password" id="oldPassword"  class="form-control" name="oldPassword" placeholder="Password" value="{{ Input::old('oldPassword') }}"/>
 				@if ($errors->has('oldPassword')) <p class="help-block">{{ $errors->first('oldPassword') }} </p>@endif
 			</div>
 			<div class="form-group" @if ($errors->has('newPassword')) has-error @endif>
 				<label class="control-label" for="lbl_newPassword">New Password:</label>
-				<input type="password" id="newPassword" class="form-control" name="newPassword" placeholder="" value="{{ Input::old('newPassword') }}"/>
+				<input type="password" id="newPassword" class="form-control" name="newPassword" placeholder="Password" value="{{ Input::old('newPassword') }}"/>
 				@if ($errors->has('newPassword')) <p class="help-block">{{ $errors->first('newPassword') }} </p>@endif
 			</div>
 			<div class="form-group" @if ($errors->has('repeatPassword')) has-error @endif>
 				<label class="control-label" for="lbl_repeatPassword">Confirm Password:</label>
-				<input type="password" id="repeatPassword" class="form-control" name="repeatPassword" placeholder="" value="{{ Input::old('repeatPassword') }}"/>
+				<input type="password" id="repeatPassword" class="form-control" name="repeatPassword" placeholder="Password" value="{{ Input::old('repeatPassword') }}"/>
 				@if ($errors->has('repeatPassword')) <p class="help-block">{{ $errors->first('repeatPassword') }} </p>@endif
 			</div>		        
                 	<div class="row">
