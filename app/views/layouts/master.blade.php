@@ -1,6 +1,6 @@
 <html>
 <head>
-	@include('includes.head')
+	@include('includes.head') 
 	@section('style')
 	@show
 	<style>
@@ -38,7 +38,8 @@
 	@include('includes.navbar')
 	<!-- Container -->
 	<div class="container" style="margin-top: 85px;min-height:400px;">
-		<!-- Content -->
+		<!-- Content -->		
+
 		@yield('content')
 	</div>
 	

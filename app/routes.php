@@ -22,7 +22,7 @@ Route::match(array('GET', 'POST'), '/addCoorSave', array(
 
 
 Route::get('/login', function(){				
-			return View::make('login');
+			return View::make('login'); 
 });
  
 
