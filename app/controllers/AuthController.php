@@ -96,7 +96,7 @@ class AuthController extends BaseController {
 			$username = Session::get('entityDtl')['username'];
 		}
 		else{
-			$username = 'khalid.iitb@gmail.com';
+			//$username = 'khalid.iitb@gmail.com';
 			Log::error($thisMethod . "Exception occured! Msg: ". "Session not set");
 		}
 
