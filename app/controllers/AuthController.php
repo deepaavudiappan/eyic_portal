@@ -210,7 +210,6 @@ class AuthController extends BaseController {
 		/* Validation of username/emailid */
 		$username = Input::get('username');
 		$user = Login::where('username', $username)->first();
-		//if($oldpassword != $user->password) {
 		if(!$user) { 
 			$messages = ['This email is not registered with us.'];
 			return Redirect::Route('forgetPwdLand')->withErrors($messages)->withInput(Input::all());
@@ -227,9 +226,9 @@ class AuthController extends BaseController {
 				throw new Exception('Unable to save token to users_login table.');
 			}
 			
-			/* send email to user */
-			$emailSubj = "Reset password.";
-			Mail::queue('emails.eyic.setpassword_invite',  array('username'	=>	$username), function($message) use($username, $emailSubj)
+			/* send a nice email to user */
+			$emailSubj = "eYIC : Reset password";
+			Mail::queue('emails.eyic.setpassword_invite',  array('username'	=> $username, 'token' => $token), function($message) use($username, $emailSubj)
 			{
 				$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
 				$message->to($username)->subject($emailSubj);
@@ -248,7 +247,8 @@ class AuthController extends BaseController {
 		}
 
 		//Display Success
-		$messages = ['Check your mail to reset your password.'];
+		$mesgstr = "A mail containing further instructions has been sent to ".$username.". Please check it to reset your password.";
+		$messages = [$mesgstr];
 		return Redirect::route('forgetPwdLand')->withErrors($messages);
 		
 		
@@ -262,12 +262,9 @@ class AuthController extends BaseController {
 	| Logic:		Validate username, token before allowing to set new password. 
 	|
 	*/
-	public function validateToken() {
+	public function validateToken($username, $token) {
 
 		$thisMethod = self::$thisClass . ' -> validateToken -> ';
-
-		$username = 'khalid.iitb@gmail.com';
-		$token = '47c977e048aded210bb93e7e835570df';
 
 		/* Validate username and token */
 
@@ -281,7 +278,7 @@ class AuthController extends BaseController {
 		}
 		
 		/* Emailid, Token verified. redirect user to set password page. */	
-		return Redirect::Route('setPwdLand')->with('username', $username);
+		return Redirect::Route('setPwdLand', array('username' => $username));
 	}
 
 	/*
@@ -292,9 +289,8 @@ class AuthController extends BaseController {
 	| Logic:		Generate View to set new password incase of Forget Password 
 	|
 	*/
-	public function setPasswordLand(){
-		
-		return View::make('setpwd');
+	public function setPasswordLand($username) {
+			return View::make('setpwd')->with('username', $username);
 	}
 
 	/*
@@ -305,14 +301,9 @@ class AuthController extends BaseController {
 	| Logic:		set new password incase of Forget Password 
 	|
 	*/
-	public function setPassword(){
+	public function setPassword($username){
 		
 		$thisMethod = self::$thisClass . ' -> setPassword -> ';
-				
-		/* Set username and token from URL. But How to do it? */
-
-		$username = 'khalid.iitb@gmail.com';
-		$token = '47c977e048aded210bb93e7e835570df';
 
 		/* Validation of input data */
 		$rules = [	
@@ -328,7 +319,7 @@ class AuthController extends BaseController {
 			return Redirect::Route('setPwdLand')->withErrors($validator)->withInput(Input::all());
 		}
 
-		/* Check newPassword and repeatPassword are Equal. Is some better approach available? */
+		/* Check newPassword and repeatPassword are Equal. */
 		$newpassword = Input::get('newPassword');
 		$repeatpassword = Input::get('repeatPassword');
 		if ($newpassword != $repeatpassword){
@@ -360,7 +351,7 @@ class AuthController extends BaseController {
 		}
 
 		//Display Success
-		$messages = ['Password saved. Please Login again.'];
+		$messages = ['Password saved. Please Login.'];
 		return Redirect::route('loginLand')->withErrors($messages);		
 	}
 	

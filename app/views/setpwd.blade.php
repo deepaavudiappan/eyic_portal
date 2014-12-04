@@ -24,7 +24,7 @@
 </div>
 @endif
 
-	{{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'setPwd')) }}
+	{{ Form::open(array('class'=>'form-signin','role'=>'form', 'route' => array('setPwd', $username))) }}
 	<div class="panel panel-info">
 		<div class="panel-heading">
 			<h3 class="panel-title">Set Password</h3>
