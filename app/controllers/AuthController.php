@@ -88,16 +88,19 @@ class AuthController extends BaseController {
 		$thisMethod = self::$thisClass . ' -> changePassword -> ';
 				
 		/* This page must be accessed after login*/
-		/*if(!Auth::check()){
+		if(!Auth::check()){
 			return Redirect::Route('loginLand');
-		}*/
+    }
+
 		$username = "";
 		if(Session::has('entityDtl')){
 			$username = Session::get('entityDtl')['username'];
 		}
 		else{
 			//$username = 'khalid.iitb@gmail.com';
-			Log::error($thisMethod . "Exception occured! Msg: ". "Session not set");
+      Log::error($thisMethod . "Exception occured! Msg: ". "Session not set");
+      $messages = ['Session not set. Login again.'];
+      return Redirect::Route('loginLand')->withErrors($messages);
 		}
 
 		/* Validation of data */
