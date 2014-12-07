@@ -22,7 +22,7 @@ Route::match(array('GET', 'POST'), '/addCoorSave', array(
 ));
 
 /* Migrate coordinator table data to teachers table*/
-Route::match(array('GET', 'POST'), '/migCoor', array(
+Route::match(array('GET', 'POST'), '/admin/migCoor', array(
 			'as'	=>	'migCoor',
 			'uses'	=>	'MigCoorController@migrateCoorToTeacher'
 ));

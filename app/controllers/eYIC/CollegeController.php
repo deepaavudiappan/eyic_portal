@@ -67,24 +67,25 @@ class CollegeController extends BaseController {
 		if(Input::get('college') == 0){
 			return Redirect::Route('addCoor')->withErrors('Please select a college')->withInput(Input::all());	
 		}
-		$pcoor = new ElsiCoordinator;
-		$pcoor->clg_id = Input::get('college');
-		$pcoor->name = Input::get('pcoor_name');
-		$pcoor->email_id = Input::get('pcoor_email');
-		$pcoor->type = 1;
 
-		$scoor = new ElsiCoordinator;
-		$scoor->clg_id = Input::get('college');
-		$scoor->name = Input::get('scoor_name');
-		$scoor->email_id = Input::get('scoor_email');
-		$scoor->type = 2;
+		$teacher1 = new ElsiTeachersDtls;
+		$teacher1->name = ucwords(strtolower(Input::get('pcoor_name')));
+		$teacher1->emailid = Input::get('pcoor_email');
+		$teacher1->coor_flag = 1;
+		$teacher1->clg_id = Input::get('college');
+
+		$teacher2 = new ElsiTeachersDtls;
+		$teacher2->name = ucwords(strtolower(Input::get('scoor_name')));
+		$teacher2->emailid = Input::get('scoor_email');
+		$teacher2->coor_flag = 2;
+		$teacher2->clg_id = Input::get('college');
 
 		DB::beginTransaction();
 		try{
-			if(!$pcoor->save()){
+			if(!$teacher1->save()){
 				throw new Exception('Unable to save primary coordinator');
 			}
-			if(!$scoor->save()){
+			if(!$teacher2->save()){
 				throw new Exception('Unable to save primary coordinator');	
 			}
 			DB::commit();

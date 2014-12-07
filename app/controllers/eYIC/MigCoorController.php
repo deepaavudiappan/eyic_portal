@@ -16,6 +16,14 @@ class MigCoorController extends BaseController {
 	|
 	*/
 	public function migrateCoorToTeacher(){
+		
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		
 		$thisMethod = self::$thisClass . ' -> migrateCoorToTeacher -> ';
 		$coors = ElsiCoordinator::all();
 

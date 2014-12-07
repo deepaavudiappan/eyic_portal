@@ -8,7 +8,8 @@
 		<h3 class="panel-title">Home</h3>
 	</div>
 	<div class="panel-body">
-		{{ HTML::linkRoute('setupCoorAccs', 'Setup Coordinators account (email is sent)', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}
+		{{ HTML::linkRoute('migCoor', 'Migrate Coordinators to Teachers', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
+		{{ HTML::linkRoute('setupCoorAccs', 'Setup Coordinators account (email is sent)', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 	</div>
 </div>
 @stop
