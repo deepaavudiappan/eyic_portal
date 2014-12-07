@@ -28,7 +28,7 @@ class CollegeController extends BaseController {
 	*/
 	public function addCoordinator(){
 		
-		$clgs = ['0' => 'Select College'] + ElsiCollegeDetail::where('EYIC', 1)->lists('college_name', 'id');
+		$clgs = ['0' => 'Select College'] + ElsiCollegeDetail::where('EYIC', 1)->orderBy('college_name')->lists('college_name', 'id');
 
 		return View::make('eyic.addcoor')->with(['clgs'	=>	$clgs]);
 	}
