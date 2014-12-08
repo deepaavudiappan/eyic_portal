@@ -127,6 +127,13 @@ Route::match(array('GET', 'POST'), '/admin/setupCoorAccs', array(
 			'uses'	=>	'AdminOperations@makeLoginCoor'
 ));
 
+/*----------------------Student Representative Routes---------------------------*/
+Route::match(array('GET', 'POST'), '/stdnt_repre/prjStndDtlsLand', array(
+			'as'	=>	'prjStndDtlsLand',
+			'uses'	=>	'StdntCrdntrOperations@prjStdntDtlsLand'
+));
+
+
 /*Route::get('/', function(){
 		$user = new Login();
 		
