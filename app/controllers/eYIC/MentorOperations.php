@@ -93,14 +93,13 @@ class MentorOperations extends BaseController {
 		$validator = Validator::make(Input::all(), $rules, $messages);
 
 		if ($validator->fails()){
-			return Redirect::Route('addprojdetailLand')->withErrors($validator)->withInput(Input::all());
+			return Redirect::Route('addprojectdetailland')->withErrors($validator)->withInput(Input::all());
 		}
 		$sc_email = Input::get('std1_email');
 		$std2_email = Input::get('std2_email');
 		$std3_email = Input::get('std3_email');
 		$std4_email = Input::get('std4_email');
-		$stdArray = [];
-
+		
 		//Check if student already registered
 		$res = ElsiStudentsDtls::whereIn('email_id', [$sc_email, $std2_email, $std3_email, $std4_email])->get();
 
@@ -110,7 +109,7 @@ class MentorOperations extends BaseController {
 			foreach($res as $curStd){
 				$str .= $curStd->email_id . ' ';
 			}
-			return Redirect::route('addprojdetailLand')->withErrors($str)->withInput(Input::all());
+			return Redirect::route('addprojectdetailland')->withErrors($str)->withInput(Input::all());
 		}
 		//begining DB transaction
 		DB::beginTransaction();
@@ -132,12 +131,14 @@ class MentorOperations extends BaseController {
 				throw new Exception("Failed to save users login");
 			}
 
-			$scStd = [];
-			$scStd['user_id'] = $curStd_login->id;
-			$scStd['project_id'] = $proj_id;
-			$scStd['email_id'] = $sc_email;
-			$scStd['role'] = 2;
-			array_push($stdArray, $scStd);
+			$scStd = new ElsiStudentsDtls;
+			$scStd->user_id = $curStd_login->id;
+			$scStd->email_id = $sc_email;
+			$scStd->role = 1;
+			
+			if(!$scStd->save()){
+				throw new Exception("Failed to save student details");
+			}
 
 			$curStd_login = new Login;
 			$curStd_login->username = $std2_email;
@@ -150,12 +151,14 @@ class MentorOperations extends BaseController {
 				throw new Exception("Failed to save users login");
 			}
 
-			$scStd2 = [];
-			$scStd2['user_id'] = $curStd_login->id;
-			$scStd2['project_id'] = $proj_id;
-			$scStd2['email_id'] = $std2_email;
-			$scStd2['role'] = 2;
-			array_push($stdArray, $scStd2);
+			$scStd2 = new ElsiStudentsDtls;
+			$scStd2->user_id = $curStd_login->id;
+			$scStd2->email_id = $std2_email;
+			$scStd2->role = 2;
+			
+			if(!$scStd2->save()){
+				throw new Exception("Failed to save student details");
+			}			
 
 			if(!empty($std3_email)){
 
@@ -170,12 +173,14 @@ class MentorOperations extends BaseController {
 					throw new Exception("Failed to save users login");
 				}
 
-				$scStd3 = [];
-				$scStd3['user_id'] = $curStd_login->id;
-				$scStd3['project_id'] = $proj_id;
-				$scStd3['email_id'] = $std3_email;
-				$scStd3['role'] = 1;
-				array_push($stdArray, $scStd3);
+				$scStd3 = new ElsiStudentsDtls;
+				$scStd3->user_id = $curStd_login->id;
+				$scStd3->email_id = $std3_email;
+				$scStd3->role = 2;
+				
+				if(!$scStd3->save()){
+					throw new Exception("Failed to save student details");
+				}
 			}
 			if(!empty($std4_email)){
 				$curStd_login = new Login;
@@ -189,20 +194,14 @@ class MentorOperations extends BaseController {
 					throw new Exception("Failed to save users login");
 				}
 
-				$scStd4 = [];
-				$scStd4['user_id'] = $curStd_login->id;
-				$scStd4['project_id'] = $proj_id;
-				$scStd4['email_id'] = $std4_email;
-				$scStd4['role'] = 1;
-				array_push($stdArray, $scStd4);
-			}
-
-			if(ElsiStudentsDtls::insert($stdArray)){
-				Log::debug($thisMethod . "Added student details successfully");
-			}
-			else{
-				Log::debug($thisMethod . "Throwing exception for unable to save the student details");
-				throw new Exception('Unable to save student details');
+				$scStd4 = new ElsiStudentsDtls;
+				$scStd4->user_id = $curStd_login->id;
+				$scStd4->email_id = $std4_email;
+				$scStd4->role = 2;
+				
+				if(!$scStd4->save()){
+					throw new Exception("Failed to save student details");
+				}	
 			}
 			
 			Mail::queue('emails.eyic.student_invite',  array('username'	=>	$sc_email, 
@@ -242,10 +241,10 @@ class MentorOperations extends BaseController {
 			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
 			$messages = ['Unable to save the information. Please contact us at helpdesk@e-yantra.org via email about the issue'];
-			return Redirect::route('addprojdetailLand')->withErrors($messages)->withInput(Input::all());
+			return Redirect::route('addprojectdetailland')->withErrors($messages)->withInput(Input::all());
 		}
 		//Store the student details and send email
-		$messages = ['Successfully stored'];
-		return Redirect::route('addprojdetailLand')->withErrors($messages);
+		$messages = 'Successfully stored';
+		return Redirect::route('addprojectdetailland')->with(['success' => $messages]);
 	}
 }
