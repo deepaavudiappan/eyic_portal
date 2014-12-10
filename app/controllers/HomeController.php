@@ -33,7 +33,12 @@ class HomeController extends BaseController {
 		}
 		if(Auth::user()->role == 1){
 			//Return to teachers home page
-			return Redirect::Route('coorMentorHome');
+			//Log::debug('##########' . Session::get('errors'));
+			if(Session::has('errors'))
+				return Redirect::Route('coorMentorHome')->withErrors(Session::get('errors')->getMessages());
+				//return Redirect::Route('coorMentorHome');
+			else
+				return Redirect::Route('coorMentorHome');
 		}
 		else if(Auth::user()->role == 2){
 			//Return to students home page
@@ -41,7 +46,10 @@ class HomeController extends BaseController {
 		}
 		else if(Auth::user()->role == 3){
 			//Return to admin page
-			return Redirect::Route('adminHome');
+			if(Session::has('errors'))
+				return Redirect::Route('adminHome')->withErrors(Session::get('errors')->getMessages());
+			else
+				return Redirect::Route('adminHome');
 		}
 		else{
 			Log::error($thisMethod . 'got role other than 1, 2 and 3 Login ID: ' . Auth::id());

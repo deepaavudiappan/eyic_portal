@@ -39,8 +39,22 @@ class MentorOperations extends BaseController {
 		if(Auth::user()->role != 1){
 			return Redirect::Route('commonHome');
 		}
+		if(!Session::has('entityDtl')){
+			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
+		}
+		if(!Input::has('proj_id')){
+			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
+		}
+		
+		$proj_id = Input::get('proj_id');
+		$prjDtls = EyicProjectDtls::find($proj_id);
 
-		return View::make('eyic.mentor.addProjDtl');
+		if($prjDtls == NULL || empty($prjDtls)){
+			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
+		}
+		$tchDtls = Session::get('entityDtl');
+
+		return View::make('eyic.mentor.addProjDtl')->with(['projDtls' => $prjDtls, 'tchDtls' => $tchDtls]);
 	}
 
 	/*
@@ -56,15 +70,26 @@ class MentorOperations extends BaseController {
 			return Redirect::Route('loginLand');
 		}
 		if(Auth::user()->role != 1){
-			return Redirect::Route('commonHome');
+			return Redirect::Route('commonHome')->withErrors('You are NOT allowed to do this operation');
 		}
+		if(!Input::has('proj_id')){
+			return Redirect::Route('commonHome')->withErrors('--Something went wrong. Please contact us at helpdesk@e-yantra.org');
+		}
+		
 		$thisMethod = self::$thisClass . ' -> addProjectDetails -> ';
 		$emailSubj = 'eYIC Invite';
 
 		/*################################################*/
 		//Get project id
-		$proj_id = 1;
-		$proj_title = 'TEMP';
+		$proj_id = Input::get('proj_id');
+
+		$prjDtls = EyicProjectDtls::find($proj_id);
+
+		if($prjDtls == NULL || empty($prjDtls)){
+			return Redirect::Route('commonHome')->withErrors(['!Something went wrong. Please contact us at helpdesk@e-yantra.org']);
+		}
+
+		$proj_title = $prjDtls['proj_name'];
 		
 		$mentor_name = 'XYZ';
 		if(Session::has('entityDtl')){
@@ -101,7 +126,7 @@ class MentorOperations extends BaseController {
 		$std4_email = Input::get('std4_email');
 		
 		//Check if student already registered
-		$res = ElsiStudentsDtls::whereIn('email_id', [$sc_email, $std2_email, $std3_email, $std4_email])->get();
+		$res = Login::whereIn('username', [$sc_email, $std2_email, $std3_email, $std4_email])->get();
 
 		if(count($res) != 0){
 
@@ -114,6 +139,11 @@ class MentorOperations extends BaseController {
 		//begining DB transaction
 		DB::beginTransaction();
 		try{
+
+			$std1_id = -1;
+			$std2_id = -1;
+			$std3_id = -1;
+			$std4_id = -1;
 
 			$scpassword = str_random(10);
 			$std2_pwd = str_random(10);
@@ -139,6 +169,7 @@ class MentorOperations extends BaseController {
 			if(!$scStd->save()){
 				throw new Exception("Failed to save student details");
 			}
+			$std1_id = $scStd->id;
 
 			$curStd_login = new Login;
 			$curStd_login->username = $std2_email;
@@ -159,6 +190,8 @@ class MentorOperations extends BaseController {
 			if(!$scStd2->save()){
 				throw new Exception("Failed to save student details");
 			}			
+
+			$std2_id = $scStd2->id;
 
 			if(!empty($std3_email)){
 
@@ -181,6 +214,8 @@ class MentorOperations extends BaseController {
 				if(!$scStd3->save()){
 					throw new Exception("Failed to save student details");
 				}
+
+				$std3_id = $scStd3->id;
 			}
 			if(!empty($std4_email)){
 				$curStd_login = new Login;
@@ -201,7 +236,20 @@ class MentorOperations extends BaseController {
 				
 				if(!$scStd4->save()){
 					throw new Exception("Failed to save student details");
-				}	
+				}
+				$std4_id = $scStd4->id;
+			}
+			
+			$prjDtls['project_status'] = 1;
+			$prjDtls['student1_id'] = $std1_id;
+			$prjDtls['student2_id'] = $std2_id;
+			if($std3_id > -1)
+				$prjDtls['student3_id'] = $std3_id;
+			if($std4_id > -1)
+				$prjDtls['student4_id'] = $std4_id;
+
+			if(!$prjDtls->save()){
+				throw new Exception("Unable to update project details");
 			}
 			
 			Mail::queue('emails.eyic.student_invite',  array('username'	=>	$sc_email, 
