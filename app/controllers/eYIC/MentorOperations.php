@@ -46,8 +46,8 @@ class MentorOperations extends BaseController {
 			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
 		}
 		
-		$prod_id = Input::get('proj_id');
-		$prjDtls = EyicProjectDtls::find($prod_id);
+		$proj_id = Input::get('proj_id');
+		$prjDtls = EyicProjectDtls::find($proj_id);
 
 		if($prjDtls == NULL || empty($prjDtls)){
 			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
@@ -83,7 +83,7 @@ class MentorOperations extends BaseController {
 		//Get project id
 		$proj_id = Input::get('proj_id');
 
-		$prjDtls = EyicProjectDtls::find($prod_id);
+		$prjDtls = EyicProjectDtls::find($proj_id);
 
 		if($prjDtls == NULL || empty($prjDtls)){
 			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
