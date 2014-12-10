@@ -5,10 +5,11 @@
 @section('content')
 <div class="panel panel-default" style="border:0px;">
 	<h2>Add Project Details</h2><br/>
-	<p>Project Name: </p><br/>
-	<p>Mentor Name: </p><br/>
-	<p>Mentor Email: </p><br/>
+	<p>Project Name: {{ $projDtls['proj_name']; }}</p><br/>
+	<p>Mentor Name: {{ $tchDtls['name']; }}</p><br/>
+	<p>Mentor Email: {{ $tchDtls['emailid']; }}</p><br/>
 	{{ Form::open(array('route' => 'addprojectdetail', 'method' => 'POST')) }}
+	<input id="proj_id" name="proj_id" type="hidden" value="{{ $projDtls['id'];}}"/>
 	<div class="form-group @if ($errors->has('std1_email')) has-error @endif">
 		<label class="control-label" for="lbl_std1">Student Coordinator (1st Student) Email:</label>
 		<input type="text" id="std1_email" class="form-control" name="std1_email" placeholder="example@example.com" value="{{ Input::old('std1_email') }}"/>

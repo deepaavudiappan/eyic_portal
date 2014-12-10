@@ -65,7 +65,8 @@ class LabInchargeOperations extends BaseController {
 
 		$thisMethod = self::$thisClass . ' -> registerProj -> ';
 		$clg_id = Auth::user()->clg_id;
-
+		$emailSubj = 'eYIC-2015 Invite';
+		
 		$rules = [	'proj_name'	=>	'required',
 		'mentor_name'	=>	'required',
 		'mentor_email'	=>	'required|email'];
@@ -94,17 +95,6 @@ class LabInchargeOperations extends BaseController {
 		DB::beginTransaction();
 		try{
 			//Check intigrity
-			$projDtls = new EyicProjectDtls;
-			$projDtls->proj_name = $proj_name;
-			$projDtls->clg_id = $clg_id;
-			$projDtls->year = 2015;
-			$projDtls->eyic_flag = 1;
-			$projDtls->project_status = 0;
-
-			if(!$projDtls->save()){
-				throw new Exception("Failed to save project details");
-			}
-
 			$tch_id = 0;
 
 			$men_pre = ElsiTeachersDtls::where('emailid', $mentor_email)->get();
@@ -154,8 +144,27 @@ class LabInchargeOperations extends BaseController {
 
 				$tch_id = $mentorDtls->id;
 				//Send email
+
+				Mail::queue('emails.eyic.mentor_invite',  array('username'	=>	$mentor_email, 
+					'pwd' => $mentorPwd, 'mentor' => $mentor_name, 'proj' => $proj_name), function($message) use($mentor_email, $emailSubj)
+				{
+					$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
+					$message->to($mentor_email)->subject($emailSubj);
+				});
 			}
 
+			$projDtls = new EyicProjectDtls;
+			$projDtls->proj_name = $proj_name;
+			$projDtls->clg_id = $clg_id;
+			$projDtls->year = 2015;
+			$projDtls->teacher_id = $tch_id;
+			$projDtls->eyic_flag = 1;
+			$projDtls->project_status = 0;
+
+			if(!$projDtls->save()){
+				throw new Exception("Failed to save project details");
+			}
+			/*
 			$prj_mentor_map = new EYICProjTchrMap;
 			$prj_mentor_map->project_id = $projDtls->id;
 			$prj_mentor_map->teacher_id = $tch_id;
@@ -163,7 +172,7 @@ class LabInchargeOperations extends BaseController {
 
 			if(!$prj_mentor_map->save()){
 				throw new Exception("Failed to save project mentor map");
-			}
+			}*/
 			DB::commit();
 		}
 		catch (Exception $e){
