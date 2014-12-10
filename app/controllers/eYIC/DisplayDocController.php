@@ -20,9 +20,30 @@ class DisplayDocController extends BaseController {
 		return View::make('eyic.documents.coordinators');
 	}
 
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		displayDocMentor
+	| Input:		Null
+	| Output:		Display Documents for Mentors and Student Representative
+	| Logic:		Display Documents for Mentors and Student Representative
+	|
+	*/
 	public function displayDocMentor(){
 		
 		return View::make('eyic.documents.mentorAndStudentRep');
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		displayDocPlagiarism
+	| Input:		Null
+	| Output:		Display Documents on Plagiarism
+	| Logic:		Display Documents on Plagiarism
+	|
+	*/
+	public function displayDocPlagiarism(){
+		
+		return View::make('eyic.documents.plagiarism');
 	}
 	
 }

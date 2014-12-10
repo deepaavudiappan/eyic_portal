@@ -10,17 +10,17 @@
 	</div>
 	<div class="panel-body">
 		<h3>Document for Coordinators:</h3>
-		<h4>What is eYIC ?</h4>
-		eYIC stands for e-Yantra Ideas Competition, an initiative to encourage innovative projects from robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI), in colleges across the country.
-		<h4>What are the aims of eYIC ?</h4>
+		<h3>What is eYIC ?</h3>
+		<p>eYIC stands for e-Yantra Ideas Competition, an initiative to encourage innovative projects from robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI), in colleges across the country.</p>
+		<h3>What are the aims of eYIC ?</h3>
 		<ul>
   			<li>To ensure sustained use of the robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI).</li>
   			<li>To encourage <b>innovative ideas</b> from students in eLSI colleges across the country.</li>
   			<li>To provide a platform for teams to showcase their projects.</li>
 			<li>To nurture BE projects in Embedded Systems and Robotics at the eLSI colleges.</li>
 		</ul>
-		e-Yantra Ideas Competition (eYIC- 2015) will be held as part of e-Yantra Symposium (eYS-2015).
-		<h4>Role of a Coordinator:</h4>
+		<p>e-Yantra Ideas Competition (eYIC- 2015) will be held as part of e-Yantra Symposium (eYS-2015).</p>
+		<h3>Role of a Coordinator:</h3>
 		<ul>
   			<li><b>As the first step, e-Yantra sends an e-mail to the colleges to nominate two Coordinators</b> (Local faculty designated by the college), one as a primary coordinator and other as secondary coordinator.</li>
   			<li>The coordinators will be sent an introductory email with their credentials to access the eYIC portal.</li>
@@ -41,7 +41,7 @@
 			</ul>
 			<li>After selecting the projects, coordinator fills <b>Project Name</b> and the <b>Mentor’s e-mail Id</b> for each selected project (up to a maximum of four projects) by logging on to the portal.</li>
 		</ul>
-		<h4>eYIC Portal Link : <a href="http://elsiportal.e-yantra.org/addCoor">http://elsiportal.e-yantra.org/addCoor</a></h4>				
+		<h3>eYIC Portal Link : <a href="http://elsiportal.e-yantra.org/addCoor">http://elsiportal.e-yantra.org/addCoor</a></h3>				
 	</div>
 </div>
 

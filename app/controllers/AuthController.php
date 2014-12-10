@@ -70,7 +70,12 @@ class AuthController extends BaseController {
 	|
 	*/
 	public function changePasswordLand(){
-		
+
+    /* This page must be accessed after login*/
+    if(!Auth::check()) {
+        return Redirect::Route('loginLand');
+    }
+
 		//Display the view
 		return View::make('changepwd');
 	}

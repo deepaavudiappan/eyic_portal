@@ -49,7 +49,7 @@ class MigCoorController extends BaseController {
 				}
 			}
 			DB::commit();
-			Log::success($thisMethod . "All coordinator data migrated to Teachers table.");
+			Log::debug($thisMethod . "All coordinator data migrated to Teachers table.");
 		}
 		catch (Exception $e){
 			//Catching any exception to roll back
