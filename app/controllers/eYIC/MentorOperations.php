@@ -73,7 +73,7 @@ class MentorOperations extends BaseController {
 			return Redirect::Route('commonHome')->withErrors('You are NOT allowed to do this operation');
 		}
 		if(!Input::has('proj_id')){
-			return Redirect::Route('commonHome')->withErrors('Something went wrong. Please contact us at helpdesk@e-yantra.org');
+			return Redirect::Route('commonHome')->withErrors('--Something went wrong. Please contact us at helpdesk@e-yantra.org');
 		}
 		
 		$thisMethod = self::$thisClass . ' -> addProjectDetails -> ';
@@ -86,7 +86,7 @@ class MentorOperations extends BaseController {
 		$prjDtls = EyicProjectDtls::find($proj_id);
 
 		if($prjDtls == NULL || empty($prjDtls)){
-			return Redirect::Route('commonHome')->withErrors(['Something went wrong. Please contact us at helpdesk@e-yantra.org']);
+			return Redirect::Route('commonHome')->withErrors(['!Something went wrong. Please contact us at helpdesk@e-yantra.org']);
 		}
 
 		$proj_title = $prjDtls['proj_name'];
