@@ -104,6 +104,11 @@ Route::match(array('GET', 'POST'), '/mentor/addprojdetailLand', array(
 			'as'	=>	'addprojectdetailland',
 			'uses'	=>	'MentorOperations@eyicMentorLand'
 ));
+/* Display Document for Mentors and Student Representative */
+Route::match(array('GET', 'POST'), '/doc/dmentor', array(
+			'as'	=>	'dmentor',
+			'uses'	=>	'DisplayDocController@displayDocMentor'
+));
 
 /*----------------------Coordinator Routes---------------------------*/
 Route::match(array('GET', 'POST'), '/labin/regProjLand', array(
@@ -114,6 +119,12 @@ Route::match(array('GET', 'POST'), '/labin/regProjLand', array(
 Route::match(array('GET', 'POST'), '/labin/registerProj', array(
 			'as'	=>	'registerProj',
 			'uses'	=>	'LabInchargeOperations@registerProj'
+));
+
+/* Display Document for Coordinators */
+Route::match(array('GET', 'POST'), '/doc/dcoor', array(
+			'as'	=>	'dcoor',
+			'uses'	=>	'DisplayDocController@displayDocCoor'
 ));
 
 /*----------------------Admin Routes---------------------------*/
