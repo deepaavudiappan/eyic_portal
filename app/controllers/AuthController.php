@@ -38,7 +38,7 @@ class AuthController extends BaseController {
 				Session::put('entityDtl', $teacherDtl);
 			}
 			else if(Auth::user()->role == 2){
-				$stdDtl = ElsiStudentDtls::firstbyAttributes('user_id', Auth::id());
+				$stdDtl = ElsiStudentsDtls::firstbyAttributes('user_id', Auth::id());
 				Session::put('entityDtl', $stdDtl);
 			}
 			return Redirect::Route('commonHome');
