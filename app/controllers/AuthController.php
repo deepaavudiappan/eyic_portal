@@ -350,7 +350,7 @@ class AuthController extends BaseController {
 		'repeatPassword'	=>	'required'];
 
 		$messages = [	
-		'newPassword.required'		=>	'Password is compulsory.',
+		'newPassword.required'		=>	'New Password is compulsory.',
 		'repeatPassword.required'	=>	'Confirm Password is compulsory.'];
 
 		$validator = Validator::make(Input::all(), $rules, $messages);
@@ -378,7 +378,6 @@ class AuthController extends BaseController {
 				throw new Exception('Unable to set new password in users_login table');
 			}
 			DB::commit();
-			Log::debug($thisMethod . "Password set.");
 		}
 		catch (Exception $e) {
 			//Catching any exception to roll back
@@ -390,8 +389,8 @@ class AuthController extends BaseController {
 		}
 
 		//Display Success
-		$messages = ['Password saved. Please Login.'];
-		return Redirect::route('loginLand')->withErrors($messages);		
+		$messages = 'Password changed successfully. Please Login below.';
+		return Redirect::route('loginLand')->with([MSG_VAR_SUCCESS => $messages]);
 	}
 	
 }
