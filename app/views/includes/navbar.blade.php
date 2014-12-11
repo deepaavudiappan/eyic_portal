@@ -15,8 +15,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right" style="font-size: 20px; margin-top: 20px;">                    
                     <li class="page-scroll"><li><a href="{{ URL::to('homepage') }}"></a></li>
-                    <li class="page-scroll"><li><a href="{{ URL::to('homepage') }}"><?php if(Session::has('username')){
-                        echo Session::get('username'); } ?></a></li>
+                    <li class="page-scroll"><li><a href="{{ URL::to('homepage') }}">{{ Auth::user()->username; }}</a></li>
                     <li class="page-scroll"><li><a href="{{ URL::to('/auth/logout') }}">Logout</a></li>
                 </ul>
             </div>
