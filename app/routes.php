@@ -16,6 +16,11 @@ Route::match(array('GET', 'POST'), '/addCoor', array(
 			'uses'	=>	'CollegeController@addCoordinator'
 ));
 
+Route::match(array('GET', 'POST'), '/addcoor', array(
+			'as'	=>	'addCoor',
+			'uses'	=>	'CollegeController@addCoordinator'
+));
+
 Route::match(array('GET', 'POST'), '/addCoorSave', array(
 			'as'	=>	'addCoorSave',
 			'uses'	=>	'CollegeController@addCoordinatorSave'
@@ -131,7 +136,7 @@ Route::match(array('GET', 'POST'), '/admin/setupCoorAccs', array(
 
 
 /*--------------------Auth Route-------------------*/
-Route::get('/login', function(){
+/*Route::get('/login', function(){
 			View::share(array('title'=>'Login'));					
 			return View::make('login'); 
 }); 
@@ -144,7 +149,7 @@ Route::post('/login', array(
 Route::get('/auth/logout', array(
 			'as' => 'logout',
 			'uses' => 'AuthController@doLogout'  
-));
+));*/
 
 Route::match(array('GET','POST'),'/project',array(
 			'as' => 'project',
@@ -155,9 +160,6 @@ Route::match(array('GET','POST'),'/mentorproject',array(
 			'as' => 'mentorproject',
 			'uses' => 'HomeController@mentorProjectDetails'
 ));
-
-
-
 
 /*----------------------Student Representative Routes---------------------------*/
 Route::match(array('GET', 'POST'), '/stdnt_repre/prjStndDtlsLand', array(
