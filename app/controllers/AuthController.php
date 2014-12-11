@@ -288,9 +288,8 @@ class AuthController extends BaseController {
 
 		//Display Success
 		$mesgstr = "A mail containing further instructions has been sent to ".$username.". Please check it to reset your password.";
-		$messages = [$mesgstr];
-		return Redirect::route('forgetPwdLand')->withErrors($messages);
-		
+		$messages = $mesgstr;
+		return Redirect::route('forgetPwdLand')->with([MSG_VAR_SUCCESS => $messages]);
 		
 	}
 
