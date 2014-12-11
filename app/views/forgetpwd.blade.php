@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-	<div class="col-md-4 col-md-offset4">
+	<div class="col-md-4 col-md-offset-4">
 		{{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'forgetPwd')) }}	
 		<div class="panel panel-info">
 			<div class="panel-heading">
@@ -20,7 +20,7 @@
 						<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
