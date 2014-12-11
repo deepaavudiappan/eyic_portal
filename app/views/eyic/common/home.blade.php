@@ -28,9 +28,14 @@
 	  </tr>
 	  <tr>
 		<td>DESIGATION</td>
-		<td><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> {{ $teacherDetail->designation }}</td>		
+		<td><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> {{ $teacherDetail->designation }}</td>
 	  </tr>
 </table>
+<div class="row">
+	<div class="col-md-12 text-center">
+		{{ HTML::linkRoute('changePwdLand', 'Change Password', [], ['class'	=> 'btn btn-primary']) }}
+	</div>
+</div>
 @stop
 
 @section('notice')
