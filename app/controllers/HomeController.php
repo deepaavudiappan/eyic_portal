@@ -91,7 +91,7 @@ class HomeController extends BaseController {
 	public function coordinatorMentorHome(){
 		$thisMethod = self::$thisClass . ' -> coordinatorMentorHome -> ';
 		if(!Auth::check()){
-			return Redirect::Route('login');
+			return Redirect::Route('loginLand');
 		}
 		if(Auth::user()->role != 1){
 			return Redirect::Route('commonHome');
@@ -137,7 +137,7 @@ class HomeController extends BaseController {
 		
 		$thisMethod = self::$thisClass . ' -> projectDetails -> ';
 		if(!Auth::check()){
-			return Redirect::Route('login');
+			return Redirect::Route('loginLand');
 		}
 		if(Auth::user()->role != 1){
 			return Redirect::Route('commonHome');
@@ -162,7 +162,7 @@ class HomeController extends BaseController {
 		
 		$thisMethod = self::$thisClass . ' -> mentorProjectDetails -> ';
 		if(!Auth::check()){
-			return Redirect::Route('login');
+			return Redirect::Route('loginLand');
 		}
 		
 		if(Session::has('entityDtl')){
