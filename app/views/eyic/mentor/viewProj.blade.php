@@ -61,7 +61,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
-		$('#menProjLk').addClass('active');
+		$('#menProLk').addClass('active');
 	});
 </script>
 @stop
