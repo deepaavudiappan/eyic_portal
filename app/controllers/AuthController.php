@@ -170,8 +170,8 @@ class AuthController extends BaseController {
 		$user = Login::where('username', $username)->first();
 		if(!$user) { 
 			Log::error($thisMethod . "This email is not registered with us.");
-			$messages = ['Please Login again.'];
-			return Redirect::Route('loginLand')->withErrors($messages);
+			$messages = ['Unable to change password. Please contact us at helpdesk@e-yantra.org'];
+			return Redirect::Route('changePwdLand')->withErrors($messages);
 		}
 
 		/* Check currentpassword and storedpassword match. Use Hash */
@@ -198,14 +198,12 @@ class AuthController extends BaseController {
 			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
 			$messages = ['Unable to save the information. Please contact us at helpdesk@e-yantra.org via email about the issue'];
-			return Redirect::route('changePwdLand')->withErrors($messages)->withInput(Input::all());
-			
+			return Redirect::route('changePwdLand')->withErrors($messages)->withInput(Input::all());			
 		}
 
 		//Display Success
-		$messages = ['Password changed. Please login again.'];
-		return Redirect::route('loginLand')->withErrors($messages);
-		
+		$messages = 'Password changed successfully.';
+		return Redirect::route('changePwdLand')->with([MSG_VAR_SUCCESS => $messages]);
 	}
 
 	/*
