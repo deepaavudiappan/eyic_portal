@@ -10,7 +10,8 @@
 	</div>
 	<div class="panel-body">
 		<div class="panel panel-info">
-			<div class="panel-title"><h3>What is eYIC ?</h3>
+			<div class="panel-heading">
+				<h3 class="panel-title">What is eYIC ?</h3>
 			</div>
 			<div class="panel-body">
 				<p>eYIC stands for e-Yantra Ideas Competition, an initiative to encourage innovative projects from robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI), in colleges across the country.</p>
