@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			
-			<div class="col-md-7" >
+			<div class="col-md-9" >
 				@if(Session::has('success'))
 				<div class="alert alert-success">{{ Session::get('success') }}</div>
 				@elseif (!empty($success))
@@ -71,10 +71,6 @@
 				@endif
 
 				@yield('content')
-			</div>
-			
-			<div class="col-md-3">
-				@yield('notice')
 			</div>
 		</div>
 
