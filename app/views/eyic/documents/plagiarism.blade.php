@@ -32,7 +32,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
-		$('#template').addClass('active');
+		$('#plagDocLk').addClass('active');
 	});
 </script>
 @stop

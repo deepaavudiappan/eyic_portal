@@ -42,13 +42,16 @@
 			
 			<div class="col-md-2">
 				<div class="list-group">
-				{{ HTML::linkRoute('coorMentorHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}
-				  @if(Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2)
-				  	{{ HTML::linkRoute('project', 'Register Project', [], ['class'	=> 'list-group-item', 'id'	=> 'regProLk']) }}
-				  @endif
-				  @if(Session::get('entityDtl')['eyic_flag'] == 1)
-				  	{{ HTML::linkRoute('mentorproject', 'Mentored Projects', [], ['class'	=> 'list-group-item', 'id'	=> 'menProLk']) }}
-				  @endif
+					{{ HTML::linkRoute('coorMentorHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}
+					@if(Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2)
+					{{ HTML::linkRoute('project', 'Register Project', [], ['class'	=> 'list-group-item', 'id'	=> 'regProLk']) }}
+					@endif
+					@if(Session::get('entityDtl')['eyic_flag'] == 1)
+					{{ HTML::linkRoute('mentorproject', 'Mentored Projects', [], ['class'	=> 'list-group-item', 'id'	=> 'menProLk']) }}
+					@endif
+					{{ HTML::linkRoute('dcoor', 'Coordinator Document', [], ['class'	=> 'list-group-item', 'id'	=> 'coorDocLk']) }}
+					{{ HTML::linkRoute('dmentor', 'Mentor and Student Info', [], ['class'	=> 'list-group-item', 'id'	=> 'menStdntDocLk']) }}
+					{{ HTML::linkRoute('dplag', 'Plagiarism', [], ['class'	=> 'list-group-item', 'id'	=> 'plagDocLk']) }}
 				</div>
 			</div>
 			

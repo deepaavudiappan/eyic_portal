@@ -47,7 +47,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
-		$('#template').addClass('active');
+		$('#menStdntDocLk').addClass('active');
 	});
 </script>
 @stop

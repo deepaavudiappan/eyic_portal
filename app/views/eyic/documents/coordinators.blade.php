@@ -50,7 +50,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
-		$('#template').addClass('active');
+		$('#coorDocLk').addClass('active');
 	});
 </script>
 @stop
