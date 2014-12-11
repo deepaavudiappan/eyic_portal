@@ -5,7 +5,7 @@
 
     <title>
 		@section('title')
-			{{{ isset($title) ? $title:'Tile no exists :) ' }}}			
+			e-Yantra
 		@show
 	</title>
 
