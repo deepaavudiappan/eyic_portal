@@ -17,12 +17,14 @@
 @section('content')	
 
 <div class="row" style="top-margin: 50px">	
-{{ Form::open(array('class'=>'form-signin', 'route' => 'login', 'method' => 'POST')) }}
+  {{ Form::open(array('class'=>'form-signin', 'route' => 'login', 'method' => 'POST')) }}
 
- <h2 class="form-signin-heading">Please sign in</h2>        
+  <h2 class="form-signin-heading">Please sign in</h2>        
 
- {{ Form::text('inputEmail', null, array('class' => 'form-control','placeholder' => 'Email Address'))}}
- {{ Form::password('inputPassword', array('class' => 'form-control','placeholder' => 'Password'))}}        
+  {{ Form::text('inputEmail', null, array('class' => 'form-control','placeholder' => 'Email Address'))}}
+  {{ Form::password('inputPassword', array('class' => 'form-control','placeholder' => 'Password'))}}        
+  <br/>
+  {{ HTML::linkRoute('forgetPwdLand', 'Forgot Password?', [], []) }}
 
  <!-- <div class="checkbox">
   <label>
