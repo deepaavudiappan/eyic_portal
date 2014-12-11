@@ -40,7 +40,7 @@ Route::match(array('GET', 'POST'), '/', array(
 						}
 ));
 
-Route::post('/auth/login', array(
+Route::match(array('GET', 'POST'), '/auth/login', array(
 			'as'	=>	'login',
 			'uses'	=>	'AuthController@doLogin'
 ));
