@@ -26,22 +26,22 @@ class AuthController extends BaseController {
 	|
 	*/
 	public function doLogin(){
-			
+
 		$userdata = array(
-				'username' 	=> Input::get('inputEmail'),
-				'password' 	=> Input::get('inputPassword')
-		);
-				
+			'username' 	=> Input::get('inputEmail'),
+			'password' 	=> Input::get('inputPassword')
+			);
+
 		$validator = Validator::make(
-				array(
+			array(
 				'username' 	=> Input::get('inputEmail'),
 				'password' 	=> Input::get('inputPassword')
 				),
-				array(
-					'username' => 'required|email',
-					'password' => 'required'
+			array(
+				'username' => 'required|email',
+				'password' => 'required'
 				)
-		);			
+			);			
 		if($validator->fails()){
 			$messages = $validator->messages();
 			return Redirect::Route('login')->withErrors($validator);				
@@ -49,11 +49,11 @@ class AuthController extends BaseController {
 			if(Auth::attempt($userdata)){
 				if( Auth::user()->active == 1){	
 					if(Auth::user()->role == 1){
-							$teacherDtl = ElsiTeachersDtls::firstbyAttributes(['user_id' => Auth::id()]);
-							Session::put('entityDtl', $teacherDtl);
+						$teacherDtl = ElsiTeachersDtls::firstbyAttributes(['user_id' => Auth::id()]);
+						Session::put('entityDtl', $teacherDtl);
 					}else if(Auth::user()->role == 2){
-							$stdDtl = ElsiStudentsDtls::firstbyAttributes(['user_id'=> Auth::id()]);
-							Session::put('entityDtl', $stdDtl);
+						$stdDtl = ElsiStudentsDtls::firstbyAttributes(['user_id'=> Auth::id()]);
+						Session::put('entityDtl', $stdDtl);
 					}
 					return Redirect::Route('commonHome');
 				//Check user and redirect to corresponding controller 1 = teacher  2 = student 
@@ -114,10 +114,10 @@ class AuthController extends BaseController {
 	*/
 	public function changePasswordLand(){
 
-    /* This page must be accessed after login*/
-    if(!Auth::check()) {
-        return Redirect::Route('loginLand');
-    }
+		/* This page must be accessed after login*/
+		if(!Auth::check()) {
+			return Redirect::Route('loginLand');
+		}
 
 		//Display the view
 		return View::make('changepwd');
@@ -134,22 +134,13 @@ class AuthController extends BaseController {
 	public function changePassword(){
 		
 		$thisMethod = self::$thisClass . ' -> changePassword -> ';
-				
+
 		/* This page must be accessed after login*/
 		if(!Auth::check()){
 			return Redirect::Route('loginLand');
-    }
+		}
 
-		$username = "";
-		if(Session::has('entityDtl')){
-			$username = Session::get('entityDtl')['username'];
-		}
-		else{
-			//$username = 'khalid.iitb@gmail.com';
-      Log::error($thisMethod . "Exception occured! Msg: ". "Session not set");
-      $messages = ['Session not set. Login again.'];
-      return Redirect::Route('loginLand')->withErrors($messages);
-		}
+		$username = Auth::user()->username;
 
 		/* Validation of data */
 		$rules = [	
@@ -242,7 +233,7 @@ class AuthController extends BaseController {
 	public function forgetPassword(){
 		
 		$thisMethod = self::$thisClass . ' -> forgetPassword -> ';
-				
+
 		/* Validation of data */
 		$rules = [	
 		'username'		=>	'required|email'
@@ -341,7 +332,7 @@ class AuthController extends BaseController {
 	|
 	*/
 	public function setPasswordLand($username) {
-			return View::make('setpwd')->with('username', $username);
+		return View::make('setpwd')->with('username', $username);
 	}
 
 	/*
