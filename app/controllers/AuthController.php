@@ -27,7 +27,6 @@ class AuthController extends BaseController {
 	*/
 	public function doLogin(){
 			
-		
 		$userdata = array(
 				'username' 	=> Input::get('inputEmail'),
 				'password' 	=> Input::get('inputPassword')
