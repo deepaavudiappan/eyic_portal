@@ -33,6 +33,13 @@ class MentorOperations extends BaseController {
 		//Auth
 		//Pull up Project Name
 		//Display the view
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 1){
+			return Redirect::Route('commonHome');
+		}
+
 		return View::make('eyic.mentor.addProjDtl');
 	}
 
@@ -45,25 +52,40 @@ class MentorOperations extends BaseController {
 	|
 	*/
 	public function addProjectDetails(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 1){
+			return Redirect::Route('commonHome');
+		}
 		$thisMethod = self::$thisClass . ' -> addProjectDetails -> ';
 		$emailSubj = 'eYIC Invite';
-		//Authorize
 
+		/*################################################*/
 		//Get project id
 		$proj_id = 1;
-		$mentor_name = 'XYZ';
 		$proj_title = 'TEMP';
-		$clg_id = 1;
+		
+		$mentor_name = 'XYZ';
+		if(Session::has('entityDtl')){
+			$mentor_name = Session::get('entityDtl')['name'];
+		}
+		else{
+			$mentor_name = '{Mentor Name not provided}';
+		}
+
+		$clg_id = Auth::user()->clg_id;
 		
 		$rules = [	'std1_email'	=>	'required|email',
 		'std2_email'	=>	'required|email',
-		'std3_email'	=>	'email',
+		'std3_email'	=>	'required|email',
 		'std4_email'	=>	'email'];
 
 		$messages = [	'std1_email.required'	=>	'Student Coordinator email id is compulsory',
 		'std1_email.email'		=>	'Student Coordinator email id is not in proper format',
 		'std2_email.required'	=>	'2nd student email id is compulsory',
 		'std2_email.email'		=>	'2nd student email id is not in proper format',
+		'std3_email.required'	=>	'3rd student email id is compulsory',
 		'std3_email.email'		=>	'3nd student email id is not in proper format',
 		'std4_email.email'		=>	'4nd student email id is not in proper format',
 		];
@@ -104,7 +126,7 @@ class MentorOperations extends BaseController {
 			$curStd_login->active = 1;
 			$curStd_login->password = Hash::make($scpassword);
 			$curStd_login->clg_id = $clg_id;
-			$curStd_login->role = 3;
+			$curStd_login->role = 2;
 
 			if(!$curStd_login->save()){
 				throw new Exception("Failed to save users login");
@@ -122,7 +144,7 @@ class MentorOperations extends BaseController {
 			$curStd_login->active = 1;
 			$curStd_login->password = Hash::make($std2_pwd);
 			$curStd_login->clg_id = $clg_id;
-			$curStd_login->role = 3;
+			$curStd_login->role = 2;
 
 			if(!$curStd_login->save()){
 				throw new Exception("Failed to save users login");
@@ -132,7 +154,7 @@ class MentorOperations extends BaseController {
 			$scStd2['user_id'] = $curStd_login->id;
 			$scStd2['project_id'] = $proj_id;
 			$scStd2['email_id'] = $std2_email;
-			$scStd2['role'] = 1;
+			$scStd2['role'] = 2;
 			array_push($stdArray, $scStd2);
 
 			if(!empty($std3_email)){
@@ -142,7 +164,7 @@ class MentorOperations extends BaseController {
 				$curStd_login->active = 1;
 				$curStd_login->password = Hash::make($std3_pwd);
 				$curStd_login->clg_id = $clg_id;
-				$curStd_login->role = 3;
+				$curStd_login->role = 2;
 
 				if(!$curStd_login->save()){
 					throw new Exception("Failed to save users login");
@@ -161,7 +183,7 @@ class MentorOperations extends BaseController {
 				$curStd_login->active = 1;
 				$curStd_login->password = Hash::make($std4_pwd);
 				$curStd_login->clg_id = $clg_id;
-				$curStd_login->role = 3;
+				$curStd_login->role = 2;
 
 				if(!$curStd_login->save()){
 					throw new Exception("Failed to save users login");

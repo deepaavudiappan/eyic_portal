@@ -13,10 +13,12 @@
 @section('styles')
 @stop
 
+
 @section('content')	
 		
 	<div class="row" style="top-margin: 50px">	
 	    {{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'login')) }}
+
         <h2 class="form-signin-heading">Please sign in</h2>        
         
 		{{ Form::text('inputEmail', null, array('class' => 'form-control','placeholder' => 'Email Address'))}}

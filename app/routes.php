@@ -10,6 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+
 Route::match(array('GET', 'POST'), '/addCoor', array(
 			'as'	=>	'addCoor',
 			'uses'	=>	'CollegeController@addCoordinator'
@@ -20,32 +21,42 @@ Route::match(array('GET', 'POST'), '/addCoorSave', array(
 			'uses'	=>	'CollegeController@addCoordinatorSave'
 ));
 
-
-Route::get('/login', function(){				
-			return View::make('login'); 
-});
- 
-
-Route::post('/login', array(
-			'as'	=>	'login',
-			'uses'	=>	'AuthController@doLogin'
+/* Migrate coordinator table data to teachers table*/
+Route::match(array('GET', 'POST'), '/migCoor', array(
+			'as'	=>	'migCoor',
+			'uses'	=>	'MigCoorController@migrateCoorToTeacher'
 ));
 
-Route::get('/logout', array(
-			'as' => 'logout',
-			'uses' => 'AuthController@doLogout'  
+/*----------------------Auth Routes---------------------------*/
+Route::match(array('GET', 'POST'), '/', array(
+			'as'	=>	'loginLand',
+			'uses'	=>	function(){		
+							return View::make('login');
+						}
 ));
 
-Route::match(array('GET', 'POST'), '/addprojdetail', array(
+Route::match(array('GET', 'POST'), '/common/home', array(
+			'as'	=>	'commonHome',
+			'uses'	=>	'HomeController@homeBifurcate'
+));
+
+Route::match(array('GET', 'POST'), '/common/home_coor_mentor', array(
+			'as'	=>	'coorMentorHome',
+			'uses'	=>	'HomeController@coordinatorMentorHome'
+));
+
+/*----------------------Mentor Routes---------------------------*/
+Route::match(array('GET', 'POST'), '/mentor/addprojdetail', array(
 			'as'	=>	'addprojectdetail',
 			'uses'	=>	'MentorOperations@addProjectDetails'
 ));
 
-Route::match(array('GET', 'POST'), '/addprojdetailLand', array(
+Route::match(array('GET', 'POST'), '/mentor/addprojdetailLand', array(
 			'as'	=>	'addprojectdetailland',
 			'uses'	=>	'MentorOperations@eyicMentorLand'
 ));
 
+/*----------------------Coordinator Routes---------------------------*/
 Route::match(array('GET', 'POST'), '/labin/regProjLand', array(
 			'as'	=>	'regProjLand',
 			'uses'	=>	'LabInchargeOperations@loadRegProj'
@@ -56,17 +67,46 @@ Route::match(array('GET', 'POST'), '/labin/registerProj', array(
 			'uses'	=>	'LabInchargeOperations@registerProj'
 ));
 
+/*----------------------Admin Routes---------------------------*/
+Route::match(array('GET', 'POST'), '/admin/home', array(
+			'as'	=>	'adminHome',
+			'uses'	=>	'HomeController@adminHome'
+));
 
-/*Route::get('/', function(){
-		$user = new Login();
-		
-		$user->username = "user1";
-		$user->password = Hash::make("12345");
-		$user->save();	
- 		
-  		return "Done";		
-	
-});*/
+Route::match(array('GET', 'POST'), '/admin/setupCoorAccs', array(
+			'as'	=>	'setupCoorAccs',
+			'uses'	=>	'AdminOperations@makeLoginCoor'
+));
+
+/*--------------------Added By SP -------------------------------*/
+
+
+/*--------------------Auth Route-------------------*/
+Route::get('/login', function(){
+			View::share(array('title'=>'Login'));					
+			return View::make('login'); 
+}); 
+
+Route::post('/login', array(
+			'as'	=>	'login',
+			'uses'	=>	'AuthController@doLogin'
+));
+
+Route::get('/auth/logout', array(
+			'as' => 'logout',
+			'uses' => 'AuthController@doLogout'  
+));
+
+Route::match(array('GET','POST'),'/project',array(
+			'as' => 'project',
+			'uses' => 'HomeController@projectDetails'
+));
+
+Route::match(array('GET','POST'),'/mentorproject',array(
+			'as' => 'mentorproject',
+			'uses' => 'HomeController@mentorProjectDetails'
+));
+
 
 
 

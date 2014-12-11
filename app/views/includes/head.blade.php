@@ -5,7 +5,7 @@
 
     <title>
 		@section('title')
-			e-Yantra
+			{{{ isset($title) ? $title:'Tile no exists :) ' }}}			
 		@show
 	</title>
 
@@ -18,14 +18,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>    <![endif]-->
 
-<title>
-	@section('title')
-	e-Yantra
-	@show
-</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
-<link rel="icon" href="/img/eyantra.jpg" type="img/x-icon">
-{{ HTML::style('css/bootstrap.css') }}
-{{-- HTML::style('css/bootstrap-responsive.css') --}}
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+	<link rel="icon" href="/img/eyantra.jpg" type="img/x-icon">
+	{{ HTML::style('css/bootstrap.css') }}
+	{{-- HTML::style('css/bootstrap-responsive.css') --}}
 
