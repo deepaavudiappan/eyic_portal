@@ -17,7 +17,7 @@
 @section('content')	
 
 <div class="row" style="top-margin: 50px">	
-{{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'auth/login', 'method' => 'post')) }}
+{{ Form::open(array('class'=>'form-signin', 'route' => 'login', 'method' => 'POST')) }}
 
  <h2 class="form-signin-heading">Please sign in</h2>        
 
@@ -28,7 +28,7 @@
   <label>
     <input type="checkbox" value="remember-me"> Remember me
   </label>
-</div>   -->     
+</div>   --><br/><br/>
 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 {{ Form::close() }}
 
