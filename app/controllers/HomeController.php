@@ -42,7 +42,10 @@ class HomeController extends BaseController {
 		}
 		else if(Auth::user()->role == 2){
 			//Return to students home page
-			return Redirect::Route('studentHome');
+			if(Session::has('errors'))
+				return Redirect::Route('studentHome')->withErrors(Session::get('errors')->getMessages());
+			else
+				return Redirect::Route('studentHome');
 		}
 		else if(Auth::user()->role == 3){
 			//Return to admin page
@@ -70,9 +73,9 @@ class HomeController extends BaseController {
 		if(!Auth::check()){
 			return Redirect::Route('loginLand');
 		}
-		if(Auth::user()->role != 3){
+		/*if(Auth::user()->role != 3){
 			return Redirect::Route('commonHome');
-		}
+		}*/
 
 		return View::make('eyic.admin.home');
 	}

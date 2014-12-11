@@ -57,12 +57,13 @@ class AuthController extends BaseController {
 					}
 					return Redirect::Route('commonHome');
 				//Check user and redirect to corresponding controller 1 = teacher  2 = student 
-				}else{							
+				}else{	
+					//logout also						
 					return Redirect::Route('login')->withErrors(['Please Activate your account']);
 				}
 			}else{
 				$msg = 'Please Enter correct Username and Password';				
-				return Redirect::Route('login')->withErrors(['Please Enter correct Username and Password']);
+				return Redirect::Route('login')->withErrors([$msg]);
 			}
 		}//end of else
 	}//end of doLogin
