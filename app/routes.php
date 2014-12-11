@@ -78,12 +78,12 @@ Route::match(array('GET', 'POST'), '/validateToken/{username}/{token}', array(
 
 /* Used to set new password in case of forget password */
 
-Route::match(array('GET', 'POST'), '/setPwdLand/{username}', array(
+Route::match(array('GET', 'POST'), '/setPwdLand', array(
 			'as'	=>	'setPwdLand',
 			'uses'	=>	'AuthController@setPasswordLand'
 ));
 
-Route::match(array('GET', 'POST'), '/setPwd/{username}', array(
+Route::match(array('GET', 'POST'), '/setPwd', array(
 			'as'	=>	'setPwd',
 			'uses'	=>	'AuthController@setPassword'
 ));

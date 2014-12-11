@@ -316,8 +316,10 @@ class AuthController extends BaseController {
 			$messages = ['Unable to set new password. Please contact us at helpdesk@e-yantra.org via email about the issue']; 				return Redirect::Route('loginLand')->withErrors($messages);
 		}
 		
-		/* Emailid, Token verified. redirect user to set password page. */	
-		return Redirect::Route('setPwdLand', array('username' => $username));
+		/* Emailid, Token verified. redirect user to set password page. */
+		Session::put('forgotpwd_username', $username);
+		return Redirect::Route('setPwdLand');
+		//return Redirect::Route('setPwdLand', array('username' => $username));
 	}
 
 	/*
@@ -328,8 +330,8 @@ class AuthController extends BaseController {
 	| Logic:		Generate View to set new password incase of Forget Password 
 	|
 	*/
-	public function setPasswordLand($username) {
-		return View::make('setpwd')->with('username', $username);
+	public function setPasswordLand() {
+		return View::make('setpwd');
 	}
 
 	/*
@@ -340,10 +342,12 @@ class AuthController extends BaseController {
 	| Logic:		set new password incase of Forget Password 
 	|
 	*/
-	public function setPassword($username){
+	public function setPassword(){
 		
 		$thisMethod = self::$thisClass . ' -> setPassword -> ';
 
+		$username = Session::get('forgotpwd_username');
+		
 		/* Validation of input data */
 		$rules = [	
 		'newPassword'		=>	'required',

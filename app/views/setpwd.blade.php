@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
 
-		{{ Form::open(array('class'=>'form-signin','role'=>'form', 'route' => array('setPwd', $username))) }}
+		{{ Form::open(array('class'=>'form-signin','role'=>'form', 'url' => 'setPwd')) }}
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title">Reset Password</h3>
