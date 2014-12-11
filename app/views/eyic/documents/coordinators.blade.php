@@ -6,7 +6,7 @@
 
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<h2 class="panel-title text-center">Document for Coordinators:</h2>
+		<h2 class="panel-title text-center">Document for Coordinators</h2>
 	</div>
 	<div class="panel-body text-justify">
 		<div class="panel panel-info">

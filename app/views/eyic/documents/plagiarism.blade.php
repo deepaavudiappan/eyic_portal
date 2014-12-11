@@ -6,10 +6,9 @@
 
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<h2 class="panel-title" align="center" >e-Yantra Ideas Competition</h2>
+		<h2 class="panel-title" align="center" >Plagiarism</h2>
 	</div>
-	<div class="panel-body">
-		<h3>Plagiarism:</h3>
+	<div class="panel-body text-justify">
 		<p>Plagiarism means copying another person's work, language, thought or original ideas and passing them off as one's own. According to WordNet dictionary, plagiarism is defined as:</p>
 		<ol>
 			<li>A piece of writing that has been copied from someone else and is presented as being your own work.</li>
