@@ -16,6 +16,14 @@ class MigCoorController extends BaseController {
 	|
 	*/
 	public function migrateCoorToTeacher(){
+		
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		
 		$thisMethod = self::$thisClass . ' -> migrateCoorToTeacher -> ';
 		$coors = ElsiCoordinator::all();
 
@@ -41,7 +49,7 @@ class MigCoorController extends BaseController {
 				}
 			}
 			DB::commit();
-			Log::success($thisMethod . "All coordinator data migrated to Teachers table.");
+			Log::debug($thisMethod . "All coordinator data migrated to Teachers table.");
 		}
 		catch (Exception $e){
 			//Catching any exception to roll back

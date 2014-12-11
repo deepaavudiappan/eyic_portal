@@ -22,7 +22,7 @@ Route::match(array('GET', 'POST'), '/addCoorSave', array(
 ));
 
 /* Migrate coordinator table data to teachers table*/
-Route::match(array('GET', 'POST'), '/migCoor', array(
+Route::match(array('GET', 'POST'), '/admin/migCoor', array(
 			'as'	=>	'migCoor',
 			'uses'	=>	'MigCoorController@migrateCoorToTeacher'
 ));
@@ -34,6 +34,55 @@ Route::match(array('GET', 'POST'), '/', array(
 							return View::make('login');
 						}
 ));
+
+Route::post('/auth/login', array(
+			'as'	=>	'login',
+			'uses'	=>	'AuthController@doLogin'
+));
+
+Route::get('/auth/logout', array(
+			'as' => 'logout',
+			'uses' => 'AuthController@doLogout'  
+));
+
+Route::match(array('GET', 'POST'), '/changePwdLand', array(
+			'as'	=>	'changePwdLand',
+			'uses'	=>	'AuthController@changePasswordLand'
+));
+
+Route::match(array('GET', 'POST'), '/changePwd', array(
+			'as'	=>	'changePwd',
+			'uses'	=>	'AuthController@changePassword'
+));
+
+Route::match(array('GET', 'POST'), '/forgetPwdLand', array(
+			'as'	=>	'forgetPwdLand',
+			'uses'	=>	'AuthController@forgetPasswordLand'
+));
+
+Route::match(array('GET', 'POST'), '/forgetPwd', array(
+			'as'	=>	'forgetPwd',
+			'uses'	=>	'AuthController@forgetPassword'
+));
+
+
+Route::match(array('GET', 'POST'), '/validateToken/{username}/{token}', array(
+			'as'	=>	'validateToken',
+			'uses'	=>	'AuthController@validateToken'
+));
+
+/* Used to set new password in case of forget password */
+
+Route::match(array('GET', 'POST'), '/setPwdLand/{username}', array(
+			'as'	=>	'setPwdLand',
+			'uses'	=>	'AuthController@setPasswordLand'
+));
+
+Route::match(array('GET', 'POST'), '/setPwd/{username}', array(
+			'as'	=>	'setPwd',
+			'uses'	=>	'AuthController@setPassword'
+));
+
 
 Route::match(array('GET', 'POST'), '/common/home', array(
 			'as'	=>	'commonHome',
@@ -110,3 +159,39 @@ Route::match(array('GET','POST'),'/mentorproject',array(
 
 
 
+/*----------------------Student Representative Routes---------------------------*/
+Route::match(array('GET', 'POST'), '/stdnt_repre/prjStndDtlsLand', array(
+			'as'	=>	'prjStndDtlsLand',
+			'uses'	=>	'StdntCrdntrOperations@prjStdntDtlsLand'
+));
+
+/*----------------------Documents Display Routes---------------------------*/
+
+/* Display Document for Coordinators */
+Route::match(array('GET', 'POST'), '/doc/dcoor', array(
+			'as'	=>	'dcoor',
+			'uses'	=>	'DisplayDocController@displayDocCoor'
+));
+
+/* Display Document for Mentors and Student Representative */
+Route::match(array('GET', 'POST'), '/doc/dmentor', array(
+			'as'	=>	'dmentor',
+			'uses'	=>	'DisplayDocController@displayDocMentor'
+));
+
+/* Display Document on Plagiarism */
+Route::match(array('GET', 'POST'), '/doc/dplag', array(
+			'as'	=>	'dplag',
+			'uses'	=>	'DisplayDocController@displayDocPlagiarism'
+));
+
+/*Route::get('/', function(){
+		$user = new Login();
+		
+		$user->username = "user1";
+		$user->password = Hash::make("12345");
+		$user->save();	
+ 		
+  		return "Done";		
+	
+});*/

@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'elsi_portal',
 			'username'  => 'root',
-			'password'  => '',
+      		'password'  => 'pkm963lx',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
