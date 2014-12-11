@@ -17,14 +17,22 @@
 				<p>eYIC stands for e-Yantra Ideas Competition, an initiative to encourage innovative projects from robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI), in colleges across the country.</p>
 			</div>
 		</div>
-		<h3>What are the aims of eYIC ?</h3>
-		<ul>
-			<li>To ensure sustained use of the robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI).</li>
-			<li>To encourage <b>innovative ideas</b> from students in eLSI colleges across the country.</li>
-			<li>To provide a platform for teams to showcase their projects.</li>
-			<li>To nurture BE projects in Embedded Systems and Robotics at the eLSI colleges.</li>
-		</ul>
-		<p>e-Yantra Ideas Competition (eYIC- 2015) will be held as part of e-Yantra Symposium (eYS-2015).</p>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">What are the aims of eYIC ?</h3>
+			</div>
+			<div class="panel-body">
+				<ul>
+					<li>To ensure sustained use of the robotics labs set up through the e-Yantra Lab Setup Initiative (eLSI).</li>
+					<li>To encourage <b>innovative ideas</b> from students in eLSI colleges across the country.</li>
+					<li>To provide a platform for teams to showcase their projects.</li>
+					<li>To nurture BE projects in Embedded Systems and Robotics at the eLSI colleges.</li>
+				</ul>
+				<p>e-Yantra Ideas Competition (eYIC- 2015) will be held as part of e-Yantra Symposium (eYS-2015).</p>
+			</div>
+		</div>
+
+		
 		<h3>Mentor’s Role:</h3>
 		<ul>
 			<li>Teams comprising of 3 or 4 students and one teacher designated a <b>Mentor</b> submit their project proposals to the <b>Coordinator</b> (A local faculty designated by the college) by an internal deadline defined by the Coordinator.</li>
