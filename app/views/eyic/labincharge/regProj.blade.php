@@ -43,6 +43,8 @@
 		</div>
 	</div>
 </div>
+@stop
+@section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
 		$('#regProLk').addClass('active');
