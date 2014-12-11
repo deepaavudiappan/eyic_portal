@@ -53,7 +53,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
-		$('#home').addClass('active');
+		$('#profileLk').addClass('active');
 	});
 </script>
 @stop

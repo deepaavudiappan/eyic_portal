@@ -43,4 +43,9 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$('#regProLk').addClass('active');
+	});
+</script>
 @stop

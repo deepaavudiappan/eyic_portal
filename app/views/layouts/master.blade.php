@@ -41,15 +41,14 @@
 		<div class="row">
 			
 			<div class="col-md-2">
-				<div class="list-group">				 
-				  <a href="{{URL::Route('coorMentorHome')}}" <?php if ($link == 1): ?>class="list-group-item active"<?php else: ?>class="list-group-item"<?php endif ?>>Profile</a>
-				  <?php if(Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2){ ?>
-				  	<a href="{{URL::Route('project')}}"<?php if ($link == 2): ?>class="list-group-item active"<?php else: ?>class="list-group-item"<?php endif ?>>Projects</a>
-				  <?php } ?>
-				  <?php if(Session::get('entityDtl')['eyic_flag'] == 1) { ?>
-				  	<a href="{{URL::Route('mentorproject')}}"<?php if ($link == 3): ?>class="list-group-item active"<?php else: ?>class="list-group-item"<?php endif ?>>Mentor Projects</a>
-				  <?php } ?>
-				  <a href="#" class="list-group-item">Resources</a>				  
+				<div class="list-group">
+				{{ HTML::linkRoute('coorMentorHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}
+				  @if(Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2)
+				  	{{ HTML::linkRoute('project', 'Register Project', [], ['class'	=> 'list-group-item', 'id'	=> 'regProLk']) }}
+				  @endif
+				  @if(Session::get('entityDtl')['eyic_flag'] == 1)
+				  	{{ HTML::linkRoute('mentorproject', 'Mentored Projects', [], ['class'	=> 'list-group-item', 'id'	=> 'menProLk']) }}
+				  @endif
 				</div>
 			</div>
 			

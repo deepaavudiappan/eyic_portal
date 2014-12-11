@@ -69,7 +69,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(document).ready( function() {
-		$('#home').addClass('active');
+		$('#regProLk').addClass('active');
 	});
 </script>
 @stop
