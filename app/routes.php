@@ -197,3 +197,8 @@ Route::match(array('GET', 'POST'), '/doc/dplag', array(
   		return "Done";		
 	
 });*/
+
+Route::match(array('GET','POST'),'/student/studentHome',array(
+			'as' => 'studentHome',
+			'uses' => 'StudentHomeController@studentProfile'
+));

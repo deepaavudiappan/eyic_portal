@@ -40,6 +40,7 @@
 		<!-- Content -->
 		<div class="row">
 			
+			@if(Auth::user()->role == 1)
 			<div class="col-md-2">
 				<div class="list-group">
 					{{ HTML::linkRoute('coorMentorHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}
@@ -54,6 +55,14 @@
 					{{ HTML::linkRoute('dplag', 'Plagiarism', [], ['class'	=> 'list-group-item', 'id'	=> 'plagDocLk']) }}
 				</div>
 			</div>
+			@elseif (Auth::user()->role == 2)
+			<div class="col-md-2">
+				<div class="list-group">
+					{{ HTML::linkRoute('studentHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}					
+					{{ HTML::linkRoute('project', 'Project', [], ['class'	=> 'list-group-item', 'id'	=> 'regProLk']) }}					
+				</div>
+			</div>
+			@endif
 			
 			<div class="col-md-9" >
 				@if(Session::has('success'))

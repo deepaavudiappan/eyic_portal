@@ -44,7 +44,7 @@ class AuthController extends BaseController {
 			);			
 		if($validator->fails()){
 			$messages = $validator->messages();
-			return Redirect::Route('login')->withErrors($validator);				
+			return Redirect::Route('loginLand')->withErrors($validator);				
 		}else{
 			if(Auth::attempt($userdata)){
 				if( Auth::user()->active == 1){	
@@ -59,11 +59,11 @@ class AuthController extends BaseController {
 				//Check user and redirect to corresponding controller 1 = teacher  2 = student 
 				}else{	
 					//logout also						
-					return Redirect::Route('login')->withErrors(['Please Activate your account']);
+					return Redirect::Route('loginLand')->withErrors(['Please Activate your account']);
 				}
 			}else{
 				$msg = 'Please Enter correct Username and Password';				
-				return Redirect::Route('login')->withErrors([$msg]);
+				return Redirect::Route('loginLand')->withErrors([$msg]);
 			}
 		}//end of else
 	}//end of doLogin

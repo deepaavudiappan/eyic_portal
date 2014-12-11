@@ -12,7 +12,8 @@
 	          <th>#</th>
 	          <th>Project Name</th>
 	          <th>Project Status</th>
-	          <th>Team Members</th>	          
+	          <th>Team Members</th>
+	          <th></th>	          
 	        </tr>
       </thead>
       <tbody>
@@ -29,6 +30,12 @@
 					@endif		
 				</td>
 				<td><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
+				<td>
+					{{ Form::open(array('route' => 'addprojectdetailland', 'method' => 'POST')) }}
+						{{ Form::hidden('invisible', $project['id'], array('name' => 'proj_id')) }}
+						<button class="btn btn-sm btn-primary btn-block" type="submit">Add Project</button>
+					{{ Form::close() }}					
+				</td>
 			</tr>	
 	  @endforeach
 	  </tbody>

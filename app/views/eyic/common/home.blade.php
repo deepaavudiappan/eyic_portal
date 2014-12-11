@@ -2,40 +2,39 @@
 @section('styles')
 @stop
 
-@section('content')
-
-<table class="table table-striped">
-	  <tr>
-	  	<th colspan="2">
-	  		<h3><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ $teacherDetail->name }}</h3>
-	  	</th>
-	  </tr>
-	  <tr>
-		<td>COLLEGE NAME</td>
-		<td><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ $teacherDetail->college }}</td>		
-	  </tr>
-	  <tr>
-		<td>E-MAIL ID</td>
-		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $teacherDetail->emailid }}</td>		
-	  </tr>
-	  <tr>
-		<td>CONTACT</td>
-		<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $teacherDetail->contact_num }}</td>		
-	  </tr>
-	  <tr>
-		<td>DEPARTMENT</td>
-		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $teacherDetail->department }}</td>		
-	  </tr>
-	  <tr>
-		<td>DESIGATION</td>
-		<td><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> {{ $teacherDetail->designation }}</td>
-	  </tr>
-</table>
-<div class="row">
-	<div class="col-md-12 text-center">
-		{{ HTML::linkRoute('changePwdLand', 'Change Password', [], ['class'	=> 'btn btn-primary']) }}
+@section('content')	
+	<table class="table table-striped">
+		  <tr>
+		  	<th colspan="2">
+		  		<h3><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ $teacherDetail->name }}</h3>
+		  	</th>
+		  </tr>
+		  <tr>
+			<td>COLLEGE NAME</td>
+			<td><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ $teacherDetail->college }}</td>		
+		  </tr>
+		  <tr>
+			<td>E-MAIL ID</td>
+			<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $teacherDetail->emailid }}</td>		
+		  </tr>
+		  <tr>
+			<td>CONTACT</td>
+			<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $teacherDetail->contact_num }}</td>		
+		  </tr>
+		  <tr>
+			<td>DEPARTMENT</td>
+			<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $teacherDetail->department }}</td>		
+		  </tr>
+		  <tr>
+			<td>DESIGATION</td>
+			<td><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> {{ $teacherDetail->designation }}</td>
+		  </tr>
+	</table>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			{{ HTML::linkRoute('changePwdLand', 'Change Password', [], ['class'	=> 'btn btn-primary']) }}
+		</div>
 	</div>
-</div>
 @stop
 
 @section('notice')
