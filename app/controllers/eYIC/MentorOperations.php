@@ -164,6 +164,7 @@ class MentorOperations extends BaseController {
 			$scStd = new ElsiStudentsDtls;
 			$scStd->user_id = $curStd_login->id;
 			$scStd->email_id = $sc_email;
+			$scStd->clg_id = $clg_id;
 			$scStd->role = 1;
 			
 			if(!$scStd->save()){
@@ -185,6 +186,7 @@ class MentorOperations extends BaseController {
 			$scStd2 = new ElsiStudentsDtls;
 			$scStd2->user_id = $curStd_login->id;
 			$scStd2->email_id = $std2_email;
+			$scStd2->clg_id = $clg_id;
 			$scStd2->role = 2;
 			
 			if(!$scStd2->save()){
@@ -209,6 +211,7 @@ class MentorOperations extends BaseController {
 				$scStd3 = new ElsiStudentsDtls;
 				$scStd3->user_id = $curStd_login->id;
 				$scStd3->email_id = $std3_email;
+				$scStd3->clg_id = $clg_id;
 				$scStd3->role = 2;
 				
 				if(!$scStd3->save()){
@@ -232,6 +235,7 @@ class MentorOperations extends BaseController {
 				$scStd4 = new ElsiStudentsDtls;
 				$scStd4->user_id = $curStd_login->id;
 				$scStd4->email_id = $std4_email;
+				$scStd4->clg_id = $clg_id;
 				$scStd4->role = 2;
 				
 				if(!$scStd4->save()){
