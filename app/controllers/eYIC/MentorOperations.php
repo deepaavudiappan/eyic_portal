@@ -297,6 +297,6 @@ class MentorOperations extends BaseController {
 		}
 		//Store the student details and send email
 		$messages = 'Successfully stored';
-		return Redirect::route('addprojectdetailland')->with(['success' => $messages]);
+		return Redirect::route('commonHome')->with(['success' => $messages]);
 	}
 }
