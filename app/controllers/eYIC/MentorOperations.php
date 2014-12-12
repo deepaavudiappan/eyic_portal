@@ -256,7 +256,7 @@ class MentorOperations extends BaseController {
 				throw new Exception("Unable to update project details");
 			}
 			
-			Mail::queue('emails.eyic.student_invite',  array('username'	=>	$sc_email, 
+			Mail::queue('emails.eyic.student_repre_invite',  array('username'	=>	$sc_email, 
 				'pwd' => $scpassword, 'mentor' => $mentor_name, 'proj' => $proj_title), function($message) use($sc_email, $emailSubj)
 			{
 				$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
