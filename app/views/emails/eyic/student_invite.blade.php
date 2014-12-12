@@ -1,9 +1,15 @@
-<p>Dear Student,<br/>
+Dear Team Member,<br/>
 <br/>
-You have been added as a student under the project {{$proj}} by your mentor {{$mentor}}.<br/>
-Please login at <a href="http://elsiportal.e-yantra.org">e-Yantra</a> with the following details:<br/>
+Greetings from e-Yantra !!<br/>
 <br/>
-Username: {{$username}}<br/>
-Password: {{$pwd}}<br/>
-Best Wishes,<br/>
-e-Yantra Admin
+You have been sucessfully registered for the project "{{$proj}}" in e-Yantra Ideas Competition(eYIC)-2015.
+eYIC Portal Link : <a href="http://elsiportal.e-yantra.org">http://elsiportal.e-yantra.org</a><br/>
+Your credentials for the portal:<br/>
+<br/>
+Username : {{$username}}<br/>
+Password : {{$pwd}}<br/>
+<br/>
+We look forward to your support.<br/>
+<br/>
+Thank You,<br/>
+e-Yantra Team.
