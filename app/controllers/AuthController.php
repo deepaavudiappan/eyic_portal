@@ -38,10 +38,10 @@ class AuthController extends BaseController {
 				'password' 	=> Input::get('inputPassword')
 				),
 			array(
-				'username' => 'required|email',
+				'username' => 'required',
 				'password' => 'required'
 				)
-			);			
+		);			
 		if($validator->fails()){
 			$messages = $validator->messages();
 			return Redirect::Route('loginLand')->withErrors($validator);				
