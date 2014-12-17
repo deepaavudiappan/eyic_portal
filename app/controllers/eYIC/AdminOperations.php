@@ -52,13 +52,15 @@ class AdminOperations extends BaseController {
 				}
 				$curCoor->login_created = 1;
 				$curCoor->user_id = $curStd_login->id;
-				
+					
 				if(!$curCoor->save()){
 					Log::error($thisMethod . "Throwing exception for unable to save coordinator in teachers dtls flag update");
 					throw new Exception('Unable to save coordinator in teachers flag update');
 				}
+
+				$clgDtl = ElsiCollegeDetail::where('id',$curCoor->clg_id)->get();
 				Mail::queue('emails.eyic.coord_invite',  array('username'	=>	$curCoor->emailid, 
-					'pwd' => $scpassword, 'coorName' => $curCoor->name, 'clgName' => $curCoor->clg_id), function($message) use($curCoor, $emailSubj)
+					'pwd' => $scpassword, 'coorName' => $curCoor->name, 'clgName' => $clgDtl[0]->college_name), function($message) use($curCoor, $emailSubj)
 				{
 					$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
 					$message->to($curCoor->emailid)->subject($emailSubj);
