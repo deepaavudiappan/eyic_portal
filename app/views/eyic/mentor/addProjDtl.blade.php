@@ -25,7 +25,7 @@
 	{{ Form::open(array('class' => 'form-horizontal','role' => 'form', 'route' => 'addprojectdetail', 'method' => 'POST')) }}
 	<input id="proj_id" name="proj_id" type="hidden" value="{{ $projDtls['id'];}}"/>	
 	<div class="form-group @if ($errors->has('std1_email')) has-error @endif">
-		<label class="control-label col-sm-5" for="lbl_std1">Student Coordinator (1st Student) Email:</label>
+		<label class="control-label col-sm-5" for="lbl_std1">Student Representative (1st Student) Email:</label>
 		<div class="col-sm-6">
 			<input type="text" id="std1_email" class="form-control" name="std1_email" placeholder="example@example.com" value="{{ Input::old('std1_email') }}"/>
 			@if ($errors->has('std1_email')) <p class="help-block">{{ $errors->first('std1_email') }} </p>@endif

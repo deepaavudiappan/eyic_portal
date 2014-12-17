@@ -4,8 +4,6 @@
 
 @section('content')
 
-	Project Details from your college:	
-	
 	<table class="table table-striped">
 	  <thead>
 	        <tr>
@@ -44,9 +42,9 @@
 	</table>
 	
 	@if (count($projectDetails) === 4)
-		<p>Number Of project: {{count($projectDetails)}}</p>
+		<p>Number Of projects: {{count($projectDetails)}}</p>
 	@else
-		<p>Number Of project: {{count($projectDetails)}}</p>		
+		<p>Number Of projects: {{count($projectDetails)}}</p>		
 	@endif
 
 @stop
