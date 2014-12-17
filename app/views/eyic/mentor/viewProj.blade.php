@@ -31,10 +31,12 @@
 				</td>
 				<td><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
 				<td>
-					{{ Form::open(array('route' => 'addprojectdetailland', 'method' => 'POST')) }}
-						{{ Form::hidden('invisible', $project['id'], array('name' => 'proj_id')) }}
-						<button class="btn btn-sm btn-primary btn-block" type="submit">Add Project</button>
-					{{ Form::close() }}					
+					@if($project['project_status'] == 0)
+						{{ Form::open(array('route' => 'addprojectdetailland', 'method' => 'POST')) }}
+							{{ Form::hidden('invisible', $project['id'], array('name' => 'proj_id')) }}
+							<button class="btn btn-sm btn-primary btn-block" type="submit">Add Project</button>
+						{{ Form::close() }}
+					@endif					
 				</td>
 			</tr>	
 	  @endforeach

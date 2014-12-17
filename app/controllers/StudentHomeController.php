@@ -38,9 +38,9 @@ class StudentHomeController extends BaseController {
 		if(Session::has('entityDtl')){
 			Log::debug($thisMethod . ' Coor_flag: ' . Session::get('entityDtl')['coor_flag'] . ' Auth:: ' . Auth::id());			
 				$student = 	Session::get('entityDtl');
-				//$clgDtl = ElsiCollegeDetail::find(Session::get('entityDtl')['clg_id']);				
-				//$student['college'] = $clgDtl['college_name'];
-				$student['college'] = "Add college_id in student table";				
+				$clgDtl = ElsiCollegeDetail::find(Session::get('entityDtl')['clg_id']);				
+				$student['college'] = $clgDtl['college_name'];
+				//$student['college'] = "Add college_id in student table";				
 				//View::share(array('title'=>'Profile','link' => 1));
 				//print_r($clgDtl);
 				return View::make('eyic.common.studentHome')->with(array('studentDetail' => $student));							
