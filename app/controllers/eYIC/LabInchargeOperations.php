@@ -65,7 +65,7 @@ class LabInchargeOperations extends BaseController {
 
 		$thisMethod = self::$thisClass . ' -> registerProj -> ';
 		$clg_id = Auth::user()->clg_id;
-		$emailSubj = 'eYIC-2015 Invite';
+		$emailSubj = 'eYIC-2015 Project Invite';
 		
 		$rules = [	'proj_name'	=>	'required',
 		'mentor_name'	=>	'required',
@@ -113,6 +113,11 @@ class LabInchargeOperations extends BaseController {
 				}
 
 				//Send email
+				Mail::queue('emails.eyic.mentor_invite_labIn',  array('mentor' => $mentor_name, 'proj' => $proj_name), function($message) use($mentor_email, $emailSubj)
+				{
+					$message->from(EYIC_FROM_EMAIL, EYIC_FROM_NAME);
+					$message->to($mentor_email)->subject($emailSubj);
+				});
 			}
 			else{
 				$mentorPwd = str_random(10);
