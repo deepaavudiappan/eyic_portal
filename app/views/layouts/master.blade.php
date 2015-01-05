@@ -88,7 +88,7 @@
 	</div>
 	@include('includes.footer')
 	<script type="text/javascript">
-		$('#projPropLk').append('<span class="badge">new</span>');
+		//$('#projPropLk').append('<span class="badge">new</span>');
 	</script>
 </body>
 </html>

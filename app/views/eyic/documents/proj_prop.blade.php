@@ -11,6 +11,9 @@
 		<div class="alert alert-danger">The project team is required to prepare a project proposal using the template provided below and then upload the same. The project will be evaluated based on the uploaded Project Proposal</div>
 		<br/>
 		{{ HTML::linkRoute('projPropDown', 'Download Project Proposal Template!', [], ['class'	=> 'btn btn-primary', 'id'	=> 'projPropDownLk']) }}
+		<br/><br/>
+		Upload facility coming soon!
+
 	</div>
 </div>
 @stop
