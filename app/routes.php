@@ -187,6 +187,16 @@ Route::match(array('GET', 'POST'), '/doc/dplag', array(
 			'uses'	=>	'DisplayDocController@displayDocPlagiarism'
 ));
 
+Route::match(array('GET', 'POST'), '/doc/projProp', array(
+			'as'	=>	'projProp',
+			'uses'	=>	'DisplayDocController@displayDocProjProp'
+));
+
+Route::match(array('GET', 'POST'), '/doc/projPropDown', array(
+			'as'	=>	'projPropDown',
+			'uses'	=>	'DisplayDocController@downloadProjProp'
+));
+
 /*Route::get('/', function(){
 		$user = new Login();
 		

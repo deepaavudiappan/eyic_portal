@@ -46,4 +46,30 @@ class DisplayDocController extends BaseController {
 		return View::make('eyic.documents.plagiarism');
 	}
 	
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		displayDocProjProp	
+	| Input:		Null
+	| Output:		Display Documents on Project Proposal
+	| Logic:		Display Documents on Project Proposal
+	|
+	*/
+	public function displayDocProjProp	(){
+		
+		return View::make('eyic.documents.proj_prop');
+	}
+	
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		downloadProjProp	
+	| Input:		Null
+	| Output:		Download Documents on Project Proposal
+	| Logic:		Download Documents on Project Proposal
+	|
+	*/
+	public function downloadProjProp	(){
+		
+		return Response::download(DOWNLOAD_FILES_LOC . 'eyic/Project_Proposal_Template_eyic_2015.docx');
+	}
+	
 }

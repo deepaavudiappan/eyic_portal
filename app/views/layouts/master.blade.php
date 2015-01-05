@@ -50,6 +50,7 @@
 					@if(Session::get('entityDtl')['eyic_flag'] == 1)
 					{{ HTML::linkRoute('mentorproject', 'Mentored Projects', [], ['class'	=> 'list-group-item', 'id'	=> 'menProLk']) }}
 					@endif
+					{{ HTML::linkRoute('projProp', 'Project Proposal', [], ['class'	=> 'list-group-item', 'id'	=> 'projPropLk']) }}
 					{{ HTML::linkRoute('dcoor', 'Coordinator Info', [], ['class'	=> 'list-group-item', 'id'	=> 'coorDocLk']) }}
 					{{ HTML::linkRoute('dmentor', 'Mentor and Student Info', [], ['class'	=> 'list-group-item', 'id'	=> 'menStdntDocLk']) }}
 					{{ HTML::linkRoute('dplag', 'Plagiarism', [], ['class'	=> 'list-group-item', 'id'	=> 'plagDocLk']) }}
@@ -58,7 +59,8 @@
 			@elseif (Auth::user()->role == 2)
 			<div class="col-md-2">
 				<div class="list-group">
-					{{ HTML::linkRoute('studentHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}					
+					{{ HTML::linkRoute('studentHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}
+					{{ HTML::linkRoute('projProp', 'Project Proposal', [], ['class'	=> 'list-group-item', 'id'	=> 'projPropLk']) }}
 					{{ HTML::linkRoute('project', 'Project', [], ['class'	=> 'list-group-item', 'id'	=> 'regProLk']) }}					
 				</div>
 			</div>
@@ -85,5 +87,8 @@
 
 	</div>
 	@include('includes.footer')
+	<script type="text/javascript">
+		$('#projPropLk').append('<span class="badge">new</span>');
+	</script>
 </body>
 </html>
