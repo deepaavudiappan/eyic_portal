@@ -103,7 +103,7 @@ class HomeController extends BaseController {
 				$clgDtl = ElsiCollegeDetail::find(Session::get('entityDtl')['clg_id']);				
 				$teacher['college'] = $clgDtl['college_name'];				
 				View::share(array('title'=>'Profile','link' => 1));
-				return View::make('eyic.common.home')->with(array('teacherDetail'=>$teacher));							
+				return View::make('eyic.common.home')->with(array('teacherDetail'=>$teacher, 'college' => $clgDtl));							
 				//return View::make('eyic.labincharge.home')->with(array('teacherDetail'=>$teacher,'projectDetail'=>$projectDtl));					
 			}			
 		}
