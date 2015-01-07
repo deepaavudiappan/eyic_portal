@@ -4,16 +4,16 @@
 
 @section('content')
 	<div class="alert alert-danger">
-	The project proposal template is now available under the tab "Project Proposal" on the left side menu.
+	The project proposal template is now available under the tab <strong>"Project Proposal"</strong> on the left side menu.
 	</div>
 	@if($teacherDetail->coor_flag == 1 || $teacherDetail->coor_flag == 2)
-	<div class="alert alert-danger">
-	Dear Coordinator, Welcome to e-Yantra Ideas Competition 2015 Portal.<br/><br/>
-	Step 1: Please read the information under the tab "Coordinator Info" on the left side menu.<br/>
-	Step 2: After selecting up to 4 projects to represent your college, please register the projects by clicking on the "Register Project" tab on the left side menu<br/>
+	<div class="alert alert-info">
+	Dear Coordinator, welcome to e-Yantra Ideas Competition 2015 Portal.<br/><br/>
+	Step 1: Please read the information under the tab <strong>"Coordinator Info"</strong> on the left side menu<br/>
+	Step 2: After selecting up to 4 projects to represent your college, please register the projects by clicking on the <strong>"Register Project"</strong> tab on the left side menu<br/>
 	Step 3: After registering the project, the mentor is contacted to complete the registration<br/>
 	<br/>
-	You can check the status of all the projects registered under your college at the "Register Project" tab on the left side menu.
+	You can check the status of all the projects registered under your college at the <strong>"Register Project"</strong> tab on the left side menu.
 	</div>
 	@endif
 	<table class="table table-striped">
