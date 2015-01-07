@@ -6,6 +6,17 @@
 	<div class="alert alert-danger">
 	The project proposal template is now available under the tab <strong>"Project Proposal"</strong> on the left side menu.
 	</div>
+	<div class="alert alert-danger">
+	<ol>
+		@if($college->phase == '2012' || $college->phase == '2013')
+		<li>Deadline for the coordinator to register the project: January 17th 2015</li>
+		<li>Deadline for the project team to upload the project proposal as per the template: January 23rd 2015</li>
+		@else
+		<li>Deadline for the coordinator to register the project: January 24th 2015</li>
+		<li>Deadline for the project team to upload the project proposal as per the template: January 31st 2015</li>
+		@endif
+	</ol>
+	</div>
 	@if($teacherDetail->coor_flag == 1 || $teacherDetail->coor_flag == 2)
 	<div class="alert alert-info">
 	Dear Coordinator, welcome to e-Yantra Ideas Competition 2015 Portal.<br/><br/>
