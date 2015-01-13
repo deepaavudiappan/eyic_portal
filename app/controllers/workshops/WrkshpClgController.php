@@ -63,20 +63,19 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('clgConfirmLand')->withErrors('Please select the college!');
 		}
 		
-		if(Input::get('confirm')){
-			$clg = ElsiCollegeDetail::find($clg);
-			$clg->workshop_cnfrm = 1;
+		$clg = ElsiCollegeDetail::find($clg);
+		$clg->workshop_cnfrm = 1;
 
-			if(!$clg->save()){
-				Log::error($thisMethod . 'Unable to save college confirm');
-				return Redirect::route('clgConfirmLand')->withErrors('Unable to confirm college workshop please contact support@e-yantra.org');
-			}
-			else{
-				return Redirect::route('clgConfirmLand')->withSuccess('Your college has successfully confirmed the workshop');
-			}
+		if(!$clg->save()){
+			Log::error($thisMethod . 'Unable to save college confirm');
+			return Redirect::route('clgConfirmLand')->withErrors('Unable to confirm college workshop please contact support@e-yantra.org');
 		}
 		else{
-			return Redirect::route('clgConfirmLand')->withErrors('Please confirm the message');
+			return Redirect::route('clgConfirmLand')->withSuccess('Your college has successfully confirmed the workshop');
 		}
+		/*}
+		else{
+			return Redirect::route('clgConfirmLand')->withErrors('Please confirm the message');
+		}*/
 	}
 }
