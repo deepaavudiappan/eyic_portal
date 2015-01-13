@@ -36,7 +36,7 @@
 	<div class="container" style="padding-top: 80px;">
 		<!-- Content -->
 		@if(Session::has('success'))
-		<div class="alert alert-success">{{ Session::get('success') }}</div>
+		<div class="alert alert-success"><strong>{{ Session::get('success') }}</strong></div>
 		@elseif (!empty($success))
 		<div class="alert alert-success">{{ $success }}</div>
 		@endif
