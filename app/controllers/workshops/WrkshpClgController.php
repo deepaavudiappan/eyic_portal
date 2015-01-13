@@ -41,7 +41,7 @@ class WrkshpClgController extends BaseController {
 	public function clgConfirmLand(){
 		$thisMethod = self::$thisClass . ' -> clgConfirmLand -> ';
 
-		$clgs = ['0' => 'Select College'] + ElsiCollegeDetail::where(['region' => 'bangalore', 'LOI' => 1, 'workshop_cnfrm' => 0])->lists('college_name', 'id');
+		$clgs = ['0' => 'Select College'] + ElsiCollegeDetail::where('phase', 'like', '2015')->where(['region' => 'bangalore', 'LOI' => 1, 'workshop_cnfrm' => 0])->lists('college_name', 'id');
 
 		return View::make('workshops.loi_confirm')->with('clgs', $clgs);
 	}

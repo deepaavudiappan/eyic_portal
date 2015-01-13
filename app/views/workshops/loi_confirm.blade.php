@@ -31,10 +31,6 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before January 26th 2015:<br/>
 				<br/>
-				{{ Form::submit('Confirm!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br
-				/><br/><br/>
-				{{ Form::close()}}
-				<br/>
 				<div class="alert alert-danger">
 					Please note:<br/>
 					<br/>
@@ -46,6 +42,10 @@
 						<li>You may substitute teachers in your team till the workshop date. Each team member attending the workshop will register at the workshop. These 4 teachers will particicpate in the e-Yantra Robotics Teacher Competition (eYRTC). No substitution is possible after the workshop, during eYRTC.</li>
 					</ol>
 				</div>
+				<br/>
+				{{ Form::submit('Confirm!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br
+				/><br/>
+				{{ Form::close()}}
 			</div>
 		</div>
 	</div>
