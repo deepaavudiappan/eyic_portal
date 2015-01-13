@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.login-master')
 @section('styles')
 @stop
 
@@ -50,7 +50,4 @@
 		</div>
 	</div>
 </div>
-@stop
-
-@section('scripts')
 @stop
