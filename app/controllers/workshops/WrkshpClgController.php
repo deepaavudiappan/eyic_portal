@@ -71,7 +71,7 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('clgConfirmLand')->withErrors('Unable to confirm college workshop please contact support@e-yantra.org');
 		}
 		else{
-			return Redirect::route('clgConfirmLand')->withSuccess('Your college has successfully confirmed the workshop');
+			return Redirect::route('clgConfirmLand')->withSuccess('Your college has successfully confirmed participation in the workshop.');
 		}
 		/*}
 		else{
