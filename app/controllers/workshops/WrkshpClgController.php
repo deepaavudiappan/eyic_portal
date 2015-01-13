@@ -63,7 +63,7 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('clgConfirmLand')->withErrors('Please select the college!');
 		}
 		
-		$clg = ElsiCollegeDetail::find($clg);
+		$clg = ElsiCollegeDetail::find($clg_id);
 		$clg->workshop_cnfrm = 1;
 
 		if(!$clg->save()){
