@@ -79,3 +79,4 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('clgConfirmLand')->withErrors('Please confirm the message');
 		}
 	}
+}
