@@ -24,8 +24,8 @@
 				<br/>
 				Date: <strong>February 6th and 7th, 2015</strong><br/>
 				Venue: <strong>IIIT Bangalore<br/>
-				No. 26/C, Electronic City, Hosur Road<br/>
-				Bangalore - 560100<br/></strong>
+				<div style="margin-left:25px;">No. 26/C, Electronic City, Hosur Road</div><br/>
+				<div style="margin-left:25px;">Bangalore - 560100</div><br/></strong>
 				Coordinator: <strong>Ms. Roshni DSouza</strong><br/>
 				Contact number: <strong>+91-80-4140-7777, +91-9986668421</strong><br/>
 				E-mail: <strong>roshni.dsouza@iiitb.ac.in</strong><br/>
