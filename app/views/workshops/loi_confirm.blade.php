@@ -3,7 +3,7 @@
 @stop
 
 @section('content')
-@if (empty($success))
+@if (!(Session::has('success')) )
 <div class="panel panel-info">
 	<div class="panel-heading">
 		<h3 class="panel-title">Workshop Confirmation</h3>
