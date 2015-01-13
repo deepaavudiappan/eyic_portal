@@ -6,7 +6,7 @@ We are happy to announce the dates for the 2-day workshop on "Introduction to Ro
 <br/>
 Date: {{$date;}}<br/>
 Venue: {{$venue;}}<br/>
-Nodal Center Coordinator: {{$nc_coor;}}<br/>
+Coordinator: {{$nc_coor;}}<br/>
 Contact number: {{$contact_num;}}<br/>
 <br/>
 Here are the modalities of the workshop:<br/>

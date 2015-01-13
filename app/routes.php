@@ -144,12 +144,12 @@ Route::match(array('GET', 'POST'), '/elsi/workshops/admin/workshop_invite', arra
 
 Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirmland', array(
 			'as'	=>	'clgConfirmLand',
-			'uses'	=>	'CollegeController@clgConfirmLand'
+			'uses'	=>	'WrkshpClgController@clgConfirmLand'
 ));
 
 Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirm', array(
 			'as'	=>	'clgConfirm',
-			'uses'	=>	'CollegeController@clgConfirm'
+			'uses'	=>	'WrkshpClgController@clgConfirm'
 ));
 
 /*--------------------Added By SP -------------------------------*/
