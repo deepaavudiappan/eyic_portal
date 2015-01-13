@@ -52,7 +52,7 @@ class AdminOperations extends BaseController {
 				}
 				$curCoor->login_created = 1;
 				$curCoor->user_id = $curStd_login->id;
-					
+
 				if(!$curCoor->save()){
 					Log::error($thisMethod . "Throwing exception for unable to save coordinator in teachers dtls flag update");
 					throw new Exception('Unable to save coordinator in teachers flag update');
@@ -79,5 +79,100 @@ class AdminOperations extends BaseController {
 		}
 
 		return Redirect::route('adminHome')->with(['success' => 'Setup Coordinator accounts successfully']);
+	}
+
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		workshop_invite_loi
+	| Input:		Null
+	| Output:		
+	| Logic:		Workshop Send invites to LOI colleges
+	|
+	*/
+	public function workshop_invite(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		$thisMethod = self::$thisClass . ' -> workshop_invite_loi -> ';
+
+		$region = Input::get('regions');
+		$date = Input::get('date');
+		$venue = Input::get('venue');
+		$nc_coor = Input::get('nc_coor');
+		$contact_num = Input::get('contact_num');
+
+		DB::beginTransaction();
+		try{
+			if(Input::get('loi_invite')) {
+				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->get();
+
+				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
+				$emailSubj = 'eLSI-Workshop-Invite';
+
+				foreach($clg_lst as $cur_clg){
+					Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
+						'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
+					{
+						$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+						$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
+					});
+				}
+			}
+			elseif(Input::get('fcfs_invite')) {
+				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->get();
+
+				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
+				$emailSubj = 'eLSI-Workshop-Invite';
+
+				foreach($clg_lst as $cur_clg){
+					Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
+						'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
+					{
+						$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+						$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
+					});
+				}
+			}
+
+			return Redirect::route('adminHome')->withSuccess('Workshop invites sent successfully!');
+		}
+
+		catch(Exception $e){
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Exception Occured'];
+			return Redirect::route('adminHome')->withErrors($messages);
+		}
+	}
+
+	public function invite_data(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		$thisMethod = self::$thisClass . ' -> workshop_invite -> ';
+
+		DB::beginTransaction();
+		try{
+			$dst_region = ElsiCollegeDetail::distinct()->select('region')->lists('region','region');
+
+			return View::make('workshops.invite_data')->with(['regions' => $dst_region]);
+		}
+		catch(Exception $e){
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Exception Occured'];
+			return Redirect::route('adminHome')->withErrors($messages);
+		}
 	}
 }
