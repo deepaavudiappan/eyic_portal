@@ -34,8 +34,24 @@
 					Please note:<br/>
 					<br/>
 					<ol>
-						<li>Point 1</li>
+						<li>We welcome other college teams in the region to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity.</li>
+						<li>Formal invitations will be sent to teams from colleges who are selected for participation.</li>
+						<li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
+						<li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
+						<li>Each participating college team member registers at the venue on the first day of workshop. Any change in the team members is allowed till the day of the workshop.</li>
+						<li>Teachers will be given a participation certificate from e-Yantra upon successful participation on both days of the workshop.</li>
+						<li>Each Teacher team from colleges who are participating in the e-Yantra Lab Setup Initiative (eLSI) by giving the Letter of Intent (LoI) will receive a robotic kit at the end of the workshop. These teams will participate in the e-Yantra Robotics Teacher Competition (eYRTC).</li>
+						<li>Colleges who have not given the LoI will not be given the robotic kit and are not eligible for participating in eYRTC.</li>
 					</ol>
+				</div>
+				<div class="alert alert-danger">
+					Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the attached Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail and a hard-copy mailed to:<br/>
+					<br/>
+					e-Yantra project,<br/>
+					ERTS lab, First Floor, KReSIT building<br/>
+					IIT Bombay<br/>
+					Powai, Mumbai - 400 076<br/>
+					<br/>
 				</div>
 				<br/>
 				<div class="form-group @if ($errors->has('tl_name')) has-error @endif">
