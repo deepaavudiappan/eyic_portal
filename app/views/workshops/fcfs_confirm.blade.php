@@ -28,7 +28,7 @@
 				<span style="margin-left:50px;">Bangalore - 560100</span><br/></strong>
 				Coordinator: <strong>Ms. Roshni DSouza</strong><br/>
 				Contact number: <strong>+91-80-4140-7777, +91-9986668421</strong><br/>
-				E-mail: <strong>roshni.dsouza@iiitb.ac.in</strong><br/>
+				e-mail: <strong>roshni.dsouza@iiitb.ac.in</strong><br/>
 				<br/>
 				<div class="alert alert-danger">
 					<strong>Please note:<br/></strong>
