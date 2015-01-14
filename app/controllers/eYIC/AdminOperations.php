@@ -137,7 +137,7 @@ class AdminOperations extends BaseController {
 							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
 						{
 							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-							$message->to(explode(',',$cur_clg['principal_email'])->cc('admin@e-yantra.org')->subject($emailSubj);
+							$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
 						});
 					}
 				}
