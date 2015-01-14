@@ -4,10 +4,10 @@ Greetings from e-Yantra!<br/>
 <br/>
 We are happy to announce the dates for the 2-day workshop on "Introduction to Robotics". Details are given below:<br/>
 <br/>
-Date: {{$date;}}<br/>
-Venue: {{$venue;}}<br/>
-Coordinator: {{$nc_coor;}}<br/>
-Contact number: {{$contact_num;}}<br/>
+Date: <strong>{{$date;}}</strong><br/>
+Venue: <strong>{{$venue;}}</strong><br/>
+Coordinator: <strong>{{$nc_coor;}}</strong><br/>
+Contact number: <strong>{{$contact_num;}}</strong><br/>
 <br/>
 Here are the modalities of the workshop:<br/>
 Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 4 teachers).<br/>
