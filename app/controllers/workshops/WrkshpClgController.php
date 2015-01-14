@@ -143,4 +143,18 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('clgConfirmLandFCFS')->withSuccess('Your college has successfully confirmed participation in the workshop.');
 		}
 	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		downloadLoi
+	| Input:		Null
+	| Output:		Register for Workshop
+	| Logic:		Register for Workshop
+	|
+	*/
+	public function downloadLoi(){
+		$thisMethod = self::$thisClass . ' -> downloadLoi -> ';
+
+		return Response::download(DOWNLOAD_FILES_LOC . 'elsi/letter-of-intent.docx');
+	}
 }

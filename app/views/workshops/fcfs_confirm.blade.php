@@ -19,6 +19,7 @@
 				Greetings from e-Yantra!<br/>
 				<br/>
 				As the first step in engaging with your teacher team, you can register your team for the 2-day workshop on "Introduction to Robotics". Details of the workshop are given below:<br/>
+				{{ HTML::linkRoute('downloadLoi', 'Download LOI Template', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 				<br/>
 				Date: <strong>February 6th and 7th, 2015</strong><br/>
 				Venue: <strong>IIIT Bangalore<br/>

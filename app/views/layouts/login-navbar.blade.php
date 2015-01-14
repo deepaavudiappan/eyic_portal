@@ -11,7 +11,7 @@
 				<a class="navbar-brand" href="#" title="e-Yantra">{{ HTML::image('img/logo1.png') }}</a>
 			</div>
 
-			<h3 class="navbar-text navbar-right">e-Yantra Ideas Competition (eYIC-2015)</h3>
+			<h3 class="navbar-text navbar-right">e-Yantra Lab Setup Initiative (eLSI)</h3>
 			    
 		</div>	
 </div>

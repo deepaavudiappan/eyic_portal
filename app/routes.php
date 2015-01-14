@@ -132,6 +132,7 @@ Route::match(array('GET', 'POST'), '/admin/setupCoorAccs', array(
 			'uses'	=>	'AdminOperations@makeLoginCoor'
 ));
 
+/*------------------Workshops--------------*/
 Route::match(array('GET', 'POST'), '/elsi/workshops/admin/invite_data', array(
 			'as'	=>	'invite_data',
 			'uses'	=>	'AdminOperations@invite_data'
@@ -160,6 +161,11 @@ Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirm_land_fcfs', 
 Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirm_fcfs', array(
 			'as'	=>	'clgConfirmFCFS',
 			'uses'	=>	'WrkshpClgController@clgConfirmFCFS'
+));
+
+Route::match(array('GET', 'POST'), '/elsi/workshops/college/download/loi', array(
+			'as'	=>	'downloadLoi',
+			'uses'	=>	'WrkshpClgController@downloadLoi'
 ));
 
 
