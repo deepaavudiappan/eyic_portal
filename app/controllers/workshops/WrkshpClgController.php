@@ -128,7 +128,7 @@ class WrkshpClgController extends BaseController {
 		'tl_cont.required'		=>	'Team Leader\'s Contact number is required'];
 
 		$clg = ElsiCollegeDetail::find($clg_id);
-		$clg->workshop_cnfrm = 1;
+		$clg->workshop_reg = 1;
 		$clg->workshop_cnfrm_date = new DateTime;
 		$clg->tl_name = Input::get('tl_name');
 		$clg->tl_email = Input::get('tl_email');

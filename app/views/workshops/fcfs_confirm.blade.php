@@ -34,7 +34,7 @@
 					<strong>Please note:<br/></strong>
 					<br/>
 					<ol>
-						<li>Formal invitations will be sent to teams from colleges who are selected for participation.</li>
+						<li>Formal invitations will be sent to teams from colleges who are <strong>selected</strong> for participation.</li>
 						<li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
 						<li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
 						<li>Each participating college team member registers at the venue on the first day of workshop. Any change in the team members is allowed till the day of the workshop.</li>
@@ -55,7 +55,7 @@
 					{{ HTML::linkRoute('downloadLoi', 'Download LOI Template', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 				</div>
 				<br/>
-				<div class="alert alert-info">Please fill in the details to register your team of four teachers on or before <strong>January 26th 2015:</strong></div><br/>
+				<div class="alert alert-info">Please fill in the details to register your team of four teachers on or before <strong>January 26th 2015. You will be notified on or before January 30th.</strong></div><br/>
 				<div class="form-group @if ($errors->has('tl_name')) has-error @endif">
 					<label class="control-label" for="lbl_tl_name">Team Leader Name:</label>
 					<input type="text" id="tl_name" class="form-control" name="tl_name" placeholder="" value="{{ Input::old('tl_name') }}"/>
