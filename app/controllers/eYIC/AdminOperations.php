@@ -105,7 +105,7 @@ class AdminOperations extends BaseController {
 		$nc_coor = Input::get('nc_coor');
 		$contact_num = Input::get('contact_num');
 		$email = Input::get('email');
-		
+
 		DB::beginTransaction();
 		try{
 			if(Input::get('loi_invite')) {
@@ -120,7 +120,7 @@ class AdminOperations extends BaseController {
 							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
 						{
 							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-							$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
+							$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->cc('admin@e-yantra.org')->subject($emailSubj);
 						});
 					}
 				}
@@ -137,7 +137,7 @@ class AdminOperations extends BaseController {
 							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
 						{
 							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-							$message->to([$cur_clg['principal_email']])->subject($emailSubj);
+							$message->to([$cur_clg['principal_email']])->cc('admin@e-yantra.org')->subject($emailSubj);
 						});
 					}
 				}
