@@ -11,7 +11,7 @@
 	<div class="panel-body">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-				{{ Form::open(array('route' => 'clgConfirm', 'method' => 'POST')) }}
+				{{ Form::open(array('route' => 'clgConfirmFCFS', 'method' => 'POST')) }}
 				
 				<label style="250px">Please select your college:</label>
 				{{ Form::select('clg_id', $clgs, [], ['class' => 'form-control'] );}}<br/><br/>
@@ -53,7 +53,7 @@
 					@if ($errors->has('tl_email')) <p class="help-block">{{ $errors->first('tl_email') }} </p>@endif
 				</div>
 				<div class="form-group @if ($errors->has('tl_cont')) has-error @endif">
-					<label class="control-label" for="lbl_tl_cont">Team Leader's contact Number:</label>
+					<label class="control-label" for="lbl_tl_cont">Team Leader's Contact Number:</label>
 					<input type="text" id="tl_cont" class="form-control" name="tl_cont" placeholder="example@example.com" value="{{ Input::old('tl_cont') }}"/>
 					@if ($errors->has('tl_cont')) <p class="help-block">{{ $errors->first('tl_cont') }} </p>@endif
 				</div>
