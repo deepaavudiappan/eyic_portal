@@ -30,7 +30,7 @@
 				Contact number: <strong>+91-80-4140-7777, +91-9986668421</strong><br/>
 				E-mail: <strong>roshni.dsouza@iiitb.ac.in</strong><br/>
 				<br/>
-				Please fill in the details and confirm attendance of your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
+				Please fill in the details to register your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
 				<br/>
 				<div class="alert alert-danger">
 					<strong>Please note:<br/></strong>
