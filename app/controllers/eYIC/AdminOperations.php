@@ -104,7 +104,8 @@ class AdminOperations extends BaseController {
 		$venue = Input::get('venue');
 		$nc_coor = Input::get('nc_coor');
 		$contact_num = Input::get('contact_num');
-
+		$email = Input::get('email');
+		
 		DB::beginTransaction();
 		try{
 			if(Input::get('loi_invite')) {
@@ -116,7 +117,7 @@ class AdminOperations extends BaseController {
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
 						Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
-							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
+							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
 						{
 							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
 							$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
@@ -133,7 +134,7 @@ class AdminOperations extends BaseController {
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email'])){ 
 						Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
-							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
+							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
 						{
 							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
 							$message->to([$cur_clg['principal_email']])->subject($emailSubj);

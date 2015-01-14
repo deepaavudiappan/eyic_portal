@@ -8,6 +8,7 @@ Date: <strong>{{$date;}}</strong><br/>
 Venue: <strong>{{$venue;}}</strong><br/>
 Coordinator: <strong>{{$nc_coor;}}</strong><br/>
 Contact number: <strong>{{$contact_num;}}</strong><br/>
+E-mail: <strong>{{$email;}}</strong><br/>
 <br/>
 Here are the modalities of the workshop:<br/>
 Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 4 teachers).<br/>

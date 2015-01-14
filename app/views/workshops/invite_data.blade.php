@@ -16,6 +16,7 @@
 		<label style="width:250px;">Venue:</label><input type="text" name="venue" /><br/>
 		<label style="width:250px;">Nodal Center Coordinator Name:</label><input type="text" name="nc_coor" /><br/>
 		<label style="width:250px;">Contact Number:</label><input type="text" name="contact_num" /><br/><br/>
+		<label style="width:250px;">E-mail:</label><input type="text" name="email" /><br/><br/>
 		{{ Form::submit('Invite LOI Colleges!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br/><br/>
 		{{ Form::submit('Invite Other Colleges' , array('class' => 'btn btn-danger', 'name' => 'fcfs_invite')) }}
 		{{ Form::close()}}
