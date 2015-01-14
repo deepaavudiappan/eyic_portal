@@ -109,7 +109,7 @@ class AdminOperations extends BaseController {
 		DB::beginTransaction();
 		try{
 			if(Input::get('loi_invite')) {
-				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->get();
+				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
 				$emailSubj = 'eLSI-Workshop-Invite';
@@ -126,7 +126,7 @@ class AdminOperations extends BaseController {
 				}
 			}
 			elseif(Input::get('fcfs_invite')) {
-				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->get();
+				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
 				$emailSubj = 'eLSI-Workshop-Invite';
