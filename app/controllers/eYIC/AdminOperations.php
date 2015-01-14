@@ -114,12 +114,14 @@ class AdminOperations extends BaseController {
 				$emailSubj = 'eLSI-Workshop-Invite';
 
 				foreach($clg_lst as $cur_clg){
-					Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
-						'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
-					{
-						$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-						$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
-					});
+					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
+						Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
+							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
+						{
+							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+							$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
+						});
+					}
 				}
 			}
 			elseif(Input::get('fcfs_invite')) {
@@ -129,15 +131,16 @@ class AdminOperations extends BaseController {
 				$emailSubj = 'eLSI-Workshop-Invite';
 
 				foreach($clg_lst as $cur_clg){
-					Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
-						'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
-					{
-						$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-						$message->to([$cur_clg['principal_email'], $cur_clg['tl_email']])->subject($emailSubj);
-					});
+					if(!empty($cur_clg['principal_email'])){ 
+						Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
+							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num), function($message) use($cur_clg, $emailSubj)
+						{
+							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+							$message->to([$cur_clg['principal_email']])->subject($emailSubj);
+						});
+					}
 				}
 			}
-
 			return Redirect::route('adminHome')->withSuccess('Workshop invites sent successfully!');
 		}
 
