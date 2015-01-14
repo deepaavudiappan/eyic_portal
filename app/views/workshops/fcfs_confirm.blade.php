@@ -34,11 +34,7 @@
 					Please note:<br/>
 					<br/>
 					<ol>
-						<li>Upon receiving your confirmation, we will send an invitation to your college.</li>
-
-						<li>Each workshop has a maximum capacity of 15 teams (15 slots). We are blocking one of these slots for your team. We request you to let us know if you have any problem in attending the workshop through a mail to: <a href="mailto:support@e-yantra.org">support@e-yantra.org</a></li>
-
-						<li>You may substitute teachers in your team till the workshop date. Each team member attending the workshop will register at the workshop. These 4 teachers will participate in the e-Yantra Robotics Teacher Competition (eYRTC). No substitution is possible after the workshop, during eYRTC.</li>
+						<li>Point 1</li>
 					</ol>
 				</div>
 				<br/>
@@ -59,17 +55,17 @@
 				</div>
 				<div class="form-group @if ($errors->has('tm1_name')) has-error @endif">
 					<label class="control-label" for="lbl_tm1_name">Team Member Name:</label>
-					<input type="text" id="tm1_name" class="form-control" name="tm1_name" placeholder="example@example.com" value="{{ Input::old('tm1_name') }}"/>
+					<input type="text" id="tm1_name" class="form-control" name="tm1_name" value="{{ Input::old('tm1_name') }}"/>
 					@if ($errors->has('tm1_name')) <p class="help-block">{{ $errors->first('tm1_name') }} </p>@endif
 				</div>
 				<div class="form-group @if ($errors->has('tm2_name')) has-error @endif">
 					<label class="control-label" for="lbl_tm2_name">Team Member Name:</label>
-					<input type="text" id="tm2_name" class="form-control" name="tm2_name" placeholder="example@example.com" value="{{ Input::old('tm2_name') }}"/>
+					<input type="text" id="tm2_name" class="form-control" name="tm2_name" value="{{ Input::old('tm2_name') }}"/>
 					@if ($errors->has('tm2_name')) <p class="help-block">{{ $errors->first('tm2_name') }} </p>@endif
 				</div>
 				<div class="form-group @if ($errors->has('tm3_name')) has-error @endif">
 					<label class="control-label" for="lbl_tm3_name">Team Member Name:</label>
-					<input type="text" id="tm3_name" class="form-control" name="tm3_name" placeholder="example@example.com" value="{{ Input::old('tm3_name') }}"/>
+					<input type="text" id="tm3_name" class="form-control" name="tm3_name" value="{{ Input::old('tm3_name') }}"/>
 					@if ($errors->has('tm3_name')) <p class="help-block">{{ $errors->first('tm3_name') }} </p>@endif
 				</div>
 				<br/>

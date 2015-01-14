@@ -147,7 +147,7 @@ Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirm_land_loi', a
 			'uses'	=>	'WrkshpClgController@clgConfirmLand'
 ));
 
-Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirm_land_loi', array(
+Route::match(array('GET', 'POST'), '/elsi/workshops/college/confirm_loi', array(
 			'as'	=>	'clgConfirm',
 			'uses'	=>	'WrkshpClgController@clgConfirm'
 ));
