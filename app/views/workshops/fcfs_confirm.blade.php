@@ -68,7 +68,7 @@
 				</div>
 				<div class="form-group @if ($errors->has('tl_cont')) has-error @endif">
 					<label class="control-label" for="lbl_tl_cont">Team Leader's Contact Number:</label>
-					<input type="text" id="tl_cont" class="form-control" name="tl_cont" placeholder="example@example.com" value="{{ Input::old('tl_cont') }}"/>
+					<input type="text" id="tl_cont" class="form-control" name="tl_cont" value="{{ Input::old('tl_cont') }}"/>
 					@if ($errors->has('tl_cont')) <p class="help-block">{{ $errors->first('tl_cont') }} </p>@endif
 				</div>
 				<div class="form-group @if ($errors->has('tm1_name')) has-error @endif">
