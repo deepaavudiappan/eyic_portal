@@ -30,8 +30,6 @@
 				Contact number: <strong>+91-80-4140-7777, +91-9986668421</strong><br/>
 				E-mail: <strong>roshni.dsouza@iiitb.ac.in</strong><br/>
 				<br/>
-				Please fill in the details to register your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
-				<br/>
 				<div class="alert alert-danger">
 					<strong>Please note:<br/></strong>
 					<br/>
@@ -57,6 +55,7 @@
 					{{ HTML::linkRoute('downloadLoi', 'Download LOI Template', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 				</div>
 				<br/>
+				Please fill in the details to register your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
 				<div class="form-group @if ($errors->has('tl_name')) has-error @endif">
 					<label class="control-label" for="lbl_tl_name">Team Leader Name:</label>
 					<input type="text" id="tl_name" class="form-control" name="tl_name" placeholder="" value="{{ Input::old('tl_name') }}"/>
