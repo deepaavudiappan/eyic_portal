@@ -133,7 +133,7 @@ class AdminOperations extends BaseController {
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email'])){ 
-						Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
+						Mail::queue('emails.workshops.fcfs_invite',  array('date'	=>	$date, 
 							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
 						{
 							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);

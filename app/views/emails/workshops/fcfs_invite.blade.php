@@ -25,7 +25,7 @@ Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 
 <li>Colleges who have not given the LoI will not be given the robotic kit and are not eligible for participating in eYRTC.</li></ol>
 ---------------------------------------------------------<br/>
 <br/>
-** Attached please find the format for the Letter of Intent (LoI):  Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the attached Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail and a hard-copy mailed to:<br/>
+**The Letter of Intent (LoI) template can be downloaded from <a href="http://elsiportal.e-yantra.org/elsi/workshops/college/download/loi">here! e-LSI LoI Template.</a>:  Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the downloaded Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail and a hard-copy mailed to:<br/>
 <br/>
     e-Yantra project,<br/>
     ERTS lab, First Floor, KReSIT building<br/>
