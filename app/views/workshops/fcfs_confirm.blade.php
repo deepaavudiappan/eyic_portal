@@ -33,7 +33,7 @@
 				Please fill in the details and confirm attendance of your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
 				<br/>
 				<div class="alert alert-danger">
-					Please note:<br/>
+					<strong>Please note:<br/></strong>
 					<br/>
 					<ol>
 						<li>Formal invitations will be sent to teams from colleges who are selected for participation.</li>
