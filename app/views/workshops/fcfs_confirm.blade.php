@@ -18,8 +18,9 @@
 
 				Greetings from e-Yantra!<br/>
 				<br/>
-				As the first step in engaging with your teacher team, you can register your team for the 2-day workshop on "Introduction to Robotics". Details of the workshop are given below:<br/>
-				{{ HTML::linkRoute('downloadLoi', 'Download LOI Template', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
+				e-Yantra is organizing a 2-day workshop on "Introduction to Robotics" for the colleges participating in the e-Yantra Lab setup Initiative (eLSI).<br/>
+				<br/>
+				To encourage more colleges from your region to participate in this Nation-building initiative, we welcome one team of 4 teachers from your college to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity of 15 college teams.<br/>
 				<br/>
 				Date: <strong>February 6th and 7th, 2015</strong><br/>
 				Venue: <strong>IIIT Bangalore<br/>
@@ -35,7 +36,6 @@
 					Please note:<br/>
 					<br/>
 					<ol>
-						<li>We welcome other college teams in the region to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity.</li>
 						<li>Formal invitations will be sent to teams from colleges who are selected for participation.</li>
 						<li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
 						<li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
@@ -46,6 +46,7 @@
 					</ol>
 				</div>
 				<div class="alert alert-danger">
+					<strong>For colleges who wish to participate in eLSI:</strong><br/>
 					Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the attached Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail at <strong>support@e-yantra.org</strong> and a hard-copy mailed to:<br/>
 					<br/>
 					e-Yantra project,<br/>
@@ -53,6 +54,7 @@
 					IIT Bombay<br/>
 					Powai, Mumbai - 400 076<br/>
 					<br/>
+					{{ HTML::linkRoute('downloadLoi', 'Download LOI Template', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 				</div>
 				<br/>
 				<div class="form-group @if ($errors->has('tl_name')) has-error @endif">
