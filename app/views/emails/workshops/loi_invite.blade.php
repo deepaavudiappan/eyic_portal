@@ -13,7 +13,8 @@ Here are the modalities of the workshop:<br/>
 Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 4 teachers).<br/>
 -------------------------------------------------------------<br/>
 <ol><li>As your college has already given the Letter of Intent (LoI), your team is automatically registered for the workshop.</li>
-<li>Formal invitations will be sent to your college.</li>
+<li>Please confirm your attendance by visiting here: <a href="http://elsiportal.e-yantra.org/elsi/workshops/college/confirm_land_loi">http://elsiportal.e-yantra.org/elsi/workshops/college/confirm_land_loi</a></li>
+<li>Formal invitations will be sent to your college after your confirm your attendance.</li>
 <li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
 <li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
 <li>Each participating college team member registers at the venue on the first day of workshop. Any change in the team members is allowed till the day of the workshop. No changes will be allowed after registration at the workshop.</li>

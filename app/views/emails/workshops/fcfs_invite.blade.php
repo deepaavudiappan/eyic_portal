@@ -14,7 +14,7 @@ Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 
 -------------------------------------------------------------<br/>
 <ol><li>Teams from colleges that have already given the Letter of Intent (LoI) are automatically registered for the workshop.</li>
 <li>We welcome other college teams in the region to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity.</li>
-<li>To register your team, visit:</li>
+<li>To register your team, visit: <a href="http://elsiportal.e-yantra.org/elsi/workshops/college/confirm_land_fcfs">http://elsiportal.e-yantra.org/elsi/workshops/college/confirm_land_fcfs</a></li>
 <li>Formal invitations will be sent to teams from colleges who are selected for participation.</li>
 <li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
 <li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
