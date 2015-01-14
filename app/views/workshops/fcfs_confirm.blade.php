@@ -45,7 +45,7 @@
 					</ol>
 				</div>
 				<div class="alert alert-danger">
-					Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the attached Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail and a hard-copy mailed to:<br/>
+					Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the attached Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail at <strong>support@e-yantra.org</strong> and a hard-copy mailed to:<br/>
 					<br/>
 					e-Yantra project,<br/>
 					ERTS lab, First Floor, KReSIT building<br/>
