@@ -9,7 +9,7 @@
 		<h3 class="panel-title">Workshop Confirmation</h3>
 	</div>
 	<div class="panel-body">
-		<div class="row">
+		<div class="row text-justify">
 			<div class="col-md-6 col-md-offset-3">
 				{{ Form::open(array('route' => 'clgConfirmFCFS', 'method' => 'POST')) }}
 				
