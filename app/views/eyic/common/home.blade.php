@@ -29,6 +29,11 @@
 	You can check the status of all the projects registered under your college at the <strong>"Register Project"</strong> tab on the left side menu.
 	</div>
 	@endif
+	@if($teacherDetail->eyic_flag == 1)
+	<div class="alert alert-danger">
+		Please go to "Mentored projects" on the left side tab to complete your mentored project's registration by providing the details of the students associated to the project.
+	</div>
+	@endif
 	<table class="table table-striped">
 		  <tr>
 		  	<th colspan="2">
