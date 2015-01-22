@@ -12,7 +12,6 @@
 		<br/>
 		{{ HTML::linkRoute('projPropDown', 'Download Project Proposal Template!', [], ['class'	=> 'btn btn-primary', 'id'	=> 'projPropDownLk']) }}
 		<br/><br/>
-		Upload facility coming soon!
 
 		@if(Auth::user()->role == 2)
 		@if(Session::has('entityDtl'))
