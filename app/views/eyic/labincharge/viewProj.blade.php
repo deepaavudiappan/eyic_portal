@@ -25,7 +25,7 @@
 					@elseif	($project['project_status'] == 1)
 						<p class="text-danger">{{'Project Registration Pending with Student'}}</p>
 					@else	($project['project_status'] == 2)
-						<p class="text-sucess">{{'Project Registration successful'}}</p>
+						<p class="text-sucess">{{'Project Proposal Uploaded! Evaluation in process'}}</p>
 					@endif		
 				</td>
 				<td class="text-center"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>

@@ -5,7 +5,15 @@
 		[
 			[
 				"clg",
-				"clgDtl"
+				"clg"
+			],
+			[
+				"cur",
+				"cur_clg"
+			],
+			[
+				"this",
+				"thisMethod"
 			],
 			[
 				"success",
@@ -14,14 +22,6 @@
 			[
 				"teac",
 				"teacherDtl"
-			],
-			[
-				"cur",
-				"curCoor"
-			],
-			[
-				"this",
-				"thisClass"
 			],
 			[
 				"pro",
@@ -280,59 +280,58 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/workshops/WrkshpClgController.php",
-			"settings":
-			{
-				"buffer_size": 5288,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/eYIC/AdminOperations.php",
-			"settings":
-			{
-				"buffer_size": 6297,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "09 e1 c5 f7 0a 65 ac 51 94 58 e7 e5 3f 36\n                                 11100101  00111111  00110110\n                                 \n                                --11110001 00111011 00110011\n                                f1 3b 33\n\n\n\n09e1c5f70a65ac519458e7	e5	3f	36\n\n						11100101 00111111 00110110\n						00010100 00000100 00000101\n						11110001 00111011 00110011\n						10000100 01001000 01011000\n						01110101 01110011 01101011\n						f1		 3b		  33\n\n						a 01100001 w 01110111 n 01101110\n						u 01110101 s 01110011 k 01101011\n						  00010100   00000100   00000101\n\n						11100101 00111111 00110110\n						01100001 01110111 01101110\n						10000100 01001000 01011000",
-			"settings":
-			{
-				"buffer_size": 678,
-				"line_ending": "Unix",
-				"name": "09 e1 c5 f7 0a 65 ac 51 94 58 e7 e5 3f 36"
-			}
-		},
-		{
-			"file": "app/views/workshops/fcfs_confirm.blade.php",
-			"settings":
-			{
-				"buffer_size": 6365,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/emails/workshops/loi_invite.blade.php",
-			"settings":
-			{
-				"buffer_size": 2388,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/eyic/admin/home.blade.php",
-			"settings":
-			{
-				"buffer_size": 1711,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 7175,
+				"buffer_size": 7331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/eyic/documents/proj_prop.blade.php",
+			"settings":
+			{
+				"buffer_size": 3049,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/eYIC/DisplayDocController.php",
+			"settings":
+			{
+				"buffer_size": 2334,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 12811,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/eyic/common/studentHome.blade.php",
+			"settings":
+			{
+				"buffer_size": 1562,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/eYIC/StdntCrdntrOperations.php",
+			"settings":
+			{
+				"buffer_size": 1076,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/eYIC/CollegeController.php",
+			"settings":
+			{
+				"buffer_size": 3605,
 				"line_ending": "Unix"
 			}
 		}
@@ -368,81 +367,81 @@
 		"/var/www/elsi_portal/app",
 		"/var/www/elsi_portal/app/controllers",
 		"/var/www/elsi_portal/app/controllers/eYIC",
-		"/var/www/elsi_portal/app/controllers/workshops",
+		"/var/www/elsi_portal/app/models",
 		"/var/www/elsi_portal/app/views",
-		"/var/www/elsi_portal/app/views/emails",
-		"/var/www/elsi_portal/app/views/emails/workshops",
-		"/var/www/elsi_portal/app/views/includes",
-		"/var/www/elsi_portal/app/views/layouts",
-		"/var/www/elsi_portal/app/views/workshops"
+		"/var/www/elsi_portal/app/views/eyic",
+		"/var/www/elsi_portal/app/views/eyic/common",
+		"/var/www/elsi_portal/app/views/eyic/documents",
+		"/var/www/elsi_portal/app/views/eyic/labincharge",
+		"/var/www/elsi_portal/app/views/eyic/mentor"
 	],
 	"file_history":
 	[
-		"/var/www/elsi_portal/app/views/workshops/invite_data.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/DisplayDocController.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/CollegeController.php",
-		"/var/www/elsi_portal/.project",
+		"/var/www/elsi_portal/app/config/app.php",
+		"/var/www/elsi_portal/app/controllers/StudentHomeController.php",
+		"/var/www/elsi_portal/vendor/guzzle/guzzle/docs/_static/homepage.css",
+		"/var/www/elsi_portal/app/views/eyic/mentor/home.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/common/home.blade.php",
+		"/var/www/elsi_portal/app/controllers/HomeController.php",
+		"/var/www/elsi_portal/app/views/eyic/admin/home.blade.php",
 		"/var/www/elsi_portal/app/downloads/eyic/Project_Proposal_Template_eyic_2015.docx",
 		"/var/www/elsi_portal/app/views/eyic/documents/proj_prop.blade.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Parser/ParserRegistry.php",
 		"/var/www/elsi_portal/phpunit.xml",
-		"/var/www/elsi_portal/app/views/eyic/common/home.blade.php",
-		"/var/www/elsi_portal/app/controllers/HomeController.php",
-		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/docs/_snippets/models-intro.txt",
-		"/var/www/elsi_portal/app/views/eyic/addcoor.blade.php",
-		"/var/www/elsi_portal/app/config/app.php",
-		"/var/www/elsi_portal/app/views/changepwd.blade.php",
-		"/var/www/elsi_portal/app/views/layouts/login-master.blade.php",
-		"/var/www/elsi_portal/app/views/includes/head.blade.php",
-		"/var/www/elsi_portal/app/views/includes/navbar.blade.php",
-		"/var/www/elsi_portal/app/views/layouts/login-navbar.blade.php",
-		"/var/www/elsi_portal/vendor/composer/include_paths.php",
-		"/var/www/elsi_portal/vendor/nikic/php-parser/test/code/prettyPrinter/include.test",
-		"/var/www/elsi_portal/vendor/nikic/php-parser/lib/PHPParser/Node/Expr/Include.php",
-		"/var/www/elsi_portal/vendor/nikic/php-parser/test/code/parser/expr/includeAndEval.test",
-		"/var/www/elsi_portal/vendor/swiftmailer/swiftmailer/doc/including-the-files.rst",
-		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Fragment/HIncludeFragmentRenderer.php",
-		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Tests/Fragment/HIncludeFragmentRendererTest.php",
-		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/tests/mock/ec2/describe_instances_no_reservations",
-		"/var/www/elsi_portal/public/index.php",
-		"/var/www/elsi_portal/app/config/mail.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
-		"/var/www/elsi_portal/app/views/login.blade.php",
-		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Support/Facades/Log.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/LabInchargeOperations.php",
-		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm.blade.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/AdminOperations.php",
-		"/var/www/elsi_portal/app/views/workshops/loi_confirm.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/loi_confirm.blade.php",
-		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/DependencyInjection/AddClassesToCachePass.php",
-		"/var/www/elsi_portal/app/views/eyic/mentor/addProjDtl.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/stdnt_repre/addPrjStndDtlsLand.blade.php",
+		"/var/www/elsi_portal/vendor/predis/predis/lib/Predis/Command/SetDifference.php",
+		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/SubTest.php",
+		"/var/www/elsi_portal/app/config/session.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/addcoor.blade.php",
+		"/var/www/elsi_portal/app/config/mail.php",
+		"/var/www/elsi_portal/app/views/workshops/invite_data.blade.php",
+		"/var/www/elsi_portal/app/constants.php",
+		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/DynamoDb/Exception/ItemCollectionSizeLimitExceededException.php",
+		"/var/www/elsi_portal/vendor/monolog/monolog/src/Monolog/Handler/CouchDBHandler.php",
+		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CouldNotRewindStreamException.php",
+		"/var/www/elsi_portal/vendor/symfony/console/Symfony/Component/Console/Output/NullOutput.php",
+		"/var/www/elsi_portal/app/config/database.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/CollegeController.php",
 		"/var/www/elsi_portal/app/views/template.php",
+		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/Common/Facade/facade-classes.php",
+		"/var/www/elsi_portal/app/views/includes/footer.blade.php",
+		"/var/www/elsi_portal/app/models/ElsiCollegeDetail.php",
+		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Service/Resource/Model.php",
+		"/var/www/elsi_portal/vendor/monolog/monolog/src/Monolog/Handler/MongoDBHandler.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/MentorOperations.php",
+		"/var/www/elsi_portal/readme.md",
+		"/var/www/elsi_portal/artisan",
 		"/var/www/elsi_portal/app/controllers/AuthController.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/LabInchargeOperations.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/MigCoorController.php",
 		"/var/www/elsi_portal/vendor/predis/predis/lib/Predis/Cluster/Distribution/EmptyRingException.php",
 		"/var/www/elsi_portal/app/models/EyicProjectDtls.php",
 		"/var/www/elsi_portal/app/models/ElsiStudentsDtls.php",
 		"/var/www/elsi_portal/app/start/global.php",
 		"/var/www/elsi_portal/app/models/Login.php",
+		"/var/www/elsi_portal/app/views/login.blade.php",
+		"/var/www/elsi_portal/app/views/layouts/login-master.blade.php",
+		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Support/Facades/Log.php",
 		"/var/www/elsi_portal/app/views/eyic/common/studentHome.blade.php",
-		"/var/www/elsi_portal/app/views/eyic/mentor/home.blade.php",
 		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/Profile.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/mentor_invite.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/mentor/viewProj.blade.php",
 		"/var/www/elsi_portal/app/views/layouts/master.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/documents/coordinators.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/documents/mentorAndStudentRep.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/mentor/addProjDtl.blade.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/mentor_invite_labIn.blade.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/coord_invite.blade.php",
-		"/var/www/elsi_portal/app/models/ElsiCollegeDetail.php",
 		"/var/www/elsi_portal/app/models/ElsiCoordinator.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/Iam/Resources/iam-2010-05-08.php",
 		"/var/www/elsi_portal/app/routes.php",
+		"/var/www/elsi_portal/app/views/changepwd.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/documents/plagiarism.blade.php",
 		"/var/www/elsi_portal/app/views/setpwd.blade.php",
 		"/var/www/elsi_portal/app/views/forgetpwd.blade.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/MentorOperations.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/S3/Exception/PermanentRedirectException.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/Route53/Exception/PriorRequestNotCompleteException.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/ParserRegistryTest.php",
@@ -455,18 +454,17 @@
 		"/var/www/elsi_portal/app/views/emails/eyic/student_repre_invite.blade.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/setpassword_invite.blade.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/student_invite.blade.php",
-		"/var/www/elsi_portal/app/constants.php",
 		"/var/www/elsi_portal/app/config/cache.php",
 		"/var/www/elsi_portal/bootstrap/autoload.php",
-		"/var/www/elsi_portal/app/views/eyic/admin/home.blade.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Remote/SecLibGateway.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/DisplayDocController.php",
 		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/AddTest.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/docs/getting-started/overview.rst",
-		"/var/www/elsi_portal/app/views/includes/footer.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/labincharge/viewProj.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/labincharge/regProj.blade.php",
-		"/var/www/elsi_portal/app/config/database.php",
+		"/var/www/elsi_portal/app/views/includes/navbar.blade.php",
+		"/var/www/elsi_portal/app/views/includes/head.blade.php",
 		"/var/www/elsi_portal/vendor/composer/autoload_real.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/tests/Guzzle/Tests/Parser/UriTemplate/AbstractUriTemplateTest.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Auth/UserTrait.php",
@@ -491,6 +489,7 @@
 		"/var/www/elsi_portal/app/views/eyic/labincharge/home.blade.php",
 		"/var/www/elsi_portal/vendor/swiftmailer/swiftmailer/tests/fixtures/MimeEntityFixture.php",
 		"/var/www/elsi_portal/app/config/auth.php",
+		"/var/www/elsi_portal/app/views/layouts/login-navbar.blade.php",
 		"/var/www/elsi_portal/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/HeaderSigner.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderCollection.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Header/HeaderFactory.php",
@@ -523,6 +522,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"admin",
+			"/',",
+			"admin",
 			"homeBifurcate",
 			"commonHome",
 			"login",
@@ -600,19 +602,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/workshops/WrkshpClgController.php",
+					"file": "app/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5288,
+						"buffer_size": 7331,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1587,
-								1587
+								6085,
+								6085
 							]
 						],
 						"settings":
@@ -621,36 +623,36 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 867.0,
+						"translation.y": 3519.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/eYIC/AdminOperations.php",
+					"file": "app/views/eyic/documents/proj_prop.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6297,
+						"buffer_size": 3049,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3589,
-								3589
+								744,
+								744
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 101.0,
-						"translation.y": 1734.0,
+						"translation.x": 0.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -658,27 +660,28 @@
 				},
 				{
 					"buffer": 2,
+					"file": "app/controllers/eYIC/DisplayDocController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 678,
+						"buffer_size": 2334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								440,
-								440
+								1646,
+								1646
 							]
 						],
 						"settings":
 						{
-							"auto_name": "09 e1 c5 f7 0a 65 ac 51 94 58 e7 e5 3f 36",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 809.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -686,57 +689,57 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/workshops/fcfs_confirm.blade.php",
+					"file": "app/controllers/AuthController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6365,
+						"buffer_size": 12811,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								220,
-								220
+								1618,
+								1618
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 741.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/emails/workshops/loi_invite.blade.php",
+					"file": "app/views/eyic/common/studentHome.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2388,
+						"buffer_size": 1562,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								975,
-								975
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 570.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -744,19 +747,19 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/views/eyic/admin/home.blade.php",
+					"file": "app/controllers/eYIC/StdntCrdntrOperations.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1711,
+						"buffer_size": 1076,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								818,
-								818
+								583,
+								583
 							]
 						],
 						"settings":
@@ -764,28 +767,28 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 374.0,
-						"translation.y": 111.0,
+						"translation.x": -0.0,
+						"translation.y": 285.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "app/routes.php",
+					"file": "app/controllers/eYIC/CollegeController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7175,
+						"buffer_size": 3605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4863,
-								4863
+								3605,
+								3605
 							]
 						],
 						"settings":
@@ -794,10 +797,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2390.0,
+						"translation.y": 1938.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -842,10 +845,6 @@
 	{
 		"height": 0.0
 	},
-	"output.haskell_sublime_load":
-	{
-		"height": 112.0
-	},
 	"project": "elsi_portal.sublime-project",
 	"replace":
 	{
@@ -858,48 +857,52 @@
 		"selected_items":
 		[
 			[
-				"route",
-				"app/routes.php"
+				"auth",
+				"app/controllers/AuthController.php"
 			],
 			[
 				"home",
-				"app/views/eyic/admin/home.blade.php"
+				"app/views/eyic/common/studentHome.blade.php"
 			],
 			[
-				"addc",
-				"app/views/eyic/addcoor.blade.php"
+				"addprjstnddtlsland",
+				"app/views/eyic/stdnt_repre/addPrjStndDtlsLand.blade.php"
 			],
 			[
-				"head",
-				"app/views/includes/head.blade.php"
+				"stdnt",
+				"app/controllers/eYIC/StdntCrdntrOperations.php"
 			],
 			[
-				"login",
-				"app/views/layouts/login-master.blade.php"
+				"collegecontroller",
+				"app/controllers/eYIC/CollegeController.php"
 			],
 			[
-				"admin",
-				"app/controllers/eYIC/AdminOperations.php"
+				"collle",
+				"app/controllers/eYIC/CollegeController.php"
+			],
+			[
+				"data",
+				"app/config/database.php"
+			],
+			[
+				"loi_invite",
+				"app/views/emails/workshops/loi_invite.blade.php"
+			],
+			[
+				"constan",
+				"app/constants.php"
 			],
 			[
 				"mail",
 				"app/config/mail.php"
 			],
 			[
-				"addcoo",
-				"app/views/eyic/addcoor.blade.php"
+				"fcf",
+				"app/views/emails/workshops/fcfs_invite.blade.php"
 			],
 			[
-				"login-master",
-				"app/views/layouts/login-master.blade.php"
-			],
-			[
-				"addco",
-				"app/views/eyic/addcoor.blade.php"
-			],
-			[
-				"auth",
-				"app/controllers/AuthController.php"
+				"route",
+				"app/routes.php"
 			],
 			[
 				"labin",
@@ -930,6 +933,10 @@
 				"app/constants.php"
 			],
 			[
+				"login",
+				"app/views/layouts/login-master.blade.php"
+			],
+			[
 				"con",
 				"app/constants.php"
 			],
@@ -958,12 +965,12 @@
 				"app/views/includes/footer.blade.php"
 			],
 			[
-				"rout",
-				"app/routes.php"
+				"head",
+				"app/views/includes/head.blade.php"
 			],
 			[
-				"data",
-				"app/config/database.php"
+				"rout",
+				"app/routes.php"
 			],
 			[
 				"navbar",
@@ -1008,6 +1015,10 @@
 			[
 				"header",
 				"vendor/filp/whoops/src/Whoops/Resources/views/header.html.php"
+			],
+			[
+				"admin",
+				"app/controllers/eYIC/AdminOperations.php"
 			],
 			[
 				"elsite",
@@ -1256,7 +1267,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 287.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

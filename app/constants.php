@@ -9,3 +9,4 @@ define('EYIC_PROJS_ALLOWED',  4);
 define('DOWNLOAD_FILES_LOC',  '/var/www/elsi_portal/app/downloads/');
 define('MSG_VAR_SUCCESS',  'success');
 define('MSG_VAR_ERROR',  'error');
+define('UPLOAD_FILES_LOC',  '/var/www/eyrc/app/storage/uploads/');

@@ -204,6 +204,11 @@ Route::match(array('GET', 'POST'), '/stdnt_repre/prjStndDtlsLand', array(
 			'uses'	=>	'StdntCrdntrOperations@prjStdntDtlsLand'
 ));
 
+Route::match(array('GET', 'POST'), '/stdnt_repre/prjPropUpload', array(
+			'as'	=>	'prjPropUpload',
+			'uses'	=>	'StdntCrdntrOperations@prjPropUpload'
+));
+
 /*----------------------Documents Display Routes---------------------------*/
 
 /* Display Document for Coordinators */

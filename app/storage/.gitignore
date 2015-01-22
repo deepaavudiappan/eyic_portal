@@ -1,1 +1,5 @@
-services.manifest
+# Ignore everything in this directory
+*
+# Except this file
+!uploads*
+!.gitignore
