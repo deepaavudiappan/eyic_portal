@@ -186,7 +186,7 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('confirmedRegd')->withErrors('Something went wrong. Incorrect Token, please contact us at support@e-yantra.org to report the issue with this message.');
 		}
 
-		return View::make('workshops.loi_confirm_final')->with('clgs', $clgs[0]);
+		return View::make('workshops.loi_confirm_final')->with('clgs', $clg[0]);
 	}
 
 	/*
