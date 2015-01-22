@@ -212,7 +212,7 @@ class WrkshpClgController extends BaseController {
 		$clg->workshop_cnfrm_date = new DateTime;
 
 		if(!$clg->save()){
-			Log::error($thisMethod . 'Unable to save college confirm' . $clg_id;
+			Log::error($thisMethod . 'Unable to save college confirm' . $clg_id);
 			return Redirect::route('confirmedRegd')->withErrors('Unable to confirm college workshop please contact support@e-yantra.org');
 		}
 		else{
