@@ -32,7 +32,7 @@
 					@if($project['project_status'] == 0)
 						{{ Form::open(array('route' => 'addprojectdetailland', 'method' => 'POST')) }}
 							{{ Form::hidden('invisible', $project['id'], array('name' => 'proj_id')) }}
-							<button class="btn btn-sm btn-primary btn-block" type="submit">Add Team members</button>
+							<button class="btn btn-sm btn-primary btn-block" type="submit">Add Team Members</button>
 						{{ Form::close() }}
 					@endif					
 				</td>
