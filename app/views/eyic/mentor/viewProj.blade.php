@@ -27,12 +27,12 @@
 						<p class="text-success">{{'Project Proposal Uploaded! Evaluation in process'}}</p>
 					@endif		
 				</td>
-				<td><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
+				<td><!-- <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a> --></td>
 				<td>
 					@if($project['project_status'] == 0)
 						{{ Form::open(array('route' => 'addprojectdetailland', 'method' => 'POST')) }}
 							{{ Form::hidden('invisible', $project['id'], array('name' => 'proj_id')) }}
-							<button class="btn btn-sm btn-primary btn-block" type="submit">Add Project</button>
+							<button class="btn btn-sm btn-primary btn-block" type="submit">Add Team members</button>
 						{{ Form::close() }}
 					@endif					
 				</td>
