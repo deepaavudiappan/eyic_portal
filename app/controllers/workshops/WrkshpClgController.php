@@ -186,6 +186,9 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('confirmedRegd')->withErrors('Something went wrong. Incorrect Token, please contact us at support@e-yantra.org to report the issue with this message.');
 		}
 
+		if($clg[0]->workshop_cnfrm == 1){
+			return Redirect::route('confirmedRegd')->withSuccess('Your college has already confirmed participation in the workshop.');
+		}
 		return View::make('workshops.loi_confirm_final')->with('clgs', $clg[0]);
 	}
 
@@ -258,6 +261,11 @@ class WrkshpClgController extends BaseController {
 			Log::error($thisMethod . 'clg_token incorrect!' . $token);
 			return Redirect::route('confirmedRegd')->withErrors('Something went wrong. Incorrect Token, please contact us at support@e-yantra.org to report the issue with this message.');
 		}
+
+		if($clg[0]->workshop_reg == 1){
+			return Redirect::route('confirmedRegd')->withSuccess('Your college has already registered participation in the workshop.');
+		}
+
 		// $clgs = ['0' => 'Select College'] + ElsiCollegeDetail::where('phase', 'like', '2015')->where(['region' => 'bangalore', 'LOI' => 0, 'workshop_cnfrm' => 0])->lists('college_name', 'id');
 
 		return View::make('workshops.fcfs_confirm_final')->with('clgs', $clg[0]);
