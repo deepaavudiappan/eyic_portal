@@ -168,6 +168,31 @@ Route::match(array('GET', 'POST'), '/elsi/workshops/college/download/loi', array
 			'uses'	=>	'WrkshpClgController@downloadLoi'
 ));
 
+/*------------------- Final Workshop confirm----------------------*/
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_land_loi', array(
+			'as'	=>	'clgConfirmLandFinal',
+			'uses'	=>	'WrkshpClgController@clgConfirmLandFinal'
+));
+
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_loi', array(
+			'as'	=>	'clgConfirmFinal',
+			'uses'	=>	'WrkshpClgController@clgConfirmFinal'
+));
+
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_land_fcfs', array(
+			'as'	=>	'clgConfirmLandFCFSFinal',
+			'uses'	=>	'WrkshpClgController@clgConfirmLandFCFSFinal'
+));
+
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_fcfs', array(
+			'as'	=>	'clgConfirmFCFSFinal',
+			'uses'	=>	'WrkshpClgController@clgConfirmFCFSFinal'
+));
+
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirmed_regd', array(
+			'as'	=>	'confirmedRegd',
+			'uses'	=>	'WrkshpClgController@confirmedRegd'
+));
 
 /*--------------------Added By SP -------------------------------*/
 
