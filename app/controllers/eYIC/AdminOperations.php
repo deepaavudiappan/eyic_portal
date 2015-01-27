@@ -105,6 +105,7 @@ class AdminOperations extends BaseController {
 		$nc_coor = Input::get('nc_coor');
 		$contact_num = Input::get('contact_num');
 		$email = Input::get('email');
+		$last_date = Input::get('lastdate');
 
 		DB::beginTransaction();
 		try{
@@ -116,12 +117,21 @@ class AdminOperations extends BaseController {
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
-						Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
-							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
-						{
-							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-							$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
-						});
+						
+						$token = substr(md5(rand()), 0, 7);
+						$cur_clg->workshop_token = $token;
+						$if(!$cur_clg->save()){
+							return Redirect::route('adminHome')->withErrors('Unable to save college' . $cur_clg->id);
+						}
+						else{
+							Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
+								'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
+								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+							{
+								$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+								$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
+							});
+						}
 					}
 				}
 			}
@@ -133,12 +143,20 @@ class AdminOperations extends BaseController {
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email'])){ 
-						Mail::queue('emails.workshops.fcfs_invite',  array('date'	=>	$date, 
-							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 'email' => $email), function($message) use($cur_clg, $emailSubj)
-						{
-							$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
-							$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
-						});
+						$token = substr(md5(rand()), 0, 7);
+						$cur_clg->workshop_token = $token;
+						$if(!$cur_clg->save()){
+							return Redirect::route('adminHome')->withErrors('Unable to save college' . $cur_clg->id);
+						}
+						else{
+							Mail::queue('emails.workshops.fcfs_invite',  array('date'	=>	$date, 
+								'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
+								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+							{
+								$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+								$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
+							});
+						}
 					}
 				}
 			}
