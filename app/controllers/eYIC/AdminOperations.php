@@ -119,7 +119,7 @@ class AdminOperations extends BaseController {
 					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
 						
 						$token = substr(md5(rand()), 0, 7);
-						$cur_clg->workshop_token = $token;
+						$cur_clg['workshop_token'] = $token;
 						if(!$cur_clg->save()){
 							return Redirect::route('adminHome')->withErrors('Unable to save college' . $cur_clg->id);
 						}
