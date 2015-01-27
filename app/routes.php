@@ -169,27 +169,27 @@ Route::match(array('GET', 'POST'), '/elsi/workshops/college/download/loi', array
 ));
 
 /*------------------- Final Workshop confirm----------------------*/
-Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_land_loi', array(
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_land_loi_final', array(
 			'as'	=>	'clgConfirmLandFinal',
 			'uses'	=>	'WrkshpClgController@clgConfirmLandFinal'
 ));
 
-Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_loi', array(
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_loi_final', array(
 			'as'	=>	'clgConfirmFinal',
 			'uses'	=>	'WrkshpClgController@clgConfirmFinal'
 ));
 
-Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_land_fcfs', array(
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_land_fcfs_final', array(
 			'as'	=>	'clgConfirmLandFCFSFinal',
 			'uses'	=>	'WrkshpClgController@clgConfirmLandFCFSFinal'
 ));
 
-Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_fcfs', array(
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirm_fcfs_final', array(
 			'as'	=>	'clgConfirmFCFSFinal',
 			'uses'	=>	'WrkshpClgController@clgConfirmFCFSFinal'
 ));
 
-Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirmed_regd', array(
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/confirmed_regd_final', array(
 			'as'	=>	'confirmedRegd',
 			'uses'	=>	'WrkshpClgController@confirmedRegd'
 ));
