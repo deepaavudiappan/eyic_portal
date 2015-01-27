@@ -46,15 +46,15 @@
 				Please confirm attendance of your team of four teachers on or before <strong>February 3rd 2015</strong>:<br/>
 				<br/>
 				@elseif ($clgs->region == 'Gujarat')
-				Date: <strong>February 13th and 14th, 2015</strong><br/>
-				Venue: <strong>NRI Institute of Information Science & Technology,<br/>
-				<span style="margin-left:50px;">1, Sajjan Singh Nagar, Opposite Patel Nagar,</span><br/>
-				<span style="margin-left:50px;">Raisen Road, Bhopal, Madhya Pradesh 462023</span><br/></strong>
-				Coordinator: <strong>Dr. Amita Mahor</strong><br/>
-				Contact number: <strong>0755-2684058, +91-94250-19572</strong><br/>
-				E-mail: <strong>mitu2008mahor@gmail.com</strong><br/>
+				Date: <strong></strong><br/>
+				Venue: <strong>-<br/>
+				<span style="margin-left:50px;">--</span><br/>
+				<span style="margin-left:50px;">--</span><br/></strong>
+				Coordinator: <strong>--</strong><br/>
+				Contact number: <strong>--</strong><br/>
+				E-mail: <strong>--</strong><br/>
 				<br/>
-				Please confirm attendance of your team of four teachers on or before <strong>February 3rd 2015</strong>:<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>February -- 2015</strong>:<br/>
 				<br/>
 				@endif
 				<div class="alert alert-danger">
