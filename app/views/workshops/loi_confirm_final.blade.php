@@ -45,7 +45,7 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before <strong>February 3rd 2015</strong>:<br/>
 				<br/>
-				@endif ($clgs->region == 'Gujarat')
+				@elseif ($clgs->region == 'Gujarat')
 				Date: <strong>February 13th and 14th, 2015</strong><br/>
 				Venue: <strong>NRI Institute of Information Science & Technology,<br/>
 				<span style="margin-left:50px;">1, Sajjan Singh Nagar, Opposite Patel Nagar,</span><br/>
