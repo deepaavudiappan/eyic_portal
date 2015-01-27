@@ -118,9 +118,10 @@ class AdminOperations extends BaseController {
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
 						
+						$newClg = ElsiCollegeDetail::find($cur_clg->id);
 						$token = substr(md5(rand()), 0, 7);
-						$cur_clg['workshop_token'] = $token;
-						if(!$cur_clg->save()){
+						$$newClg->workshop_token = $token;
+						if(!$$newClg->save()){
 							return Redirect::route('adminHome')->withErrors('Unable to save college' . $cur_clg->id);
 						}
 						else{
@@ -142,10 +143,11 @@ class AdminOperations extends BaseController {
 				$emailSubj = 'eLSI-Workshop-Invite';
 
 				foreach($clg_lst as $cur_clg){
-					if(!empty($cur_clg['principal_email'])){ 
+					if(!empty($cur_clg['principal_email'])){
+						$newClg = ElsiCollegeDetail::find($cur_clg->id);
 						$token = substr(md5(rand()), 0, 7);
-						$cur_clg->workshop_token = $token;
-						if(!$cur_clg->save()){
+						$newClg->workshop_token = $token;
+						if(!$newClg->save()){
 							return Redirect::route('adminHome')->withErrors('Unable to save college' . $cur_clg->id);
 						}
 						else{
