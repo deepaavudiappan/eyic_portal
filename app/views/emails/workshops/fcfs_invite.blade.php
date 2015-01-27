@@ -15,7 +15,7 @@ Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 
 -------------------------------------------------------------<br/>
 <ol><li>Teams from colleges that have already given the Letter of Intent (LoI) are automatically registered for the workshop.</li>
 <li>We welcome other college teams in the region to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity.</li>
-<li>To register your team, visit on of before {{$last_date}}: <a href="http://elsiportal.e-yantra.org/elsi/workshops/college/confirm_land_fcfs_final?ct={{$token}}">http://elsiportal.e-yantra.org/elsi/workshops/college/confirm_land_fcfs_final?ct={{$token}}</a></li>
+<li>To register your team, visit on of before {{$last_date}}: <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_fcfs?ct={{$token}}">http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_fcfs?ct={{$token}}</a></li>
 <li>Formal invitations will be sent to teams from colleges who are selected for participation.</li>
 <li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
 <li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
@@ -25,7 +25,7 @@ Maximum capacity for a workshop: 60 teachers (15 colleges each having a team of 
 <li>Colleges who have not given the LoI will not be given the robotic kit and are not eligible for participating in eYRTC.</li></ol>
 ---------------------------------------------------------<br/>
 <br/>
-**The Letter of Intent (LoI) template can be downloaded from <a href="http://elsiportal.e-yantra.org/elsi/workshops/college/download/loi">here! e-LSI LoI Template.</a>:  Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the downloaded Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail and a hard-copy mailed to:<br/>
+**The Letter of Intent (LoI) template can be downloaded from <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/download/loi">here! e-LSI LoI Template.</a>:  Colleges which want to participate in this Nation-building initiative must: (i) nominate a team of 4 teachers– with one member identified as team leader, and (ii) print the downloaded Letter of Intent (LoI) on letter head, sign, and stamp. The scanned copy may be sent by e-mail and a hard-copy mailed to:<br/>
 <br/>
     e-Yantra project,<br/>
     ERTS lab, First Floor, KReSIT building<br/>
