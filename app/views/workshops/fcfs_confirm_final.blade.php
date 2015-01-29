@@ -10,7 +10,7 @@
 	</div>
 	<div class="panel-body">
 		<div class="row text-justify">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-8 col-md-offset-2 text-justify">
 				{{ Form::open(array('route' => 'clgConfirmFCFS', 'method' => 'POST')) }}
 				
 				<label>College Name: {{ $clgs->college_name;}}</label>
