@@ -23,8 +23,7 @@
 							</div>
 
 							<div class="modal-body">
-								Day 1:
-								<br/>
+								<strong>Day 1:</strong><br/>
 								9:00AM to 10:00AM Registration + Tea<br/>
 								(*Morning Tea break: coffee / Tea with biscuits or a small snack (something like idli, upma also may be served in case the participants are coming from far and might have left home early*)
 								<br/><br/>
@@ -45,7 +44,7 @@
 								<br/>
 								<br/>
 								<br/>
-								Day 2: <br/>
+								<strong>Day 2:</strong><br/>
 								Hands on Session<br/>
 								10:00 AM to10:45AM	Introduction to LCD interfacing<br/>
 								10:45 AM to11:30 AM	Display of Data Array of eight elements on LCD <br/>
