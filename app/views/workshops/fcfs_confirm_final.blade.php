@@ -23,47 +23,48 @@
 							</div>
 
 							<div class="modal-body">
-								Day 1: 
+								Day 1:
 								<br/>
-								9:00AM to 10:00AM Registration + Tea
+								9:00AM to 10:00AM Registration + Tea<br/>
 								(*Morning Tea break: coffee / Tea with biscuits or a small snack (something like idli, upma also may be served in case the participants are coming from far and might have left home early*)
-								<br/>
-								10:00AM  to 10:30AM     Inauguration -- Lighting of lamp; Overview of e-Yantra
+								<br/><br/>
+								10:00AM  to 10:30AM     Inauguration -- Lighting of lamp; Overview of e-Yantra<br/>
 								(* You may have a symbolic lamp lighting to start the workshop. Please avoid Flex banners, Flower bouquets, and Mementos *)
-								<br/>
-								10:30AM to 11:00AM	Introduction to Fire Bird V robot	
-								11:00 AM to 01:00PM	Introduction to AVR Micro-controller and Programming environment
-								01:00 PM to 02:00 PM	Lunch Break
-								<br/>
+								<br/><br/>
+								10:30AM to 11:00AM	Introduction to Fire Bird V robot<br/>
+								11:00 AM to 01:00PM	Introduction to AVR Micro-controller and Programming environment<br/>
+								01:00 PM to 02:00 PM	Lunch Break<br/>
 								( *A modest lunch comprising Rice (can be plain rice, jeera rice or a rice preparation of local preference), Dal (can be Dal fry, Sambhar, Rasam or any dal preparation of local preference), Chapatti, Two variety of vegetables (2 different vegetables or can be one vegetable and another either Rajma or Kabuli channa), Plain Curds or Raita, Salad, Papad, Pickle and one sweet. Depending on the local choice of food, the coordinating college can vary the menu to suit the taste preference of local participants.*)
-								<br/>
-								Hands on Session
-								02:00 PM to 03:00PM	Motion control using I/O ports
-								03:00 PM to 04:00 PM   	Robot velocity control using pulse width modulation
-								04:00 PM to 04:15 PM	Tea break (* Coffee / Tea and Biscuits *)
-								04:15 PM to 05:30 PM	*Interrupt programming
+								<br/><br/>
+								Hands on Session<br/>
+								02:00 PM to 03:00PM	Motion control using I/O ports<br/>
+								03:00 PM to 04:00 PM   	Robot velocity control using pulse width modulation<br/>
+								04:00 PM to 04:15 PM	Tea break (* Coffee / Tea and Biscuits *)<br/>
+								04:15 PM to 05:30 PM	*Interrupt programming<br/>
 								*Closed loop position control of robot using position encoders
 								<br/>
 								<br/>
-								Day 2: 
-								Hands on Session
-								10:00 AM to10:45AM	Introduction to LCD interfacing
-								10:45 AM to11:30 AM	Display of Data Array of eight elements on LCD 
-								11:30 AM to11:45 AM	Tea Break (* Coffee / Tea and Biscuits/light snacks *)
-								11:45 AM to 01:00 PM	*Analog sensor interfacing using Analog to Digital conversion
-								*Interfacing with white line sensors
-								*Interfacing with Infrared range finder sensor
-								01:00 PM to 02:00 PM	Lunch Break (*Please see above for our recommendations*)
-								02:00 PM to 02:45 PM	Robot programming for white line following
-								02:45 PM to 03:30 PM	Adaptive cruise control (Robots try to maintain safe distance using analog IR range finder while following white line)
-								03:30 PM to 03:45 PM	Tea break (* Coffee / Tea and Biscuits *)
-								03:45 PM to 04:15 PM	Adaptive cruise control (continued)
 								<br/>
-								Feedback Session
-								04:15 PM to 05:00 PM	Quiz and feedback
-								05:00 PM to 05.30 PM	Concluding session
+								Day 2: <br/>
+								Hands on Session<br/>
+								10:00 AM to10:45AM	Introduction to LCD interfacing<br/>
+								10:45 AM to11:30 AM	Display of Data Array of eight elements on LCD <br/>
+								11:30 AM to11:45 AM	Tea Break (* Coffee / Tea and Biscuits/light snacks *)<br/>
+								11:45 AM to 01:00 PM	*Analog sensor interfacing using Analog to Digital conversion<br/>
+								*Interfacing with white line sensors<br/>
+								*Interfacing with Infrared range finder sensor<br/>
+								01:00 PM to 02:00 PM	Lunch Break (*Please see above for our recommendations*)<br/>
+								02:00 PM to 02:45 PM	Robot programming for white line following<br/>
+								02:45 PM to 03:30 PM	Adaptive cruise control (Robots try to maintain safe distance using analog IR range finder while following white line)<br/>
+								03:30 PM to 03:45 PM	Tea break (* Coffee / Tea and Biscuits *)<br/>
+								03:45 PM to 04:15 PM	Adaptive cruise control (continued)<br/>
 								<br/>
-								Please note: Schedule subject to change depending on the material we cover.
+								<br/>
+								Feedback Session<br/>
+								04:15 PM to 05:00 PM	Quiz and feedback<br/>
+								05:00 PM to 05.30 PM	Concluding session<br/>
+								<br/>
+								Please note: Schedule subject to change depending on the material we cover.<br/>
 							</div>
 							<div class="modal-footer"> 
 							</div>
