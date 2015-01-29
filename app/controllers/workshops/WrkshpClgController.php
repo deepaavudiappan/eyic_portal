@@ -255,13 +255,15 @@ class WrkshpClgController extends BaseController {
 		//Authenticate Token
 		$token = Input::get('ct');
 
-		$clg = ElsiCollegeDetail::where('workshop_token', 'like', trim($token))->where('loi',0)->get();
+		$clg = ElsiCollegeDetail::where('workshop_token', 'like', trim($token))->get();
 
 		if(count($clg) < 1){
 			Log::error($thisMethod . 'clg_token incorrect!' . $token);
 			return Redirect::route('confirmedRegd')->withErrors('Something went wrong. Incorrect Token, please contact us at support@e-yantra.org to report the issue with this message.');
 		}
-
+		if($clg[0]->loi == 1){
+			return Redirect::route('clgConfirmLandFinal')->withInput();
+		}
 		if($clg[0]->workshop_cnfrm == 1){
 			return Redirect::route('confirmedRegd')->withSuccess('Your college has already registered participation in the workshop.');
 		}

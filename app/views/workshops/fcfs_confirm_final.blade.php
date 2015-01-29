@@ -15,7 +15,61 @@
 				
 				<label>College Name: {{ $clgs->college_name;}}</label>
 				<input id = "clg_id" name = "clg_id" type = "hidden" value = "{{$clgs->id;}}"/><br/><br/>
-				
+				<div class="modal fade" id="sch" tabindex="-1" role="dialog" aria-labelledby="task1UpldLbl" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="task1UpldLblH">Workshop Schedule</h4>
+							</div>
+
+							<div class="modal-body">
+								Day 1: 
+								<br/>
+								9:00AM to 10:00AM Registration + Tea
+								(*Morning Tea break: coffee / Tea with biscuits or a small snack (something like idli, upma also may be served in case the participants are coming from far and might have left home early*)
+								<br/>
+								10:00AM  to 10:30AM     Inauguration -- Lighting of lamp; Overview of e-Yantra
+								(* You may have a symbolic lamp lighting to start the workshop. Please avoid Flex banners, Flower bouquets, and Mementos *)
+								<br/>
+								10:30AM to 11:00AM	Introduction to Fire Bird V robot	
+								11:00 AM to 01:00PM	Introduction to AVR Micro-controller and Programming environment
+								01:00 PM to 02:00 PM	Lunch Break
+								<br/>
+								( *A modest lunch comprising Rice (can be plain rice, jeera rice or a rice preparation of local preference), Dal (can be Dal fry, Sambhar, Rasam or any dal preparation of local preference), Chapatti, Two variety of vegetables (2 different vegetables or can be one vegetable and another either Rajma or Kabuli channa), Plain Curds or Raita, Salad, Papad, Pickle and one sweet. Depending on the local choice of food, the coordinating college can vary the menu to suit the taste preference of local participants.*)
+								<br/>
+								Hands on Session
+								02:00 PM to 03:00PM	Motion control using I/O ports
+								03:00 PM to 04:00 PM   	Robot velocity control using pulse width modulation
+								04:00 PM to 04:15 PM	Tea break (* Coffee / Tea and Biscuits *)
+								04:15 PM to 05:30 PM	*Interrupt programming
+								*Closed loop position control of robot using position encoders
+								<br/>
+								<br/>
+								Day 2: 
+								Hands on Session
+								10:00 AM to10:45AM	Introduction to LCD interfacing
+								10:45 AM to11:30 AM	Display of Data Array of eight elements on LCD 
+								11:30 AM to11:45 AM	Tea Break (* Coffee / Tea and Biscuits/light snacks *)
+								11:45 AM to 01:00 PM	*Analog sensor interfacing using Analog to Digital conversion
+								*Interfacing with white line sensors
+								*Interfacing with Infrared range finder sensor
+								01:00 PM to 02:00 PM	Lunch Break (*Please see above for our recommendations*)
+								02:00 PM to 02:45 PM	Robot programming for white line following
+								02:45 PM to 03:30 PM	Adaptive cruise control (Robots try to maintain safe distance using analog IR range finder while following white line)
+								03:30 PM to 03:45 PM	Tea break (* Coffee / Tea and Biscuits *)
+								03:45 PM to 04:15 PM	Adaptive cruise control (continued)
+								<br/>
+								Feedback Session
+								04:15 PM to 05:00 PM	Quiz and feedback
+								05:00 PM to 05.30 PM	Concluding session
+								<br/>
+								Please note: Schedule subject to change depending on the material we cover.
+							</div>
+							<div class="modal-footer"> 
+							</div>
+						</div>
+					</div>
+				</div>
 				Greetings from e-Yantra!<br/>
 				<br/>
 				e-Yantra is organizing a 2-day workshop on "Introduction to Robotics" for the colleges participating in the e-Yantra Lab setup Initiative (eLSI).<br/>
@@ -23,7 +77,7 @@
 				To encourage more colleges from your region to participate in this Nation-building initiative, we welcome one team of 4 teachers from your college to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity of 15 college teams.<br/>
 				<br/>
 				@if($clgs->region == 'Bangalore')
-				Date: <strong>February 6th and 7th, 2015</strong><br/>
+				Date: <strong>February 6th and 7th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)<a><br/>
 				Venue: <strong>IIIT Bangalore<br/>
 				<span style="margin-left:50px;">No. 26/C, Electronic City, Hosur Road</span><br/>
 				<span style="margin-left:50px;">Bangalore - 560100</span><br/></strong>
@@ -34,7 +88,7 @@
 				Please confirm attendance of your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
 				<br/>
 				@elseif ($clgs->region == 'Bhopal')
-				Date: <strong>February 13th and 14th, 2015</strong><br/>
+				Date: <strong>February 13th and 14th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)<a><br/>
 				Venue: <strong>NRI Institute of Information Science & Technology,<br/>
 				<span style="margin-left:50px;">1, Sajjan Singh Nagar, Opposite Patel Nagar,</span><br/>
 				<span style="margin-left:50px;">Raisen Road, Bhopal, Madhya Pradesh 462023</span><br/></strong>
@@ -45,7 +99,7 @@
 				Please confirm attendance of your team of four teachers on or before <strong>February 3rd 2015</strong>:<br/>
 				<br/>
 				@elseif ($clgs->region == 'Gujarat')
-				Date: <strong>20<sup>th</sup> and 21<sup>st</sup> February, 2015</strong><br/>
+				Date: <strong>20<sup>th</sup> and 21<sup>st</sup> February, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)<a><br/>
 				Venue: <strong>Seminar Hall, First Floor,<br/>
 				<span style="margin-left:50px;">Institute of Infrastructure, Technology, Research and Management (IITRAM)</span><br/>
 				<span style="margin-left:50px;">Khokhra Circle, Maninagar (East), Ahmedabad -380026</span><br/></strong>
@@ -124,4 +178,11 @@
 	</div>
 </div>
 @endif
+@stop
+@section('scripts')
+<script type="text/javascript">
+	function open_sch(){
+		$('#sch').show();
+	}
+</script>
 @stop
