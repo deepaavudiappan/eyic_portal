@@ -113,8 +113,11 @@
 					@if ($errors->has('tm3_name')) <p class="help-block">{{ $errors->first('tm3_name') }} </p>@endif
 				</div>
 				<br/>
-				{{ Form::submit('Register!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br
-				/><br/>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						{{ Form::submit('Register!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}
+					</div>
+				</div>
 				{{ Form::close()}}
 			</div>
 		</div>

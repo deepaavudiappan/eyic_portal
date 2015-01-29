@@ -69,8 +69,11 @@
 					</ol>
 				</div>
 				<br/>
-				{{ Form::submit('Confirm!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br
-				/><br/>
+				<div class="row">
+					<div class="col-md-12 text-center">
+					{{ Form::submit('Confirm!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}
+					</div>
+				</div>
 				{{ Form::close()}}
 			</div>
 		</div>
