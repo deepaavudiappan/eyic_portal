@@ -45,15 +45,15 @@
 				Please confirm attendance of your team of four teachers on or before <strong>February 3rd 2015</strong>:<br/>
 				<br/>
 				@elseif ($clgs->region == 'Gujarat')
-				Date: <strong></strong><br/>
-				Venue: <strong>-<br/>
-				<span style="margin-left:50px;">--</span><br/>
-				<span style="margin-left:50px;">--</span><br/></strong>
-				Coordinator: <strong>--</strong><br/>
-				Contact number: <strong>--</strong><br/>
-				E-mail: <strong>--</strong><br/>
+				Date: <strong>20<sup>th</sup> and 21<sup>st</sup> February, 2015</strong><br/>
+				Venue: <strong>Seminar Hall, First Floor,<br/>
+				<span style="margin-left:50px;">Institute of Infrastructure, Technology, Research and Management (IITRAM)</span><br/>
+				<span style="margin-left:50px;">Khokhra Circle, Maninagar (East), Ahmedabad -380026</span><br/></strong>
+				Coordinator: <strong>Dr. Ketan P Badgujar</strong><br/>
+				Contact number: <strong>079-67775408, 8153941900</strong><br/>
+				E-mail: <strong>ketan@iitram.ac.in</strong><br/>
 				<br/>
-				Please confirm attendance of your team of four teachers on or before <strong>February -- 2015</strong>:<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>10th February, 2015</strong>:<br/>
 				<br/>
 				@endif
 				<div class="alert alert-danger">
