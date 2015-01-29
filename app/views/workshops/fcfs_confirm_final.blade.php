@@ -19,6 +19,7 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
+								<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 								<h4 class="modal-title" id="task1UpldLblH">Workshop Schedule</h4>
 							</div>
 
@@ -44,7 +45,7 @@
 								<br/>
 								<br/>
 								<br/>
-								<strong>Day 2:</strong><br/>
+								<strong>Day 2: </strong><br/>
 								Hands on Session<br/>
 								10:00 AM to10:45AM	Introduction to LCD interfacing<br/>
 								10:45 AM to11:30 AM	Display of Data Array of eight elements on LCD <br/>
@@ -66,6 +67,7 @@
 								<strong>Please note: Schedule subject to change depending on the material we cover.</strong><br/>
 							</div>
 							<div class="modal-footer"> 
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>

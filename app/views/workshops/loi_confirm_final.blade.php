@@ -19,6 +19,7 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
+								<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 								<h4 class="modal-title" id="task1UpldLblH">Workshop Schedule</h4>
 							</div>
 
@@ -66,6 +67,7 @@
 								<strong>Please note: Schedule subject to change depending on the material we cover.</strong><br/>
 							</div>
 							<div class="modal-footer"> 
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
@@ -125,7 +127,7 @@
 				<br/>
 				<div class="row">
 					<div class="col-md-12 text-center">
-					{{ Form::submit('Confirm!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}
+						{{ Form::submit('Confirm!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}
 					</div>
 				</div>
 				{{ Form::close()}}
