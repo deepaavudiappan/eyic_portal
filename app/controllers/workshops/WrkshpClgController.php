@@ -261,7 +261,7 @@ class WrkshpClgController extends BaseController {
 			Log::error($thisMethod . 'clg_token incorrect!' . $token);
 			return Redirect::route('confirmedRegd')->withErrors('Something went wrong. Incorrect Token, please contact us at support@e-yantra.org to report the issue with this message.');
 		}
-		if($clg[0]->loi == 1){
+		if($clg[0]->LOI == 1){
 			return Redirect::route('clgConfirmLandFinal')->withInput();
 		}
 		if($clg[0]->workshop_cnfrm == 1){
