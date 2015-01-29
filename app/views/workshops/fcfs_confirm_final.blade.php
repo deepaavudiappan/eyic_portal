@@ -77,7 +77,7 @@
 				To encourage more colleges from your region to participate in this Nation-building initiative, we welcome one team of 4 teachers from your college to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity of 15 college teams.<br/>
 				<br/>
 				@if($clgs->region == 'Bangalore')
-				Date: <strong>February 6th and 7th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)<a><br/>
+				Date: <strong>February 6th and 7th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)</a><br/>
 				Venue: <strong>IIIT Bangalore<br/>
 				<span style="margin-left:50px;">No. 26/C, Electronic City, Hosur Road</span><br/>
 				<span style="margin-left:50px;">Bangalore - 560100</span><br/></strong>
