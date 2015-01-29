@@ -59,11 +59,11 @@
 								03:45 PM to 04:15 PM	Adaptive cruise control (continued)<br/>
 								<br/>
 								<br/>
-								Feedback Session<br/>
+								<strong>Feedback Session</strong><br/>
 								04:15 PM to 05:00 PM	Quiz and feedback<br/>
 								05:00 PM to 05.30 PM	Concluding session<br/>
 								<br/>
-								Please note: Schedule subject to change depending on the material we cover.<br/>
+								<strong>Please note: Schedule subject to change depending on the material we cover.</strong><br/>
 							</div>
 							<div class="modal-footer"> 
 							</div>
