@@ -106,7 +106,7 @@
 				Contact number: <strong>079-67775408, 8153941900</strong><br/>
 				E-mail: <strong>ketan@iitram.ac.in</strong><br/>
 				<br/>
-				Please confirm attendance of your team of four teachers on or before <strong>10th February, 2015</strong>:<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>5th February, 2015</strong>:<br/>
 				<br/>
 				@endif
 				<div class="alert alert-danger">
