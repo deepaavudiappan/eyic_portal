@@ -25,10 +25,8 @@
 
 							<div class="modal-body">
 								<strong>Day 1:</strong><br/>
-								9:00 AM to 10:00 AM Registration + Tea
-								<br/><br/>
-								10:00 AM to 10:30 AM Inauguration -- Lighting of lamp; Overview of e-Yantra
-								<br/><br/>
+								9:00 AM to 10:00 AM Registration + Tea<br/>
+								10:00 AM to 10:30 AM Inauguration -- Lighting of lamp; Overview of e-Yantra<br/>
 								10:30 AM to 11:00 AM Introduction to Fire Bird V robot<br/>
 								11:00 AM to 01:00 PM	Introduction to AVR Micro-controller and Programming environment<br/>
 								01:00 PM to 02:00 PM	Lunch Break
@@ -42,7 +40,7 @@
 								<br/>
 								<br/>
 								<strong>Day 2: </strong><br/>
-								Hands on Session<br/>
+								<strong>Hands on Session</strong><br/>
 								10:00 AM to10:45 AM	Introduction to LCD interfacing<br/>
 								10:45 AM to11:30 AM	Display of Data Array of eight elements on LCD <br/>
 								11:30 AM to 11:45 AM	Tea Break<br/>
