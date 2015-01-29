@@ -77,7 +77,7 @@
 				To encourage more colleges from your region to participate in this Nation-building initiative, we welcome one team of 4 teachers from your college to participate in the workshop. Selection for participation is on a First Come First Serve (FCFS) basis to fill the capacity of 15 college teams.<br/>
 				<br/>
 				@if($clgs->region == 'Bangalore')
-				Date: <strong>February 6th and 7th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)</a><br/>
+				Date: <strong>February 6th and 7th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
 				Venue: <strong>IIIT Bangalore<br/>
 				<span style="margin-left:50px;">No. 26/C, Electronic City, Hosur Road</span><br/>
 				<span style="margin-left:50px;">Bangalore - 560100</span><br/></strong>
@@ -88,7 +88,7 @@
 				Please confirm attendance of your team of four teachers on or before <strong>January 26th 2015</strong>:<br/>
 				<br/>
 				@elseif ($clgs->region == 'Bhopal')
-				Date: <strong>February 13th and 14th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)</a><br/>
+				Date: <strong>February 13th and 14th, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
 				Venue: <strong>NRI Institute of Information Science & Technology,<br/>
 				<span style="margin-left:50px;">1, Sajjan Singh Nagar, Opposite Patel Nagar,</span><br/>
 				<span style="margin-left:50px;">Raisen Road, Bhopal, Madhya Pradesh 462023</span><br/></strong>
@@ -99,7 +99,7 @@
 				Please confirm attendance of your team of four teachers on or before <strong>February 3rd 2015</strong>:<br/>
 				<br/>
 				@elseif ($clgs->region == 'Gujarat')
-				Date: <strong>20<sup>th</sup> and 21<sup>st</sup> February, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:open_sch();">(Click here to view schedule)</a><br/>
+				Date: <strong>20<sup>th</sup> and 21<sup>st</sup> February, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
 				Venue: <strong>Seminar Hall, First Floor,<br/>
 				<span style="margin-left:50px;">Institute of Infrastructure, Technology, Research and Management (IITRAM)</span><br/>
 				<span style="margin-left:50px;">Khokhra Circle, Maninagar (East), Ahmedabad -380026</span><br/></strong>
@@ -182,7 +182,8 @@
 @section('scripts')
 <script type="text/javascript">
 	function open_sch(){
-		$('#sch').show();
+		$('#sch').modal('show');
+		return true;
 	}
 </script>
 @stop
