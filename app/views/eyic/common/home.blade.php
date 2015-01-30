@@ -3,16 +3,19 @@
 @stop
 
 @section('content')
+<div class="alert alert-info">
+	You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
+</div>
 <div class="alert alert-danger">
 	Project Proposal can now be uploaded by the Student Representative by clicking on the "Project Proposal" tab on the left side bar.
 </div>
 <div class="alert alert-danger">
 	<ul>
 		@if($college->phase == '2012' || $college->phase == '2013')
-		<li>Deadline for the coordinator to register the project: January 17th 2015</li>
-		<li>Deadline for the project team to upload the project proposal as per the template: January 23rd 2015</li>
+		<li>Deadline for the coordinator to register the project: January 31st 2015</li>
+		<li>Deadline for the project team to upload the project proposal as per the template: January 31st 2015</li>
 		@else
-		<li>Deadline for the coordinator to register the project: January 24th 2015</li>
+		<li>Deadline for the coordinator to register the project: January 31st 2015</li>
 		<li>Deadline for the project team to upload the project proposal as per the template: January 31st 2015</li>
 		@endif
 	</ul>
@@ -52,8 +55,20 @@
 		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $teacherDetail->emailid }}</td>		
 	</tr>
 	<tr>
+		<td>ALTERNATIVE E-MAIL ID 1</td>
+		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $teacherDetail->alt_email1 }}</td>		
+	</tr>
+	<tr>
+		<td>ALTERNATIVE E-MAIL ID 2</td>
+		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $teacherDetail->alt_email2 }}</td>
+	</tr>
+	<tr>
 		<td>CONTACT</td>
-		<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $teacherDetail->contact_num }}</td>		
+		<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $teacherDetail->contact_num }}</td>	
+	</tr>
+	<tr>
+		<td>ALTERNATIVE CONTACT</td>
+		<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $teacherDetail->alt_contact1 }}</td>	
 	</tr>
 	<tr>
 		<td>DEPARTMENT</td>
@@ -64,9 +79,61 @@
 		<td><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> {{ $teacherDetail->designation }}</td>
 	</tr>
 </table>
-<div class="row">
-	<div class="col-md-12 text-center">
+<div class="row text-center">
+	<div class="col-md-2 col-md-offset-3">
 		{{ HTML::linkRoute('changePwdLand', 'Change Password', [], ['class'	=> 'btn btn-primary']) }}
+	</div>
+	<div class="col-md-2 col-md-offset-1">
+		<a href="javascript:void(0);" onclick="open_updt_modal();" class="btn btn-primary">Update Profile!</a>
+	</div>
+</div>
+
+<div class="modal fade" id="updt_prfl" tabindex="-1" role="dialog" aria-labelledby="updt_prflLbl" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">Update Profile</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="alert alert-danger hidden" id="msg_box"></div>
+				<table class="table table-striped">
+					<tr>
+						<td>Alternate Email 1:</td>
+						<td><input type="text" id="alt_email1" name="alt_email1"/></td>
+					</tr>
+					<tr>
+						<td>Alternate Email 2:</td>
+						<td><input type="text" id="alt_email2" name="alt_email2"/></td>
+					</tr>
+					<tr>
+						<td>Contact Number:</td>
+						<td><input type="text" id="cnt_num" name="cnt_num"/></td>
+					</tr>
+					<tr>
+						<td>Alternate Contact Number:</td>
+						<td><input type="text" id="alt_cnt_num" name="alt_cnt_num"/></td>
+					</tr>
+					<tr>
+						<td>Select Department:</td>
+						<td><select id="department" name="department"></select></td>
+					</tr>
+					<tr>
+						<td>Select Designation:</td>
+						<td><select id="desig" name="desig"></select></td>
+					</tr>
+					<tr>
+						<td>Select Gender:</td>
+						<td><select id="gender" name="gender"><option value="-1">--Select--</option><option value="Male">Male</option><option value="Female">Female</option></select></td>
+					</tr>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" onclick="sve_updte_info()">Update!</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
 	</div>
 </div>
 @stop
@@ -93,5 +160,78 @@
 	$(document).ready( function() {
 		$('#profileLk').addClass('active');
 	});
+
+	function open_updt_modal(){
+
+		$.ajax({
+			type 	: "POST",
+			url    	: "{{ URL::route('loadPrTeacher'); }}",
+			dataType: 'json'
+		}).done(function(data) {
+			if(!data.error){
+				//Success
+				$('#department').append($('<option>').text("--Select--").attr('value', "-1"));
+				$('#desig').append($('<option>').text("--Select--").attr('value', "-1"));
+				for(var i = 0; i < data.depart.length; i++){
+					$('#department').append($('<option>').text(data.depart[i].name).attr('value', data.depart[i].name));
+				}
+
+				for(var j = 0; j < data.desig.length; j++){
+					$('#desig').append($('<option>').text(data.desig[j].name).attr('value', data.desig[j].name));
+				}
+
+				$('#alt_email1').val(data.profile[0].alt_email1);
+				$('#alt_email2').val(data.profile[0].alt_email2);
+				$('#cnt_num').val(data.profile[0].contact_num);
+				$('#alt_cnt_num').val(data.profile[0].alt_contact1);
+				if(data.profile[0].department)
+					$('#department').val(data.profile[0].department);
+				if(data.profile[0].designation)
+					$('#desig').val(data.profile[0].designation);
+				if(data.profile[0].gender)
+					$('#gender').val(data.profile[0].gender);
+
+				$('#updt_prfl').modal('show');
+			}
+			else{
+				//Error
+				alert(data.error);
+			}
+		}).fail(function(){
+			alert("Unable to process the request.");
+		});
+
+		return true;
+	}
+
+	function sve_updte_info(){
+		$.ajax({
+			type 	: "POST",
+			url    	: "{{ URL::route('savePrTeacher'); }}",
+			data 	: { "alt_email1"	: 	$('#alt_email1').val(),
+						"alt_email2"	: 	$('#alt_email2').val(),
+						"alt_cnt_num"	: 	$('#alt_cnt_num').val(),
+						"cnt_num"		: 	$('#cnt_num').val(),
+						"department"	: 	$('#department').val(),
+						"desig"			: 	$('#desig').val(),
+						"gender"		: 	$('#gender').val()},
+			dataType: 'json'
+		}).done(function(data) {
+			if(!data.error){
+				$('#msg_box').addClass('hidden');
+				alert("Successfully Updated!");
+				location.reload();
+			}
+			else{
+				//alert(data.error);
+				$('#msg_box').html(data.error);
+				$('#msg_box').removeClass('hidden');
+			}
+		}).fail(function(){
+			//alert("Unable to process the request.");
+			$('#msg_box').html("Unable to process the request.");
+			$('#msg_box').removeClass('hidden');
+		});
+	}
 </script>
 @stop

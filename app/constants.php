@@ -10,3 +10,5 @@ define('DOWNLOAD_FILES_LOC',  '/var/www/elsi_portal/app/downloads/');
 define('MSG_VAR_SUCCESS',  'success');
 define('MSG_VAR_ERROR',  'error');
 define('UPLOAD_FILES_LOC',  '/var/www/elsi_portal/app/storage/uploads/');
+define('JSON_ERROR',  'error');
+define('JSON_SUCCESS',  'success');

@@ -88,7 +88,6 @@ Route::match(array('GET', 'POST'), '/setPwd', array(
 			'uses'	=>	'AuthController@setPassword'
 ));
 
-
 Route::match(array('GET', 'POST'), '/common/home', array(
 			'as'	=>	'commonHome',
 			'uses'	=>	'HomeController@homeBifurcate'
@@ -97,6 +96,26 @@ Route::match(array('GET', 'POST'), '/common/home', array(
 Route::match(array('GET', 'POST'), '/common/home_coor_mentor', array(
 			'as'	=>	'coorMentorHome',
 			'uses'	=>	'HomeController@coordinatorMentorHome'
+));
+
+Route::match(array('GET', 'POST'), '/teacher/load_profile', array(
+			'as'	=>	'loadPrTeacher',
+			'uses'	=>	'TeacherController@load_update_profile'
+));
+
+Route::match(array('GET', 'POST'), '/teacher/save_profile', array(
+			'as'	=>	'savePrTeacher',
+			'uses'	=>	'TeacherController@save_profile'
+));
+
+Route::match(array('GET', 'POST'), '/student/load_profile', array(
+			'as'	=>	'loadPrStudent',
+			'uses'	=>	'StudentHomeController@load_update_profile'
+));
+
+Route::match(array('GET', 'POST'), '/student/save_profile', array(
+			'as'	=>	'savePrStudent',
+			'uses'	=>	'StudentHomeController@save_profile'
 ));
 
 /*----------------------Mentor Routes---------------------------*/

@@ -99,7 +99,8 @@ class HomeController extends BaseController {
 		if(Session::has('entityDtl')){
 			Log::debug($thisMethod . ' Coor_flag: ' . Session::get('entityDtl')['coor_flag'] . ' Auth:: ' . Auth::id());
 			if(Session::get('entityDtl')['coor_flag'] == 0 || Session::get('entityDtl')['coor_flag'] == 1 || Session::get('entityDtl')['coor_flag'] == 2){
-				$teacher = 	Session::get('entityDtl');
+				$teacher = ElsiTeachersDtls::where('user_id', Auth::id())->get();
+				$teacher = $teacher[0];
 				$clgDtl = ElsiCollegeDetail::find(Session::get('entityDtl')['clg_id']);				
 				$teacher['college'] = $clgDtl['college_name'];				
 				View::share(array('title'=>'Profile','link' => 1));
