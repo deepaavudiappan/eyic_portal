@@ -20,6 +20,10 @@
 		<td><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ $studentDetail->college }}</td>		
 	</tr>
 	<tr>
+		<td>Name</td>
+		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $studentDetail->name }}</td>		
+	</tr>
+	<tr>
 		<td>E-MAIL ID</td>
 		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $studentDetail->email_id }}</td>		
 	</tr>
@@ -62,6 +66,10 @@
 
 			<div class="modal-body">
 				<div class="alert alert-danger hidden" id="msg_box"></div><table class="table table-striped">
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" id="name" name="name"/></td>
+					</tr>
 					<tr>
 						<td>Contact Number:</td>
 						<td><input type="text" id="contact_num" name="contact_num"/></td>
@@ -134,6 +142,7 @@
 					$('#branch').append($('<option>').text(data.depart[i].name).attr('value', data.depart[i].name));
 				}
 
+				$('#name').val(data.profile[0].name);
 				$('#contact_num').val(data.profile[0].contact_num);
 				$('#address').val(data.profile[0].address);
 
@@ -166,7 +175,8 @@
 		$.ajax({
 			type 	: "POST",
 			url    	: "{{ URL::route('savePrStudent'); }}",
-			data 	: { "contact_num"	: 	$('#contact_num').val(),
+			data 	: { "name"			: 	$('#name').val(),
+						"contact_num"	: 	$('#contact_num').val(),
 						"address"		: 	$('#address').val(),
 						"branch"		: 	$('#branch').val(),
 						"year"			: 	$('#year').val(),

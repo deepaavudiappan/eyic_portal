@@ -136,14 +136,16 @@ class StudentHomeController extends BaseController {
 		$thisMethod = self::$thisClass . ' -> save_profile -> ';
 		$usr_id = Auth::id();
 
-		$rules = [	'contact_num'	=>	'regex:/^[+]?\d+[-]?\d+$/',
+		$rules = [ 'name'	=> 'regex:/^[A-Za-z\.\-\s_]*$/',
+		'contact_num'	=>	'regex:/^[+]?\d+[-]?\d+$/',
 		'address'		=>	"regex:/^[A-Za-z0-9'\.\-\s\,]*$/",
 		'branch'		=>	'regex:/^[_A-Za-z0-9-\s]*$/',
 		'year'			=>	'regex:/^-*\d$/',
 		'degree'		=>	'regex:/^[_A-Za-z0-9-\s\.]*$/',
 		'gender'		=>	'regex:/^[_A-Za-z0-9-\s]*$/'];
 
-		$messages = [	'contact_num.regex'	=>	'Contact Number can only have digits, + and - sign.',
+		$messages = [	'name.regex'	=>	'Name can only contain characters.',
+		'contact_num.regex'	=>	'Contact Number can only have digits, + and - sign.',
 		'address.regex'		=>	'Address can only have characters, numbers and (.,-) symbols.',
 		'branch.regex'		=>	'Branch can only contain characters and numbers.',
 		'year.regex'		=>	'Year can only be 1 digit.',
@@ -163,6 +165,7 @@ class StudentHomeController extends BaseController {
 			return json_encode([JSON_ERROR => $fn_msg]);
 		}
 
+		$name = ucwords(strtolower(Input::get('name')));
 		$contact_num = Input::get('contact_num');
 		$address = Input::get('address');
 		$branch = Input::get('branch');
@@ -182,6 +185,7 @@ class StudentHomeController extends BaseController {
 			
 			$student[0]->contact_num = $contact_num;
 			$student[0]->address = $address;
+			$student[0]->name = $name;
 			
 			if($year != '-1')			
 				$student[0]->year = $year;
