@@ -16,7 +16,7 @@
 		</th>
 	</tr>
 	<tr>
-		<td>COLLEGE NAME</td>
+		<td>College Name</td>
 		<td><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ $studentDetail->college }}</td>		
 	</tr>
 	<tr>
@@ -24,27 +24,27 @@
 		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $studentDetail->name }}</td>		
 	</tr>
 	<tr>
-		<td>E-MAIL ID</td>
+		<td>Email ID</td>
 		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $studentDetail->email_id }}</td>		
 	</tr>
 	<tr>
-		<td>CONTACT</td>
+		<td>Contact</td>
 		<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $studentDetail->contact_num }}</td>		
 	</tr>
 	<tr>
-		<td>ADDRESS</td>
+		<td>Address</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->address }}</td>		
 	</tr>
 	<tr>
-		<td>BRANCH</td>
+		<td>Branch</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->branch }}</td>		
 	</tr>	
 	<tr>
-		<td>YEAR</td>
+		<td>Year</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->year }}</td>		
 	</tr>
 	<tr>
-		<td>DEGREE</td>
+		<td>Degree</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->degree }}</td>		
 	</tr>
 </table>	
