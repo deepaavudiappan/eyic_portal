@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="alert alert-info">
-	You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
+	*Update Please update your name too*  You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
 </div>
 <div class="alert alert-danger">
 	Project Proposal can now be uploaded by the Student Representative by clicking on the "Project Proposal" tab on the left side bar.
@@ -16,31 +16,35 @@
 		</th>
 	</tr>
 	<tr>
-		<td>COLLEGE NAME</td>
+		<td>College Name</td>
 		<td><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ $studentDetail->college }}</td>		
 	</tr>
 	<tr>
-		<td>E-MAIL ID</td>
+		<td>Name</td>
+		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $studentDetail->name }}</td>		
+	</tr>
+	<tr>
+		<td>Email ID</td>
 		<td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ $studentDetail->email_id }}</td>		
 	</tr>
 	<tr>
-		<td>CONTACT</td>
+		<td>Contact</td>
 		<td><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> {{ $studentDetail->contact_num }}</td>		
 	</tr>
 	<tr>
-		<td>ADDRESS</td>
+		<td>Address</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->address }}</td>		
 	</tr>
 	<tr>
-		<td>BRANCH</td>
+		<td>Branch</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->branch }}</td>		
 	</tr>	
 	<tr>
-		<td>YEAR</td>
+		<td>Year</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->year }}</td>		
 	</tr>
 	<tr>
-		<td>DEGREE</td>
+		<td>Degree</td>
 		<td><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ $studentDetail->degree }}</td>		
 	</tr>
 </table>	
@@ -62,6 +66,10 @@
 
 			<div class="modal-body">
 				<div class="alert alert-danger hidden" id="msg_box"></div><table class="table table-striped">
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" id="name" name="name"/></td>
+					</tr>
 					<tr>
 						<td>Contact Number:</td>
 						<td><input type="text" id="contact_num" name="contact_num"/></td>
@@ -134,6 +142,7 @@
 					$('#branch').append($('<option>').text(data.depart[i].name).attr('value', data.depart[i].name));
 				}
 
+				$('#name').val(data.profile[0].name);
 				$('#contact_num').val(data.profile[0].contact_num);
 				$('#address').val(data.profile[0].address);
 
@@ -166,7 +175,8 @@
 		$.ajax({
 			type 	: "POST",
 			url    	: "{{ URL::route('savePrStudent'); }}",
-			data 	: { "contact_num"	: 	$('#contact_num').val(),
+			data 	: { "name"			: 	$('#name').val(),
+						"contact_num"	: 	$('#contact_num').val(),
 						"address"		: 	$('#address').val(),
 						"branch"		: 	$('#branch').val(),
 						"year"			: 	$('#year').val(),
