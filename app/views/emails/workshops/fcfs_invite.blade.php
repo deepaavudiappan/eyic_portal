@@ -1,8 +1,3 @@
-<style>
-	.btn{
-		background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;
-	}
-</style>
 <div style="width:700px;text-align:center;background-color:#E5E5E6;padding-left:50px;padding-right:50px;padding-top:20px;font-family: Verdana, Geneva, sans-serif;font-size:14px;">
 	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url('http://elsiportal.e-yantra.org/bg.jpg');">
 		<div style="border-bottom:1px solid #D1D1D3;">
@@ -32,7 +27,7 @@
 					e-mail: <strong>{{$email;}}</strong><br/>
 					<br>
 					For workshop schedule click here:<br/>
-					<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_loi?ct={{ $token }}" class="btn">Click here to register.</a><br/>
+					<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_loi?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to register.</a><br/>
 					<br/>
 				</div>
 			</div>

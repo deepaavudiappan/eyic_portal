@@ -108,7 +108,10 @@ class AdminOperations extends BaseController {
 		$last_date = Input::get('lastdate');
 		$from_email = Input::get('from_email');
 		
-		if($from_email == null || empty($from_email)){
+		if($from_email == null){
+			$from_email = ELSI_FROM_EMAIL;
+		}
+		if(empty($from_email)){
 			$from_email = ELSI_FROM_EMAIL;
 		}
 
