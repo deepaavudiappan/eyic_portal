@@ -116,7 +116,7 @@ class AdminOperations extends BaseController {
 		try{
 			if(Input::get('remind_loi_invite')) {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
-				$emailSubj = 'eLSI-Workshop-Invite';
+				$emailSubj = 'e-Yantra, IIT Bombay: 2-day workshop -- '.$date.' -- Last Chance to register!!!';
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
@@ -136,7 +136,7 @@ class AdminOperations extends BaseController {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
-				$emailSubj = 'eLSI-Workshop-Invite';
+				$emailSubj = 'e-Yantra, IIT Bombay: 2-day workshop -- '.$date.' -- Last Chance to register!!!';
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email'])){
@@ -156,7 +156,7 @@ class AdminOperations extends BaseController {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
-				$emailSubj = 'eLSI-Workshop-Invite';
+				$emailSubj = 'eLSI-Workshop-Invitation to attend the two day workshop - ' . $date;
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
@@ -183,7 +183,7 @@ class AdminOperations extends BaseController {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
-				$emailSubj = 'eLSI-Workshop-Invite';
+				$emailSubj = 'eLSI-Workshop-Invitation to attend the two day workshop - ' . $date;
 
 				foreach($clg_lst as $cur_clg){
 					if(!empty($cur_clg['principal_email'])){
