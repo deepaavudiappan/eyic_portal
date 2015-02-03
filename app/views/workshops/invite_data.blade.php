@@ -22,14 +22,14 @@
 		
 		<br/><br/>
 		<div class="row">
-		<div class="col-md-6">
-		{{ Form::submit('Invite LOI Colleges!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br/><br/>
-		{{ Form::submit('Invite Other Colleges' , array('class' => 'btn btn-danger', 'name' => 'fcfs_invite')) }}
-		</div>
-		<div class="col-md-6">
-		{{ Form::submit('Send Reminder LOI Colleges' , array('class' => 'btn btn-danger', 'name' => 'remind_loi_invite')) }}
-		{{ Form::submit('Send Reminder Other Colleges' , array('class' => 'btn btn-danger', 'name' => 'remind_fcfs_invite')) }}
-		</div>
+			<div class="col-md-6">
+				{{ Form::submit('Invite LOI Colleges!' , array('class' => 'btn btn-primary', 'name' => 'loi_invite')) }}<br/><br/>
+				{{ Form::submit('Invite Other Colleges' , array('class' => 'btn btn-danger', 'name' => 'fcfs_invite')) }}
+			</div>
+			<div class="col-md-6">
+			{{ Form::submit('Send Reminder LOI Colleges' , array('class' => 'btn btn-primary', 'name' => 'remind_loi_invite')) }}
+				{{ Form::submit('Send Reminder Other Colleges' , array('class' => 'btn btn-danger', 'name' => 'remind_fcfs_invite')) }}
+			</div>
 		</div>
 		{{ Form::close()}}
 
