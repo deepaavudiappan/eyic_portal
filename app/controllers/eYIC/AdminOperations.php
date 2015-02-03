@@ -108,9 +108,9 @@ class AdminOperations extends BaseController {
 		$last_date = Input::get('lastdate');
 		$from_email = Input::get('from_email');
 		
-		/*if(empty($from_email)){
+		if(empty($from_email)){
 			$from_email = ELSI_FROM_EMAIL;
-		}*/
+		}
 
 		DB::beginTransaction();
 		try{
@@ -172,7 +172,7 @@ class AdminOperations extends BaseController {
 								'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
 								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj, $from_email)
 							{
-								$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+								$message->from($from_email, ELSI_FROM_NAME);
 								$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
 							});
 						}
@@ -198,7 +198,7 @@ class AdminOperations extends BaseController {
 								'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
 								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj, $from_email)
 							{
-								$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
+								$message->from($from_email, ELSI_FROM_NAME);
 								$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
 							});
 						}
