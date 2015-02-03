@@ -1,5 +1,5 @@
 <div style="width:700px;text-align:center;background-color:#E5E5E6;padding-left:50px;padding-right:50px;padding-top:20px;font-family: Verdana, Geneva, sans-serif;font-size:14px;">
-	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url('bg.jpg');">
+	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url('http://elsiportal.e-yantra.org/bg.jpg');">
 		<div style="border-bottom:1px solid #D1D1D3;">
 			{{ HTML::image('img/emails/header.jpg', 'Header', array('style' => 'width:700px;')) }}
 		</div>
@@ -16,7 +16,7 @@
 					<br/>
 					We have received the Letter of Intent (LoI) from your college.<br/>
 					<br/>
-					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the e-Yantra Lab Setup Initiative (eLSI).<br/>
+					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>
 					<br/>
 					The dates and venue is given below:<br/>
 					<br/>
