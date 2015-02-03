@@ -106,10 +106,53 @@ class AdminOperations extends BaseController {
 		$contact_num = Input::get('contact_num');
 		$email = Input::get('email');
 		$last_date = Input::get('lastdate');
+		$from_email = Input::get('from_email');
+		
+		if($from_email == null || empty($from_email)){
+			$from_email = ELSI_FROM_EMAIL;
+		}
 
 		DB::beginTransaction();
 		try{
-			if(Input::get('loi_invite')) {
+			if(Input::get('remind_loi_invite')) {
+				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
+				$emailSubj = 'eLSI-Workshop-Invite';
+
+				foreach($clg_lst as $cur_clg){
+					if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){ 
+						
+						$token = $cur_clg->workshop_token;
+						Mail::queue('emails.workshops.remind_loi_invite',  array('date'	=>	$date, 
+							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
+							'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+						{
+							$message->from($from_email, WORKSHOP_FROM_NAME);
+							$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
+						});
+					}
+				}
+			}
+			else if(Input::get('remind_fcfs_invite')){
+				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->where('phase','like','2015')->get();
+
+				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
+				$emailSubj = 'eLSI-Workshop-Invite';
+
+				foreach($clg_lst as $cur_clg){
+					if(!empty($cur_clg['principal_email'])){
+						
+						$token = $cur_clg->workshop_token;
+						Mail::queue('emails.workshops.remind_fcfs_invite',  array('date'	=>	$date, 
+							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
+							'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+						{
+							$message->from($from_email, WORKSHOP_FROM_NAME);
+							$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
+						});
+					}
+				}
+			}
+			else if(Input::get('loi_invite')) {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
@@ -136,7 +179,7 @@ class AdminOperations extends BaseController {
 					}
 				}
 			}
-			elseif(Input::get('fcfs_invite')) {
+			else if(Input::get('fcfs_invite')) {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi', 0)->where('phase','like','2015')->get();
 
 				//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
