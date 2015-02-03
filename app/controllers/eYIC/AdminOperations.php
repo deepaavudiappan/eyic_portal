@@ -124,7 +124,7 @@ class AdminOperations extends BaseController {
 						$token = $cur_clg->workshop_token;
 						Mail::queue('emails.workshops.remind_loi_invite',  array('date'	=>	$date, 
 							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
-							'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+							'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj, $from_email)
 						{
 							$message->from($from_email, WORKSHOP_FROM_NAME);
 							$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
@@ -144,7 +144,7 @@ class AdminOperations extends BaseController {
 						$token = $cur_clg->workshop_token;
 						Mail::queue('emails.workshops.remind_fcfs_invite',  array('date'	=>	$date, 
 							'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
-							'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+							'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj, $from_email)
 						{
 							$message->from($from_email, WORKSHOP_FROM_NAME);
 							$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
@@ -170,7 +170,7 @@ class AdminOperations extends BaseController {
 						else{
 							Mail::queue('emails.workshops.loi_invite',  array('date'	=>	$date, 
 								'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
-								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj, $from_email)
 							{
 								$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
 								$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
@@ -196,7 +196,7 @@ class AdminOperations extends BaseController {
 						else{
 							Mail::queue('emails.workshops.fcfs_invite',  array('date'	=>	$date, 
 								'venue' => $venue, 'nc_coor' => $nc_coor, 'contact_num' => $contact_num, 
-								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj)
+								'email' => $email, 'token' => $token, 'last_date' => $last_date), function($message) use($cur_clg, $emailSubj, $from_email)
 							{
 								$message->from(ELSI_FROM_EMAIL, ELSI_FROM_NAME);
 								$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
