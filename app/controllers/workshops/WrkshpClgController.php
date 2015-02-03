@@ -179,7 +179,7 @@ class WrkshpClgController extends BaseController {
 		//Authenticate Token
 		$token = Input::get('ct');
 
-		$clg = ElsiCollegeDetail::where('workshop_token', 'like', trim($token))->where('loi', 1)->get();
+		$clg = ElsiCollegeDetail::where('workshop_token', 'like', trim($token))->where('LOI', 1)->get();
 
 		if(count($clg) < 1){
 			Log::error($thisMethod . 'clg_token incorrect!' . $token);
