@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div style="float:left">
-				<div style="margin:100px;">
+				<div style="margin-left:100px;">
 					<table>
 						<tr><td><strong>Date:</strong></td><td>{{$date;}}</td></tr>
 						<tr><td><strong>Venue: </strong></td><td>{{$venue;}}</td></tr>
