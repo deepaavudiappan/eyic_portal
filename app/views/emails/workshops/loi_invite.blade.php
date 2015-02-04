@@ -1,5 +1,5 @@
 <div style="width:700px;text-align:center;background-color:#E5E5E6;padding-left:50px;padding-right:50px;padding-top:20px;font-family: Verdana, Geneva, sans-serif;font-size:14px;">
-	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url({{ URL::asset('img/emails/bg3.jpg'); }});">
+	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url({{ URL::asset('img/emails/bg2.jpg'); }});">
 		<div style="border-bottom:1px solid #D1D1D3;">
 			{{ HTML::image('img/emails/header1.jpg', 'Header', array('style' => 'width:700px;')) }}
 		</div>
