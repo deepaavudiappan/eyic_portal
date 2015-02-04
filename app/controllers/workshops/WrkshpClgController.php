@@ -321,4 +321,18 @@ class WrkshpClgController extends BaseController {
 			return Redirect::route('confirmedRegd')->withSuccess('You have successfully registered your team.  You will be notified on or before January 30th');
 		}
 	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		wrkshpSchedule
+	| Input:		Null
+	| Output:		Register for Workshop
+	| Logic:		Register for Workshop
+	|
+	*/
+	public function wrkshpSchedule(){
+		$thisMethod = self::$thisClass . ' -> wrkshpSchedule -> ';
+
+		return View::make('workshops.schedule');
+	}
 }

@@ -217,6 +217,11 @@ Route::match(array('GET', 'POST'), '/elsi/workshop/college/download/loi', array(
 			'as'	=>	'downloadLoi',
 			'uses'	=>	'WrkshpClgController@downloadLoi'
 ));
+
+Route::match(array('GET', 'POST'), '/elsi/workshop/college/schedule', array(
+			'as'	=>	'wrkshpSchedule',
+			'uses'	=>	'WrkshpClgController@wrkshpSchedule'
+));
 /*--------------------Added By SP -------------------------------*/
 
 
