@@ -108,6 +108,16 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before <strong>5th February, 2015</strong>:<br/>
 				<br/>
+				@elseif ($clgs->region == 'Punjab')
+				Date: <strong>20<sup>th</sup> and 21<sup>st</sup> February, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
+				Venue: <strong>Thapar University Patiala,<br/>
+				<span style="margin-left:50px;">P.O Box 32, Patiala, Pin -147004</span></strong><br/>
+				Coordinator: <strong>Dr. Sanjay Sharma</strong><br/>
+				Contact number: <strong>0175-2393083/2393136, 07696400690</strong><br/>
+				E-mail: <strong>sanjay.sharma@thapar.edu</strong><br/>
+				<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>7th February, 2015</strong>:<br/>
+				<br/>
 				@endif
 				<div class="alert alert-danger">
 					Please note:<br/>
