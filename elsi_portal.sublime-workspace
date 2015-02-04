@@ -328,50 +328,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/eYIC/AdminOperations.php",
-			"settings":
-			{
-				"buffer_size": 9262,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/emails/workshops/remind_fcfs_invite.blade.php",
-			"settings":
-			{
-				"buffer_size": 2572,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 9035,
+				"buffer_size": 9355,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/emails/workshops/remind_loi_invite.blade.php",
+			"file": "app/controllers/workshops/WrkshpClgController.php",
 			"settings":
 			{
-				"buffer_size": 2235,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/emails/workshops/loi_invite.blade.php",
-			"settings":
-			{
-				"buffer_size": 3074,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/emails/workshops/fcfs_invite.blade.php",
-			"settings":
-			{
-				"buffer_size": 3310,
+				"buffer_size": 12264,
 				"line_ending": "Unix"
 			}
 		}
@@ -445,16 +413,19 @@
 	],
 	"file_history":
 	[
+		"/var/www/elsi_portal/app/controllers/eYIC/AdminOperations.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/remind_fcfs_invite.blade.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
+		"/var/www/elsi_portal/app/controllers/workshops/WrkshpClgController.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/remind_loi_invite.blade.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
+		"/var/www/elsi_portal/app/views/workshops/loi_confirm_final.blade.php",
+		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm_final.blade.php",
+		"/var/www/elsi_portal/app/views/workshops/schedule.blade.php",
 		"/var/www/elsi_portal/app/routes.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/CollegeController.php",
 		"/var/www/elsi_portal/app/views/workshops/invite_data.blade.php",
 		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite_backup.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/remind_fcfs_invite.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/remind_loi_invite.blade.php",
-		"/var/www/elsi_portal/app/controllers/workshops/WrkshpClgController.php",
-		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm_final.blade.php",
 		"/var/www/elsi_portal/vendor/predis/predis/lib/Predis/Command/PubSubUnsubscribeByPattern.php",
 		"/var/www/elsi_portal/vendor/symfony/process/Symfony/Component/Process/ProcessUtils.php",
 		"/var/www/elsi_portal/phpunit.xml",
@@ -490,7 +461,6 @@
 		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm.blade.php",
 		"/var/www/elsi_portal/vendor/symfony/finder/Symfony/Component/Finder/Iterator/DateRangeFilterIterator.php",
 		"/var/www/elsi_portal/vendor/symfony/finder/Symfony/Component/Finder/Tests/Iterator/DateRangeFilterIteratorTest.php",
-		"/var/www/elsi_portal/app/views/workshops/loi_confirm_final.blade.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Log/Writer.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Console/ConfirmableTrait.php",
 		"/var/www/elsi_portal/app/views/workshops/confim_msg.blade.php",
@@ -500,7 +470,6 @@
 		"/var/www/elsi_portal/app/models/ElsiCollegeDtls.php",
 		"/var/www/elsi_portal/app/models/ElsiContactDtls.php",
 		"/var/www/elsi_portal/app/controllers/DataTransformation.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/AdminOperations.php",
 		"/var/www/elsi_portal/app/views/eyic/documents/proj_prop.blade.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/StdntCrdntrOperations.php",
 		"/home/amirajdhawan/Desktop/sample.c",
@@ -571,8 +540,7 @@
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/docs/getting-started/overview.rst",
 		"/var/www/elsi_portal/app/views/eyic/labincharge/regProj.blade.php",
 		"/var/www/elsi_portal/app/views/includes/navbar.blade.php",
-		"/var/www/elsi_portal/app/views/includes/head.blade.php",
-		"/var/www/elsi_portal/vendor/composer/autoload_real.php"
+		"/var/www/elsi_portal/app/views/includes/head.blade.php"
 	],
 	"find":
 	{
@@ -590,6 +558,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/>\n",
 			"null",
 			"from_email",
 			"workshop_invite",
@@ -679,205 +648,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/eYIC/AdminOperations.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7529,
-								7529
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 0.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5103.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/emails/workshops/remind_fcfs_invite.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2572,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1636,
-								1636
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 0.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 758.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9035,
+						"buffer_size": 9355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5164,
-								5164
+								7006,
+								7006
 							]
 						],
 						"settings":
@@ -885,41 +668,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -930,19 +678,54 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"incomplete_sync": null,
-							"origPos": 0.0,
+							"origPos": 4562.0,
 							"remote_loading": false,
 							"syncScroll": false,
 							"synced": false,
@@ -950,119 +733,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3728.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/emails/workshops/remind_loi_invite.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2235,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 0.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4677.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/emails/workshops/loi_invite.blade.php",
+					"buffer": 1,
+					"file": "app/controllers/workshops/WrkshpClgController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3074,
+						"buffer_size": 12264,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3074,
-								3074
+								12121,
+								12121
 							]
 						],
 						"settings":
@@ -1070,41 +761,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -1115,123 +771,65 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 0.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/emails/workshops/fcfs_invite.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2880,
-								2880
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_regex_content"
 							],
 							"incomplete_sync": null,
 							"origPos": 0.0,
 							"remote_loading": false,
 							"syncScroll": false,
 							"synced": false,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1338.0,
+						"translation.y": 8248.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1295,6 +893,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"wrk",
+				"app/controllers/workshops/WrkshpClgController.php"
+			],
 			[
 				"route",
 				"app/routes.php"
@@ -1362,10 +964,6 @@
 			[
 				"fcfs",
 				"app/views/workshops/fcfs_confirm_final.blade.php"
-			],
-			[
-				"wrk",
-				"app/controllers/workshops/WrkshpClgController.php"
 			],
 			[
 				"confirm",

@@ -335,4 +335,19 @@ class WrkshpClgController extends BaseController {
 
 		return View::make('workshops.schedule');
 	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		confirmClgs
+	| Input:		Null
+	| Output:		Register for Workshop
+	| Logic:		Register for Workshop
+	|
+	*/
+	public function confirmClgs(){
+		$thisMethod = self::$thisClass . ' -> confirmClgs -> ';
+
+		return View::make('confirmClgs.schedule');
+	}
+	
 }

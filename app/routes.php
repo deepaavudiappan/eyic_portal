@@ -222,6 +222,11 @@ Route::match(array('GET', 'POST'), '/elsi/workshop/college/schedule', array(
 			'as'	=>	'wrkshpSchedule',
 			'uses'	=>	'WrkshpClgController@wrkshpSchedule'
 ));
+
+Route::match(array('GET', 'POST'), '/elsi/workshop/admin/confirmed_clgs', array(
+			'as'	=>	'confirmClgs',
+			'uses'	=>	'WrkshpClgController@confirmClgs'
+));
 /*--------------------Added By SP -------------------------------*/
 
 
