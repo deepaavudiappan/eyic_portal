@@ -26,7 +26,7 @@
 					Contact number: <strong>{{$contact_num;}}</strong><br/>
 					e-mail: <strong>{{$email;}}</strong><br/>
 					<br/>
-					For workshop schedule click here: <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Schedule!</a><br/>
+					For workshop schedule click here: <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/>
 					<br/>
 				</div>
 			</div>
