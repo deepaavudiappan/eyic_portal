@@ -12,9 +12,9 @@
 			<div class="col-md-8 col-md-offset-2 text-justify">
 				<table class="table table-striped">
 					<tr class="text-center"><td colspan="2"><strong>Day 1:</strong></td></tr>
-					<tr><td style="width:150px;">9:00 AM to 10:00 AM</td><td>Registration + Tea</td></tr>
+					<tr><td style="width:250px;">9:00 AM to 10:00 AM</td><td>Registration + Tea</td></tr>
 					<tr><td>10:00 AM to 10:30 AM</td><td> Inauguration -- Lighting of lamp; Overview of e-Yantra</td></tr>
-					<tr><td>10:30 AM to 11:00</td><td>AM Introduction to Fire Bird V robot</td></tr>
+					<tr><td>10:30 AM to 11:00 AM</td><td>Introduction to Fire Bird V robot</td></tr>
 					<tr><td>11:00 AM to 01:00 PM</td><td>Introduction to AVR Micro-controller and Programming environment</td></tr>
 					<tr><td>01:00 PM to 02:00 PM</td><td>Lunch Break</td></tr>
 					<tr></tr>
