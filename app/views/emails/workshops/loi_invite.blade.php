@@ -23,18 +23,20 @@
 				</div>
 			</div>
 			<div style="float:left">
-				<table>
-					<tr><td><strong>Date:</strong></td><td>{{$date;}}</td></tr><br/>
-					<tr><td><strong>Venue: </strong></td><td>{{$venue;}}</td></tr><br/>
-					<tr><td><strong>Coordinator:</strong></td><td>{{$nc_coor;}}</td></tr><br/>
-					<tr><td><strong>Contact number:</strong></td><td>{{$contact_num;}}</td></tr><br/>
-					<tr><td><strong>e-mail: </strong></td><td>{{$email;}}</td></tr><br/>
-				</table>
+				<div style="margin:100px;">
+					<table>
+						<tr><td><strong>Date:</strong></td><td>{{$date;}}</td></tr>
+						<tr><td><strong>Venue: </strong></td><td>{{$venue;}}</td></tr>
+						<tr><td><strong>Coordinator:</strong></td><td>{{$nc_coor;}}</td></tr>
+						<tr><td><strong>Contact number:</strong></td><td>{{$contact_num;}}</td></tr>
+						<tr><td><strong>e-mail: </strong></td><td>{{$email;}}</td></tr>
+					</table>
+				</div>
 				<br/>
 				<div style="text-align:center;">
-				For workshop schedule click here: <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/><br/>
-				<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_loi?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to confirm your participation</a><br/>
-				<br/>
+					For workshop schedule click here: <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/><br/>
+					<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_loi?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to confirm your participation</a><br/>
+					<br/>
 				</div>
 				Here are the modalities of the workshop:<br/>
 				<br/>
