@@ -118,6 +118,15 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before <strong>7th February, 2015</strong>:<br/>
 				<br/>
+				@elseif ($clgs->region == 'Guntur')
+				Date: <strong>26<sup>th</sup> and 27<sup>th</sup> February, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
+				Venue: <strong>Vignan University, Vadlamudi, Guntur - 522213, A.P.</strong><br/>
+				Coordinator: <strong>S. Krishna Chaitanya</strong><br/>
+				Contact number: <strong>0863- 234 4700, +91-9440485456</strong><br/>
+				E-mail: <strong>chaitanyabright@gmail.com</strong><br/>
+				<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>12th February, 2015</strong>:<br/>
+				<br/>
 				@endif
 				<div class="alert alert-danger">
 					Please note:<br/>
