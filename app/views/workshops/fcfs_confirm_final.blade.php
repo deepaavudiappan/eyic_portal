@@ -132,7 +132,7 @@
 				Contact number: <strong>+91-9392078835, 9296956735</strong><br/>
 				E-mail: <strong>ratna_rit@yahoo.co.in</strong><br/>
 				<br/>
-				Please confirm attendance of your team of four teachers on or before <strong>18th February, 2015</strong>:<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>15th February, 2015</strong>:<br/>
 				<br/>
 				@endif
 				<div class="alert alert-danger">
