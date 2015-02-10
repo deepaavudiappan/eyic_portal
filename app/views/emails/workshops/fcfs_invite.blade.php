@@ -1,7 +1,7 @@
 <div style="width:700px;text-align:center;background-color:#E5E5E6;padding-left:50px;padding-right:50px;padding-top:20px;font-family: Verdana, Geneva, sans-serif;font-size:14px;">
-	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url({{ URL::asset('img/emails/bg.jpg'); }});">
+	<div style="width:700px;test-align:center;background-color:#ffffff;background-image: url({{ URL::asset('img/emails/bg4.jpg'); }});">
 		<div style="border-bottom:1px solid #D1D1D3;">
-			{{ HTML::image('img/emails/header.jpg', 'Header', array('style' => 'width:700px;')) }}
+			{{ HTML::image('img/emails/header1.jpg', 'Header', array('style' => 'width:700px;')) }}
 		</div>
 		<br/>
 		<div style="text-align:justify;padding:13px;">
@@ -34,7 +34,7 @@
 					</table>
 				</div>
 				<br/>
-				
+
 				For workshop schedule click here:<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/><br/>
 				<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_fcfs?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to register</a><br/>
 				<br/>
@@ -61,7 +61,7 @@
 	</div>
 	<br/>
 	<div style="border-top:1px solid #D1D1D3;clear:both;">
-		{{ HTML::image('img/emails/footer.jpg', 'Footer', array('style' => 'width:700px;')) }}
+		{{ HTML::image('img/emails/footer1.jpg', 'Footer', array('style' => 'width:700px;')) }}
 	</div>
 </div>
 </div>
