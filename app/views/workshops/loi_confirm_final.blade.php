@@ -127,6 +127,16 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before <strong>12th February, 2015</strong>:<br/>
 				<br/>
+				@elseif ($clgs->region == 'Kakinada')
+				Date: <strong>2<sup>nd</sup> and 3<sup>rd</sup> March, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
+				Venue: <strong>Kakinada Institute of Engineering and Technology (KIET), Yanam Road,<br/>
+				<span style="margin-left:50px;">Korangi, Tallarevu Mandal, E.G. Dist. Pin: 533461</span></strong><br/>
+				Coordinator: <strong>Prof. Ratna Raju Bonasu</strong><br/>
+				Contact number: <strong>+91-9392078835, 9296956735</strong><br/>
+				E-mail: <strong>ratna_rit@yahoo.co.in</strong><br/>
+				<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>18th February, 2015</strong>:<br/>
+				<br/>
 				@endif
 				<div class="alert alert-danger">
 					Please note:<br/>
