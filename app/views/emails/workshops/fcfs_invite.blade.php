@@ -34,34 +34,33 @@
 					</table>
 				</div>
 				<br/>
-
-				For workshop schedule click here:<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/><br/>
-				<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_fcfs?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to register</a><br/>
+				<div style="text-align:center;">
+					For workshop schedule click here:<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/><br/>
+					<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_fcfs?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to register</a><br/>
+					<br/>
+				</div>
+				
+				Here are the modalities of the workshop:<br/>
 				<br/>
+				<hr/>
+				<ol>
+					<li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
+					<li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
+					<li>Teachers will be given a participation certificate from e-Yantra upon successful participation on both days of the workshop</li>
+				</ol>
+				<hr/>
+				<br/>
+				We look forward to meeting you and your team at the workshop.<br/>
+				<br/>
+				Feel free to contact us at support@e-yantra.org in case of any query.<br/>
+				<br/>
+				All the best!!<br/>
+				e-Yantra Team
 			</div>
 		</div>
-		<div style="float:left">
-			Here are the modalities of the workshop:<br/>
-			<br/>
-			<hr/>
-			<ol>
-				<li>No fee will be collected from any participant. Tea/Lunch will be provided on both the days of workshop.</li>
-				<li>All traveling and staying expenses of the team members attending the workshops are borne by their respective colleges.</li>
-				<li>Teachers will be given a participation certificate from e-Yantra upon successful participation on both days of the workshop</li>
-			</ol>
-			<hr/>
-			<br/>
-			We look forward to meeting you and your team at the workshop.<br/>
-			<br/>
-			Feel free to contact us at support@e-yantra.org in case of any query.<br/>
-			<br/>
-			All the best!!<br/>
-			e-Yantra Team
+		<br/>
+		<div style="border-top:1px solid #D1D1D3;clear:both;">
+			{{ HTML::image('img/emails/footer1.jpg', 'Footer', array('style' => 'width:700px;')) }}
 		</div>
 	</div>
-	<br/>
-	<div style="border-top:1px solid #D1D1D3;clear:both;">
-		{{ HTML::image('img/emails/footer1.jpg', 'Footer', array('style' => 'width:700px;')) }}
-	</div>
-</div>
 </div>
