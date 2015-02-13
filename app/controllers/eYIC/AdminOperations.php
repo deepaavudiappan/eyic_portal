@@ -299,7 +299,7 @@ class AdminOperations extends BaseController {
 			$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
 
 			//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
-			$emailSubj = 'From e-Yantra!!';
+			$emailSubj = 'eLSI: Information to set up a Robotics lab at your college';
 
 			foreach($clg_lst as $cur_clg){
 				if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){					
@@ -308,7 +308,7 @@ class AdminOperations extends BaseController {
 					{
 						$message->from($from_email, ELSI_FROM_NAME);
 						$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
-						$message->attach('attachment/eLSI-equipmentlist.xls');
+						$message->attach('attachment /eLSI-equipmentlist.xls');
 					});
 				}
 			}
