@@ -46,7 +46,8 @@
 					
 					Mobile: +91-9004094490<br/>
 					</p>
-					Please write to support@e-yantra.org if you need any additional information.					 
+					<p>Please write to support@e-yantra.org if you need any additional information.</p>
+					<p>Attached please find the suggested equipment list.</p>					 
 				</div>
 			</div>
 			
