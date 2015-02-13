@@ -10,34 +10,40 @@
 					{{ HTML::image('img/emails/image.jpg', 'Image', array('style' => 'width:320px;'))}}
 				</div>
 				<div style="width:330px;float:left;margin-bottom:20px;">
-					<p>We are in the process of conducting the 2-day workshop for teacher teams in various regions of the country in 
-					February and March 2015. We will be launching the e-Yantra Robotics Teacher Competition (eYRTC) by early 
-					April -- Teacher teams implement a project using the robotiic kit (given to them at the end of the workshop) 
-					over a period of 3 months to complete their training in a Project Based Learning(PBL) mode.
+					<p>Dear Sir/Madam,</p>					
+					<p>Greetings from e-Yantra!</p>
+					<p>
+						We are in the process of conducting the 2-day workshop for teacher teams in various regions of the country in 
+						February and March 2015. We will be launching the e-Yantra Robotics Teacher Competition (eYRTC) by early 
+						April -- Teacher teams implement a project using the robotiic kit (given to them at the end of the workshop) 
+						over a period of 3 months to complete their training in a Project Based Learning(PBL) mode.
 					</p>
 
-					<p>Colleges can initiate their Purchase Process at this time. All colleges MUST procure the equipment and set up the lab 
+					<p>
+						Colleges can initiate their Purchase Process at this time. All colleges MUST procure the equipment and set up the lab 
 						such that labs are formally inaugurated during the Finals of eYRTC, four months from now. Note that colleges may establish 
 						the lab and start using it even before the formal lab inaugurations.
 					</p>	
 					
-					<p>You can choose any vendor who can supply robots of specifications provided in the list of equipment, 
+					<p>
+						You can choose any vendor who can supply robots of specifications provided in the list of equipment, 
 						by following due purchase process as required by your college. e-Yantra team does not recommend any specific vendor 
 						for your purchase.
 					</p>
 					
-					<p>We have purchased robots from Nex Robotics, by following  the purchase procedure as laid down by our Institute. 
+					<p>
+						We have purchased robots from Nex Robotics, by following  the purchase procedure as laid down by our Institute. 
 						In case you like to contact Nex Robotics, please find below the contact details:
 					</p>
 					
-					<p>Dr. Anant Malewar,
+					<p>Dr. Anant Malewar,<br/>
 					
-					Director (Technology)
-					Nex Robotics Pvt. Ltd.
+					Director (Technology)<br/>
+					Nex Robotics Pvt. Ltd.<br/>
 					
-					anantmalewar@gmail.com
+					anantmalewar@gmail.com<br/>
 					
-					Mobile: +91-9004094490
+					Mobile: +91-9004094490<br/>
 					</p>
 					Please write to support@e-yantra.org if you need any additional information.					 
 				</div>

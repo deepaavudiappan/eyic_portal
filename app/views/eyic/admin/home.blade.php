@@ -25,7 +25,8 @@
 						<h3 class="panel-title">eLSI Workshops Admin Section</h3>
 					</div>
 					<div class="panel-body">
-						{{ HTML::linkRoute('invite_data', 'Send Workshop Invites', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
+						{{ HTML::linkRoute('invite_data', 'Send Workshop Invites', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/><br/>
+						{{ HTML::linkRoute('rqs_loiclg', 'Send equipment list', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 					</div>
 				</div>				
 			</div>
