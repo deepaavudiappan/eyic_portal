@@ -308,7 +308,7 @@ class AdminOperations extends BaseController {
 					{
 						$message->from($from_email, ELSI_FROM_NAME);
 						$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
-						$message->attach('attachment /eLSI-equipmentlist.xls');
+						$message->attach('attachment/eLSI-equipmentlist.xls');
 					});
 				}
 			}
