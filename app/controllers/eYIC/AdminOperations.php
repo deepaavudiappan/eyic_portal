@@ -252,4 +252,78 @@ class AdminOperations extends BaseController {
 			return Redirect::route('adminHome')->withErrors($messages);
 		}
 	}
+	
+	public function rqs_loiclg(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		$thisMethod = self::$thisClass . ' -> workshop_invite -> ';
+
+		DB::beginTransaction();
+		try{
+			$dst_region = ElsiCollegeDetail::distinct()->select('region')->lists('region','region');
+
+			return View::make('workshops.rqs_loiclg')->with(['regions' => $dst_region]);
+		}
+		catch(Exception $e){
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Exception Occured'];
+			return Redirect::route('adminHome')->withErrors($messages);
+		}
+	}
+	
+	public function send_eqiplist_loicollege(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		$thisMethod = self::$thisClass . ' -> send_eqiplist_loicollege -> ';
+
+		$region = Input::get('regions');		
+		$from_email = Input::get('from_email');
+		
+		if(empty($from_email)){
+			$from_email = ELSI_FROM_EMAIL;
+		}
+
+		DB::beginTransaction();
+		try{			
+			$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
+
+			//Log::debug($thisMethod . 'Total Colleges: ' . count($clg_lst));
+			$emailSubj = 'From e-Yantra!!';
+
+			foreach($clg_lst as $cur_clg){
+				if(!empty($cur_clg['principal_email']) && !empty($cur_clg['tl_email'])){					
+						
+					Mail::queue('emails.workshops.equipment_list_loi', array(),function($message) use($cur_clg, $emailSubj, $from_email)
+					{
+						$message->from($from_email, ELSI_FROM_NAME);
+						$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
+					});
+				}
+			}
+		
+			
+			DB::commit();
+			return Redirect::route('adminHome')->withSuccess('List sent successfully!');
+		}
+
+		catch(Exception $e){
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Exception Occured'];
+			return Redirect::route('adminHome')->withErrors($messages);
+		}
+	}
 }

@@ -228,24 +228,6 @@ Route::match(array('GET', 'POST'), '/elsi/workshop/admin/confirmed_clgs', array(
 			'uses'	=>	'WrkshpClgController@confirmClgs'
 ));
 /*--------------------Added By SP -------------------------------*/
-
-
-/*--------------------Auth Route-------------------*/
-/*Route::get('/login', function(){
-			View::share(array('title'=>'Login'));					
-			return View::make('login'); 
-}); 
-
-Route::post('/login', array(
-			'as'	=>	'login',
-			'uses'	=>	'AuthController@doLogin'
-));
-
-Route::get('/auth/logout', array(
-			'as' => 'logout',
-			'uses' => 'AuthController@doLogout'  
-));*/
-
 Route::match(array('GET','POST'),'/project',array(
 			'as' => 'project',
 			'uses' => 'HomeController@projectDetails'
@@ -254,6 +236,17 @@ Route::match(array('GET','POST'),'/project',array(
 Route::match(array('GET','POST'),'/mentorproject',array(
 			'as' => 'mentorproject',
 			'uses' => 'HomeController@mentorProjectDetails'
+));
+
+/*-------------------------LOI Request e-Mail----------------------------*/
+Route::match(array('GET', 'POST'), '/elsi/workshops/admin/rqs_loiclg', array(
+			'as'	=>	'rqs_loiclg',
+			'uses'	=>	'AdminOperations@rqs_loiclg'
+));
+
+Route::match(array('GET', 'POST'), '/elsi/workshops/admin/snd_rqs_loiclg', array(
+			'as'	=>	'snd_rqs_loiclg',
+			'uses'	=>	'AdminOperations@send_eqiplist_loicollege'
 ));
 
 /*----------------------Student Representative Routes---------------------------*/
