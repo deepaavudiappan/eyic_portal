@@ -18,7 +18,8 @@
 						April -- Teacher teams implement a project using the robotiic kit (given to them at the end of the workshop) 
 						over a period of 3 months to complete their training in a Project Based Learning(PBL) mode.
 					</p>
-
+				</div>
+				<div>	
 					<p>
 						Colleges can initiate their Purchase Process at this time. All colleges MUST procure the equipment and set up the lab 
 						such that labs are formally inaugurated during the Finals of eYRTC, four months from now. Note that colleges may establish 
