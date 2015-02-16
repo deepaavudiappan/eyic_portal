@@ -18,7 +18,7 @@
 					<br/>
 					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>					
 					<br/>
-					The dates and venue is given below:<br/>
+					Details are given below:<br/>
 					<br/> 
 				</div>
 			</div>
