@@ -413,19 +413,24 @@
 	],
 	"file_history":
 	[
-		"/var/www/elsi_portal/app/controllers/eYIC/AdminOperations.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/remind_fcfs_invite.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
-		"/var/www/elsi_portal/app/controllers/workshops/WrkshpClgController.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/remind_loi_invite.blade.php",
 		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
 		"/var/www/elsi_portal/app/views/workshops/loi_confirm_final.blade.php",
 		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm_final.blade.php",
+		"/var/www/elsi_portal/app/views/workshops/loi_confirm.blade.php",
+		"/var/www/elsi_portal/vendor/psr/log/Psr/Log/LoggerInterface.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite_backup.blade.php",
+		"/var/www/elsi_portal/app/downloads/elsi/letter-of-intent.docx",
+		"/var/www/elsi_portal/app/views/layouts/login-master.blade.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/LabInchargeOperations.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/AdminOperations.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/remind_fcfs_invite.blade.php",
+		"/var/www/elsi_portal/app/controllers/workshops/WrkshpClgController.php",
+		"/var/www/elsi_portal/app/views/emails/workshops/remind_loi_invite.blade.php",
 		"/var/www/elsi_portal/app/views/workshops/schedule.blade.php",
 		"/var/www/elsi_portal/app/routes.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/CollegeController.php",
 		"/var/www/elsi_portal/app/views/workshops/invite_data.blade.php",
-		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite_backup.blade.php",
 		"/var/www/elsi_portal/vendor/predis/predis/lib/Predis/Command/PubSubUnsubscribeByPattern.php",
 		"/var/www/elsi_portal/vendor/symfony/process/Symfony/Component/Process/ProcessUtils.php",
 		"/var/www/elsi_portal/phpunit.xml",
@@ -453,7 +458,6 @@
 		"/var/www/elsi_portal/app/models/ElsiCollegeDetail.php",
 		"/var/www/elsi_portal/app/config/mail.php",
 		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmer.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/LabInchargeOperations.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
 		"/var/www/elsi_portal/CONTRIBUTING.md",
 		"/var/www/elsi_portal/app/views/emails/eyic/coord_invite.blade.php",
@@ -465,7 +469,6 @@
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Console/ConfirmableTrait.php",
 		"/var/www/elsi_portal/app/views/workshops/confim_msg.blade.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/CloudFormation/Enum/OnFailure.php",
-		"/var/www/elsi_portal/app/views/workshops/loi_confirm.blade.php",
 		"/var/www/elsi_portal/app/models/Temp_clg.php",
 		"/var/www/elsi_portal/app/models/ElsiCollegeDtls.php",
 		"/var/www/elsi_portal/app/models/ElsiContactDtls.php",
@@ -508,7 +511,6 @@
 		"/var/www/elsi_portal/app/start/global.php",
 		"/var/www/elsi_portal/app/models/Login.php",
 		"/var/www/elsi_portal/app/views/login.blade.php",
-		"/var/www/elsi_portal/app/views/layouts/login-master.blade.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Support/Facades/Log.php",
 		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/Profile.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/mentor_invite.blade.php",
@@ -538,9 +540,7 @@
 		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/AddTest.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/docs/getting-started/overview.rst",
-		"/var/www/elsi_portal/app/views/eyic/labincharge/regProj.blade.php",
-		"/var/www/elsi_portal/app/views/includes/navbar.blade.php",
-		"/var/www/elsi_portal/app/views/includes/head.blade.php"
+		"/var/www/elsi_portal/app/views/eyic/labincharge/regProj.blade.php"
 	],
 	"find":
 	{
@@ -643,7 +643,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -659,8 +659,8 @@
 						"selection":
 						[
 							[
-								7006,
-								7006
+								1198,
+								1198
 							]
 						],
 						"settings":
@@ -668,31 +668,36 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -703,29 +708,24 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"incomplete_sync": null,
-							"origPos": 4562.0,
+							"origPos": 744.0,
 							"remote_loading": false,
 							"syncScroll": false,
 							"synced": false,
@@ -733,10 +733,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4677.0,
+						"translation.y": 338.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -752,8 +752,8 @@
 						"selection":
 						[
 							[
-								12121,
-								12121
+								1410,
+								1410
 							]
 						],
 						"settings":
@@ -761,31 +761,36 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -796,29 +801,24 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"incomplete_sync": null,
-							"origPos": 0.0,
+							"origPos": 704.0,
 							"remote_loading": false,
 							"syncScroll": false,
 							"synced": false,
@@ -826,10 +826,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8248.0,
+						"translation.y": 565.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -893,6 +893,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"loi",
+				"app/views/workshops/loi_confirm_final.blade.php"
+			],
+			[
+				"fcfs",
+				"app/views/workshops/fcfs_confirm_final.blade.php"
+			],
 			[
 				"wrk",
 				"app/controllers/workshops/WrkshpClgController.php"
@@ -959,10 +967,6 @@
 			],
 			[
 				"fcf",
-				"app/views/workshops/fcfs_confirm_final.blade.php"
-			],
-			[
-				"fcfs",
 				"app/views/workshops/fcfs_confirm_final.blade.php"
 			],
 			[

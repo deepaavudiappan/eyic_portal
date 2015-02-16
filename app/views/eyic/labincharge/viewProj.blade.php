@@ -42,8 +42,11 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">Project Detail</h3>
 			</div>
-			<div class="panel-body">		
-				{{ HTML::linkRoute('regProjLand', 'Register a Project', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}
+			<div class="panel-body">
+				<div class="alert alert-danger">
+					Last date to register new projects have passed!
+				</div>
+				<!-- {{ HTML::linkRoute('regProjLand', 'Register a Project', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }} -->
 			</div>
 		</div>	
 	@endif

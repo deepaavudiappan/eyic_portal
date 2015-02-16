@@ -12,7 +12,9 @@
 		<br/>
 		{{ HTML::linkRoute('projPropDown', 'Download Project Proposal Template!', [], ['class'	=> 'btn btn-primary', 'id'	=> 'projPropDownLk']) }}
 		<br/><br/>
-		<div class="panel panel-info">
+		<div class="alert alert-danger">
+		Last date to upload the projet proposal has passed!</div>
+		<!-- <div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title">Upload Project Proposal</h3>
 			</div>
@@ -39,11 +41,11 @@
 						<div class="modal fade" id="prjPropUpld" tabindex="-1" role="dialog" aria-labelledby="task1UpldLbl" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
-
+		
 									<div class="modal-header">
 										<h4 class="modal-title" id="prjPropUpld">Upload Project Proposal</h4>
 									</div>
-
+		
 									<div class="modal-body">
 										<div id="uploadMsg" class="alert alert-danger">Your file is being uploaded. Please do not click refresh, back or forward button!</div>
 									</div>
@@ -74,7 +76,7 @@
 				<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
 				@endif
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 @stop
