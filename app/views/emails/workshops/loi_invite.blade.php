@@ -17,9 +17,15 @@
 					We have received the Letter of Intent (LoI) from your college.<br/>
 					<br/>
 					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>
+					
+					<p>
+						We have created a tutorial on "C Programming basics and Micro controllers", which you may like to read before attending the workshop.
+						This tutorial outlines the essential concepts which will help in understanding the contents of the workshop.	
+					</p>
+					<p>Please find the tutorial attached with this mail.</p>
 					<br/>
 					The dates and venue is given below:<br/>
-					<br/>
+					<br/> 
 				</div>
 			</div>
 			<div style="float:left">

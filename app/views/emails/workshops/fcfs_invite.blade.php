@@ -17,7 +17,14 @@
 					e-Yantra is a project supported by MHRD through the National Mission on Education through ICT (NMEICT) to spread Embedded systems and Robotics education in colleges across India. through the e-Yantra Lab Setup Initiative (eLSI), we are creating the necessary ecosystem at colleges to teach embedded systems and robotics in an effective manner. We have established robotics labs in 107 colleges from 11 regions across the country.<br/>
 					<br/>
 					We are happy to let you know that your teacher team is invited to register for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>
-					<br/>
+					
+					<p>
+						We have created a tutorial on "C Programming basics and Micro controllers", which you may like to read before attending the workshop.
+						This tutorial outlines the essential concepts which will help in understanding the contents of the workshop.	
+					</p>
+					<p>Please find the tutorial attached with this mail.</p>
+					
+					<br/>					
 					The dates and venue is given below:<br/>
 					<br/>
 

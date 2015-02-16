@@ -25,6 +25,11 @@
 					For workshop schedule click here:<br/>
 					You have been automatically registered for the workshop.<br/>
 					<br/>
+					<p>
+						We have created a tutorial on "C Programming basics and Micro controllers", which you may like to read before attending the workshop.
+						This tutorial outlines the essential concepts which will help in understanding the contents of the workshop.	
+					</p>
+					<p>Please find the tutorial attached with this mail.</p>
 				</div>
 			</div>
 			<div style="float:left">
