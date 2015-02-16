@@ -16,13 +16,7 @@
 					<br/>
 					We have received the Letter of Intent (LoI) from your college.<br/>
 					<br/>
-					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>
-					
-					<p>
-						We have created a tutorial on "C Programming basics and Micro controllers", which you may like to read before attending the workshop.
-						This tutorial outlines the essential concepts which will help in understanding the contents of the workshop.	
-					</p>
-					<p>Please find the tutorial attached with this mail.</p>
+					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>					
 					<br/>
 					The dates and venue is given below:<br/>
 					<br/> 
@@ -44,7 +38,13 @@
 					<a href="http://elsiportal.e-yantra.org/elsi/workshop/college/confirm_land_loi?ct={{ $token }}" style="background-color: #337ab7;border-color: #2e6da4;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;color:white;text-decoration:none;border: 1px solid transparent;border-radius: 4px;color: #fff;margin-top: 5px;margin-bottom: 5px;padding: 6px 12px;">Click here to confirm your participation</a><br/>
 					<br/>
 				</div>
-				Here are the modalities of the workshop:<br/>
+				<p style="color: red;">
+					We have created a tutorial on "C Programming basics and Micro controllers", which you may like to read before attending the workshop.
+					This tutorial outlines the essential concepts which will help in understanding the contents of the workshop.	
+				</p>
+				<p style="color: red; font-weight: bold">Please find the tutorial attached with this mail.</p>
+				
+				<p>Here are the modalities of the workshop:</p>
 				<br/>
 				<hr/>
 				<ol>
