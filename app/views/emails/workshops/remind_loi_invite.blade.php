@@ -22,7 +22,7 @@
 					Contact number: <strong>{{$contact_num;}}</strong><br/>
 					e-mail: <strong>{{$email;}}</strong><br/>
 					<br/>
-					For workshop schedule click here:<br/>
+					For workshop schedule click here: <a href="http://elsiportal.e-yantra.org/elsi/workshop/college/schedule">Schedule!</a><br/>
 					You have been automatically registered for the workshop.<br/>
 					<br/>					
 				</div>
