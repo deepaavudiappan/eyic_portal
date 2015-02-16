@@ -128,6 +128,7 @@ class AdminOperations extends BaseController {
 						{
 							$message->from($from_email, WORKSHOP_FROM_NAME);
 							$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
+							$message->attach(DOWNLOAD_FILES_LOC . 'attachment/c_prog_basics.pdf'); 
 						});
 					}
 				}
@@ -148,6 +149,7 @@ class AdminOperations extends BaseController {
 						{
 							$message->from($from_email, WORKSHOP_FROM_NAME);
 							$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
+							$message->attach(DOWNLOAD_FILES_LOC . 'attachment/c_prog_basics.pdf');
 						});
 					}
 				}
@@ -180,6 +182,7 @@ class AdminOperations extends BaseController {
 						{
 							$message->from($from_email, ELSI_FROM_NAME);
 							$message->to(array_merge(explode(',', $cur_clg['principal_email']), explode(',',$cur_clg['tl_email'])))->cc('admin@e-yantra.org')->subject($emailSubj);
+							$message->attach(DOWNLOAD_FILES_LOC . 'attachment/c_prog_basics.pdf');
 						});
 					}
 				}
@@ -210,6 +213,7 @@ class AdminOperations extends BaseController {
 						{
 							$message->from($from_email, ELSI_FROM_NAME);
 							$message->to(explode(',',$cur_clg['principal_email']))->cc('admin@e-yantra.org')->subject($emailSubj);
+							$message->attach(DOWNLOAD_FILES_LOC . 'attachment/c_prog_basics.pdf');
 						});
 					}
 				}
