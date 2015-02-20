@@ -331,4 +331,16 @@ class AdminOperations extends BaseController {
 			return Redirect::route('adminHome')->withErrors($messages);
 		}
 	}
+
+	public function list_clg(){
+		
+		$thisMethod = self::$thisClass . ' -> list_clg -> ';
+
+		$region = Input::get('region');	
+			
+		$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('phase','like','2015')->get();
+		
+		$detail = ['clg_dtls' => $clg_lst];
+		return json_encode($detail);
+	}
 }
