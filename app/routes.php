@@ -249,8 +249,13 @@ Route::match(array('GET', 'POST'), '/elsi/workshops/admin/snd_rqs_loiclg', array
 			'uses'	=>	'AdminOperations@send_eqiplist_loicollege'
 ));
 
-Route::match(array('GET', 'POST'),'/elsi/workshops/admin/testAjax', array(
-			'as' => 'testAjax', 
+Route::match(array('GET', 'POST'), '/elsi/workshops/admin/rqs_loiclglist', array(
+			'as'	=>	'rqs_loiclglist',
+			'uses'	=>	'AdminOperations@rqs_loiclglist'
+));
+
+Route::match(array('GET', 'POST'),'/elsi/workshops/admin/get_clg_list', array(
+			'as' => 'get_clg_list', 
 			'uses'	=>	'AdminOperations@list_clg'
 ));
 

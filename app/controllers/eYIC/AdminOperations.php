@@ -264,7 +264,7 @@ class AdminOperations extends BaseController {
 		if(Auth::user()->role != 3){
 			return Redirect::Route('commonHome');
 		}
-		$thisMethod = self::$thisClass . ' -> workshop_invite -> ';
+		$thisMethod = self::$thisClass . ' -> rqs_loiclg -> ';
 
 		DB::beginTransaction();
 		try{
@@ -332,6 +332,31 @@ class AdminOperations extends BaseController {
 		}
 	}
 
+	public function rqs_loiclglist(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 3){
+			return Redirect::Route('commonHome');
+		}
+		$thisMethod = self::$thisClass . ' -> rqs_loiclglist -> ';
+
+		DB::beginTransaction();
+		try{
+			$dst_region = ElsiCollegeDetail::distinct()->select('region')->lists('region','region');
+
+			return View::make('workshops.clg_list_loi')->with(['regions' => $dst_region]);
+		}
+		catch(Exception $e){
+			//Catching any exception to roll back
+			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
+			DB::rollback();
+			Log::error($thisMethod . "Rollback successful");
+			$messages = ['Exception Occured'];
+			return Redirect::route('adminHome')->withErrors($messages);
+		}
+	}
+	
 	public function list_clg(){
 		
 		$thisMethod = self::$thisClass . ' -> list_clg -> ';

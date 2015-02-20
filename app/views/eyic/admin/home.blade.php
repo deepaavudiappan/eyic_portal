@@ -15,7 +15,7 @@
 						<h3 class="panel-title">eYRTC Admin Section</h3>
 					</div>
 					<div class="panel-body">
-						<p>Nothing here as of now!</p>
+						<p>Nothing here as of now!</p>						
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 						<h3 class="panel-title">eLSI College Status Admin Section</h3>
 					</div>
 					<div class="panel-body">
-						<p>Nothing here as of now!</p>
+						{{ HTML::linkRoute('rqs_loiclglist', 'College LOI Status', [], array('class'	=>	'btn btn-primary', 'role' => 'button')); }}<br/>
 					</div>
 				</div>
 			</div>
