@@ -13,7 +13,7 @@
 		{{ Form::open(array('route' => 'snd_rqs_loiclg', 'method' => 'POST')) }}
 		{{ Form::select('regions', $regions,[], ['id' => 'regions','class' => 'form-control'] );}}<br/><br/>
 		{{ Form::close()}}
-		<hr/>
+		<hr/>		
 		<p id="title"></p>		
 		<div id="here_table"></div>
 	</div>
@@ -23,9 +23,11 @@
 @section('scripts')
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="{{ URL::asset('js/jquery.sortElements.js') }}"></script>
-<script type="text/javascript">
+<script src="{{ URL::asset('js/bootstrap.js') }}"></script>
+<script type="text/javascript">	
 	$(document).ready( function() {
 		$('#template').addClass('active');
+		$("[data-toggle=popover]").popover();
 	});
 	
 	$("#regions").on('change', function() {	  	  
@@ -46,7 +48,7 @@
 										    '<th id="clg_name">'+'College Name'+'</th>'+
 										    '<th id="loi_header">'+'LOI'+'</th>'+
 										    '<th id="wscnf_header">'+'WS CNF'+'</th>'+
-									    '</tr>'+
+										 '</tr>'+
 									'</thead>';
 						table.append(thead);
 						for(var i = 0; i < data.clg_dtls.length; i++){					    	
@@ -54,26 +56,42 @@
 						    		var cell = $('<td></td>').text(i+1);
 						    		row.append(cell);
 						    						    		
-						    		var cell2 = $('<td></td>').text(data.clg_dtls[i].college_name);
+						    		var cell2 = $('<td></td>').text(data.clg_dtls[i].college_name).addClass('chartSection').attr('data-test',data.clg_dtls[i].principal_name+':\n'+data.clg_dtls[i].principal_email+':\n'+data.clg_dtls[i].principal_contact);
 						    		row.append(cell2);
+						    		
 						    		
 						    		if(data.clg_dtls[i].LOI == 1)
 						    			var cell3 = $('<td></td>').text(data.clg_dtls[i].LOI).addClass('text-success');
 						    		else if(data.clg_dtls[i].LOI == 0)
-						    			var cell3 = $('<td></td>').text(data.clg_dtls[i].LOI).addClass('text-danger');;	
+						    			var cell3 = $('<td></td>').text(data.clg_dtls[i].LOI).addClass('text-danger');
 						    		
 						    		row.append(cell3);
 						    		
 							    	var cell4 = $('<td></td>').text(data.clg_dtls[i].workshop_cnfrm);
-							    	row.append(cell4);
+							    	row.append(cell4);						    	    
 						    	
-						    	table.append(row);
-						}
+						    	table.append(row);						    
+						}							
+						$('#here_table').append(table);						
 						
-						$('#here_table').append(table);
+						//Creating pop up for each <td>
+						$('td.chartSection').on('mouseenter', function() {							    
+							    var myPopOverContent = $(this).data('test');
+							    $(this).data('container', 'body');							    
+							    $(this).data('toggle', 'popover');
+							    $(this).data('placement', 'top');
+							    $(this).data('trigger','focus');
+							    $(this).data('content', myPopOverContent);
+							    $(this).popover('show');
+						});
+			
+						$('td.chartSection').on('mouseout', function() {
+							    $(this).popover('hide');
+						});
+
 						
-						var table = $('table');
-    
+						//Sorting script
+						var table = $('table');    
 					    $('#loi_header, #wscnf_header, #clg_name, #srid')
 					        .wrapInner('<span title="sort this column"/>')
 					        .each(function(){
@@ -101,9 +119,11 @@
 					                  });
 					                  inverse = !inverse;
 					             });
-					        });						               		
+					        });//end of sort script						               		
                 }//end of data success
        		});	  
-  	});	
+  	});  
+  	
+  		
 </script>
 @stop
