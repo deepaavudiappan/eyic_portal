@@ -170,9 +170,23 @@ class HomeController extends BaseController {
 		if(Session::has('entityDtl')){
 			Log::debug($thisMethod . ' Coor_flag: ' . Session::get('entityDtl')['coor_flag'] . ' Auth:: ' . Auth::id());
 			
-			$projectDtl = EyicProjectDtls::where(['teacher_id' => Session::get('entityDtl')['id']])->get();							
+			$projectDtl = EyicProjectDtls::where(['teacher_id' => Session::get('entityDtl')['id']])->get();
+			$final_data = [];
+			foreach($projectDtl as $curPrj){
+				$cur_final = ['project' => $curPrj];
+				if($curPrj['project_status'] == 3 || $curPrj['project_status'] == 4){
+					$eval = EyicProjEvaluation::where('proj_id', $curPrj['id'])->get();
+
+					if(count($eval) > 0){
+						$cur_final['proj_eval'] = $eval[0];
+					}
+				}
+
+				$final_data = array_push($final_data, $cur_final);
+				
+			}
 			view::share(array('title'=>'Mentor Project','link' => 3));
-			return View::make('eyic.mentor.viewProj')->with(array('projectDetails'=>$projectDtl));									
+			return View::make('eyic.mentor.viewProj')->with(array('projectDetails'=>$final_data));									
 
 		}
 		else{
