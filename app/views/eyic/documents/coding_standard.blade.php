@@ -1,5 +1,65 @@
 @extends('layouts.master')
 @section('styles')
+<style>
+.mb-style-5 {
+    width: 390px;
+}
+ 
+.mb-style-5 blockquote {
+    text-align: center;
+    background: #333;
+    width: 350px;
+    height: 350px;
+    padding: 60px;
+    padding-top:50px;
+    border-radius: 50%;
+    box-shadow: 
+        inset 0 0 0 10px #333, 
+        inset 0 0 0 12px rgba(255,255,255,0.6), 
+        80px 0 0 rgba(255,255,255,0.3),
+        -80px 0 0 rgba(255,255,255,0.3),
+        50px 0 0 rgba(60,185,145,0.2),
+        -50px 0 0 rgba(185,60,60,0.2);
+}
+.mb-style-5 blockquote p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 0px;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px #fff, 0 1px 1px #000;
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+.mb-style-5 blockquote p span {
+    display: block;
+    position: relative;
+    padding-top: 28px;
+    margin-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+.mb-style-5 blockquote p span:before {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    content: "\275d";
+    font-size: 40px;
+    color: #333;
+    top: 0px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border-radius: 50%;
+}
+.mb-style-5 .mb-attribution {
+    text-align: center;
+    font-family: 'Annie Use Your Telescope', cursive;
+    padding: 20px;
+    font-size: 16px;
+}
+.mb-style-5 cite a:hover{
+    color: #000;
+}
+</style>
 @stop
 
 @section('content')
@@ -200,4 +260,5 @@ int main() {
 			$('#cdstndrdLk').addClass('active');
 		});
 	</script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 	@stop
