@@ -108,5 +108,17 @@ class DisplayDocController extends BaseController {
 	*/
 	public function displayDocStage2(){
 		return View::make('eyic.documents.stage2');
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		displayDocCodingStndrd	
+	| Input:		Null
+	| Output:		Download Documents Coding Standard
+	| Logic:		Download Documents Coding Standard
+	|
+	*/
+	public function displayDocCodingStndrd(){
+		return View::make('eyic.documents.coding_standard');
 	}	
 }

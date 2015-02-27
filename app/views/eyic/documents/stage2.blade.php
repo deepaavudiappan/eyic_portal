@@ -100,11 +100,7 @@
 	@section('scripts')
 	<script type="text/javascript">
 		$(document).ready( function() {
-			$('#coorDocLk').addClass('active');
+			$('#stg2').addClass('active');
 		});
-		function displayInst(){
-			$('#taskVCLinkMdl').modal('show');
-			return true;
-		}
 	</script>
 	@stop
