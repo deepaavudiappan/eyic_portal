@@ -182,7 +182,7 @@ class HomeController extends BaseController {
 					}
 				}
 
-				$final_data = array_push($final_data, $cur_final);
+				array_push($final_data, $cur_final);
 				
 			}
 			view::share(array('title'=>'Mentor Project','link' => 3));
