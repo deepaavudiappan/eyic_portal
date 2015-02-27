@@ -15,7 +15,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	{{$projectDetails}}
+	{{$projectDetails['project']}}
 		
 	</tbody>
 </table>
