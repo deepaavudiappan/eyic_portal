@@ -8,9 +8,9 @@
 	<thead>
 		<tr>
 			<th>#</th>
-			<th>Project Name</th>
-			<th>Project Status</th>
-			<th>Scores</th>
+			<th class="col-md-2">Project Name</th>
+			<th class="col-md-6">Project Status</th>
+			<th class="col-md-4">Scores</th>
 			<th></th>
 		</tr>
 	</thead>
