@@ -124,14 +124,6 @@ class StdntCrdntrOperations extends BaseController {
 		if(Auth::user()->role != 2){
 			return Redirect::Route('commonHome');
 		}
-		if(Session::has('entityDtl')){
-			if(Session::get('entityDtl')['role'] != 1){
-				return Redirect::Route('commonHome');
-			}
-		}
-		else{
-			return Redirect::Route('commonHome');
-		}
 
 		$std_id = Session::get('entityDtl')->id;
 
