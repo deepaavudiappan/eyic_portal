@@ -42,20 +42,11 @@ class HomeController extends BaseController {
 		}
 		else if(Auth::user()->role == 2){
 			//Return to students home page
-			$std_id = Session::get('entityDtl')->id;
-
-			$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
-			$project = Null;
-			if(count($proj) <= 0){
-				$project = Null;
-			}
-			else{
-				$project = $proj[0];
-			}
+			
 			if(Session::has('errors'))
-				return Redirect::Route('studentHome')->with(['error' => Session::get('errors')->getMessages(), 'project'=> $project]);
+				return Redirect::Route('studentHome')->withErrors(Session::get('errors')->getMessages());
 			else
-				return Redirect::Route('studentHome')->with('project', $project);
+				return Redirect::Route('studentHome');
 		}
 		else if(Auth::user()->role == 3){
 			//Return to admin page
@@ -141,7 +132,18 @@ class HomeController extends BaseController {
 			return Redirect::Route('commonHome');
 		}
 
-		return View::make('eyic.student.home');
+		$std_id = Session::get('entityDtl')->id;
+
+		$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
+		$project = Null;
+		if(count($proj) <= 0){
+			$project = Null;
+		}
+		else{
+			$project = $proj[0];
+		}
+
+		return View::make('eyic.student.home')->with('project', $project);
 	}
 
 	public function projectDetails(){
@@ -182,7 +184,7 @@ class HomeController extends BaseController {
 			$projectDtl = EyicProjectDtls::where(['teacher_id' => Session::get('entityDtl')['id']])->get();							
 			view::share(array('title'=>'Mentor Project','link' => 3));
 			return View::make('eyic.mentor.viewProj')->with(array('projectDetails'=>$projectDtl));									
-						
+
 		}
 		else{
 			return Redirect::Route('logout');
