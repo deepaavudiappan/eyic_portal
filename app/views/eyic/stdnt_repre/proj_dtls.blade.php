@@ -10,7 +10,8 @@
 	<div class="panel-body">
 		<table class="table table-striped">
 			<tr><td>Project Name:</td><td>{{$project['proj_name']}}</td></tr>
-			<tr><td>Project Status:</td><td>@if     ($project['project_status'] == 0)
+			<tr><td>Project Status:</td><td>
+				@if ($project['project_status'] == 0)
 				<p class="text-danger">{{'Project Registration Pending with Mentor'}}</p>
 				@elseif	($project['project_status'] == 1)
 				<p class="text-danger">{{'Project Registration Pending with Student'}}</p>
@@ -31,7 +32,7 @@
 			<tr><td>Idea Remarks:</td><td>{{$proj_eval->final_idea_remarks}}</td></tr>
 			<tr><td>Score Marks:</td><td>{{$proj_eval->final_scope_marks}}/10</td></tr>
 			<tr><td>Score Remarks:</td><td>{{$proj_eval->final_scope_remarks}}</td></tr>
-			<tr><td>Status:</td><td>@if($project['project_status'] == 3) Accepted @else Rejected@endif</td></tr>
+			<tr><td>Status:</td><td>@if($project['project_status'] == 3) Accepted @else Rejected @endif</td></tr>
 			@endif
 		</table>
 	</div>
