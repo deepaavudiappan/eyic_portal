@@ -15,9 +15,10 @@
 		</tr>
 	</thead>
 	<tbody>
+	{{$projectDetails}}
 		@foreach ($projectDetails as $project)
 		<tr>
-			<td>{{''}}</td>
+			<td></td>
 			<td>{{$project['project']['proj_name']}}</td>
 			<td>@if     ($project['project']['project_status'] == 0)
 				<p class="text-danger">{{'Project Registration Pending with Mentor'}}</p>
