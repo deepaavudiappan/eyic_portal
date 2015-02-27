@@ -53,7 +53,7 @@ class HomeController extends BaseController {
 				$project = $proj[0];
 			}
 			if(Session::has('errors'))
-				return Redirect::Route('studentHome')->withErrors(Session::get('errors')->getMessages())->with('project', $project);
+				return Redirect::Route('studentHome')->with(['error' => Session::get('errors')->getMessages(), 'project'=> $project]);
 			else
 				return Redirect::Route('studentHome')->with('project', $project);
 		}
