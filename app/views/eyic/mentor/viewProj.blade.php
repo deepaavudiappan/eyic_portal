@@ -15,8 +15,8 @@
 		</tr>
 	</thead>
 	<tbody>
-	{{$projectDetails['project']}}
-		
+	{{$projectDetails}}
+	<?php print_r(projectDetails);	?>
 	</tbody>
 </table>
 
