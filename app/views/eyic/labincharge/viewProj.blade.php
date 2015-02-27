@@ -27,11 +27,11 @@ Project Details from your college:
 				@elseif ($project['project_status'] == 2)
 				<p class="text-success">{{'Project Proposal Uploaded! Evaluation in process'}}</p>
 				@elseif($project['project_status'] == 3)
-				<p class="text-success">{{'Congratulations! Your project has been selected for Stage 2 - Implementation. For details regarding Stage 2, please visit “Stage 2” tab on the left side menu.'}}</p>
+				<p class="text-success">{{'Cleared for Stage 2'}}</p>
 				@elseif($project['project_status'] == 4)
-				<p class="text-danger">{{'We regret to inform you that your project was not selected for Stage 2 – Implementation. We received a lot of good project proposals but could not select all of them owing to our capacity constraints. We look forward to continued interactions with you in the future.'}}</p>
+				<p class="text-danger">{{'Rejected'}}</p>
 				@elseif($project['project_status'] == 5)
-				<p class="text-danger">{{'We regret to inform you that your project was not selected for Stage 2 – Implementation since the project registration was not completed'}}</p>
+				<p class="text-danger">{{'Did not complete registration'}}</p>
 				@endif		
 			</td>
 			<td class="text-center"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
