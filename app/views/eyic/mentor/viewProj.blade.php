@@ -16,7 +16,7 @@
 	</thead>
 	<tbody>
 	{{$projectDetails}}
-		@foreach ($projectDetails as $project)
+		<!-- @foreach ($projectDetails as $project)
 		<tr>
 			<td></td>
 			<td>{{$project['project']['proj_name']}}</td>
@@ -54,7 +54,7 @@
 				@endif					
 			</td>
 		</tr>	
-		@endforeach
+		@endforeach-->
 	</tbody>
 </table>
 
