@@ -3,6 +3,7 @@
 @stop
 
 @section('content')
+@if($project)
 @if($project->project_status == 3)
 <div class="alert alert-success">
 	Congratulations! Your project has been selected for Stage 2 - Implementation. For details regarding Stage 2, please visit “Stage 2” tab on the left side menu.
@@ -15,6 +16,7 @@
 <div class="alert alert-danger">
 	We regret to inform you that your project was not selected for Stage 2 – Implementation since the project registration was not completed
 </div>
+@endif
 @endif
 <div class="alert alert-info">
 	*Update Please update your name too*  You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
@@ -79,42 +81,42 @@
 
 			<div class="modal-body">
 				<div class="alert alert-danger hidden" id="msg_box"></div><table class="table table-striped">
-					<tr>
-						<td>Name:</td>
-						<td><input type="text" id="name" name="name"/></td>
-					</tr>
-					<tr>
-						<td>Contact Number:</td>
-						<td><input type="text" id="contact_num" name="contact_num"/></td>
-					</tr>
-					<tr>
-						<td>Address:</td>
-						<td><input type="text" id="address" name="address"/></td>
-					</tr>
-					<tr>
-						<td>Gender:</td>
-						<td><select id="gender" name="gender"><option value="-1">--Select--</option><option value="Male">Male</option><option value="Female">Female</option></select></td>
-					</tr>
-					<tr>
-						<td>Qualifying Degree:</td>
-						<td><select id="degree" name="degree"><option value="-1">--Select--</option><option value="BCA">BCA</option><option value="B.E.">B.E.</option><option value="B.Tech">B.Tech</option><option value="B.Sc">B.Sc</option><option value="Diploma">Diploma</option><option value="MCA">MCA</option><option value="M.E.">M.E.</option><option value="M.Tech">M.Tech</option><option value="M.Sc">M.Sc</option></select></td>
-					</tr>
-					<tr>
-						<td>Branch:</td>
-						<td><select id="branch" name="branch"></select></td>
-					</tr>
-					<tr>
-						<td>Current Degree Year:</td>
-						<td><select id="year" name="year"><option value="-1">--Select--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
-					</tr>
-				</table>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" onclick="sve_updte_info()">Update!</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" id="name" name="name"/></td>
+				</tr>
+				<tr>
+					<td>Contact Number:</td>
+					<td><input type="text" id="contact_num" name="contact_num"/></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td><input type="text" id="address" name="address"/></td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td><select id="gender" name="gender"><option value="-1">--Select--</option><option value="Male">Male</option><option value="Female">Female</option></select></td>
+				</tr>
+				<tr>
+					<td>Qualifying Degree:</td>
+					<td><select id="degree" name="degree"><option value="-1">--Select--</option><option value="BCA">BCA</option><option value="B.E.">B.E.</option><option value="B.Tech">B.Tech</option><option value="B.Sc">B.Sc</option><option value="Diploma">Diploma</option><option value="MCA">MCA</option><option value="M.E.">M.E.</option><option value="M.Tech">M.Tech</option><option value="M.Sc">M.Sc</option></select></td>
+				</tr>
+				<tr>
+					<td>Branch:</td>
+					<td><select id="branch" name="branch"></select></td>
+				</tr>
+				<tr>
+					<td>Current Degree Year:</td>
+					<td><select id="year" name="year"><option value="-1">--Select--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary" onclick="sve_updte_info()">Update!</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		</div>
 	</div>
+</div>
 </div>
 @stop
 
@@ -189,12 +191,12 @@
 			type 	: "POST",
 			url    	: "{{ URL::route('savePrStudent'); }}",
 			data 	: { "name"			: 	$('#name').val(),
-						"contact_num"	: 	$('#contact_num').val(),
-						"address"		: 	$('#address').val(),
-						"branch"		: 	$('#branch').val(),
-						"year"			: 	$('#year').val(),
-						"degree"		: 	$('#degree').val(),
-						"gender"		: 	$('#gender').val()},
+			"contact_num"	: 	$('#contact_num').val(),
+			"address"		: 	$('#address').val(),
+			"branch"		: 	$('#branch').val(),
+			"year"			: 	$('#year').val(),
+			"degree"		: 	$('#degree').val(),
+			"gender"		: 	$('#gender').val()},
 			dataType: 'json'
 		}).done(function(data) {
 			if(!data.error){
