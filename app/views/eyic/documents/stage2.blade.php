@@ -14,7 +14,7 @@
 		</div>
 		<p>In Stage 2, the project team is required to implement the project proposal and create a working demonstration. You are required to upload the following:</p>
 		<ol>
-			<li>A video demonstrating the implemented solution to your proposed idea: You must upload your video demonstration on YouTube and the link must be submitted. For instructions on how to upload the video on YouTube, please click here.</li>
+			<li>A video demonstrating the implemented solution to your proposed idea: You must upload your video demonstration on YouTube and the link must be submitted. For instructions on how to upload the video on YouTube, please <a href="#" onclick="displayInst()" class="btn btn-primary">click here</a>.</li>
 			<li>Documented code for your implemented solution: A sample Coding Standard has been provided under the “Coding Standard” menu on the left side bar and should be used to document your project code.</li>
 			<li>Updated project proposal (if during implementation, you have made changes) in the form of a Change Log: For instructions for creating the Change Log, please click here.</li>
 		</ol>
@@ -67,13 +67,44 @@
 		</div>
 	</div>
 </div>
+<div class="modal fade text-justify" id="taskVCLinkMdl" tabindex="-1" role="dialog" aria-labelledby="task2LinkLbl" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
 
-@stop
+			<div class="modal-header">
+				<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title">Instructions for Creating Video</h4><br/>
+			</div>
 
-@section('scripts')
-<script type="text/javascript">
-	$(document).ready( function() {
-		$('#coorDocLk').addClass('active');
-	});
-</script>
-@stop
+			<div class="modal-body">
+				<strong>Note: Please ensure that the video uploaded is of good quality and conforms to the instructions given below.</strong>
+				<ol>
+					<li>The video should be a <strong>one-shot continuous video</strong>. It should <strong>not be edited</strong> in any manner. Teams uploading an edited video will be disqualified from the competition. e-Yantra reserves the rights to disqualify any team if foul play is suspected.</li>
+					<li>The resolution of the video should be good enough for judging. You have to use a <strong>3.2 MP camera or higher</strong> to shoot the video.</li>
+					<li>The videos should be in one of the following formats:  .avi, .mp4</li>
+					<li><strong>Upload the video on YouTube</strong> with the title: <strong>eYIC-{Your Project Name}</strong> (For example: If your project name is "e-Yantra Project" then, save it as <strong>eYIC-e-Yantra Project</strong>)</li>
+					<li>Please note that while uploading the video on YouTube select the privacy setting option as <strong>Unlisted</strong>. Refer the <strong>figure below</strong>
+						<br/><br/>{{ HTML::image('img/video_int.png', 'Video Instructions', array('style' => 'max-height:100%;max-width:100%;')) }}</li><br/>
+						<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the left side bar.</li>
+					</ol>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default ytStop" data-dismiss="modal">Close</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	@stop
+
+	@section('scripts')
+	<script type="text/javascript">
+		$(document).ready( function() {
+			$('#coorDocLk').addClass('active');
+		});
+		function displayInst(){
+			$('#taskVCLinkMdl').modal('show');
+			return true;
+		}
+	</script>
+	@stop
