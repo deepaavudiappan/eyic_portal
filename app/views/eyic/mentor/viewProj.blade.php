@@ -33,7 +33,7 @@
 				<p class="text-danger">{{'We regret to inform you that your project was not selected for Stage 2 – Implementation since the project registration was not completed'}}</p>
 				@endif
 			</td>
-			<td><table>
+			<td><table class="table table-bordered">
 				@if($project['project']['project_status'] == 3 || $project['project']['project_status'] == 4)
 				<tr><td>Originality Marks:</td><td>{{$project['proj_eval']['final_orig_marks']}}/10</td></tr>
 				<tr><td>Originality Remarks:</td><td>{{$project['proj_eval']['final_orig_remarks']}}</td></tr>
