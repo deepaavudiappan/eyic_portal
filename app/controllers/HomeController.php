@@ -132,18 +132,7 @@ class HomeController extends BaseController {
 			return Redirect::Route('commonHome');
 		}
 
-		$std_id = Session::get('entityDtl')->id;
-
-		$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
-		$project = Null;
-		if(count($proj) <= 0){
-			$project = Null;
-		}
-		else{
-			$project = $proj[0];
-		}
-
-		return View::make('eyic.student.home')->with('project', $project);
+		return View::make('eyic.student.home');
 	}
 
 	public function projectDetails(){

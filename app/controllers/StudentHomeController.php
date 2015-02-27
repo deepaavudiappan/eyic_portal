@@ -36,15 +36,25 @@ class StudentHomeController extends BaseController {
 		}		 
 		
 		if(Session::has('entityDtl')){
-			Log::debug($thisMethod . ' Coor_flag: ' . Session::get('entityDtl')['coor_flag'] . ' Auth:: ' . Auth::id());			
-				$student = ElsiStudentsDtls::where('user_id', Auth::id())->get();
-				$student = $student[0];
-				$clgDtl = ElsiCollegeDetail::find($student->clg_id);				
-				$student['college'] = $clgDtl['college_name'];
+			
+			$student = ElsiStudentsDtls::where('user_id', Auth::id())->get();
+			$student = $student[0];
+			$clgDtl = ElsiCollegeDetail::find($student->clg_id);				
+			$student['college'] = $clgDtl['college_name'];
+			$std_id = Session::get('entityDtl')->id;
+
+			$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
+			$project = Null;
+			if(count($proj) <= 0){
+				$project = Null;
+			}
+			else{
+				$project = $proj[0];
+			}
 				//$student['college'] = "Add college_id in student table";				
 				//View::share(array('title'=>'Profile','link' => 1));
 				//print_r($clgDtl);
-				return View::make('eyic.common.studentHome')->with(array('studentDetail' => $student));							
+			return View::make('eyic.common.studentHome')->with(array('studentDetail' => $student, 'project' => $project));							
 				//return View::make('eyic.labincharge.home')->with(array('teacherDetail'=>$teacher,'projectDetail'=>$projectDtl));					
 		}else{
 			return Redirect::Route('logout');
@@ -110,7 +120,7 @@ class StudentHomeController extends BaseController {
 			$projectDtl = EyicProjectDtls::where(['teacher_id' => Session::get('entityDtl')['id']])->get();							
 			view::share(array('title'=>'Mentor Project','link' => 3));
 			return View::make('eyic.mentor.viewProj')->with(array('projectDetails'=>$projectDtl));									
-						
+
 		}
 		else{
 			return Redirect::Route('logout');
