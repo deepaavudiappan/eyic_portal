@@ -309,11 +309,15 @@ Route::match(array('GET', 'POST'), '/doc/projPropDown', array(
 			'uses'	=>	'DisplayDocController@downloadProjProp'
 ));
 
-Route::match(array('GET', 'POST'), '/stage2/dtls', array(
+Route::match(array('GET', 'POST'), '/doc/stage2', array(
 			'as'	=>	'stage2_dtls',
 			'uses'	=>	'DisplayDocController@displayDocStage2'
 ));
 
+Route::match(array('GET', 'POST'), '/doc/coding_standard', array(
+			'as'	=>	'codingStandard',
+			'uses'	=>	'DisplayDocController@displayDocCodingStndrd'
+));
 /*Route::get('/', function(){
 		$user = new Login();
 		
