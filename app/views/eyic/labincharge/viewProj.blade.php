@@ -12,7 +12,7 @@ Project Details from your college:
 			<th>#</th>
 			<th>Project Name</th>
 			<th>Project Status</th>
-			<th>Team Members</th>	          
+			<th>Team Members</th>          
 		</tr>
 	</thead>
 	<tbody>

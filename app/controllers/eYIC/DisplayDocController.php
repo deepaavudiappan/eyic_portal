@@ -98,4 +98,15 @@ class DisplayDocController extends BaseController {
 		return Response::download(DOWNLOAD_FILES_LOC . 'eyic/Project_Proposal_Template_eyic_2015.docx');
 	}
 	
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		displayDocStage2	
+	| Input:		Null
+	| Output:		Download Documents Stage 2
+	| Logic:		Download Documents Stage 2
+	|
+	*/
+	public function displayDocStage2(){
+		return View::make('eyic.documents.stage2');
+	}	
 }

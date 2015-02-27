@@ -129,6 +129,7 @@ Route::match(array('GET', 'POST'), '/mentor/addprojdetailLand', array(
 			'uses'	=>	'MentorOperations@eyicMentorLand'
 ));
 
+
 /*----------------------Coordinator Routes---------------------------*/
 Route::match(array('GET', 'POST'), '/labin/regProjLand', array(
 			'as'	=>	'regProjLand',
@@ -306,6 +307,11 @@ Route::match(array('GET', 'POST'), '/doc/projProp', array(
 Route::match(array('GET', 'POST'), '/doc/projPropDown', array(
 			'as'	=>	'projPropDown',
 			'uses'	=>	'DisplayDocController@downloadProjProp'
+));
+
+Route::match(array('GET', 'POST'), '/stage2/dtls', array(
+			'as'	=>	'stage2_dtls',
+			'uses'	=>	'DisplayDocController@displayDocStage2'
 ));
 
 /*Route::get('/', function(){
