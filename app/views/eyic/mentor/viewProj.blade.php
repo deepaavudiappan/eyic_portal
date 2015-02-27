@@ -15,7 +15,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		@foreach ($projectDetails as $key => $project)
+		@foreach ($projectDetails as $project)
 		<tr>
 			<td>{{($key+1)}}</td>
 			<td>{{$project['project']['proj_name']}}</td>
