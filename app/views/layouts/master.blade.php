@@ -61,7 +61,7 @@
 				<div class="list-group">
 					{{ HTML::linkRoute('studentHome', 'Profile', [], ['class'	=> 'list-group-item', 'id'	=> 'profileLk']) }}
 					{{ HTML::linkRoute('projProp', 'Project Proposal', [], ['class'	=> 'list-group-item', 'id'	=> 'projPropLk']) }}
-					{{ HTML::linkRoute('project', 'Project', [], ['class'	=> 'list-group-item', 'id'	=> 'regProLk']) }}					
+					{{ HTML::linkRoute('projDtlsStudents', 'Project Status', [], ['class'	=> 'list-group-item', 'id'	=> 'proj_dtls_stnd']) }}				
 				</div>
 			</div>
 			@endif

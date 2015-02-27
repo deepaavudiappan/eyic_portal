@@ -272,6 +272,12 @@ Route::match(array('GET', 'POST'), '/stdnt_repre/prjPropUpload', array(
 			'uses'	=>	'StdntCrdntrOperations@prjPropUpload'
 ));
 
+Route::match(array('GET', 'POST'), '/stdnt/projDtlsStudents', array(
+			'as'	=>	'projDtlsStudents',
+			'uses'	=>	'StdntCrdntrOperations@proj_dtls'
+));
+
+
 /*----------------------Documents Display Routes---------------------------*/
 
 /* Display Document for Coordinators */

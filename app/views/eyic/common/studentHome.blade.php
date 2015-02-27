@@ -3,6 +3,19 @@
 @stop
 
 @section('content')
+@if($project->project_status == 3)
+<div class="alert alert-success">
+	Congratulations! Your project has been selected for Stage 2 - Implementation. For details regarding Stage 2, please visit “Stage 2” tab on the left side menu.
+</div>
+@elseif($project->project_status == 4)
+<div class="alert alert-danger">
+	We regret to inform you that your project was not selected for Stage 2 – Implementation. We received a lot of good project proposals but could not select all of them owing to our capacity constraints. We look forward to continued interactions with you in the future.
+</div>
+@elseif($project->project_status == 5)
+<div class="alert alert-danger">
+	We regret to inform you that your project was not selected for Stage 2 – Implementation since the project registration was not completed
+</div>
+@endif
 <div class="alert alert-info">
 	*Update Please update your name too*  You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
 </div>

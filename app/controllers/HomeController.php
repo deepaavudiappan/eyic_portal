@@ -42,10 +42,20 @@ class HomeController extends BaseController {
 		}
 		else if(Auth::user()->role == 2){
 			//Return to students home page
+			$std_id = Session::get('entityDtl')->id;
+
+			$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
+			$project = Null;
+			if(count($proj) <= 0){
+				$project = Null;
+			}
+			else{
+				$project = $proj[0];
+			}
 			if(Session::has('errors'))
-				return Redirect::Route('studentHome')->withErrors(Session::get('errors')->getMessages());
+				return Redirect::Route('studentHome')->withErrors(Session::get('errors')->getMessages())->with('project', $project);
 			else
-				return Redirect::Route('studentHome');
+				return Redirect::Route('studentHome')->with('project', $project);
 		}
 		else if(Auth::user()->role == 3){
 			//Return to admin page

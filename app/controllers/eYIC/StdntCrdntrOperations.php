@@ -107,5 +107,52 @@ class StdntCrdntrOperations extends BaseController {
 			return Redirect::route('projProp')->withErrors($messages);
 		}
 	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		proj_dtls
+	| Input:		Null
+	| Output:		
+	| Logic:		Landing page for eYIC Student Representive
+	|
+	*/
+	public function proj_dtls(){
+
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 2){
+			return Redirect::Route('commonHome');
+		}
+		if(Session::has('entityDtl')){
+			if(Session::get('entityDtl')['role'] != 1){
+				return Redirect::Route('commonHome');
+			}
+		}
+		else{
+			return Redirect::Route('commonHome');
+		}
+
+		$std_id = Session::get('entityDtl')->id;
+
+		$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
+
+		if(count($proj) < 1){
+			return Redirect::Route('projDtlsStudents')->withErrors(['Unable to find project. Please contact us at helpdesk@e-yantra.org with this issue message.']);
+		}
+		if($proj[0]->project_status == 3 || $proj[0]->project_status == 4){
+			$eval = EyicProjEvaluation::where('proj_id', $proj[0]->id)->get();
+
+			if(count($eval) > 0){
+				return View::make('eyic.stdnt_repre.proj_dtls')->with(['project' => $proj[0], 'proj_eval'	=> $eval[0]]);
+			}
+			else{
+				return View::make('eyic.stdnt_repre.proj_dtls')->with(['project' => $proj[0], 'proj_eval'	=> Null]);
+			}
+		}
+		else{
+			return View::make('eyic.stdnt_repre.proj_dtls')->with('project', $proj[0]);
+		}
+	}
 }
 
