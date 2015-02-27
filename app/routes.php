@@ -318,6 +318,11 @@ Route::match(array('GET', 'POST'), '/doc/coding_standard', array(
 			'as'	=>	'codingStandard',
 			'uses'	=>	'DisplayDocController@displayDocCodingStndrd'
 ));
+
+Route::match(array('GET', 'POST'), '/doc/change_log', array(
+			'as'	=>	'changeLog',
+			'uses'	=>	'DisplayDocController@downloadChangeLog'
+));
 /*Route::get('/', function(){
 		$user = new Login();
 		

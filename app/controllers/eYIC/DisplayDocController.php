@@ -120,5 +120,17 @@ class DisplayDocController extends BaseController {
 	*/
 	public function displayDocCodingStndrd(){
 		return View::make('eyic.documents.coding_standard');
-	}	
+	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		downloadChangeLog	
+	| Input:		Null
+	| Output:		Download Documents Coding Standard
+	| Logic:		Download Documents Coding Standard
+	|
+	*/
+	public function downloadChangeLog(){
+		return Response::download(DOWNLOAD_FILES_LOC . 'eyic/eyic_change_log.xlsx');
+	}
 }

@@ -15,8 +15,8 @@
 		<p>In Stage 2, the project team is required to implement the project proposal and create a working demonstration. You are required to upload the following:</p>
 		<ol>
 			<li>A video demonstrating the implemented solution to your proposed idea: You must upload your video demonstration on YouTube and the link must be submitted. For instructions on how to upload the video on YouTube, please <a href="#" onclick="displayInst()" class="btn btn-primary">click here</a>.</li>
-			<li>Documented code for your implemented solution: A sample Coding Standard has been provided under the “Coding Standard” menu on the left side bar and should be used to document your project code.</li>
-			<li>Updated project proposal (if during implementation, you have made changes) in the form of a Change Log: For instructions for creating the Change Log, please click here.</li>
+			<li>Documented code for your implemented solution: A sample Coding Standard has been provided under the <strong>“Coding Standard”</strong> menu on the left side bar and should be used to document your project code.</li>
+			<li>Updated project proposal (if during implementation, you have made changes) in the form of a Change Log: To download a template for creating the Change Log, please {{HTML::linkRoute('changeLog', 'click here', [], array('class' => 'btn btn-primary'))}}</li>
 		</ol>
 		<br/>
 		<p>A maximum number of 15 teams selected from Stage 2 – Implementation will be invited to demonstrate their project at e-Yantra Symposium.</p>
