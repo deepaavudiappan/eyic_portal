@@ -85,7 +85,7 @@
 						<pre class="prettyprint lang-c">
 /*
 *
-* Project Name: 		&lt;Project Name&gt;
+* Project Name: 	&lt;Project Name&gt;
 * Author List: 		&lt;Name of the team members who worked on this function 
 *			(Comma separated eg. Name1, Name2)&gt;
 * Filename: 		&lt;Filename&gt;
@@ -131,7 +131,7 @@
 						<br/>
 						<pre class="prettyprint lang-c">
 /*<br/> 
-* Project Name: 		e-Yantra Project
+* Project Name: 	e-Yantra Project
 * Author List: 		Amiraj Dhawan, e-Yantra Team
 * Filename: 		fibonacci.c
 * Functions: 		print_fibonacci_series(int) , main()
