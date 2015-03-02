@@ -257,7 +257,7 @@ int main() {
 	@section('scripts')
 	<script type="text/javascript">
 		$(document).ready( function() {
-			$('#cdstndrdLk').addClass('active');
+			$('#codingLk').addClass('active');
 		});
 	</script>
 	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>

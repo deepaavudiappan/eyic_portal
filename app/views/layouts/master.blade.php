@@ -51,6 +51,8 @@
 					{{ HTML::linkRoute('mentorproject', 'Mentored Projects', [], ['class'	=> 'list-group-item', 'id'	=> 'menProLk']) }}
 					@endif
 					{{ HTML::linkRoute('projProp', 'Project Proposal', [], ['class'	=> 'list-group-item', 'id'	=> 'projPropLk']) }}
+					{{ HTML::linkRoute('codingStandard', 'Coding Standards', [], ['class'	=> 'list-group-item', 'id'	=> 'codingLk']) }}
+					{{ HTML::linkRoute('stage2_dtls', 'Stage 2', [], ['class'	=> 'list-group-item', 'id'	=> 'stage2']) }}
 					{{ HTML::linkRoute('dcoor', 'Coordinator Info', [], ['class'	=> 'list-group-item', 'id'	=> 'coorDocLk']) }}
 					{{ HTML::linkRoute('dmentor', 'Mentor and Student Info', [], ['class'	=> 'list-group-item', 'id'	=> 'menStdntDocLk']) }}
 					{{ HTML::linkRoute('dplag', 'Plagiarism', [], ['class'	=> 'list-group-item', 'id'	=> 'plagDocLk']) }}

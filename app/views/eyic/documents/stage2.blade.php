@@ -12,6 +12,9 @@
 		<div class="alert alert-danger">
 			The last date to submit Stage 2 - Implementation is: Midnight, March 15th, 2015
 		</div>
+		<div class="alert alert-danger">
+			Only the Student Representative can upload the Stage 2 - Implementation. The upload feature will be available soon.
+		</div>
 		<p>In Stage 2, the project team is required to implement the project proposal and create a working demonstration. You are required to upload the following:</p>
 		<ol>
 			<li>A video demonstrating the implemented solution to your proposed idea: You must upload your video demonstration on YouTube and the link must be submitted. For instructions on how to upload the video on YouTube, please <a href="#" onclick="displayInst()" class="btn btn-primary">click here</a>.</li>
@@ -100,7 +103,7 @@
 	@section('scripts')
 	<script type="text/javascript">
 		$(document).ready( function() {
-			$('#stg2').addClass('active');
+			$('#stage2').addClass('active');
 		});
 	</script>
 	@stop
