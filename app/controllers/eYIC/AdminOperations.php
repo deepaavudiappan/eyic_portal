@@ -112,7 +112,6 @@ class AdminOperations extends BaseController {
 			$from_email = ELSI_FROM_EMAIL;
 		}
 
-		DB::beginTransaction();
 		try{
 			if(Input::get('remind_loi_invite')) {
 				$clg_lst = ElsiCollegeDetail::where('region','like', $region)->where('loi',1)->where('phase','like','2015')->get();
@@ -218,14 +217,12 @@ class AdminOperations extends BaseController {
 					}
 				}
 			}
-			DB::commit();
 			return Redirect::route('adminHome')->withSuccess('Workshop invites sent successfully!');
 		}
 
 		catch(Exception $e){
 			//Catching any exception to roll back
 			Log::error($thisMethod . "Exception occured! Msg: ". $e->getMessage());
-			DB::rollback();
 			Log::error($thisMethod . "Rollback successful");
 			$messages = ['Exception Occured'];
 			return Redirect::route('adminHome')->withErrors($messages);

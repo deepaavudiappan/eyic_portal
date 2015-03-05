@@ -14,7 +14,6 @@
 					<br/>
 					Greetings from e-Yantra!<br/>
 					<br/>
-					Looking forward to meeting you/your nominee at the Principals' Meet on <strong>March 14th, 2015</strong> at Pondicherry Engineering college.<br/><br/>
 					e-Yantra is a project supported by MHRD through the National Mission on Education through ICT (NMEICT) to spread Embedded systems and Robotics education in colleges across India. through the e-Yantra Lab Setup Initiative (eLSI), we are creating the necessary ecosystem at colleges to teach embedded systems and robotics in an effective manner. We have established robotics labs in 107 colleges from 11 regions across the country.<br/>
 					<br/>
 					We are happy to let you know that your teacher team is invited to register for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>

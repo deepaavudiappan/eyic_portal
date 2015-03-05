@@ -14,7 +14,6 @@
 					<br/>
 					Greetings from e-Yantra!<br/>
 					<br/>
-					Looking forward to meeting you/your nominee at the Principals' Meet on <strong>March 14th, 2015</strong> at Pondicherry Engineering college.<br/><br/>
 					We have received the Letter of Intent (LoI) from your college.<br/>
 					<br/>
 					We are happy to let you know that your teacher team is automatically registered for the 2-day workshop on "Introduction to Robotics" as the first step of engagement with e-Yantra for your teacher teams through the <strong>e-Yantra Lab Setup Initiative (eLSI).</strong><br/>					
