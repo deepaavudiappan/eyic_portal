@@ -328,26 +328,18 @@
 	"buffers":
 	[
 		{
+			"file": "app/views/eyic/documents/stage2.blade.php",
+			"settings":
+			{
+				"buffer_size": 5945,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/views/eyic/labincharge/viewProj.blade.php",
 			"settings":
 			{
-				"buffer_size": 2129,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "composer.json",
-			"settings":
-			{
-				"buffer_size": 782,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/eyic/mentor/viewProj.blade.php",
-			"settings":
-			{
-				"buffer_size": 2066,
+				"buffer_size": 2286,
 				"line_ending": "Unix"
 			}
 		}
@@ -418,13 +410,25 @@
 	],
 	"file_history":
 	[
-		"/var/www/elsi_portal/app/constants.php",
-		"/var/www/elsi_portal/app/views/eyic/documents/mentorAndStudentRep.blade.php",
+		"/home/amiraj/Downloads/users_login.csv",
+		"/var/www/elsi_portal/app/config/view.php",
+		"/var/www/elsi_portal/vendor/symfony/finder/Symfony/Component/Finder/Expression/ValueInterface.php",
+		"/var/www/elsi_portal/app/views/layouts/master.blade.php",
 		"/var/www/elsi_portal/app/routes.php",
+		"/var/www/elsi_portal/composer.json",
+		"/var/www/elsi_portal/app/views/eyic/labincharge/viewProj.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/mentor/viewProj.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/documents/coding_standard.blade.php",
+		"/var/www/elsi_portal/vendor/monolog/monolog/src/Monolog/Handler/CouchDBHandler.php",
+		"/var/www/elsi_portal/app/constants.php",
+		"/var/www/elsi_portal/app/config/mail.php",
+		"/var/www/elsi_portal/bootstrap/start.php",
+		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/SubTest.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/StdntCrdntrOperations.php",
+		"/var/www/elsi_portal/app/views/eyic/documents/mentorAndStudentRep.blade.php",
 		"/var/www/elsi_portal/app/controllers/workshops/WrkshpClgController.php",
 		"/var/www/elsi_portal/app/views/eyic/documents/proj_prop.blade.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/CollegeController.php",
-		"/var/www/elsi_portal/app/views/eyic/labincharge/viewProj.blade.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/LabInchargeOperations.php",
 		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
 		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
@@ -464,7 +468,6 @@
 		"/var/www/elsi_portal/app/models/ElsiDepartments.php",
 		"/var/www/elsi_portal/app/models/ElsiCoordinator.php",
 		"/var/www/elsi_portal/app/models/ElsiCollegeDetail.php",
-		"/var/www/elsi_portal/app/config/mail.php",
 		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/CacheWarmer/CacheWarmer.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
 		"/var/www/elsi_portal/CONTRIBUTING.md",
@@ -481,9 +484,7 @@
 		"/var/www/elsi_portal/app/models/ElsiCollegeDtls.php",
 		"/var/www/elsi_portal/app/models/ElsiContactDtls.php",
 		"/var/www/elsi_portal/app/controllers/DataTransformation.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/StdntCrdntrOperations.php",
 		"/home/amirajdhawan/Desktop/sample.c",
-		"/var/www/elsi_portal/app/views/eyic/mentor/viewProj.blade.php",
 		"/var/www/elsi_portal/app/controllers/AuthController.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/DisplayDocController.php",
 		"/var/www/elsi_portal/app/controllers/workshops/e-Yantra Robotics Competition is a unique competit",
@@ -492,17 +493,14 @@
 		"/var/www/elsi_portal/vendor/classpreloader/classpreloader/src/ClassPreloader/Config.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php-laravel/src/config/config.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/Support/Exception/CaseIdNotFoundException.php",
-		"/var/www/elsi_portal/composer.json",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Parser/ParserRegistry.php",
 		"/var/www/elsi_portal/app/downloads/eyic/Project_Proposal_Template_eyic_2015.docx",
 		"/var/www/elsi_portal/.project",
 		"/var/www/elsi_portal/app/views/eyic/stdnt_repre/addPrjStndDtlsLand.blade.php",
 		"/var/www/elsi_portal/vendor/predis/predis/lib/Predis/Command/SetDifference.php",
-		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/SubTest.php",
 		"/var/www/elsi_portal/app/config/session.php",
 		"/var/www/elsi_portal/app/views/eyic/addcoor.blade.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/DynamoDb/Exception/ItemCollectionSizeLimitExceededException.php",
-		"/var/www/elsi_portal/vendor/monolog/monolog/src/Monolog/Handler/CouchDBHandler.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Http/Exception/CouldNotRewindStreamException.php",
 		"/var/www/elsi_portal/vendor/symfony/console/Symfony/Component/Console/Output/NullOutput.php",
 		"/var/www/elsi_portal/app/views/template.php",
@@ -520,7 +518,6 @@
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Support/Facades/Log.php",
 		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Profiler/Profile.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/mentor_invite.blade.php",
-		"/var/www/elsi_portal/app/views/layouts/master.blade.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/mentor_invite_labIn.blade.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/Iam/Resources/iam-2010-05-08.php",
 		"/var/www/elsi_portal/app/views/changepwd.blade.php",
@@ -540,16 +537,11 @@
 		"/var/www/elsi_portal/app/views/emails/eyic/setpassword_invite.blade.php",
 		"/var/www/elsi_portal/app/views/emails/eyic/student_invite.blade.php",
 		"/var/www/elsi_portal/app/config/cache.php",
-		"/var/www/elsi_portal/bootstrap/autoload.php",
-		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Remote/SecLibGateway.php",
-		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/AddTest.php",
-		"/var/www/elsi_portal/vendor/guzzle/guzzle/src/Guzzle/Iterator/AppendIterator.php",
-		"/var/www/elsi_portal/vendor/guzzle/guzzle/docs/getting-started/overview.rst",
-		"/var/www/elsi_portal/app/views/eyic/labincharge/regProj.blade.php"
+		"/var/www/elsi_portal/bootstrap/autoload.php"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -653,91 +645,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/eyic/labincharge/viewProj.blade.php",
+					"file": "app/views/eyic/documents/stage2.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2129,
+						"buffer_size": 5945,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								560,
+								560
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 0.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -746,188 +674,31 @@
 				},
 				{
 					"buffer": 1,
-					"file": "composer.json",
+					"file": "app/views/eyic/labincharge/viewProj.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 782,
+						"buffer_size": 2286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								232,
-								198
+								371,
+								371
 							]
 						],
 						"settings":
 						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 0.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 27.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/eyic/mentor/viewProj.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2066,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								728,
-								728
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"incomplete_sync": null,
-							"origPos": 345.0,
-							"remote_loading": false,
-							"syncScroll": false,
-							"synced": false,
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 345.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -991,6 +762,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"viewpo",
+				"app/views/eyic/labincharge/viewProj.blade.php"
+			],
+			[
+				"coding",
+				"app/views/eyic/documents/coding_standard.blade.php"
+			],
+			[
+				"master",
+				"app/views/layouts/master.blade.php"
+			],
+			[
+				"stage2",
+				"app/views/eyic/documents/stage2.blade.php"
+			],
+			[
+				"routes",
+				"app/routes.php"
+			],
 			[
 				"compos",
 				"composer.json"
@@ -1124,10 +915,6 @@
 				"app/controllers/eYIC/LabInchargeOperations.php"
 			],
 			[
-				"master",
-				"app/views/layouts/master.blade.php"
-			],
-			[
 				"elsicoll",
 				"app/models/ElsiCollegeDetail.php"
 			],
@@ -1178,10 +965,6 @@
 			[
 				"navbar",
 				"app/views/includes/navbar.blade.php"
-			],
-			[
-				"routes",
-				"app/routes.php"
 			],
 			[
 				"elsi",
