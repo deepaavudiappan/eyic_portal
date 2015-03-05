@@ -146,7 +146,7 @@
 				<br/>
 				@elseif ($clgs->region == 'Puducherry')
 				Date: <strong>19<sup>th</sup> and 20<sup>th</sup> March, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
-				Venue: <strong>Department of ECE, Pondicherry Engineering College<br/>
+				Venue: <strong>Department of ECE, Pondicherry Engineering College</strong><br/>
 				Coordinator: <strong>Prof. Sivaradje Gopalakrishnan</strong><br/>
 				Contact number: <strong>+91-98940-88077</strong><br/>
 				E-mail: <strong>shivaradje@pec.edu</strong><br/>
