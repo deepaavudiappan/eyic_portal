@@ -141,11 +141,20 @@
 				Date: <strong>16<sup>th</sup> and 17<sup>th</sup> March, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
 				Venue: <strong>Computing Facilities Lab, ECE Dept,<br/>
 				<span style="margin-left:50px;">Mepco Schlenk Engg. College, Sivakasi</span></strong><br/>
-				Coordinator: <strong>Shantha Selvakumari</strong><br/>
+				Coordinator: <strong>Prof. R. Shantha Selvakumari</strong><br/>
 				Contact number: <strong>+91-94866-36774, 04562-235400</strong><br/>
 				E-mail: <strong>rshantha@mepcoeng.ac.in</strong><br/>
 				<br/>
-				Please confirm attendance of your team of four teachers on or before <strong>15th February, 2015</strong>:<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>12th March, 2015</strong>:<br/>
+				<br/>
+				@elseif ($clgs->region == 'Puducherry')
+				Date: <strong>19<sup>th</sup> and 20<sup>th</sup> March, 2015</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
+				Venue: <strong>Department of ECE, Pondicherry Engineering College<br/>
+				Coordinator: <strong>Prof. Sivaradje Gopalakrishnan</strong><br/>
+				Contact number: <strong>+91-98940-88077</strong><br/>
+				E-mail: <strong>shivaradje@pec.edu</strong><br/>
+				<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>12th March, 2015</strong>:<br/>
 				<br/>
 				@endif
 				<div class="alert alert-danger">
