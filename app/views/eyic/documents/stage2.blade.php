@@ -9,7 +9,7 @@
 		<h2 class="panel-title text-center">Stage 2 - Implementation</h2>
 	</div>
 	<div class="panel-body text-justify">
-		@if($error)
+		@if(isset($error))
 		@if(!empty($error))
 		<div class="alert alert-danger">
 			{{$error}}
