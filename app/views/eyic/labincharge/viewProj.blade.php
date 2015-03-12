@@ -32,6 +32,8 @@ Project Details from your college:
 				<p class="text-danger">{{'Rejected'}}</p>
 				@elseif($project['project_status'] == 5)
 				<p class="text-danger">{{'Did not complete registration'}}</p>
+				@elseif($project['project_status'] == 6)
+				<p class="text-success">{{'Submitted Stage 2 Implementation'}}</p>
 				@endif		
 			</td>
 			<td class="text-center"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>

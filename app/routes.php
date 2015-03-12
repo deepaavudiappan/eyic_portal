@@ -278,6 +278,10 @@ Route::match(array('GET', 'POST'), '/stdnt/projDtlsStudents', array(
 			'uses'	=>	'StdntCrdntrOperations@proj_dtls'
 ));
 
+Route::match(array('GET', 'POST'), '/upload/stage2', array(
+			'as'	=>	'eyicStage2Save',
+			'uses'	=>	'StdntCrdntrOperations@eyicStage2Save'
+));
 
 /*----------------------Documents Display Routes---------------------------*/
 

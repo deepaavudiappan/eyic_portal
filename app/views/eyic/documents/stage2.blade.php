@@ -9,12 +9,111 @@
 		<h2 class="panel-title text-center">Stage 2 - Implementation</h2>
 	</div>
 	<div class="panel-body text-justify">
+		@if($error)
+		@if(!empty($error))
+		<div class="alert alert-danger">
+			{{$error}}
+		</div>
+		@endif
+		@endif
 		<div class="alert alert-danger">
 			The last date to submit Stage 2 - Implementation is: Midnight, March 15th, 2015
 		</div>
-		<div class="alert alert-danger">
-			Only the Student Representative can upload the Stage 2 - Implementation. The upload feature will be available soon.
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Upload Stage 2 Implementation</h3>
+			</div>
+			<div class="panel-body">
+				@if(Auth::user()->role == 2)
+				@if(Session::has('entityDtl'))
+				@if(Session::get('entityDtl')->role == 1)
+				@if($proj_dtls->project_status == 3)
+				<div class="modal fade text-justify" id="stage2LinkMdl" tabindex="-1" role="dialog" aria-labelledby="stage2LinkLbl" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<div class="modal-header">
+								<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title">Instructions for Creating Video</h4><br/>
+							</div>
+
+							<div class="modal-body">
+								<strong>Note: Please ensure that the video uploaded is of good quality and conforms to the instructions given below.</strong>
+								<ol>
+									<li>The video should be a <strong>one-shot continuous video</strong>. It should <strong>not be edited</strong> in any manner. Teams uploading an edited video will be disqualified from the competition. e-Yantra reserves the rights to disqualify any team if foul play is suspected.</li>
+									<li>The resolution of the video should be good enough for judging. You have to use a <strong>3.2 MP camera or higher</strong> to shoot the video.</li>
+									<li>The videos should be in one of the following formats:  .avi, .mp4</li>
+									<li><strong>Upload the video on YouTube</strong> with the title: <strong>eYIC-{Project Name}-Stage-2</strong> (For example: If your project name is "Project" then, save it as <strong>eYIC-Project-Stage-2</strong>)</li>
+									<li>Please note that while uploading the video on YouTube select the privacy setting option as <strong>Unlisted</strong>. Refer the <strong>figure below</strong><br/><br/>{{ HTML::image('img/video_int.png', 'Video Instructions', array('style' => 'max-height:100%;max-width:100%;')) }}</li><br/>
+									<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the right side bar.</li>
+								</ol>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default ytStop" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-left">
+						<div class="alert alert-danger text-justify">
+							<strong>Save Youtube Link:</strong><br/>
+						</div>
+						{{ Form::open(array('route' => 'eyicStage2Save', 'files' => true, 'onsubmit' => 'uploadMsg(this)'))}}
+						Please read the instructions <a href="#" onclick="displayInst()" class="btn btn-primary">here</a> before saving the link.<br/>
+						<div class="row">
+							<div class="col-md-12">
+								{{ Form::text('videoLink', '', ['placeholder' => 'Youtube Link', 'class' => 'form-control']); }}
+								<br/>(Sample Youtube Link: https://www.youtube.com/watch?v=Hp2fiB7cLO0)<br/><br/><hr/>
+								<label>Updated Project Proposal:</label>{{ Form::file('projProp','',array('id'=>'prjProp','class'=>'')) }}<br/><hr/>
+								<label>Change Log:</label>{{ Form::file('changeLog','',array('id'=>'prjProp','class'=>'')) }}
+							</div>
+						</div>
+					</div>
+					<div class="modal fade" id="prjPropUpld" tabindex="-1" role="dialog" aria-labelledby="task1UpldLbl" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+
+								<div class="modal-header">
+									<h4 class="modal-title" id="prjPropUpld">Upload Project Proposal</h4>
+								</div>
+
+								<div class="modal-body">
+									<div id="uploadMsg" class="alert alert-danger">Your file is being uploaded. Please do not click refresh, back or forward button!</div>
+								</div>
+								<div class="modal-footer"> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							{{ Form::submit('Upload', array('class'=>'btn btn-primary')) }}
+						</div>
+					</div>
+					{{ Form::close() }}
+				</div>
+			</div>
+			@elseif($proj_dtls->project_status == 6)
+			<div class="alert alert-success">Stage 2 successfully submitted!</div>
+			@else
+			<div class="alert alert-danger">Project not shortlisted for Stage 2!</div>
+			@endif
+			@else
+			<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
+			@endif
+			@else
+			<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
+			@endif
+			@else
+			<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
+			@endif
 		</div>
+		<!--  -->
+		<!-- <div class="alert alert-danger">
+			Only the Student Representative can upload the Stage 2 - Implementation. The upload feature is available now.
+		</div> -->
 		<p>In Stage 2, the project team is required to implement the project proposal and create a working demonstration. You are required to upload the following:</p>
 		<ol>
 			<li>A video demonstrating the implemented solution to your proposed idea: You must upload your video demonstration on YouTube and the link must be submitted. For instructions on how to upload the video on YouTube, please <a href="#" onclick="displayInst()" class="btn btn-primary">click here</a>.</li>
@@ -86,24 +185,27 @@
 					<li>The resolution of the video should be good enough for judging. You have to use a <strong>3.2 MP camera or higher</strong> to shoot the video.</li>
 					<li>The videos should be in one of the following formats:  .avi, .mp4</li>
 					<li><strong>Upload the video on YouTube</strong> with the title: <strong>eYIC-{Your Project Name}</strong> (For example: If your project name is "e-Yantra Project" then, save it as <strong>eYIC-e-Yantra Project</strong>)</li>
-					<li>Please note that while uploading the video on YouTube select the privacy setting option as <strong>Unlisted</strong>. Refer the <strong>figure below</strong>
-						<br/><br/>{{ HTML::image('img/video_int.png', 'Video Instructions', array('style' => 'max-height:100%;max-width:100%;')) }}</li><br/>
-						<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the left side bar.</li>
-					</ol>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default ytStop" data-dismiss="modal">Close</button>
+					<li>Please note that while uploading the video on YouTube select the privacy setting option as <strong>Unlisted</strong>. Refer the <strong>figure below</strong><br/><br/>{{ HTML::image('img/video_int.png', 'Video Instructions', array('style' => 'max-height:100%;max-width:100%;')) }}</li><br/>
+					<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the left side bar.</li>
+				</ol>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default ytStop" data-dismiss="modal">Close</button>
 
-				</div>
 			</div>
 		</div>
 	</div>
-	@stop
+</div>
+@stop
 
-	@section('scripts')
-	<script type="text/javascript">
-		$(document).ready( function() {
-			$('#stage2').addClass('active');
-		});
-	</script>
-	@stop
+@section('scripts')
+<script type="text/javascript">
+	$(document).ready( function() {
+		$('#stage2').addClass('active');
+	});
+	function displayInst(){
+		$('#stage2LinkMdl').modal('show');
+		return true;
+	}
+</script>
+@stop

@@ -107,7 +107,27 @@ class DisplayDocController extends BaseController {
 	|
 	*/
 	public function displayDocStage2(){
-		return View::make('eyic.documents.stage2');
+
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role == 2){
+			if(Session::get('entityDtl')->role == 1){
+				$std_id = Session::get('entityDtl')->id;
+				$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
+
+				if(count($proj) < 1){
+					return View::make('eyic.documents.stage2');
+				}
+				return View::make('eyic.documents.stage2')->with('proj_dtls', $proj[0]);
+			}
+			else{
+				return View::make('eyic.documents.stage2');
+			}
+		}
+		else{
+			return View::make('eyic.documents.stage2');
+		}
 	}
 
 	/*

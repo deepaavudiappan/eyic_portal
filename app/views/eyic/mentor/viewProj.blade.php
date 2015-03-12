@@ -31,6 +31,8 @@
 				<p class="text-danger">{{'We regret to inform you that your project was not selected for Stage 2 – Implementation. We received a lot of good project proposals but could not select all of them owing to our capacity constraints. We look forward to continued interactions with you in the future.'}}</p>
 				@elseif($project['project']['project_status'] == 5)
 				<p class="text-danger">{{'We regret to inform you that your project was not selected for Stage 2 – Implementation since the project registration was not completed'}}</p>
+				@elseif($project['project']['project_status'] == 6)
+				<p class="text-success">{{'Submitted Stage 2 Implementation'}}</p>
 				@endif
 			</td>
 			<td><table class="table table-bordered">
