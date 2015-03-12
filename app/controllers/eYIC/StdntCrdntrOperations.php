@@ -227,7 +227,7 @@ class StdntCrdntrOperations extends BaseController {
 			return View::make('eyic.documents.stage2')->with(['error'=>'Unable to save link, contact us at helpdesk@e-yantra.org','proj_dtls' =>$proj[0]]);
 		}
 		else{
-			return View::make('eyic.documents.stage2');
+			return View::make('eyic.documents.stage2')->with('proj_dtls',$proj[0]);
 		}
 	}
 }
