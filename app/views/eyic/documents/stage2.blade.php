@@ -65,8 +65,8 @@
 							<div class="col-md-12">
 								{{ Form::text('videoLink', '', ['placeholder' => 'Youtube Link', 'class' => 'form-control']); }}
 								<br/>(Sample Youtube Link: https://www.youtube.com/watch?v=Hp2fiB7cLO0)<br/><br/><hr/>
-								<label>Updated Project Proposal:</label>{{ Form::file('projProp','',array('id'=>'prjProp','class'=>'')) }}<br/><hr/>
-								<label>Change Log:</label>{{ Form::file('changeLog','',array('id'=>'prjProp','class'=>'')) }}
+								<label>Updated Project Proposal(if any):</label>{{ Form::file('projProp','',array('id'=>'prjProp','class'=>'')) }}<br/><hr/>
+								<label>Change Log(if any):</label>{{ Form::file('changeLog','',array('id'=>'prjProp','class'=>'')) }}
 							</div>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 							<div class="modal-content">
 
 								<div class="modal-header">
-									<h4 class="modal-title" id="prjPropUpld">Upload Project Proposal</h4>
+									<h4 class="modal-title" id="prjPropUpld">Upload Stage 2 Content</h4>
 								</div>
 
 								<div class="modal-body">
@@ -98,16 +98,16 @@
 			@elseif($proj_dtls->project_status == 6)
 			<div class="alert alert-success">Stage 2 successfully submitted!</div>
 			@else
-			<div class="alert alert-danger">Project not shortlisted for Stage 2!</div>
+			<div class="alert alert-danger">Project not shortlisted for Stage 2! Sorry!</div>
 			@endif
 			@else
-			<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
+			<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
 			@endif
 			@else
-			<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
+			<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
 			@endif
 			@else
-			<div class="alert alert-danger">Only the Student representative can upload the Project Proposal. Please ask your project team's Student Representative to upload the Project Proposal.</div>
+			<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
 			@endif
 		</div>
 		<!--  -->
