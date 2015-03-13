@@ -3,6 +3,9 @@
 @stop
 
 @section('content')
+<div class="alert alert-danger">
+	Stage 2 Content can be uploaded by the Student Representative by clicking on the <strong>"Stage 2"</strong> tab on the left side menu.
+</div>
 @if($project)
 @if($project->project_status == 3)
 <div class="alert alert-success">
@@ -20,9 +23,6 @@
 @endif
 <div class="alert alert-info">
 	*Update Please update your name too*  You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
-</div>
-<div class="alert alert-danger">
-	Project Proposal can now be uploaded by the Student Representative by clicking on the "Project Proposal" tab on the left side bar.
 </div>
 <table class="table table-striped">
 	<tr>

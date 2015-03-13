@@ -3,11 +3,12 @@
 @stop
 
 @section('content')
+
+<div class="alert alert-danger">
+	Stage 2 Content can be uploaded by the Student Representative by clicking on the <strong>"Stage 2"</strong> tab on the left side menu.
+</div>
 <div class="alert alert-info">
 	You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
-</div>
-<div class="alert alert-danger">
-	Project Proposal can now be uploaded by the Student Representative by clicking on the "Project Proposal" tab on the left side bar.
 </div>
 <div class="alert alert-danger">
 	<ul>
