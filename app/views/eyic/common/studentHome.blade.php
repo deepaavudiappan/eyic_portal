@@ -4,6 +4,9 @@
 
 @section('content')
 <div class="alert alert-danger">
+	The option to upload Stage 2 Code will be made available from 11:59 AM 16th March till 11:59 PM 19th March
+</div>
+<div class="alert alert-danger">
 	Stage 2 Content can be uploaded by the Student Representative by clicking on the <strong>"Stage 2"</strong> tab on the left side menu.
 </div>
 @if($project)
