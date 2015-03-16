@@ -53,6 +53,7 @@
 					{{ HTML::linkRoute('projProp', 'Project Proposal', [], ['class'	=> 'list-group-item', 'id'	=> 'projPropLk']) }}
 					{{ HTML::linkRoute('codingStandard', 'Coding Standards', [], ['class'	=> 'list-group-item', 'id'	=> 'codingLk']) }}
 					{{ HTML::linkRoute('stage2_dtls', 'Stage 2', [], ['class'	=> 'list-group-item', 'id'	=> 'stage2']) }}
+					{{ HTML::linkRoute('stage2_code', 'Stage 2 Code Upload', [], ['class'	=> 'list-group-item', 'id'	=> 'stage2Code']) }}
 					{{ HTML::linkRoute('dcoor', 'Coordinator Info', [], ['class'	=> 'list-group-item', 'id'	=> 'coorDocLk']) }}
 					{{ HTML::linkRoute('dmentor', 'Mentor and Student Info', [], ['class'	=> 'list-group-item', 'id'	=> 'menStdntDocLk']) }}
 					{{ HTML::linkRoute('dplag', 'Plagiarism', [], ['class'	=> 'list-group-item', 'id'	=> 'plagDocLk']) }}
@@ -66,6 +67,7 @@
 					{{ HTML::linkRoute('projDtlsStudents', 'Project Status', [], ['class'	=> 'list-group-item', 'id'	=> 'proj_dtls_stnd']) }}
 					{{ HTML::linkRoute('codingStandard', 'Coding Standards', [], ['class'	=> 'list-group-item', 'id'	=> 'codingLk']) }}
 					{{ HTML::linkRoute('stage2_dtls', 'Stage 2', [], ['class'	=> 'list-group-item', 'id'	=> 'stage2']) }}
+					{{ HTML::linkRoute('stage2_code', 'Stage 2 Code Upload', [], ['class'	=> 'list-group-item', 'id'	=> 'stage2Code']) }}
 				</div>
 			</div>
 			@endif

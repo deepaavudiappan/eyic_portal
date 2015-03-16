@@ -1,8 +1,4 @@
 # ignore everything except .gitignore and readme
 *
-!proj_proposal*
-!proj_proposal_updated*
-!change_log*
-!proj_code*
 !readme.md
 !.gitignore

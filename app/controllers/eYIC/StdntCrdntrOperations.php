@@ -230,4 +230,54 @@ class StdntCrdntrOperations extends BaseController {
 			return View::make('eyic.documents.stage2')->with('proj_dtls',$proj[0]);
 		}
 	}
+
+	/*
+	|-------------------------------------------------------------------------
+	| Function:		eyicStage2Code
+	| Input:		Null
+	| Output:		
+	| Logic:		Landing page for eYIC Student Representive
+	|
+	*/
+	public function eyicStage2Code(){
+		if(!Auth::check()){
+			return Redirect::Route('loginLand');
+		}
+		if(Auth::user()->role != 2){
+			return Redirect::Route('commonHome');
+		}
+
+		$std_id = Session::get('entityDtl')->id;
+
+		$proj = EyicProjectDtls::where('student1_id', $std_id)->orWhere('student2_id', $std_id)->orWhere('student3_id', $std_id)->orWhere('student4_id', $std_id)->get();
+
+		if(count($proj) < 1){
+			return View::make('eyic.documents.stage2code');
+		}
+
+		if(!Input::file('stage2Code')->isValid()){
+			return View::make('eyic.documents.stage2code')->with(['error'=>'Unable to upload the file. Please contact us at helpdesk@e-yantra.org','proj_dtls' =>$proj[0]]);
+		}
+		$format = strtolower(Input::file('stage2Code')->getClientOriginalExtension());
+		$size = Input::file('stage2Code')->getSize();
+
+		if($format != 'zip'){
+			return View::make('eyic.documents.stage2code')->with(['error'=>'Unable to upload project proposal. Incorrect file format detected. Only pdf is allowed!','proj_dtls' =>$proj[0]]);
+		}
+		if($size > 26214400){
+			return View::make('eyic.documents.stage2code')->with(['error'=>'Unable to upload project code. File size is more than 25 MB.','proj_dtls' =>$proj[0]]);
+		}
+
+		Input::file('stage2Code')->move(UPLOAD_FILES_LOC .'proj_code/', 'PP#' . $proj[0]->id . '.zip');
+		
+		$proj[0]->code_date = new DateTime;
+		$proj[0]->code_uploaded = 1;
+
+		if(!$proj[0]->save()){
+			return View::make('eyic.documents.stage2code')->with(['error'=>'Unable to upload code, contact us at helpdesk@e-yantra.org','proj_dtls' =>$proj[0]]);
+		}
+		else{
+			return View::make('eyic.documents.stage2code')->with('proj_dtls',$proj[0]);
+		}
+	}
 }

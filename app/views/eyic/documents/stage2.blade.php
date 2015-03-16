@@ -27,11 +27,15 @@
 				@if(Auth::user()->role == 2)
 				@if(Session::has('entityDtl'))
 				@if(Session::get('entityDtl')->role == 1)
-				@if($proj_dtls->project_status == 3)
+				@if($proj_dtls->project_status == 6)
+				<div class="alert alert-success">
+				You have already submitted your Stage 2 - Implementation. But you can re submit your Stage 2 Implementation.
+				</div>
+				@endif
+				@if($proj_dtls->project_status == 3 || $proj_dtls->project_status == 6)
 				<div class="modal fade text-justify" id="stage2LinkMdl" tabindex="-1" role="dialog" aria-labelledby="stage2LinkLbl" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
-
 							<div class="modal-header">
 								<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 								<h4 class="modal-title">Instructions for Creating Video</h4><br/>

@@ -283,6 +283,11 @@ Route::match(array('GET', 'POST'), '/upload/stage2', array(
 			'uses'	=>	'StdntCrdntrOperations@eyicStage2Save'
 ));
 
+Route::match(array('GET', 'POST'), '/upload/stage2_code', array(
+			'as'	=>	'eyicStage2Code',
+			'uses'	=>	'StdntCrdntrOperations@eyicStage2Code'
+));
+
 /*----------------------Documents Display Routes---------------------------*/
 
 /* Display Document for Coordinators */
@@ -316,6 +321,11 @@ Route::match(array('GET', 'POST'), '/doc/projPropDown', array(
 Route::match(array('GET', 'POST'), '/doc/stage2', array(
 			'as'	=>	'stage2_dtls',
 			'uses'	=>	'DisplayDocController@displayDocStage2'
+));
+
+Route::match(array('GET', 'POST'), '/doc/stage2_code', array(
+			'as'	=>	'stage2_code',
+			'uses'	=>	'DisplayDocController@eyicStage2Code'
 ));
 
 Route::match(array('GET', 'POST'), '/doc/coding_standard', array(
