@@ -97,7 +97,7 @@
 		$('#stage2code').addClass('active');
 	});
 	function displayInst(){
-		$('#stage2LinkMdl').modal('show');
+		$('#prjPropUpld').modal('show');
 		return true;
 	}
 </script>
