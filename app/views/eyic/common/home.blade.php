@@ -5,14 +5,14 @@
 @section('content')
 
 <div class="alert alert-danger">
-	The option to upload Stage 2 Code will be made available from 11:59 AM 16th March till 11:59 PM 19th March
+	Stage 2 Code can be uploaded by the Student Representative by clicking on the <strong>"Stage 2 Code"</strong> tab on the left side menu.
 </div>
 <div class="alert alert-danger">
-	Stage 2 Content can be uploaded by the Student Representative by clicking on the <strong>"Stage 2"</strong> tab on the left side menu.
+	Stage 2 Implementation can be uploaded by the Student Representative by clicking on the <strong>"Stage 2"</strong> tab on the left side menu.
 </div>
 <div class="alert alert-info">
 	You can now update your profile information by clicking on the "Update Profile" button at the bottom of this page.
-</div>
+</div><!-- 
 <div class="alert alert-danger">
 	<ul>
 		@if($college->phase == '2012' || $college->phase == '2013')
@@ -23,13 +23,13 @@
 		<li>Deadline for the project team to upload the project proposal as per the template: January 31st 2015</li>
 		@endif
 	</ul>
-</div>
+</div> -->
 
-<div class="alert alert-danger">
+<!-- <div class="alert alert-danger">
 	The project proposal template is now available under the tab <strong>"Project Proposal"</strong> on the left side menu.
-</div>
+</div> -->
 
-@if($teacherDetail->coor_flag == 1 || $teacherDetail->coor_flag == 2)
+<!-- @if($teacherDetail->coor_flag == 1 || $teacherDetail->coor_flag == 2)
 <div class="alert alert-info">
 	Dear Coordinator, welcome to e-Yantra Ideas Competition 2015 Portal.<br/><br/>
 	<strong>Step 1:</strong> Please read the information under the tab <strong>"Coordinator Info"</strong> on the left side menu<br/>
@@ -38,12 +38,12 @@
 	<br/>
 	You can check the status of all the projects registered under your college at the <strong>"Register Project"</strong> tab on the left side menu.
 </div>
-@endif
-@if($teacherDetail->eyic_flag == 1)
+@endif -->
+<!-- @if($teacherDetail->eyic_flag == 1)
 <div class="alert alert-danger">
 	Please go to "Mentored projects" on the left side tab to complete your mentored project's registration by providing the details of the students associated to the project.
 </div>
-@endif
+@endif -->
 <table class="table table-striped">
 	<tr>
 		<th colspan="2">

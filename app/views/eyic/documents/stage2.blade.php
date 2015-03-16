@@ -29,35 +29,10 @@
 				@if(Session::get('entityDtl')->role == 1)
 				@if($proj_dtls->project_status == 6)
 				<div class="alert alert-success">
-				You have already submitted your Stage 2 - Implementation. But you can re submit your Stage 2 Implementation.
+					You have already submitted your Stage 2 - Implementation. But you can re submit your Stage 2 Implementation.
 				</div>
 				@endif
 				@if($proj_dtls->project_status == 3 || $proj_dtls->project_status == 6)
-				<div class="modal fade text-justify" id="stage2LinkMdl" tabindex="-1" role="dialog" aria-labelledby="stage2LinkLbl" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-								<h4 class="modal-title">Instructions for Creating Video</h4><br/>
-							</div>
-
-							<div class="modal-body">
-								<strong>Note: Please ensure that the video uploaded is of good quality and conforms to the instructions given below.</strong>
-								<ol>
-									<li>The video should be a <strong>one-shot continuous video</strong>. It should <strong>not be edited</strong> in any manner. Teams uploading an edited video will be disqualified from the competition. e-Yantra reserves the rights to disqualify any team if foul play is suspected.</li>
-									<li>The resolution of the video should be good enough for judging. You have to use a <strong>3.2 MP camera or higher</strong> to shoot the video.</li>
-									<li>The videos should be in one of the following formats:  .avi, .mp4</li>
-									<li><strong>Upload the video on YouTube</strong> with the title: <strong>eYIC-{Project Name}-Stage-2</strong> (For example: If your project name is "Project" then, save it as <strong>eYIC-Project-Stage-2</strong>)</li>
-									<li>Please note that while uploading the video on YouTube select the privacy setting option as <strong>Unlisted</strong>. Refer the <strong>figure below</strong><br/><br/>{{ HTML::image('img/video_int.png', 'Video Instructions', array('style' => 'max-height:100%;max-width:100%;')) }}</li><br/>
-									<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the right side bar.</li>
-								</ol>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default ytStop" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="row">
 					<div class="col-md-12 text-left">
 						<div class="alert alert-danger text-justify">
@@ -173,10 +148,9 @@
 		</div>
 	</div>
 </div>
-<div class="modal fade text-justify" id="taskVCLinkMdl" tabindex="-1" role="dialog" aria-labelledby="task2LinkLbl" aria-hidden="true">
+<div class="modal fade text-justify" id="stage2LinkMdl" tabindex="-1" role="dialog" aria-labelledby="stage2LinkLbl" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-
 			<div class="modal-header">
 				<button type="button" class="close ytStop" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 				<h4 class="modal-title">Instructions for Creating Video</h4><br/>
@@ -188,14 +162,13 @@
 					<li>The video should be a <strong>one-shot continuous video</strong>. It should <strong>not be edited</strong> in any manner. Teams uploading an edited video will be disqualified from the competition. e-Yantra reserves the rights to disqualify any team if foul play is suspected.</li>
 					<li>The resolution of the video should be good enough for judging. You have to use a <strong>3.2 MP camera or higher</strong> to shoot the video.</li>
 					<li>The videos should be in one of the following formats:  .avi, .mp4</li>
-					<li><strong>Upload the video on YouTube</strong> with the title: <strong>eYIC-{Your Project Name}</strong> (For example: If your project name is "e-Yantra Project" then, save it as <strong>eYIC-e-Yantra Project</strong>)</li>
+					<li><strong>Upload the video on YouTube</strong> with the title: <strong>eYIC-{Project Name}-Stage-2</strong> (For example: If your project name is "Project" then, save it as <strong>eYIC-Project-Stage-2</strong>)</li>
 					<li>Please note that while uploading the video on YouTube select the privacy setting option as <strong>Unlisted</strong>. Refer the <strong>figure below</strong><br/><br/>{{ HTML::image('img/video_int.png', 'Video Instructions', array('style' => 'max-height:100%;max-width:100%;')) }}</li><br/>
-					<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the left side bar.</li>
+					<li>You need to submit the video link on the <strong>“Stage 2”</strong> tab of the portal on the right side bar.</li>
 				</ol>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default ytStop" data-dismiss="modal">Close</button>
-
 			</div>
 		</div>
 	</div>
