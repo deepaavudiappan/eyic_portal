@@ -211,5 +211,9 @@
 		$('#stage2LinkMdl').modal('show');
 		return true;
 	}
+	function uploadMsg(){
+		$('#prjPropUpld').modal('show');
+		return true;
+	}
 </script>
 @stop
