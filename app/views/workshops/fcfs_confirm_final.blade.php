@@ -153,6 +153,16 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before <strong>12th March, 2015</strong>:<br/>
 				<br/>
+				@elseif ($clgs->region == 'Indore')
+				Date: <strong> April 17<sup>th</sup> and 18<sup>th</sup>, 2015 (Friday & Saturday)</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
+				Venue: <strong> Indore Institute of Science and Technology<br/>
+				<span style="margin-left:50px;">Rau - Pithampur Road, Opposite IIM, Indore – 453331 (M.P.)</strong><br/>
+				Coordinator: <strong>Prof Keshav Patidart</strong><br/>
+				Contact number: <strong>9926530687</strong><br/>
+				E-mail: <strong>Keshav.patidar@indoreinstitute.com</strong><br/>
+				<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>31st March, 2015</strong>:<br/>
+				<br/>
 				@endif
 				<div class="alert alert-danger">
 					<strong>Please note:<br/></strong>
