@@ -24,7 +24,10 @@
 				<h3 class="panel-title">Upload Stage 2 Implementation</h3>
 			</div>
 			<div class="panel-body">
-				@if(Auth::user()->role == 2)
+			<div class="alert alert-danger">
+			The last date to submit Stage 2 Implementation have passed.
+			</div>
+				<!-- @if(Auth::user()->role == 2)
 				@if(Session::has('entityDtl'))
 				@if(Session::get('entityDtl')->role == 1)
 				@if($proj_dtls->project_status == 6)
@@ -52,11 +55,11 @@
 					<div class="modal fade" id="prjPropUpld" tabindex="-1" role="dialog" aria-labelledby="task1UpldLbl" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
-
+				
 								<div class="modal-header">
 									<h4 class="modal-title" id="prjPropUpld">Upload Stage 2 Content</h4>
 								</div>
-
+				
 								<div class="modal-body">
 									<div id="uploadMsg" class="alert alert-danger">Your file is being uploaded. Please do not click refresh, back or forward button!</div>
 								</div>
@@ -73,21 +76,22 @@
 					</div>
 					{{ Form::close() }}
 				</div>
-			</div>
-			@elseif($proj_dtls->project_status == 6)
-			<div class="alert alert-success">Stage 2 successfully submitted!</div>
-			@else
-			<div class="alert alert-danger">Project not shortlisted for Stage 2! Sorry!</div>
-			@endif
-			@else
-			<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
-			@endif
-			@else
-			<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
-			@endif
-			@else
-			<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
-			@endif
+							</div>
+							@elseif($proj_dtls->project_status == 6)
+							<div class="alert alert-success">Stage 2 successfully submitted!</div>
+							@else
+							<div class="alert alert-danger">Project not shortlisted for Stage 2! Sorry!</div>
+							@endif
+							@else
+							<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
+							@endif
+							@else
+							<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
+							@endif
+							@else
+							<div class="alert alert-danger">Only the Student representative can upload the Stage 2 Content. Please ask your project team's Student Representative to upload the Stage 2 Content.</div>
+							@endif -->
+
 		</div>
 		<!--  -->
 		<!-- <div class="alert alert-danger">
