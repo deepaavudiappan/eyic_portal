@@ -3,11 +3,9 @@
 @stop
 
 @section('content')
-@if($project['project']['project_status'] == 7 || $project['project']['project_status'] == 8)
 <div class="alert alert-danger">
 	Please check the remarks provided for your project.
 </div>
-@endif
 <table class="table table-striped">
 	<thead>
 		<tr>
