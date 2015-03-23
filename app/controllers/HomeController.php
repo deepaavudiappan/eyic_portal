@@ -174,7 +174,7 @@ class HomeController extends BaseController {
 			$final_data = [];
 			foreach($projectDtl as $curPrj){
 				$cur_final = ['project' => $curPrj];
-				if($curPrj['project_status'] == 3 || $curPrj['project_status'] == 4){
+				if($curPrj['project_status'] == 3 || $curPrj['project_status'] == 4 || $curPrj['project_status'] == 6 || $curPrj['project_status'] == 7 || $curPrj['project_status'] == 8 || $curPrj['project_status'] == 9){
 					$eval = EyicProjEvaluation::where('proj_id', $curPrj['id'])->get();
 
 					if(count($eval) > 0){
