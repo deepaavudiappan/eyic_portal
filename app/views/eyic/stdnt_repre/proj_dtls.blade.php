@@ -47,8 +47,8 @@
 			<tr><td>Scope Remarks:</td><td>{{$proj_eval->final_scope_remarks}}</td></tr>
 			@endif
 			<tr><td>Stage 2 Remarks</td>
-			@if($project['project']['project_status'] == 7 || $project['project']['project_status'] == 8)
-			<td>@if($project['project']['project_status'] == 7) Accepted @else Rejected @endif - {{$project['project']['stg2_remark']}}</td>
+			@if($project['project_status'] == 7 || $project['project_status'] == 8)
+			<td>@if($project['project_status'] == 7) Accepted @else Rejected @endif - {{$project['stg2_remark']}}</td>
 			@else
 			Not Applicable
 			@endif
