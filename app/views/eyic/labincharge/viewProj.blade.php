@@ -38,6 +38,8 @@ Project Details from your college:
 				<p class="text-danger">{{'Project not selected for eYIC Finals'}}</p>
 				@elseif($project['project_status'] == 8)
 				<p class="text-success">{{'Project Selected for eYIC Finals!'}}</p>
+				@elseif($project['project_status'] == 9)
+				<p class="text-danger">{{'Stage 2 Implementation not completed.'}}</p>
 				@endif		
 			</td>
 			<td class="text-center"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></td>
