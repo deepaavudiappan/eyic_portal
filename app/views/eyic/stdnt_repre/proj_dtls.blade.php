@@ -48,7 +48,7 @@
 			@endif
 			<tr><td>Stage 2 Remarks</td>
 			@if($project['project_status'] == 7 || $project['project_status'] == 8)
-			<td>@if($project['project_status'] == 7) Accepted @else Rejected @endif - {{$project['stg2_remark']}}</td>
+			<td>@if($project['project_status'] == 7)<p class="text-danger">Rejected @else <p class="text-success"> Accepted @endif - {{$project['stg2_remark']}}</p></td>
 			@else
 			Not Applicable
 			@endif
