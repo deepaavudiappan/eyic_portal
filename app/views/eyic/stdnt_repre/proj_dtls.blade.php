@@ -33,7 +33,7 @@
 				@elseif($project['project_status'] == 7)
 				<p class="text-success">{{'We regret to inform you that your project was not selected for eYIC Finals. We received a lot of good implemented projects but could not select all of them owing to our capacity constraints. We look forward to continued interactions with you in the future.'}}</p>
 				@elseif($project['project_status'] == 8)
-				<p class="text-success">{{'Congratulations! Your project has been selected for eYIC Finals at IITB. For details regarding the finals, please visit "Finals" tab on the left side menu.'}}</p>
+				<p class="text-success">{{'Congratulations! Your project has been selected for eYIC Finals at IITB. Further details regarding accommodation and travelling will be emailed to the entire team.'}}</p>
 				@elseif($project['project_status'] == 9)
 				<p class="text-danger">Did not submit Stage 2 Implementation</p>
 				@endif
