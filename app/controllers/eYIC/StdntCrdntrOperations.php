@@ -132,7 +132,7 @@ class StdntCrdntrOperations extends BaseController {
 		if(count($proj) < 1){
 			return Redirect::Route('projDtlsStudents')->withErrors(['Unable to find project. Please contact us at helpdesk@e-yantra.org with this issue message.']);
 		}
-		if($proj[0]->project_status == 3 || $proj[0]->project_status == 4){
+		if($proj[0]->project_status == 3 || $proj[0]->project_status == 4 || $proj[0]->project_status == 6 || $proj[0]->project_status == 7 || $proj[0]->project_status == 8 || $proj[0]->project_status == 9){
 			$eval = EyicProjEvaluation::where('proj_id', $proj[0]->id)->get();
 
 			if(count($eval) > 0){
