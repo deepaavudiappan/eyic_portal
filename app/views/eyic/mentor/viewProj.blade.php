@@ -3,14 +3,19 @@
 @stop
 
 @section('content')
-
+@if($project['project']['project_status'] == 7 || $project['project']['project_status'] == 8)
+<div class="alert alert-danger">
+	Please check the remarks provided for your project.
+</div>
+@endif
 <table class="table table-striped">
 	<thead>
 		<tr>
 			<th>#</th>
 			<th class="col-md-2">Project Name</th>
-			<th class="col-md-6">Project Status</th>
+			<th class="col-md-3">Project Status</th>
 			<th class="col-md-4">Scores</th>
+			<th class="col-md-3">Stage 2 Remarks</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -33,26 +38,39 @@
 				<p class="text-danger">{{'We regret to inform you that your project was not selected for Stage 2 – Implementation since the project registration was not completed'}}</p>
 				@elseif($project['project']['project_status'] == 6)
 				<p class="text-success">{{'Submitted Stage 2 Implementation'}}</p>
+				@elseif($project['project']['project_status'] == 7)
+				<p class="text-danger">{{'We regret to inform you that your project was not selected for eYIC Finals. We received a lot of good implemented projects but could not select all of them owing to our capacity constraints. We look forward to continued interactions with you in the future.'}}</p>
+				@elseif($project['project']['project_status'] == 8)
+				<p class="text-success">{{'Congratulations! Your project has been selected for eYIC Finals at IITB. For details regarding the finals, please visit "Finals" tab on the left side menu.'}}</p>
+				@elseif($project['project']['project_status'] == 9)
+				<p class="text-danger">Did not submit Stage 2 Implementation</p>
 				@endif
 			</td>
 			<td><table class="table table-bordered">
-				@if($project['project']['project_status'] == 3 || $project['project']['project_status'] == 4)
+				@if($project['project']['project_status'] == 3 || $project['project']['project_status'] == 4 || $project['project']['project_status'] == 6 || $project['project']['project_status'] == 7 || $project['project']['project_status'] == 8 || $project['project']['project_status'] == 9)
 				<tr><td>Originality Marks:</td><td>{{$project['proj_eval']['final_orig_marks']}}/10</td></tr>
 				<tr><td>Originality Remarks:</td><td>{{$project['proj_eval']['final_orig_remarks']}}</td></tr>
 				<tr><td>Idea Marks:</td><td>{{$project['proj_eval']['final_idea_marks']}}/10</td></tr>
 				<tr><td>Idea Remarks:</td><td>{{$project['proj_eval']['final_idea_remarks']}}</td></tr>
-				<tr><td>Score Marks:</td><td>{{$project['proj_eval']['final_scope_marks']}}/10</td></tr>
-				<tr><td>Score Remarks:</td><td>{{$project['proj_eval']['final_scope_remarks']}}</td></tr>
-				<tr><td>Status:</td><td>@if($project['project']['project_status'] == 3) Accepted @else Rejected @endif</td></tr>
+				<tr><td>Scope Marks:</td><td>{{$project['proj_eval']['final_scope_marks']}}/10</td></tr>
+				<tr><td>Scope Remarks:</td><td>{{$project['proj_eval']['final_scope_remarks']}}</td></tr>
+				<!-- <tr><td>Status:</td><td>@if($project['project']['project_status'] == 3) Accepted @else Rejected @endif</td></tr> -->
 				@endif
 			</table></td>
+			<td>
+				@if($project['project']['project_status'] == 7 || $project['project']['project_status'] == 8)
+				<td>@if($project['project']['project_status'] == 7) Accepted @else Rejected @endif - {{$project['project']['stg2_remark']}}</td>
+				@else
+				Not Applicable
+				@endif
+			</td>
 			<td>
 				@if($project['project']['project_status'] == 0)
 				{{ Form::open(array('route' => 'addprojectdetailland', 'method' => 'POST')) }}
 				{{ Form::hidden('invisible', $project['project']['id'], array('name' => 'proj_id')) }}
 				<button class="btn btn-sm btn-primary btn-block" type="submit">Add Team Members</button>
 				{{ Form::close() }}
-				@endif					
+				@endif
 			</td>
 		</tr>	
 		@endforeach
