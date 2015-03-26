@@ -163,6 +163,16 @@
 				<br/>
 				Please confirm attendance of your team of four teachers on or before <strong>31st March, 2015</strong>:<br/>
 				<br/>
+				@elseif ($clgs->region == 'Mathura')
+				Date: <strong> April 24<sup>th</sup> and 25<sup>th</sup>, 2015 (Friday & Saturday)</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
+				Venue: <strong>G L Bajaj Group of Institutions, National Highway # 2, Mathura-Delhi Road,<br/>
+				<span style="margin-left:50px;"> PO-Akbarpur, Mathura – 281406 (UP) <a href="www.glbajajgroup.org" target="_blank">www.glbajajgroup.org</a></strong><br/>
+				Coordinator: <strong>Dr Meenu Gupta</strong><br/>
+				Contact number: <strong>9997018688</strong><br/>
+				E-mail: <strong>dr.meenu2@gmail.com</strong><br/>
+				<br/>
+				Please confirm attendance of your team of four teachers on or before <strong>10th April, 2015</strong>:<br/>
+				<br/>
 				@endif
 				<div class="alert alert-danger">
 					<strong>Please note:<br/></strong>
