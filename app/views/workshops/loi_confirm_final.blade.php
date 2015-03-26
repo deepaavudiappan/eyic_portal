@@ -169,7 +169,7 @@
 				@elseif ($clgs->region == 'Mathura')
 				Date: <strong> April 24<sup>th</sup> and 25<sup>th</sup>, 2015 (Friday & Saturday)</strong>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="open_sch();">(Click here to view schedule)</a><br/>
 				Venue: <strong>G L Bajaj Group of Institutions, National Highway # 2, Mathura-Delhi Road,<br/>
-				<span style="margin-left:50px;"> PO-Akbarpur, Mathura – 281406 (UP) <a href="www.glbajajgroup.org" target="_blank">www.glbajajgroup.org</a></strong><br/>
+				<span style="margin-left:50px;"> PO-Akbarpur, Mathura – 281406 (UP)</strong><br/>
 				Coordinator: <strong>Dr Meenu Gupta</strong><br/>
 				Contact number: <strong>9997018688</strong><br/>
 				E-mail: <strong>dr.meenu2@gmail.com</strong><br/>
