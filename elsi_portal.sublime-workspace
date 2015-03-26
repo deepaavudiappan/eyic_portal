@@ -328,18 +328,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/workshops/fcfs_confirm_final.blade.php",
+			"file": "app/views/eyic/documents/stage2.blade.php",
 			"settings":
 			{
-				"buffer_size": 15385,
+				"buffer_size": 9594,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/workshops/loi_confirm_final.blade.php",
+			"file": "app/views/eyic/stdnt_repre/proj_dtls.blade.php",
 			"settings":
 			{
-				"buffer_size": 11277,
+				"buffer_size": 3756,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/eyic/mentor/viewProj.blade.php",
+			"settings":
+			{
+				"buffer_size": 5179,
 				"line_ending": "Unix"
 			}
 		}
@@ -412,25 +420,28 @@
 	],
 	"file_history":
 	[
+		"/var/www/elsi_portal/app/views/workshops/loi_confirm_final.blade.php",
+		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm_final.blade.php",
+		"/var/www/elsi_portal/app/views/emails/eyic/student_repre_invite.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/labincharge/viewProj.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/documents/proj_prop.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/documents/stage2code.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/documents/stage2.blade.php",
+		"/var/www/elsi_portal/app/views/eyic/common/stage2_upload.blade.php",
+		"/var/www/elsi_portal/app/controllers/eYIC/StdntCrdntrOperations.php",
 		"/var/www/elsi_portal/app/routes.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/DisplayDocController.php",
 		"/var/www/elsi_portal/app/views/eyic/common/home.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/common/studentHome.blade.php",
-		"/var/www/elsi_portal/app/views/eyic/documents/proj_prop.blade.php",
-		"/var/www/elsi_portal/app/views/eyic/documents/stage2code.blade.php",
 		"/var/www/elsi_portal/app/views/layouts/master.blade.php",
-		"/var/www/elsi_portal/app/controllers/eYIC/StdntCrdntrOperations.php",
 		"/var/www/elsi_portal/vendor/nesbot/carbon/tests/SubTest.php",
 		"/var/www/elsi_portal/app/views/eyic/admin/home.blade.php",
 		"/var/www/elsi_portal/app/controllers/HomeController.php",
 		"/var/www/elsi_portal/app/views/eyic/mentor/home.blade.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/CloudFront/Exception/TooManyCookieNamesInWhiteListException.php",
 		"/var/www/elsi_portal/app/config/mail.php",
-		"/var/www/elsi_portal/app/views/eyic/common/stage2_upload.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/stdnt_repre/proj_dtls.blade.php",
 		"/var/www/elsi_portal/app/views/eyic/mentor/viewProj.blade.php",
-		"/var/www/elsi_portal/app/views/eyic/labincharge/viewProj.blade.php",
 		"/var/www/elsi_portal/app/config/database.php",
 		"/var/www/elsi_portal/vendor/guzzle/guzzle/docs/_static/homepage.css",
 		"/var/www/elsi_portal/app/controllers/StudentHomeController.php",
@@ -440,8 +451,6 @@
 		"/var/www/elsi_portal/app/controllers/workshops/WrkshpClgController.php",
 		"/var/www/elsi_portal/app/controllers/eYIC/AdminOperations.php",
 		"/var/www/elsi_portal/app/views/emails/workshops/loi_invite.blade.php",
-		"/var/www/elsi_portal/app/views/workshops/loi_confirm_final.blade.php",
-		"/var/www/elsi_portal/app/views/workshops/fcfs_confirm_final.blade.php",
 		"/var/www/elsi_portal/app/views/emails/workshops/fcfs_invite.blade.php",
 		"/home/amiraj/Downloads/users_login.csv",
 		"/var/www/elsi_portal/app/config/view.php",
@@ -538,8 +547,7 @@
 		"/var/www/elsi_portal/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/Event/PostResponseEvent.php",
 		"/var/www/elsi_portal/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php",
 		"/var/www/elsi_portal/vendor/aws/aws-sdk-php/src/Aws/DynamoDb/Model/BatchRequest/PutRequest.php",
-		"/var/www/elsi_portal/vendor/nikic/php-parser/lib/PHPParser/Builder/Property.php",
-		"/var/www/elsi_portal/elsi_portal.sublime-project"
+		"/var/www/elsi_portal/vendor/nikic/php-parser/lib/PHPParser/Builder/Property.php"
 	],
 	"find":
 	{
@@ -650,19 +658,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/workshops/fcfs_confirm_final.blade.php",
+					"file": "app/views/eyic/documents/stage2.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15385,
+						"buffer_size": 9594,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10257,
-								10257
+								4276,
+								4276
 							]
 						],
 						"settings":
@@ -670,41 +678,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -715,16 +688,51 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"incomplete_sync": null,
 							"origPos": 0.0,
@@ -735,27 +743,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3696.0,
+						"translation.y": 2400.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/workshops/loi_confirm_final.blade.php",
+					"file": "app/views/eyic/stdnt_repre/proj_dtls.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11277,
+						"buffer_size": 3756,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9524,
-								9524
+								2360,
+								2360
 							]
 						],
 						"settings":
@@ -763,41 +771,6 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -808,16 +781,51 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"incomplete_sync": null,
 							"origPos": 0.0,
@@ -828,10 +836,103 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3762.0,
+						"translation.y": 726.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/eyic/mentor/viewProj.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2782,
+								2782
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"incomplete_sync": null,
+							"origPos": 0.0,
+							"remote_loading": false,
+							"syncScroll": false,
+							"synced": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -896,16 +997,24 @@
 		"selected_items":
 		[
 			[
+				"view",
+				"app/views/eyic/labincharge/viewProj.blade.php"
+			],
+			[
+				"proj",
+				"app/views/eyic/documents/proj_prop.blade.php"
+			],
+			[
+				"stage2",
+				"app/views/eyic/documents/stage2.blade.php"
+			],
+			[
 				"student",
 				"app/views/eyic/common/studentHome.blade.php"
 			],
 			[
 				"home",
 				"app/views/eyic/common/home.blade.php"
-			],
-			[
-				"proj",
-				"app/views/eyic/documents/proj_prop.blade.php"
 			],
 			[
 				"route",
@@ -932,16 +1041,8 @@
 				"app/controllers/eYIC/DisplayDocController.php"
 			],
 			[
-				"view",
-				"app/views/eyic/labincharge/viewProj.blade.php"
-			],
-			[
 				"stage",
 				"app/views/eyic/common/stage2_upload.blade.php"
-			],
-			[
-				"stage2",
-				"app/views/eyic/documents/stage2.blade.php"
 			],
 			[
 				"viewpo",

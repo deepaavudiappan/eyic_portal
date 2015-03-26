@@ -27,12 +27,12 @@
 				@if(Auth::user()->role == 2)
 				@if(Session::has('entityDtl'))
 				@if(Session::get('entityDtl')->role == 1)
-				@if($proj_dtls->project_status == 6)
+				@if($proj_dtls->code_uploaded == 1)
 				<div class="alert alert-success">
 					You have already submitted Stage 2 code. You are allowed to resubmit the code till the last date of 19th March.
 				</div>
 				@endif
-				@if($proj_dtls->project_status == 3 || $proj_dtls->project_status == 6)
+				@if($proj_dtls->project_status == 3 || $proj_dtls->project_status == 6 || $proj_dtls->project_status == 8)
 				<div class="alert alert-danger">
 					<ol>
 						<li>Only zip file is allowed</li>
